@@ -1,3 +1,5 @@
+import Image from 'next/future/image'
+
 const Hero = (props) => (
   <section>
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -22,17 +24,15 @@ const Hero = (props) => (
             <div className="max-w-none px-4 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
               <div className="flex w-full sm:w-auto">
                 <a
-                  className="btn text-white bg-blue-500 hover:bg-primary-800 sm:mb-0 font-bold w-full px-10"
+                  className="btn text-white border border-primary-600 bg-primary-600 hover:bg-primary-800 hover:border-primary-800 sm:mb-0 font-bold w-full px-10"
                   href="https://github.com/onwidget/tailnext"
-                  target="_blank"
-                  rel="noopener"
                 >
                   Get template
                 </a>
               </div>
               <div className="flex w-full sm:w-auto">
                 <a
-                  className="btn bg-transparent border border-gray-400 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-800 w-full px-10"
+                  className="btn bg-transparent border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 w-full px-10"
                   href="#features"
                 >
                   Learn more
@@ -42,9 +42,12 @@ const Hero = (props) => (
           </div>
         </div>
         <div>
-          <div className="relative mb-8 m-auto max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          <div className="relative mb-8 m-auto max-w-5xl">
+            <Image
+              src="https://images.unsplash.com/photo-1502101872923-d48509bff386?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+              alt="Picture of the author"
+              width={1024}
+              height={576}
               className="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full"
             />
           </div>

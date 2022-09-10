@@ -1,4 +1,6 @@
-import Logo from "~/components/atoms/Logo"
+import { IconBrandGithub } from '@tabler/icons';
+import ToggleDarkMode from "~/components/atoms/ToggleDarkMode"
+import Logo from "~/components/atoms/Logo.server"
 
 const Header = (props) => (
   <header className="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
@@ -50,13 +52,13 @@ const Header = (props) => (
         </ul>
         <div className="md:self-center flex items-center mb-4 md:mb-0 ml-2">
           <div className="hidden items-center md:flex">
-            Toggle
+            <ToggleDarkMode />
             <a
               href="https://github.com/onwidget/tailnext"
               className="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
               aria-label="TailNext Github"
             >
-              <svg viewBox="0 0 24 24" className="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
+              <IconBrandGithub className='w-5 h-5' />
             </a>
           </div>
         </div>

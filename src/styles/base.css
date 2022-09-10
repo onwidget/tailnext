@@ -4,6 +4,6 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-md border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-lg ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-md border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-md ease-in duration-100 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2;
   }
 }
