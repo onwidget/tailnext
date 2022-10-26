@@ -1,0 +1,4 @@
+{
+  "recommendations": ["bradlc.vscode-tailwindcss", "dbaeumer.vscode-eslint"],
+  "unwantedRecommendations": []
+}
