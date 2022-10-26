@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IconSun } from '@tabler/icons';
+import { IconSun } from "@tabler/icons";
 
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);

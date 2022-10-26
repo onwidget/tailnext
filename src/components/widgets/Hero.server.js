@@ -6,7 +6,7 @@ const Hero = (props) => (
       <div className="py-12 md:py-20">
         <div className="text-center pb-10 md:pb-16 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-6 font-heading">
-            Free template for starts a website using{" "}
+            Free template for <span className='hidden md:inline'>starts a website using</span>{" "}
             <span>
               Next.js
             </span>
@@ -17,7 +17,7 @@ const Hero = (props) => (
           </h1>
           <div className="max-w-3xl mx-auto">
             <p className="text-xl text-gray-600 mb-6 dark:text-slate-400">
-              TailNext is a production ready template to start your new website using Next.js + Tailwind CSS. It has
+              <span className='hidden md:inline'>TailNext is a production ready template to start your new website using Next.js + Tailwind CSS.</span> It has
               been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
               optimization.
             </p>
