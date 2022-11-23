@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 
 const Features = () => (
   <section className="bg-gray-100 text-gray-800">

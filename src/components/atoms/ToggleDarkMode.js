@@ -1,19 +1,25 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { IconSun } from "@tabler/icons";
 
-function setTheme(themeName) {
+function setTheme(themeName, current = null) {
   localStorage.setItem("theme", themeName);
-  document.documentElement.className = themeName;
+  if (current) {
+    document.documentElement.classList.remove(current);
+  }
+
+  document.documentElement.classList.add(themeName);
 }
 
 function ToggleDarkMode() {
-  const [mode, setMode] = useState("ligth");
+  const [mode, setMode] = useState("light");
 
   useEffect(() => {
     if (mode === "dark") {
-      setTheme("dark");
+      setTheme("dark", "light");
     } else {
-      setTheme("light");
+      setTheme("light", "dark");
     }
   }, [mode]);
 
