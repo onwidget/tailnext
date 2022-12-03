@@ -1,17 +1,20 @@
 import Image from "next/image";
 
 const Features2 = () => (
-  <section className="bg-gray-100 text-gray-800">
-    <div className="container p-4 py-14 mx-auto space-y-24 md:px-8 max-w-6xl">
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl text-gray-900">
+  <section className="bg-gray-50 text-gray-800">
+    <div className="container p-4 py-16 mx-auto md:py-20 md:px-8 max-w-6xl">
+      <div className="mb-16 text-center ">
+      <p className="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">
+          Features
+        </p>
+        <h2 className="text-3xl font-bold tracking-tight sm:text-5xl text-gray-900">
           Aliquip definiebas ad est
         </h2>
-        <p className="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-600">
+        <p className="max-w-3xl mx-auto mt-4 text-xl text-gray-600">
           Quando cetero his ne, eum admodum sapientem ut.
         </p>
       </div>
-      <div className="grid md:gap-8 md:grid-cols-2 md:items-center">
+      <div className="grid md:gap-16 md:grid-cols-2 md:items-center mb-24">
         <div>
           <h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-gray-900">Ad vix debet docendi</h3>
           <p className="mt-3 text-lg text-gray-600">
@@ -89,16 +92,15 @@ const Features2 = () => (
         </div>
         <div aria-hidden="true" className="mt-10 md:mt-0">
           <Image
-            src="https://source.unsplash.com/random/360x480"
+            src="https://source.unsplash.com/random/360x480?speed"
             width={360}
             height={480}
             alt="Random image from unplash"
-            className="mx-auto rounded-lg shadow-lg bg-gray-500"
+            className="mx-auto rounded-lg shadow-lg bg-gray-500 w-full"
           />
         </div>
       </div>
-      <div>
-        <div className="grid md:gap-8 md:grid-cols-2 md:items-center">
+        <div className="grid md:gap-16 md:grid-cols-2 md:items-center">
           <div className="md:col-start-2">
             <h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-gray-900">Eam nibh gloriatur ex</h3>
             <p className="mt-3 text-lg text-gray-600">
@@ -176,15 +178,14 @@ const Features2 = () => (
           </div>
           <div className="mt-10 md:mt-0 md:col-start-1 md:row-start-1">
             <Image
-              src="https://source.unsplash.com/random/500x500"
+              src="https://source.unsplash.com/random/360x480?css"
               width={500}
               height={500}
               alt="Random image from unplash"
-              className="mx-auto rounded-lg shadow-lg bg-gray-500"
+              className="mx-auto rounded-lg shadow-lg bg-gray-500 w-full"
             />
           </div>
         </div>
-      </div>
     </div>
   </section>
 );

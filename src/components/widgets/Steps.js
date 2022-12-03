@@ -1,5 +1,11 @@
-const Icon = ({ icon }) => <>{icon}</>;
 import Image from "next/image";
+
+import {
+  IconArrowDown,
+  IconCheck,
+} from "@tabler/icons";
+
+const Icon = ({ icon }) => <>{icon}</>;
 
 const Steps = () => (
   <section className="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
@@ -12,8 +18,7 @@ const Steps = () => (
           <div className="flex flex-col items-center mr-4">
             <div>
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-                <Icon
-                  name="tabler:arrow-down"
+                <IconArrowDown
                   className="w-6 h-6 text-primary-600 dark:text-slate-200"
                 />
               </div>
@@ -36,8 +41,7 @@ const Steps = () => (
           <div className="flex flex-col items-center mr-4">
             <div>
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-                <Icon
-                  name="tabler:arrow-down"
+                <IconArrowDown
                   className="w-6 h-6 text-primary-600 dark:text-slate-200"
                 />
               </div>
@@ -59,8 +63,7 @@ const Steps = () => (
           <div className="flex flex-col items-center mr-4">
             <div>
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-                <Icon
-                  name="tabler:arrow-down"
+                <IconArrowDown
                   className="w-6 h-6 text-primary-600 dark:text-slate-200"
                 />
               </div>
@@ -82,8 +85,7 @@ const Steps = () => (
           <div className="flex flex-col items-center mr-4">
             <div>
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2 bg-primary-600">
-                <Icon
-                  name="tabler:check"
+                <IconCheck
                   className="w-6 h-6 text-white dark:text-slate-200"
                 />
               </div>
@@ -99,11 +101,11 @@ const Steps = () => (
       </div>
       <div className="relative">
         <Image
-          src="https://images.unsplash.com/photo-1548318281-7da3085ce691?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1041&q=80"
+          src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
           width={432}
           height={768}
           alt="Random image from unplash"
-          className="mx-auto rounded-lg shadow-lg bg-gray-500"
+          className="mx-auto rounded-lg shadow-lg bg-gray-500 w-full"
         />
         {/* <Picture
 				className="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
