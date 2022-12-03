@@ -1,11 +1,11 @@
-const Banner = () => (
-  <div className="hidden md:block bg-primary-50 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-primary-100 text-sm px-3 py-2 text-gray-800 overflow-hidden whitespace-nowrap text-ellipsis">
+const Announcement = () => (
+  <div className="hidden md:block bg-primary-100 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-primary-100 text-sm px-3 py-2 text-gray-800 overflow-hidden whitespace-nowrap text-ellipsis">
     <span className="text-xs py-0.5 px-1 bg-primary-200 dark:bg-slate-600 font-semibold">
       NEW
     </span>{' '}
     <a
       href="/get-started-website-with-next-js-tailwind-css"
-      className="underline underline-offset-2 decoration-1 decoration-dotted"
+      className="hover:underline text-gray-700 dark:text-slate-400"
     >
       Get started with TailNext to create a website using Next.js and Tailwind
       CSS »
@@ -27,4 +27,4 @@ const Banner = () => (
   </div>
 );
 
-export default Banner;
+export default Announcement;
