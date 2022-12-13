@@ -45,48 +45,46 @@ const links = [
 ];
 
 const Footer = () => (
-  <div className="">
-    <div className="max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="grid gap-4 grid-cols-4 gap-y-8 xs:gap-8 py-8 md:py-12">
-        {items.map(({ title, text, index }) => (
-          <div key={index} className="col-span-4 xs:col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
-            <h5 className="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</h5>
-            <p>{text[0]}<br />{text[1]}</p>
-          </div>
-        ))}
-        <div className="col-span-4 xs:col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
-          <h5 className="text-gray-800 dark:text-gray-300 font-medium mb-2">Social</h5>
-          <ul className="flex mb-4 md:order-1 -ml-2 md:mb-0">
-            {
-              social.map(({ label, href, icon: Icon, index }) => (
-                <li key={index}>
-                  <a
-                    className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                    aria-label={label}
-                    href={href}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+  <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="grid gap-4 grid-cols-4 gap-y-8 xs:gap-8 py-8 md:py-12">
+      {items.map(({ title, text }, index) => (
+        <div key={`item-footer-${index}`} className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
+          <h5 className="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</h5>
+          <p>{text[0]}<br />{text[1]}</p>
         </div>
-      </div>
-      <div className="md:flex md:items-center md:justify-between py-6 md:py-8 text-sm text-gray-700 dark:text-slate-400">
-			  <ul class="flex mb-4 pl-2 md:order-1 -ml-2 md:ml-4 md:mb-0">
-          {links.map(({ label, href, index }) => (
-            <a key={index} className="pr-4 hover:text-blue-600 hover:underline" href={href}>{label}</a>
-          ))}
+      ))}
+      <div className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
+        <h5 className="text-gray-800 dark:text-gray-300 font-medium mb-2">Social</h5>
+        <ul className="flex mb-4 md:order-1 -ml-2 md:mb-0">
+          {
+            social.map(({ label, href, icon: Icon }, index2) => (
+              <li key={`social-${index2}`}>
+                <a
+                  className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  aria-label={label}
+                  href={href}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              </li>
+            ))
+          }
         </ul>
-        <div className="mr-4">
-          <span
-            className="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"
-          >
-          </span>
-          Made by <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> ·
-          All rights reserved.
-        </div>
+      </div>
+    </div>
+    <div className="md:flex md:items-center md:justify-between py-6 md:py-8 text-sm text-gray-700 dark:text-slate-400">
+      <ul className="flex mb-4 pl-2 md:order-1 -ml-2 md:ml-4 md:mb-0">
+        {links.map(({ label, href }, index) => (
+          <a key={`link-${index}`} className="pr-4 hover:text-blue-600 hover:underline" href={href}>{label}</a>
+        ))}
+      </ul>
+      <div className="mr-4">
+        <span
+          className="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"
+        >
+        </span>
+        Made by <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> ·
+        All rights reserved.
       </div>
     </div>
   </div>

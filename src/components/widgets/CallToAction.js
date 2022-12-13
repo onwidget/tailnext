@@ -25,7 +25,7 @@ import {
           <h3 className="mb-3 text-xl font-bold">
             {cardTitle}
           </h3>
-          <p className="text-slate-800">
+          <p className="text-gray-600 dark:text-slate-400">
             {cardDescription}
           </p>
         </div>
@@ -69,19 +69,19 @@ import {
           <div className="md:pb-6 md:pr-16 mx-auto md:ml-0 md:my-auto">
             <h2 className="flex justify-center md:justify-start mb-3 text-6xl font-bold">Join us</h2>
             <div className="text-gray-600 dark:text-slate-400">
-              <p>Quisque ac eleifend enim, a blandit.</p>
+              <p className="text-xl text-gray-600 dark:text-slate-400">Quisque ac eleifend enim, a blandit.</p>
             </div>
           </div>
           <div className="relative">
             <>
               {items.map((subitems) =>
-                subitems.map(({ title, description, href }, index2) => (
+                subitems.map(({ title, description, href }, index) => (
                   <a 
                     href={href}                   
                     className="sm:mb-0 w-full"
                     target="_blank"
                     rel="noopener noreferrer" 
-                    key={index2}
+                    key={`item-cta-${index}`}
                   >
                     <Card 
                       cardTitle={title}
