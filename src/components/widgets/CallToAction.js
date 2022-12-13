@@ -8,7 +8,7 @@ import {
       {
         title: "Get template",
         description:"Aliquam sodales est lectus, quis.",
-        href: "https://github.com/onwidget/astrowind",
+        href: "https://github.com/onwidget/tailnext",
       },
       {
         title: "Learn more",
