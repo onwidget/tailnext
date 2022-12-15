@@ -5,6 +5,7 @@ import Announcement from "~/components/widgets/Announcement";
 import Steps from "~/components/widgets/Steps";
 import Features2 from "~/components/widgets/Features2";
 import SocialProof from "../src/components/widgets/SocialProof";
+import FAQs from "~/components/widgets/FAQs";
 import CallToAction from "~/components/widgets/CallToAction";
 import Footer from "~/components/widgets/Footer";
 
@@ -18,6 +19,7 @@ export default function Page() {
         <SocialProof />
         <Features3 />
         <Features2 />
+        <FAQs />
         <Steps />
         <CallToAction />
       </main>
