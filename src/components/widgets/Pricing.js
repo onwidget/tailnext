@@ -10,7 +10,7 @@ const items = [
     texts: [
       "Etiam in libero",
       "Aenean ac nunc",
-      "Morbili vehicula rhoncus felis rhoncus",
+      "Cras scelerisque accumsan libero, et volutpat dolor tristique at",
       "In hac habitasse"
     ],
     btnText: "free 7-day trial",
@@ -51,11 +51,11 @@ const Pricing = () => (
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-gray-900">Pricing for every business</h2>
         <p className="max-w-3xl mx-auto mt-4 text-xl text-gray-600">Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.</p>
       </div>
-      <div className="flex justify-center">
-        <div className="dark:text-white grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-8">
+      <div className="flex justify-center items-stretch">
+        <div className="dark:text-white grid gap-3 grid-cols-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-8">
           {items.map(({ title, value, period, texts, btnText, hasRibbon }, index) => (
-            <div className="col-span-3 w-full mx-auto sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1" key={`item-pricing-${index}`}>
-              <div className="relative flex flex-col w-full min-h-max card">
+            <div className="col-span-3 w-full mx-auto sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 flex" key={`item-pricing-${index}`}>
+              <div className="relative flex flex-col w-full max-w-sm justify-between card">
                 {hasRibbon && (
                   <div className="absolute right-[-5px] top-[-5px] z-[1] overflow-hidden w-[100px] h-[100px] text-right">
                     <span className="ribbon">Popular</span>
@@ -76,10 +76,10 @@ const Pricing = () => (
                       {item}
                     </li>
                   ))}
-                  <li className="flex w-full sm:w-auto mt-8 uppercase">
-                    <a href="#" className={`btn ${hasRibbon && "btn-primary sm:mb-0"} w-full`}>{btnText}</a>
-                  </li>
                 </ul>
+                <div className="flex w-full sm:w-auto mt-8 uppercase">
+                  <a href="#" className={`btn ${hasRibbon && "btn-primary sm:mb-0"} w-full`}>{btnText}</a>
+                </div>
               </div>
             </div>
           ))}
