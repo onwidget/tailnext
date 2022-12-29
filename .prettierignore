@@ -1,0 +1,6 @@
+.next
+out
+node_modules
+.github
+.changeset
+package-lock.json
