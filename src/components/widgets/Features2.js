@@ -23,7 +23,7 @@ const Features2 = () => (
           <div className="mt-12 space-y-10">
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -45,7 +45,7 @@ const Features2 = () => (
             </div>
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -67,7 +67,7 @@ const Features2 = () => (
             </div>
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -109,7 +109,7 @@ const Features2 = () => (
           <div className="mt-12 space-y-10">
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -131,7 +131,7 @@ const Features2 = () => (
             </div>
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -153,7 +153,7 @@ const Features2 = () => (
             </div>
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-900 text-gray-50">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-gray-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

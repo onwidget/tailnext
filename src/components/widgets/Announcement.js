@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 const Announcement = () => (
   <div className="hidden overflow-hidden text-ellipsis whitespace-nowrap border-b border-blue-900 bg-blue-900 px-3 py-2 text-sm text-gray-200 md:block">
     <span className="bg-blue-800 py-0.5 px-1 text-xs font-semibold">NEW</span>{' '}
-    <a href="/get-started-website-with-next-js-tailwind-css" className="text-gray-100 hover:underline">
+    <a href="/demo-post-1" className="text-gray-100 hover:underline">
       Get started with TailNext to create a website using Next.js and Tailwind CSS »
     </a>
     <a
