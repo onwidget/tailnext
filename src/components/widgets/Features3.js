@@ -50,7 +50,7 @@ const items = [
     href: '#',
   },
   {
-    title: 'Open to new contributions',
+    title: 'Open to new ideas',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
     icon: IconBulb,

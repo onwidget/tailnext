@@ -37,7 +37,7 @@ const Footer = () => (
           key={`item-footer-${index}`}
           className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
         >
-          <h5 className="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</h5>
+          <div className="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</div>
           <p>
             {text[0]}
             <br />
@@ -46,7 +46,7 @@ const Footer = () => (
         </div>
       ))}
       <div className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
-        <h5 className="mb-2 font-medium text-gray-800 dark:text-gray-300">Social</h5>
+        <div className="mb-2 font-medium text-gray-800 dark:text-gray-300">Social</div>
         <ul className="mb-4 -ml-2 flex md:order-1 md:mb-0">
           {social.map(({ label, href, icon: Icon }, index2) => (
             <li key={`social-${index2}`}>
