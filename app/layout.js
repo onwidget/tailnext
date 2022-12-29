@@ -1,20 +1,24 @@
-import '~/styles/base.css'
+import Header from '~/components/widgets/Header';
+import Announcement from '~/components/widgets/Announcement';
+import Footer from '~/components/widgets/Footer';
 
-import { Inter } from '@next/font/google';
+import { Space_Grotesk as CustomFont } from '@next/font/google';
+import '~/assets/styles/base.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
 
 export default function RootLayout({ children }) {
   return (
-    (
-      <html lang="en" className={`motion-safe:scroll-smooth 2xl:text-[24px] font-light ${inter.className}`}>
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </head>
-        <body className="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-          {children}
-        </body>
-      </html>
-    )
+    <html lang="en" className={`motion-safe:scroll-smooth 2xl:text-[24px] ${customFont.variable} font-sans`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
+        <Announcement />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
   );
 }

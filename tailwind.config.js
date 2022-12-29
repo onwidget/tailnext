@@ -11,7 +11,7 @@ module.exports = {
         secondary: colors.blue,
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-custom)', ...defaultTheme.fontFamily.sans],
       },
     },
   },
