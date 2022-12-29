@@ -1,11 +1,8 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import { 
-  IconChevronDown,
-  IconChevronUp 
-} from "@tabler/icons";
+import { IconChevronDown, IconChevronUp } from '@tabler/icons';
 
 const items = [
   {
@@ -41,7 +38,7 @@ const FAQs = () => {
   const [toggle, setToggle] = useState(true);
   const [activeIndex, setActiveIndex] = useState(undefined);
 
-  const handleSetIndex = ((index) => {
+  const handleSetIndex = (index) => {
     if (activeIndex !== index) {
       setActiveIndex(index);
       setToggle(!toggle);
@@ -49,31 +46,52 @@ const FAQs = () => {
       setActiveIndex(undefined);
       setToggle(!toggle);
     }
-  })
+  };
 
-  return(
-    <section className="bg-gray-50 text-gray-800">
-      <div className="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-        <div className="text-center mb-10">
-          <h2 className="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">Frequently Asked Questions</h2>
-          <p className="max-w-3xl mx-auto mt-4 text-xl text-gray-600 dark:text-slate-400">Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.</p>
+  return (
+    <section className="text-gray-800">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mb-10 text-center">
+          <h2 className="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+            Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor
+            scelerisque pulvinar.
+          </p>
         </div>
         <div className="">
-          {items.map(({ question, answer }, index ) => (
-            <div key={`accordion-${index}`} onClick={() => handleSetIndex(index)} className="max-w-3xl mx-auto mb-2 px-5 py-4 rounded-md shadow-md border-gray-400 border bg-transparent font-medium text-base text-gray-700 select-none">
+          {items.map(({ question, answer }, index) => (
+            <div
+              key={`accordion-${index}`}
+              onClick={() => handleSetIndex(index)}
+              className="mx-auto mb-2 max-w-3xl select-none rounded-md border border-gray-300 bg-transparent px-5 py-4 text-base text-gray-700 shadow-md"
+            >
               <div className="py-1 px-3">
-                <div className="flex align-center justify-between" id={`accordion__heading-${index}`} aria-disabled="false" aria-expanded="false" aria-controls={`accordion__panel-${index}`} role="button" tabIndex={index}>
+                <div
+                  className="align-center flex justify-between"
+                  id={`accordion__heading-${index}`}
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  aria-controls={`accordion__panel-${index}`}
+                  role="button"
+                  tabIndex={index}
+                >
                   <h2 className="text-lg font-medium leading-6 text-gray-900">{question}</h2>
                   <>
-                    {(activeIndex === index) ? (
-                      <IconChevronUp className="w-6 h-6 text-primary-600 dark:text-slate-200" />
+                    {activeIndex === index ? (
+                      <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
                     ) : (
-                      <IconChevronDown className="w-6 h-6 text-primary-600 dark:text-slate-200" />
+                      <IconChevronDown className="h-6 w-6 text-primary-600 dark:text-slate-200" />
                     )}
                   </>
                 </div>
-                {(activeIndex === index) && (
-                  <div className="mt-3 select-none" aria-labelledby={`accordion__heading-${index}`} id={`accordion__panel-${index}`}>
+                {activeIndex === index && (
+                  <div
+                    className="mt-3 select-none"
+                    aria-labelledby={`accordion__heading-${index}`}
+                    id={`accordion__panel-${index}`}
+                  >
                     <p className="mt-2 text-gray-600">{answer}</p>
                   </div>
                 )}
@@ -83,7 +101,7 @@ const FAQs = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FAQs
+export default FAQs;

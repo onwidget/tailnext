@@ -1,7 +1,7 @@
 const Logo = (props) => (
-  <span className="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  <span className="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
     TailNext
   </span>
 );
 
-export default Logo
+export default Logo;

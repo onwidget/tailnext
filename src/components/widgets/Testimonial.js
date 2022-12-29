@@ -1,30 +1,31 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import {
-  IconBrandTwitter
-} from "@tabler/icons";
+import { IconBrandTwitter } from '@tabler/icons';
 
 const items = [
   {
-    name: "Tayla Kirsten",
-    occupation: "Marketing Manager",
-    comment: "Suspendisse mollis ante turpis, ut fermentum nulla finibus ac. Integer ut justo id dolor lobortis pharetra. Integer ultrices leo a nunc ullamcorper commodo. In id nulla et nibh pretium pretium non vel metus. Suspendisse dapibus quis lorem sit amet fermentum. Ut a dapibus justo. In faucibus molestie pretium. Cras eros orci, bibendum fringilla elit at, vehicula maximus eros. Aenean placerat aliquet mi, et pellentesque dolor gravida at.",
-    src: " https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-    href: "https://twitter.com/"
+    name: 'Tayla Kirsten',
+    occupation: 'Marketing Manager',
+    comment:
+      'Suspendisse mollis ante turpis, ut fermentum nulla finibus ac. Integer ut justo id dolor lobortis pharetra. Integer ultrices leo a nunc ullamcorper commodo. In id nulla et nibh pretium pretium non vel metus. Suspendisse dapibus quis lorem sit amet fermentum. Ut a dapibus justo. In faucibus molestie pretium. Cras eros orci, bibendum fringilla elit at, vehicula maximus eros. Aenean placerat aliquet mi, et pellentesque dolor gravida at.',
+    src: ' https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    href: 'https://twitter.com/',
   },
   {
-    name: "Silver Jordan",
-    occupation: "Senior Marketer",
-    comment: "Mauris semper enim dolor, ac dictum sapien sollicitudin quis. Quisque id pharetra mi. Phasellus eu posuere lectus, vitae rhoncus velit. Nullam imperdiet purus quis dapibus vestibulum. Integer purus ex, hendrerit at elementum non, varius a nibh. Ut eget convallis mi. Morbi mattis, felis sit amet consectetur scelerisque, odio purus ornare sapien, in feugiat lorem tellus et magna. Pellentesque luctus dolor in ornare mattis.",
-    src: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-    href: "https://twitter.com/"
+    name: 'Silver Jordan',
+    occupation: 'Senior Marketer',
+    comment:
+      'Mauris semper enim dolor, ac dictum sapien sollicitudin quis. Quisque id pharetra mi. Phasellus eu posuere lectus, vitae rhoncus velit. Nullam imperdiet purus quis dapibus vestibulum. Integer purus ex, hendrerit at elementum non, varius a nibh. Ut eget convallis mi. Morbi mattis, felis sit amet consectetur scelerisque, odio purus ornare sapien, in feugiat lorem tellus et magna. Pellentesque luctus dolor in ornare mattis.',
+    src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    href: 'https://twitter.com/',
   },
   {
-    name: "Kelsey Arden",
-    occupation: "Co-Founder & CEO",
-    comment: "Sed malesuada rhoncus arcu, sit amet condimentum leo pharetra feugiat. In augue quam, venenatis nec dui in, auctor tempus libero. Aliquam tempus ex id metus viverra blandit. Proin varius venenatis tortor, a pellentesque enim malesuada a. Aliquam lectus magna, interdum eget odio non, consequat imperdiet ipsum.",
-    src: "https://images.unsplash.com/photo-1596935884413-260a972dab44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    href: "https://twitter.com/"
+    name: 'Kelsey Arden',
+    occupation: 'Co-Founder & CEO',
+    comment:
+      'Sed malesuada rhoncus arcu, sit amet condimentum leo pharetra feugiat. In augue quam, venenatis nec dui in, auctor tempus libero. Aliquam tempus ex id metus viverra blandit. Proin varius venenatis tortor, a pellentesque enim malesuada a. Aliquam lectus magna, interdum eget odio non, consequat imperdiet ipsum.',
+    src: 'https://images.unsplash.com/photo-1596935884413-260a972dab44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+    href: 'https://twitter.com/',
   },
   // {
   //   name: "Kelly Ashley",
@@ -51,39 +52,45 @@ const items = [
 
 const Testimonial = () => (
   <section className="bg-primary-50 dark:bg-slate-800" id="testimonial">
-    <div className="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:pt-20">
-      <div className="text-center mb-4">
-        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-gray-900">What our customers say about us</h2>
-        <p className="max-w-3xl mx-auto mt-4 text-xl text-gray-600">Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.</p>
+    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:pt-20">
+      <div className="mb-4 text-center">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">What our customers say about us</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+          Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet
+          mattis massa.
+        </p>
       </div>
-      <div className="flex justify-center items-stretch">
-        <div className="dark:text-white grid gap-3 grid-cols-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-8">
+      <div className="flex items-stretch justify-center">
+        <div className="mt-8 grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {items.map(({ name, occupation, comment, src, href }, index) => (
-            <div key={`item-feature3-${index}`} className="col-span-3 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 flex">
-              <div className="flex flex-flow card hover:shadow-lg hover:border-b-[3px] border-transparent hover:border-primary-600 hover:transition hover:duration-100">
-                <a 
+            <div
+              key={`item-feature3-${index}`}
+              className="col-span-3 flex sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
+            >
+              <div className="flex-flow card flex border-b-[3px] border-transparent hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
+                <a
                   href={href}
                   target="_blank"
-                  rel="noopener noreferrer" 
+                  rel="noopener noreferrer"
                   key={`item-testimonial-${index}`}
                   className="card-body"
                 >
-                  <div className="flex mb-4">
+                  <div className="mb-4 flex">
                     <Image
                       src={src}
                       width={48}
                       height={48}
                       alt={name}
-                      className="rounded-full shadow-lg w-12 h-12 object-cover mr-4"
+                      className="mr-4 h-12 w-12 rounded-full object-cover shadow-lg"
                     />
                     <div className="text-left">
                       <h3 className="font-semibold">{name}</h3>
                       <span className="">{occupation}</span>
                     </div>
                   </div>
-                  <h6 className="font-light m-b-30">
+                  <h6 className="m-b-30 font-light">
                     {`"${comment.slice(0, 150)}..."`}
-                    <IconBrandTwitter className="w-6 h-6 text-primary-600 dark:text-slate-200 mx-auto mt-4" />  
+                    <IconBrandTwitter className="mx-auto mt-4 h-6 w-6 text-primary-600 dark:text-slate-200" />
                   </h6>
                 </a>
               </div>
@@ -95,4 +102,4 @@ const Testimonial = () => (
   </section>
 );
 
-export default Testimonial
+export default Testimonial;
