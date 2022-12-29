@@ -65,9 +65,11 @@ const Footer = () => (
     <div className="py-6 text-sm text-gray-700 dark:text-slate-400 md:flex md:items-center md:justify-between md:py-8">
       <ul className="mb-4 -ml-2 flex pl-2 md:order-1 md:ml-4 md:mb-0">
         {links.map(({ label, href }, index) => (
-          <a key={`link-${index}`} className="pr-4 hover:text-blue-600 hover:underline" href={href}>
-            {label}
-          </a>
+          <li key={`link-${index}`}>
+            <a className="pr-4 hover:text-blue-600 hover:underline" href={href}>
+              {label}
+            </a>
+          </li>
         ))}
       </ul>
       <div className="mr-4">

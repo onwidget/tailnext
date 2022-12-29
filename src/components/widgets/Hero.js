@@ -50,6 +50,8 @@ const Hero = (props) => (
               width={1024}
               height={576}
               className="mx-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
+              loading='eager'
+              priority
             />
           </div>
         </div>

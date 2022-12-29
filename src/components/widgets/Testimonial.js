@@ -88,10 +88,10 @@ const Testimonial = () => (
                       <span className="">{occupation}</span>
                     </div>
                   </div>
-                  <h6 className="m-b-30 font-light">
+                  <p className="m-b-30 font-light">
                     {`"${comment.slice(0, 150)}..."`}
                     <IconBrandTwitter className="mx-auto mt-4 h-6 w-6 text-primary-600 dark:text-slate-200" />
-                  </h6>
+                  </p>
                 </a>
               </div>
             </div>

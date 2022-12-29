@@ -67,7 +67,7 @@ const Features3 = () => (
           Features
         </p>
         <h2 className="leading-tighter font-heading mb-4 text-4xl font-bold tracking-tighter md:text-5xl">
-          Services provided by <span className="whitespace-nowrap">TailNext</span>
+          What you get with <span className="whitespace-nowrap">TailNext</span>
         </h2>
         <p className="mx-auto max-w-3xl text-xl text-gray-600 dark:text-slate-400 sm:text-center">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa

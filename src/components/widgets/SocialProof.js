@@ -14,10 +14,8 @@ const SocialProof = () => (
             src={nextJsLogo}
             alt="NextJs Logo"
             className="w-12 opacity-50 contrast-0 grayscale md:w-16"
-            // width={500} automatically provided
-            // height={500} automatically provided
-            // blurDataURL="data:..." automatically provided
-            // placeholder="blur" // Optional blur-up while loading
+            width={64}
+            height={64}
           />
         </div>
         <div>
@@ -25,10 +23,8 @@ const SocialProof = () => (
             src={reactLogo}
             alt="React Logo"
             className="w-12 opacity-50 contrast-0 grayscale md:w-16"
-            // width={500} automatically provided
-            // height={500} automatically provided
-            // blurDataURL="data:..." automatically provided
-            // placeholder="blur" // Optional blur-up while loading
+            width={64}
+            height={64}
           />
         </div>
         <div>
@@ -36,10 +32,8 @@ const SocialProof = () => (
             src={tailwindCssLogo}
             alt="Tailwind CSS Logo"
             className="w-12 opacity-50 contrast-0 grayscale md:w-16"
-            // width={500} automatically provided
-            // height={500} automatically provided
-            // blurDataURL="data:..." automatically provided
-            // placeholder="blur" // Optional blur-up while loading
+            width={64}
+            height={64}
           />
         </div>
         <div>
@@ -47,10 +41,8 @@ const SocialProof = () => (
             src={typescriptLogo}
             alt="Typescript Logo"
             className="w-12 opacity-50 grayscale md:w-16"
-            // width={500} automatically provided
-            // height={500} automatically provided
-            // blurDataURL="data:..." automatically provided
-            // placeholder="blur" // Optional blur-up while loading
+            width={64}
+            height={64}
           />
         </div>
       </div>

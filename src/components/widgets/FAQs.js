@@ -75,7 +75,7 @@ const FAQs = () => {
                   aria-expanded="false"
                   aria-controls={`accordion__panel-${index}`}
                   role="button"
-                  tabIndex={index}
+                  tabIndex={0}
                 >
                   <h2 className="text-lg font-medium leading-6 text-gray-900">{question}</h2>
                   <>
