@@ -118,15 +118,15 @@ const Team = () => (
             <div className="relative text-center mt-2">
               <h3 className="text-xl font-bold mb-1.5">{name}</h3>
               <p className="text-base font-medium mb-7 text-gray-600 dark:text-slate-400 capitalize">{occupation}</p>
-              <ul className="absolute block right-[-10px] bottom-[225px] bg-white rounded-md list-none shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+              <ul className="absolute block right-[-10px] bottom-[245px] bg-white dark:bg-slate-800 rounded-md list-none shadow-[0_0_10px_rgba(0,0,0,0.3)]">
                 {links.map(({ href, icon: Icon, ariaLabel }, index) => (
-                  <li key={`team-link-${index}`} className="flex items-center justify-center w-10 h-10 m-1 rounded-sm text-primary-700 hover:text-gray-500">
+                  <li key={`team-link-${index}`} className="flex items-center justify-center m-0.5 rounded text-primary-700 hover:text-gray-500">
                     <a 
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={ariaLabel}
-                      className="border-2 border-primary-700 rounded-sm"
+                      className="flex items-center justify-center rounded-sm bg-primary-900 hover:bg-primary-50 hover:dark:bg-slate-800 text-slate-200 hover:text-primary-900 p-0.5 hover:dark:text-slate-200"
                     >
                       <Icon className="w-8 h-8 p-0.5" />
                     </a>

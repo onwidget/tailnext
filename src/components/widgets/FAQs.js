@@ -52,7 +52,7 @@ const FAQs = () => {
     <section className="text-gray-800">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-10 text-center">
-          <h2 className="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+          <h2 className="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto dark:text-slate-300">
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
@@ -75,9 +75,8 @@ const FAQs = () => {
                   aria-expanded="false"
                   aria-controls={`accordion__panel-${index}`}
                   role="button"
-                  tabIndex={0}
                 >
-                  <h2 className="text-lg font-medium leading-6 text-gray-900">{question}</h2>
+                  <h2 className="text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">{question}</h2>
                   <>
                     {activeIndex === index ? (
                       <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
@@ -92,7 +91,7 @@ const FAQs = () => {
                     aria-labelledby={`accordion__heading-${index}`}
                     id={`accordion__panel-${index}`}
                   >
-                    <p className="mt-2 text-gray-600">{answer}</p>
+                    <p className="mt-2 text-gray-600 dark:text-slate-400">{answer}</p>
                   </div>
                 )}
               </div>
