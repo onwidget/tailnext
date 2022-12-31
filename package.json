@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
-    "@tabler/icons": "^1.118.0",
+    "@tabler/icons": "^1.119.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "^13.1.1",
