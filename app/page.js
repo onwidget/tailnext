@@ -6,6 +6,7 @@ import SocialProof from '../src/components/widgets/SocialProof';
 import Testimonial from '~/components/widgets/Testimonial';
 import FAQs from '~/components/widgets/FAQs';
 import Pricing from '~/components/widgets/Pricing';
+import Team from '~/components/widgets/Team';
 import CallToAction from '~/components/widgets/CallToAction';
 
 export default function Page() {
@@ -19,6 +20,7 @@ export default function Page() {
       <Testimonial />
       <FAQs />
       <Pricing />
+      <Team />
       <CallToAction />
     </>
   );

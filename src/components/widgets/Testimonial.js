@@ -54,8 +54,8 @@ const Testimonial = () => (
   <section className="bg-primary-50 dark:bg-slate-800" id="testimonial">
     <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:pt-20">
       <div className="mb-4 text-center">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">What our customers say about us</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">What our customers say about us</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
           Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet
           mattis massa.
         </p>
@@ -88,7 +88,7 @@ const Testimonial = () => (
                       <span className="">{occupation}</span>
                     </div>
                   </div>
-                  <p className="m-b-30 font-light">
+                  <p className="m-b-30 font-light dark:text-slate-400">
                     {`"${comment.slice(0, 150)}..."`}
                     <IconBrandTwitter className="mx-auto mt-4 h-6 w-6 text-primary-600 dark:text-slate-200" />
                   </p>
