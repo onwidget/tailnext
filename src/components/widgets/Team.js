@@ -10,7 +10,7 @@ const items = [
   {
     name: "Cindy Belcher",
     occupation: "SEO Consultant",
-    src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
+    src: "https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
     links: [
       {
         icon: IconBrandTwitter,
@@ -33,7 +33,7 @@ const items = [
   {
     name: "Toby Foster",
     occupation: "Marketing Tech",
-    src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    src: "https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80",
     links: [
       {
         icon: IconBrandTwitter,
@@ -55,7 +55,7 @@ const items = [
   {
     name: "Clark Bourne",
     occupation: "Content Manager",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    src: "https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
     links: [
       {
         icon: IconBrandTwitter,
@@ -77,7 +77,7 @@ const items = [
   {
     name: "Bella Chase",
     occupation: "UX Designer",
-    src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    src: "https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
     links: [
       {
         icon: IconBrandTwitter,
@@ -113,7 +113,7 @@ const Team = () => (
               width={240}
               height={320}
               alt={name}
-              className="rounded-md shadow-lg w-60 h-72 object-cover"
+              className="rounded-md w-60 h-72 object-cover"
             />
             <div className="relative text-center mt-2">
               <h3 className="text-xl font-bold mb-1.5">{name}</h3>
