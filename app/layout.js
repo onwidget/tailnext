@@ -1,3 +1,4 @@
+import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer from '~/components/widgets/Footer';
@@ -14,10 +15,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
-        <Announcement />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Announcement />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
