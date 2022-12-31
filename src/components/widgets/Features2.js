@@ -89,7 +89,7 @@ const Features2 = () => (
             </div>
           </div>
         </div>
-        <div aria-hidden="true" className="mt-10 md:mt-0">
+        <div aria-hidden="true" className="mt-10 md:mt-0 self-start">
           <Image
             src={cameraFrontImg}
             width={500}
@@ -175,7 +175,7 @@ const Features2 = () => (
             </div>
           </div>
         </div>
-        <div className="mt-10 md:col-start-1 md:row-start-1 md:mt-0">
+        <div className="mt-10 md:col-start-1 md:row-start-1 md:mt-0 self-start">
           <Image
             src={cameraBackImg}
             width={500}
