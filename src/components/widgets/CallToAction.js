@@ -9,15 +9,14 @@ const items = [
     },
     {
       title: 'Learn more',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia.',
+      description: 'Class aptent taciti sociosqu ad litora torquent per conubia.',
       href: '/',
     },
   ],
 ];
 
 const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }) => (
-  <div className="mb-6 rounded-md border-gray-400 px-5 py-4 text-base font-medium text-gray-700 shadow-md bg-primary-50 dark:bg-slate-900">
+  <div className="mb-6 rounded-md border-gray-400 bg-primary-50 px-5 py-4 text-base font-medium text-gray-700 shadow-md dark:bg-slate-900">
     <div className="flex items-center justify-between">
       <div className="w-full">
         <h3 className="mb-3 text-xl font-bold dark:text-white">{cardTitle}</h3>
@@ -57,7 +56,9 @@ const CallToAction = () => (
       <div className="row-gap-10 grid gap-6 md:grid-cols-2">
         <div className="mx-auto md:my-auto md:ml-0 md:pb-6 md:pr-24">
           <h2 className="mb-3 flex justify-center text-6xl font-bold md:justify-start">Join us</h2>
-          <p className="text-center md:text-left text-xl text-gray-200 dark:text-slate-400">Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.</p>
+          <p className="text-center text-xl text-gray-200 dark:text-slate-400 md:text-left">
+            Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.
+          </p>
         </div>
         <div className="relative -mb-6">
           <>

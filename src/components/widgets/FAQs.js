@@ -52,7 +52,7 @@ const FAQs = () => {
     <section className="text-gray-800">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-10 text-center">
-          <h2 className="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto dark:text-slate-300">
+          <h2 className="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight dark:text-slate-300 sm:text-4xl md:mx-auto">
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">

@@ -2,13 +2,13 @@ import fs from 'fs';
 import matter from 'gray-matter';
 
 const load = () => {
-  const files = fs.readdirSync('src/content/blog');
+  const files = fs.readdirSync('data/blog');
 
   const posts = files
     .filter((filename) => filename.endsWith('.md'))
     .map((filename) => {
       const slug = filename.replace('.md', '');
-      const readFile = fs.readFileSync(`src/content/blog/${filename}`, 'utf-8');
+      const readFile = fs.readFileSync(`data/blog/${filename}`, 'utf-8');
       const { data: frontmatter } = matter(readFile);
       return {
         slug,

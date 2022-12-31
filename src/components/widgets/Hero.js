@@ -49,8 +49,8 @@ const Hero = (props) => (
               alt="Hero TailNext"
               width={1024}
               height={576}
-              className="mx-auto w-full rounded-md bg-gray-400 dark:bg-slate-700 h-auto"
-              loading='eager'
+              className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
+              loading="eager"
               priority
             />
           </div>

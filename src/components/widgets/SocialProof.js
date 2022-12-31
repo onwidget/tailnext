@@ -13,7 +13,7 @@ const SocialProof = () => (
           <Image
             src={nextJsLogo}
             alt="NextJs Logo"
-            className="opacity-50 contrast-0 grayscale w-12 md:w-16 h-auto"
+            className="h-auto w-12 opacity-50 contrast-0 grayscale md:w-16"
             width={64}
             height={64}
           />
@@ -22,7 +22,7 @@ const SocialProof = () => (
           <Image
             src={reactLogo}
             alt="React Logo"
-            className="opacity-50 contrast-0 grayscale w-12 md:w-16 h-auto"
+            className="h-auto w-12 opacity-50 contrast-0 grayscale md:w-16"
             width={64}
             height={64}
           />
@@ -31,7 +31,7 @@ const SocialProof = () => (
           <Image
             src={tailwindCssLogo}
             alt="Tailwind CSS Logo"
-            className="opacity-50 contrast-0 grayscale w-12 md:w-16 h-auto"
+            className="h-auto w-12 opacity-50 contrast-0 grayscale md:w-16"
             width={64}
             height={64}
           />
@@ -40,7 +40,7 @@ const SocialProof = () => (
           <Image
             src={typescriptLogo}
             alt="Typescript Logo"
-            className="opacity-50 grayscale w-12 md:w-16 h-auto"
+            className="h-auto w-12 opacity-50 grayscale md:w-16"
             width={64}
             height={64}
           />

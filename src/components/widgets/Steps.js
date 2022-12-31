@@ -83,7 +83,7 @@ const Steps = () => (
           width={432}
           height={768}
           alt="Random image from unplash"
-          className="mx-auto w-full rounded-lg bg-gray-500 shadow-lg h-auto"
+          className="mx-auto h-auto w-full rounded-lg bg-gray-500 shadow-lg"
         />
         {/* <Picture
 				className="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
