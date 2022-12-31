@@ -1,4 +1,4 @@
-import { IconArrowRight, IconMail } from '@tabler/icons';
+import { IconChevronRight, IconMail } from '@tabler/icons';
 
 const items = [
   [
@@ -10,7 +10,7 @@ const items = [
     {
       title: 'Learn more',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum.',
+        'Class aptent taciti sociosqu ad litora torquent per conubia.',
       href: '/',
     },
   ],
@@ -25,7 +25,7 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }) => (
       </div>
       {isCardIcon && (
         <div className="flex h-10 w-10 items-center justify-center">
-          <IconArrowRight className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+          <IconChevronRight className="h-6 w-6 text-primary-600 dark:text-slate-200" />
         </div>
       )}
     </div>

@@ -14,18 +14,18 @@ const items = [
     links: [
       {
         icon: IconBrandTwitter,
-        href: "https://twitter.com/",
+        href: "#",
         ariaLabel: "Know more on Twitter"
       },
       {
         icon: IconBrandLinkedin,
-        href: "https://www.linkedin.com/",
+        href: "#",
         ariaLabel: "Know more on Linkedin"
 
       },
       {
         icon: IconMail,
-        href: "https://www.google.com/intl/es/gmail/about/",
+        href: "#",
         ariaLabel: "Contact by email"
       },
     ]
@@ -37,17 +37,17 @@ const items = [
     links: [
       {
         icon: IconBrandTwitter,
-        href: "https://twitter.com/",
+        href: "#",
         ariaLabel: "Know more on Twitter"
       },
       {
         icon: IconBrandLinkedin,
-        href: "https://www.linkedin.com/",
+        href: "#",
         ariaLabel: "Know more on Linkedin"
       },
       {
         icon: IconMail,
-        href: "https://www.google.com/intl/es/gmail/about/",
+        href: "#",
         ariaLabel: "Contact by email"
       },
     ]
@@ -59,17 +59,17 @@ const items = [
     links: [
       {
         icon: IconBrandTwitter,
-        href: "https://twitter.com/",
+        href: "#",
         ariaLabel: "Know more on Twitter"
       },
       {
         icon: IconBrandLinkedin,
-        href: "https://www.linkedin.com/",
+        href: "#",
         ariaLabel: "Know more on Linkedin"
       },
       {
         icon: IconMail,
-        href: "https://www.google.com/intl/es/gmail/about/",
+        href: "#",
         ariaLabel: "Contact by email"
       },
     ]
@@ -81,17 +81,17 @@ const items = [
     links: [
       {
         icon: IconBrandTwitter,
-        href: "https://twitter.com/",
+        href: "#",
         ariaLabel: "Know more on Twitter"
       },
       {
         icon: IconBrandLinkedin,
-        href: "https://www.linkedin.com/",
+        href: "#",
         ariaLabel: "Know more on Linkedin"
       },
       {
         icon: IconMail,
-        href: "https://www.google.com/intl/es/gmail/about/",
+        href: "#",
         ariaLabel: "Contact by email"
       },
     ]
