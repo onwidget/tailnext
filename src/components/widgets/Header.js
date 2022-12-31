@@ -48,7 +48,7 @@ const Header = (props) => (
             <ToggleDarkMode />
             <a
               className="btn btn-primary ml-4 w-full py-2 px-5 text-sm sm:mb-0"
-              href="https://github.com/onwidget/astrowind"
+              href="https://github.com/onwidget/tailnext"
               target="_blank"
               rel="noopener noreferrer"
             >
