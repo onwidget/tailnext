@@ -54,15 +54,34 @@ Inside **Tailnext** template, you'll see the following folders and files:
 
 ```
 /
+├── app/
+│   ├── (blog)
+│   │   ├── [slug]
+|   |   |   └── page.js
+|   |   └── blog
+|   |       └── page.js
+│   ├── head.js
+│   ├── layout.js
+│   └── page.js
+│── data/
+|   └── blog/
+|       ├── demo-post-1.md
+|       └── ...
 ├── public/
-│   ├── favicon.svg
-│   ├── manifest.json
-│   └── robots.txt
+│   └── favicon.svg
 ├── src/
 │   ├── assets/
 │   │   ├── images/
 |   |   └── styles/
-|   |       └── ..
+|   |       └── base.css
+│   ├── components/
+│   │   ├── atoms/
+|   |   └── widgets/
+|   |       ├── Header.astro
+|   |       ├── Footer.astro
+|   |       └── ...
+│   ├── utils/
+│   └── config.mjs
 ├── package.json
 └── ...
 ```
