@@ -1,44 +1,24 @@
 export const dynamicParams = false;
 
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
 import md from 'markdown-it';
-
 import Image from 'next/image';
-
 import { notFound } from 'next/navigation';
-import { findLatestPosts } from '~/utils/posts';
 
-const postsDirectory = join(process.cwd(), 'data/blog');
+import { findPostBySlug, findLatestPosts } from '~/utils/posts';
+
 const getFormattedDate = (date) => date;
 
 export async function generateStaticParams() {
-  const posts = await findLatestPosts();
-  return posts.map(({ slug }) => ({ slug }));
-}
-
-async function fetchData(params) {
-  const slug = params?.slug;
-  try {
-    const readFile = fs.readFileSync(join(postsDirectory, `${slug}.md`), 'utf-8');
-    const { data: frontmatter, content } = matter(readFile);
-    return {
-      slug,
-      ...frontmatter,
-      content,
-    };
-  } catch (e) {}
-
-  return null;
+  return (await findLatestPosts()).map(({ slug }) => ({ slug }));
 }
 
 export default async function Page({ params }) {
-  const post = await fetchData(params);
+  const post = await findPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
+
   return (
     <section className="mx-auto py-8 sm:py-16 lg:py-20">
       <article>
@@ -57,12 +37,13 @@ export default async function Page({ params }) {
               sizes="(max-width: 900px) 400px, 900px"
               alt={post.description}
               loading="eager"
+              priority
               width={900}
               height={480}
             />
           ) : (
-            <div class="mx-auto max-w-3xl px-4 sm:px-6">
-              <div class="border-t dark:border-slate-700" />
+            <div className="mx-auto max-w-3xl px-4 sm:px-6">
+              <div className="border-t dark:border-slate-700" />
             </div>
           )}
         </header>

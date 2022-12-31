@@ -1,5 +1,7 @@
+const SITE = require('./src/config.js').SITE;
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://tailnext.vercel.app',
+  siteUrl: `${SITE.origin}${SITE.basePathname}`,
   generateRobotsTxt: true,
 };
