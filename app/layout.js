@@ -3,7 +3,7 @@ import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer from '~/components/widgets/Footer';
 
-import { Space_Grotesk as CustomFont } from '@next/font/google';
+import { Inter as CustomFont } from '@next/font/google';
 import '~/assets/styles/base.css';
 
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
