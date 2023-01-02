@@ -2,8 +2,13 @@
 const Announcement = () => (
   <div className="hidden overflow-hidden text-ellipsis whitespace-nowrap border-b border-blue-900 bg-blue-900 px-3 py-2 text-sm text-gray-200 md:block">
     <span className="bg-blue-800 py-0.5 px-1 text-xs font-semibold">NEW</span>{' '}
-    <a href="/demo-post-1" className="text-gray-100 hover:underline">
-      Get started with TailNext to create a website using Next.js and Tailwind CSS »
+    <a
+      href="https://beta.nextjs.org/docs/app-directory-roadmap"
+      target="_blank"
+      rel="noreferrer noopened"
+      className="text-gray-100 hover:underline"
+    >
+      This template is made with Next.js 13 using the new app directory »
     </a>
     <a
       target="_blank"

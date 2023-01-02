@@ -1,44 +1,24 @@
 export const dynamicParams = false;
 
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
 import md from 'markdown-it';
-
 import Image from 'next/image';
-
 import { notFound } from 'next/navigation';
-import { findLatestPosts } from '../../../src/utils/posts';
 
-const postsDirectory = join(process.cwd(), 'src/content/blog');
+import { findPostBySlug, findLatestPosts } from '~/utils/posts';
+
 const getFormattedDate = (date) => date;
 
 export async function generateStaticParams() {
-  const posts = await findLatestPosts();
-  return posts.map(({ slug }) => ({ slug }));
-}
-
-async function fetchData(params) {
-  const slug = params?.slug;
-  try {
-    const readFile = fs.readFileSync(join(postsDirectory, `${slug}.md`), 'utf-8');
-    const { data: frontmatter, content } = matter(readFile);
-    return {
-      slug,
-      ...frontmatter,
-      content,
-    };
-  } catch (e) {}
-
-  return null;
+  return (await findLatestPosts()).map(({ slug }) => ({ slug }));
 }
 
 export default async function Page({ params }) {
-  const post = await fetchData(params);
+  const post = await findPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
+
   return (
     <section className="mx-auto py-8 sm:py-16 lg:py-20">
       <article>
@@ -50,23 +30,22 @@ export default async function Page({ params }) {
           <h1 className="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
             {post.title}
           </h1>
-          {
-				post.image ? (
-					<Image
-						src={post.image}
-						className="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-						sizes="(max-width: 900px) 400px, 900px"
-						alt={post.description}
-						loading="eager"
-						width={900}
-						height={480}
-					/>
-				) : (
-					<div class="max-w-3xl mx-auto px-4 sm:px-6">
-						<div class="border-t dark:border-slate-700" />
-					</div>
-				)
-			}
+          {post.image ? (
+            <Image
+              src={post.image}
+              className="mx-auto mt-4 mb-6 max-w-full bg-gray-400 dark:bg-slate-700 sm:rounded-md lg:max-w-6xl"
+              sizes="(max-width: 900px) 400px, 900px"
+              alt={post.description}
+              loading="eager"
+              priority
+              width={900}
+              height={480}
+            />
+          ) : (
+            <div className="mx-auto max-w-3xl px-4 sm:px-6">
+              <div className="border-t dark:border-slate-700" />
+            </div>
+          )}
         </header>
         <div
           className="prose-md prose-headings:font-heading prose-headings:leading-tighter container prose prose-lg mx-auto mt-8 max-w-3xl px-6 prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-primary-600 prose-img:rounded-md prose-img:shadow-lg dark:prose-invert dark:prose-headings:text-slate-300 dark:prose-a:text-primary-400 sm:px-6 lg:prose-xl"

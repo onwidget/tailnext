@@ -37,6 +37,8 @@ next-env.d.ts
 
 .vscode
 
+package-lock.json
+
 public/sitemap.xml
 public/sitemap-0.xml
 public/robots.txt

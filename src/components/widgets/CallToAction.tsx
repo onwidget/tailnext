@@ -1,4 +1,4 @@
-import { IconArrowRight, IconMail } from '@tabler/icons';
+import { IconChevronRight, IconMail } from '@tabler/icons';
 
 const items = [
   [
@@ -9,8 +9,7 @@ const items = [
     },
     {
       title: 'Learn more',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum.',
+      description: 'Class aptent taciti sociosqu ad litora torquent per conubia.',
       href: '/',
     },
   ],
@@ -24,7 +23,7 @@ export interface CardProps {
 }
 
 const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps) => (
-  <div className="mb-6 rounded-md border-gray-400 px-5 py-4 text-base font-medium text-gray-700 shadow-md bg-primary-50 dark:bg-slate-900">
+  <div className="mb-6 rounded-md border-gray-400 bg-primary-50 px-5 py-4 text-base font-medium text-gray-700 shadow-md dark:bg-slate-900">
     <div className="flex items-center justify-between">
       <div className="w-full">
         <h3 className="mb-3 text-xl font-bold dark:text-white">{cardTitle}</h3>
@@ -32,7 +31,7 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps)
       </div>
       {isCardIcon && (
         <div className="flex h-10 w-10 items-center justify-center">
-          <IconArrowRight className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+          <IconChevronRight className="h-6 w-6 text-primary-600 dark:text-slate-200" />
         </div>
       )}
     </div>
@@ -43,7 +42,12 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps)
             <span className="px-2 py-2">
               <IconMail className="h-6 w-6 text-primary-600" />
             </span>
-            <input type="email" name="EMAIL" placeholder="Enter your email address" className="w-full py-2 pl-2 pr-4" />
+            <input
+              type="email"
+              name="EMAIL"
+              placeholder="Enter your email address"
+              className="w-full py-2 pl-2 pr-4 dark:text-gray-300"
+            />
             <button
               name="subscribe"
               type="submit"
@@ -64,7 +68,9 @@ const CallToAction = () => (
       <div className="row-gap-10 grid gap-6 md:grid-cols-2">
         <div className="mx-auto md:my-auto md:ml-0 md:pb-6 md:pr-24">
           <h2 className="mb-3 flex justify-center text-6xl font-bold md:justify-start">Join us</h2>
-          <p className="text-center md:text-left text-xl text-gray-200 dark:text-slate-400">Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.</p>
+          <p className="text-center text-xl text-gray-200 dark:text-slate-300 md:text-left">
+            Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.
+          </p>
         </div>
         <div className="relative -mb-6">
           <>
