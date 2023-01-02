@@ -47,12 +47,11 @@ const Hero = (props) => (
             <Image
               src={heroImg}
               alt="Hero TailNext"
-              width={1024}
-              height={576}
               className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
               placeholder="blur"
               loading="eager"
               priority
+              sizes="(max-width: 64rem) 100w, 100v"
             />
           </div>
         </div>
