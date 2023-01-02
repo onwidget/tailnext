@@ -35,10 +35,10 @@ const items = [
 ];
 
 const FAQs = () => {
-  const [toggle, setToggle] = useState(true);
-  const [activeIndex, setActiveIndex] = useState(undefined);
+  const [toggle, setToggle] = useState<boolean>(true);
+  const [activeIndex, setActiveIndex] = useState<undefined | number>(undefined);
 
-  const handleSetIndex = (index) => {
+  const handleSetIndex = (index: number) => {
     if (activeIndex !== index) {
       setActiveIndex(index);
       setToggle(!toggle);

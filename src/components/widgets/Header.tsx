@@ -1,9 +1,9 @@
 import { IconBrandGithub } from '@tabler/icons';
-import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
+import ToggleDarkMode from '../atoms/ToggleDarkMode';
 import Link from 'next/link';
-import Logo from '~/components/atoms/Logo.server';
+import Logo from '../atoms/Logo.server';
 
-const Header = (props) => (
+const Header = () => (
   <header className="sticky top-0 z-40 mx-auto w-full flex-none bg-white dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90">
     <div className="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:px-4">
       <div className="flex justify-between">

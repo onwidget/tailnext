@@ -16,7 +16,14 @@ const items = [
   ],
 ];
 
-const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }) => (
+export interface CardProps {
+  cardTitle: string;
+  cardDescription: string;
+  isCardIcon: boolean;
+  isCardForm: boolean;
+}
+
+const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps) => (
   <div className="mb-6 rounded-md border-gray-400 px-5 py-4 text-base font-medium text-gray-700 shadow-md bg-primary-50 dark:bg-slate-900">
     <div className="flex items-center justify-between">
       <div className="w-full">

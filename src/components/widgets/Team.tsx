@@ -141,4 +141,4 @@ const Team = () => (
   </section>
 );
 
-export default Team
+export default Team;

@@ -7,7 +7,11 @@ import '~/assets/styles/base.css';
 
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
 
-export default function RootLayout({ children }) {
+export interface LayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className={`motion-safe:scroll-smooth 2xl:text-[24px] ${customFont.variable} font-sans`}>
       <head>

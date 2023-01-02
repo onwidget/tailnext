@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import heroImg from '~/assets/images/hero.jpg';
 
-const Hero = (props) => (
+const Hero = () => (
   <section>
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
       <div className="py-12 md:py-20">

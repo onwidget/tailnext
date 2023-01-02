@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { IconSun } from '@tabler/icons';
 
-function setTheme(themeName, current = null) {
+function setTheme(themeName: string, current: string) {
   localStorage.setItem('theme', themeName);
   if (current) {
     document.documentElement.classList.remove(current);
