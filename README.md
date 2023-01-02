@@ -2,11 +2,16 @@
 
 **Tailnext** is a free and open-source template to make your website using **[NextJS](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account best practices.
 
+❗ This is a work in progress. We are using **Next.js 13** (**React 18**) with the new [**app directory**](https://beta.nextjs.org/docs/app-directory-roadmap) still in experimental mode.
+
 ## Features
 
 - ✅ Integration with **Tailwind CSS** supporting **Dark mode**.
 - ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed Insights](https://pagespeed.web.dev/) reports.
 - ✅ **Image optimization** and **Font optimization**.
+- ✅ Fast and **SEO friendly blog**.
+- ✅ **Image optimization** and **Font optimization**.
+- ✅ Generation of **project sitemap** and **robots.txt** based on your routes.
 
 <br>
 
@@ -63,10 +68,6 @@ Inside **Tailnext** template, you'll see the following folders and files:
 │   ├── head.js
 │   ├── layout.js
 │   └── page.js
-│── data/
-|   └── blog/
-|       ├── demo-post-1.md
-|       └── ...
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -80,6 +81,10 @@ Inside **Tailnext** template, you'll see the following folders and files:
 |   |       ├── Header.astro
 |   |       ├── Footer.astro
 |   |       └── ...
+│   │── content/
+│   |   └── blog/
+│   |       ├── demo-post-1.md
+│   |       └── ...
 │   ├── utils/
 │   └── config.mjs
 ├── package.json

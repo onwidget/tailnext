@@ -2,22 +2,19 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 
-const BLOG_DIR = join(process.cwd(), 'data/blog');
+const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 
 const load = () => {
-  const files = fs.readdirSync('data/blog');
+  const files = fs.readdirSync(BLOG_DIR);
 
-  const posts = files
-    .filter((filename) => filename.endsWith('.md'))
-    .map((filename) => {
-      const slug = filename.replace('.md', '');
-      const readFile = fs.readFileSync(join(BLOG_DIR, filename), 'utf-8');
-      const { data: frontmatter } = matter(readFile);
-      return {
-        slug,
-        frontmatter,
-      };
-    });
+  const posts = Promise.all(
+    files
+      .filter((filename) => filename.endsWith('.md'))
+      .map(async (filename) => {
+        const slug = filename.replace('.md', '');
+        return await findPostBySlug(slug);
+      }),
+  );
 
   return posts;
 };
