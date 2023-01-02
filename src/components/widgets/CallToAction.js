@@ -35,7 +35,12 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }) => (
             <span className="px-2 py-2">
               <IconMail className="h-6 w-6 text-primary-600" />
             </span>
-            <input type="email" name="EMAIL" placeholder="Enter your email address" className="w-full py-2 pl-2 pr-4" />
+            <input
+              type="email"
+              name="EMAIL"
+              placeholder="Enter your email address"
+              className="w-full py-2 pl-2 pr-4 dark:text-gray-300"
+            />
             <button
               name="subscribe"
               type="submit"
@@ -56,7 +61,7 @@ const CallToAction = () => (
       <div className="row-gap-10 grid gap-6 md:grid-cols-2">
         <div className="mx-auto md:my-auto md:ml-0 md:pb-6 md:pr-24">
           <h2 className="mb-3 flex justify-center text-6xl font-bold md:justify-start">Join us</h2>
-          <p className="text-center text-xl text-gray-200 dark:text-slate-400 md:text-left">
+          <p className="text-center text-xl text-gray-200 dark:text-slate-300 md:text-left">
             Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.
           </p>
         </div>
