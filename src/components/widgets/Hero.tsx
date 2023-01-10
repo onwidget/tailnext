@@ -27,7 +27,7 @@ const Hero = () => (
               <div className="flex w-full sm:w-auto">
                 <a
                   className="btn btn-primary w-full sm:mb-0"
-                  href="https://github.com/onwidget/astrowind"
+                  href="https://github.com/onwidget/tailnext"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
