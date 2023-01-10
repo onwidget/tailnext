@@ -48,7 +48,7 @@ const Testimonial = () => (
               key={`item-feature3-${index}`}
               className="col-span-3 flex sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
             >
-              <div className="flex-flow card flex border-b-[3px] border-transparent hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
+              <div className="flex-flow card text-center flex border-b-[3px] border-transparent hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
                 <a
                   href={href}
                   target="_blank"

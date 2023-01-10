@@ -39,8 +39,8 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps)
       <div className="mt-2">
         <form className="rounded-md border border-gray-400 bg-white shadow-md">
           <div className="flex items-center">
-            <span className="px-2 py-2">
-              <IconMail className="h-6 w-6 text-primary-600" />
+            <span className="px-2 py-2 dark:bg-[#3b3b3b] rounded-tl rounded-bl border-r-[1px] border-gray-400">
+              <IconMail className="h-6 w-6 text-primary-600 dark:text-gray-400" />
             </span>
             <input
               type="email"
@@ -51,7 +51,7 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps)
             <button
               name="subscribe"
               type="submit"
-              className="border-l-[1px] border-gray-400 px-4 py-2 text-primary-600"
+              className="border-l-[1px] border-gray-400 px-4 py-2 bg-primary-600 text-white rounded-tr rounded-br"
             >
               Subscribe
             </button>
@@ -64,7 +64,8 @@ const Card = ({ cardTitle, cardDescription, isCardIcon, isCardForm }: CardProps)
 
 const CallToAction = () => (
   <section className="bg-primary-900 text-gray-200">
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:pt-20">
+
       <div className="row-gap-10 grid gap-6 md:grid-cols-2">
         <div className="mx-auto md:my-auto md:ml-0 md:pb-6 md:pr-24">
           <h2 className="mb-3 flex justify-center text-6xl font-bold md:justify-start">Join us</h2>
