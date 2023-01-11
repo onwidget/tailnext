@@ -13,7 +13,7 @@ export interface CallToActionProps {
   callToAction?: string | CallToAction;
 }
 
-const callToActionOne: CallToActionProps = {
+const callToActionData: CallToActionProps = {
   title: "Next.js + Tailwind CSS",
   subtitle: "Aliquam sodales porttitor lacus ac tristique. Etiam posuere elit at leo feugiat sodales. Sed ac mauris quis sem tempor condimentum non at metus.",
   callToAction: {
@@ -24,7 +24,7 @@ const callToActionOne: CallToActionProps = {
 };
 
 const CallToAction = () => {
-  const { title, subtitle, callToAction } = callToActionOne;
+  const { title, subtitle, callToAction } = callToActionData;
 
   return (
     <section className="relative" id="callToActionOne">

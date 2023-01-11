@@ -26,7 +26,7 @@ export interface CallToActionProps {
   items: Array<Item>;
 }
 
-const callToActionTwo: CallToActionProps = {
+const callToActionData: CallToActionProps = {
   title: "Join us",
   subtitle: "Fusce porttitor, arcu nec rhoncus pulvinar, massa lorem volutpat ante, id scelerisque dui nibh at urna.",
   items: [
@@ -96,7 +96,7 @@ const Card = ({ title, description, href, form }: Item) => (
 );
 
 const CallToAction2 = () => {
-  const { title, subtitle, items } = callToActionTwo;
+  const { title, subtitle, items } = callToActionData;
 
   return (
     <section className="bg-primary-900 text-gray-200" id="callToActionTwo">
