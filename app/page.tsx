@@ -7,7 +7,7 @@ import Testimonial from '~/components/widgets/Testimonial';
 import FAQs from '~/components/widgets/FAQs';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
-import CallToAction from '~/components/widgets/CallToAction';
+import CallToAction2 from '~/components/widgets/CallToAction2';
 
 export default function Page() {
   return (
@@ -21,7 +21,7 @@ export default function Page() {
       <FAQs />
       <Pricing />
       <Team />
-      <CallToAction />
+      <CallToAction2 />
     </>
   );
 }
