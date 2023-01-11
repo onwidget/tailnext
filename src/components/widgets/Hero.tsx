@@ -18,7 +18,7 @@ export interface HeroProps {
   image?: string | any; // TODO: find HTMLElementProps
 }
 
-const hero1: HeroProps = {
+const heroOne: HeroProps = {
   title: <>
           Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
           <span className="sm:whitespace-nowrap">Tailwind CSS</span>
@@ -46,7 +46,7 @@ const hero1: HeroProps = {
 }
 
 const Hero = () => {
-  const { title, subtitle, callToAction, callToAction2, image } = hero1;
+  const { title, subtitle, callToAction, callToAction2, image } = heroOne;
 
   return (
     <section>
