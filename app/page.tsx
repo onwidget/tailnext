@@ -4,10 +4,10 @@ import Steps from '~/components/widgets/Steps';
 import Features2 from '~/components/widgets/Features2';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Testimonial from '~/components/widgets/Testimonial';
-import FAQs from '~/components/widgets/FAQs';
+import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
-import CallToAction from '~/components/widgets/CallToAction';
+import CallToAction2 from '~/components/widgets/CallToAction2';
 
 export default function Page() {
   return (
@@ -18,10 +18,10 @@ export default function Page() {
       <Features2 />
       <Steps />
       <Testimonial />
-      <FAQs />
+      <FAQs2 />
       <Pricing />
       <Team />
-      <CallToAction />
+      <CallToAction2 />
     </>
   );
 }

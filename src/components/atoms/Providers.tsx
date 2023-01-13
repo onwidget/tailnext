@@ -2,7 +2,11 @@
 
 import { ThemeProvider } from 'next-themes';
 
-const Providers = ({ children }) => (
+export interface ProvidersProps {
+  children: React.ReactNode
+}
+
+const Providers = ({ children }: ProvidersProps) => (
   <ThemeProvider attribute="class" disableTransitionOnChange>
     {children}
   </ThemeProvider>

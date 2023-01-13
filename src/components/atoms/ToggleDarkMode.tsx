@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import { IconSun, IconMoon } from '@tabler/icons';
 
 function ToggleDarkMode() {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {

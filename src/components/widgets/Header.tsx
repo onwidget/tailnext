@@ -6,7 +6,7 @@ import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleOnClick = () => {

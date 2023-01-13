@@ -16,7 +16,7 @@
   }
 
   .card {
-    @apply rounded-md border-gray-200 bg-white px-6 pt-10 pb-8 text-center shadow-xl transition duration-300 ease-in-out dark:border dark:border-slate-800 dark:bg-slate-900;
+    @apply rounded-md border-gray-200 bg-white px-6 pt-10 pb-8 shadow-xl transition duration-300 ease-in-out dark:border dark:border-slate-800 dark:bg-slate-900;
   }
 
   .ribbon {
