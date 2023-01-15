@@ -1,7 +1,6 @@
 import Hero from '~/components/widgets/Hero';
 import Features3 from '~/components/widgets/Features3';
 import Steps from '~/components/widgets/Steps';
-import Features2 from '~/components/widgets/Features2';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Testimonial from '~/components/widgets/Testimonial';
 import FAQs2 from '~/components/widgets/FAQs2';
@@ -15,7 +14,6 @@ export default function Page() {
       <Hero />
       <SocialProof />
       <Features3 />
-      <Features2 />
       <Steps />
       <Testimonial />
       <FAQs2 />

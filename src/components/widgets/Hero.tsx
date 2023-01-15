@@ -25,14 +25,15 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {callToAction.icon && callToAction.icon} {callToAction.text}
+                      {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
                     </a>
                   </div>
                 )}
                 {callToAction2 && callToAction2.text && callToAction2.href && (
                   <div className="flex w-full sm:w-auto">
                     <a className="btn w-full" href={callToAction2.href}>
-                      {callToAction2.icon && callToAction2.icon} {callToAction2.text}
+                      {callToAction2.icon && <callToAction2.icon className="mr-1 -ml-1.5 h-5 w-5" />}{' '}
+                      {callToAction2.text}
                     </a>
                   </div>
                 )}

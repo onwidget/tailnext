@@ -27,7 +27,7 @@ const CallToAction = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {callToAction.icon && callToAction.icon} {callToAction.text}
+                    {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
                   </a>
                 </div>
               )

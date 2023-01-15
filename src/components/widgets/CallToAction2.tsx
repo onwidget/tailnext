@@ -1,4 +1,4 @@
-import { IconChevronRight, IconMail } from '@tabler/icons';
+import { IconChevronRight } from '@tabler/icons';
 import { callToActionData } from '~/shared/data';
 import { Item } from '~/shared/types';
 
@@ -19,9 +19,11 @@ const Card = ({ title, description, href, form }: Item) => (
       <div className="mt-2">
         <form className="rounded-md border border-gray-400 bg-white shadow-md">
           <div className="flex items-center">
-            <span className="rounded-tl rounded-bl border-r-[1px] border-gray-400 px-2 py-2 dark:bg-[#3b3b3b]">
-              <IconMail className="h-6 w-6 text-primary-600 dark:text-gray-400" />
-            </span>
+            {form.icon && (
+              <span className="rounded-tl rounded-bl border-r-[1px] border-gray-400 px-2 py-2 dark:bg-[#3b3b3b]">
+                <form.icon className="h-6 w-6 text-primary-600 dark:text-gray-400" />
+              </span>
+            )}
             <input
               type="email"
               name="EMAIL"

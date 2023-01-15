@@ -1,5 +1,14 @@
-import { IconDownload, IconMail } from '@tabler/icons';
-import { CallToActionProps, FAQsProps, HeroProps } from './types';
+import {
+  IconArrowsRightLeft,
+  IconBrandTailwind,
+  IconBulb,
+  IconComponents,
+  IconDownload,
+  IconListCheck,
+  IconMail,
+  IconRocket,
+} from '@tabler/icons';
+import { CallToActionProps, FAQsProps, FeaturesProps, HeroProps } from './types';
 
 import heroImg from '~/assets/images/hero.jpg';
 
@@ -26,7 +35,7 @@ export const heroData: HeroProps = {
   callToAction: {
     text: 'Get template',
     href: 'https://github.com/onwidget/tailnext',
-    icon: <IconDownload className="mr-1 -ml-1.5 h-5 w-5" />,
+    icon: IconDownload,
   },
   callToAction2: {
     text: 'Learn more',
@@ -77,7 +86,7 @@ export const callToActionData: CallToActionProps = {
   callToAction: {
     text: 'Get template',
     href: 'https://github.com/onwidget/tailnext',
-    icon: <IconDownload className="mr-1 -ml-1.5 h-5 w-5" />,
+    icon: IconDownload,
   },
   items: [
     {
@@ -95,12 +104,74 @@ export const callToActionData: CallToActionProps = {
       description: 'Morbi orci nunc, euismod ac dui id, convallis.',
       form: {
         placeholder: 'Enter your email address',
-        icon: <IconMail className="h-6 w-6 text-primary-600 dark:text-gray-400" />,
+        icon: IconMail,
         callToAction: {
           text: 'Subscribe',
           href: 'https://github.com/onwidget/tailnext',
         },
       },
+    },
+  ],
+};
+
+// Feature data
+export const featuresData: FeaturesProps = {
+  title: (
+    <>
+      What you get with <span className="whitespace-nowrap">TailNext</span>
+    </>
+  ),
+  subtitle:
+    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
+  highlight: 'Features',
+  items: [
+    {
+      title: 'Next.Js + Tailwind CSS Integration',
+      description:
+        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+      icon: IconBrandTailwind,
+      btn: 'Discover now',
+      href: '#',
+    },
+    {
+      title: 'Ready-to-use Components',
+      description:
+        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+      icon: IconComponents,
+      btn: 'Discover now',
+      href: '#',
+    },
+    {
+      title: 'Best Practices',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconListCheck,
+      btn: 'Discover now',
+      href: '#',
+    },
+    {
+      title: 'Excellent Page Speed',
+      description:
+        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+      icon: IconRocket,
+      btn: 'Discover now',
+      href: '#',
+    },
+    {
+      title: 'Search Engine Optimization (SEO)',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconArrowsRightLeft,
+      btn: 'Discover now',
+      href: '#',
+    },
+    {
+      title: 'Open to new ideas and contributions',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconBulb,
+      btn: 'Discover now',
+      href: '#',
     },
   ],
 };
