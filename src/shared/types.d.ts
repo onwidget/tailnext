@@ -14,7 +14,7 @@ interface SmallForm {
 
 interface Item {
   title: string;
-  description: string;
+  description?: string;
   href?: string;
   form?: SmallForm;
   icon?: Function;
@@ -48,4 +48,15 @@ interface FeaturesProps {
   subtitle?: string;
   highlight?: string;
   items: Array<Item>;
+}
+
+interface ContentProps {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  content?: string;
+  items?: Array<Item>;
+  image?: string | any; // TODO: find HTMLElementProps
+  isReversed?: boolean;
+  isAfterContent?: boolean;
 }

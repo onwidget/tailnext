@@ -8,8 +8,10 @@ import {
   IconMail,
   IconRocket,
 } from '@tabler/icons';
-import { CallToActionProps, FAQsProps, FeaturesProps, HeroProps } from './types';
+import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps } from './types';
 
+import cameraFrontImg from '~/assets/images/camera-front.jpg';
+import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
 
 // Hero data
@@ -174,4 +176,68 @@ export const featuresData: FeaturesProps = {
       href: '#',
     },
   ],
+};
+
+// Content data
+export const contentData: ContentProps = {
+  highlight: 'Content',
+  title: 'Aliquip definiebas ad est',
+  subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
+  content:
+    'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
+  items: [
+    {
+      title: 'Per ei quaeque sensibus',
+      description:
+        'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    },
+    {
+      title: 'Cu imperdiet posidonium sed',
+      description:
+        'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+    },
+    {
+      title: 'Nulla omittam sadipscing mel ne',
+      description:
+        'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    },
+  ],
+  image: {
+    src: cameraFrontImg,
+    alt: 'Colorful Image',
+  },
+  isReversed: false,
+  isAfterContent: false,
+};
+
+// Content2 data
+export const content2Data: ContentProps = {
+  content:
+    'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
+  items: [
+    {
+      title: 'Per ei quaeque sensibus',
+    },
+    {
+      title: 'Cu imperdiet posidonium sed',
+    },
+    {
+      title: 'Nulla omittam sadipscing mel ne',
+    },
+    {
+      title: 'Per ei quaeque sensibus',
+    },
+    {
+      title: 'Cu imperdiet posidonium sed',
+    },
+    {
+      title: 'Nulla omittam sadipscing mel ne',
+    },
+  ],
+  image: {
+    src: cameraBackImg,
+    alt: 'Colorful Image',
+  },
+  isReversed: true,
+  isAfterContent: true,
 };
