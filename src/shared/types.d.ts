@@ -3,20 +3,22 @@ import { ReactElement } from 'react';
 interface CallToAction {
   text: string;
   href: string;
-  icon?: string | ReactElement;
+  icon?: Function;
 }
 
 interface SmallForm {
   placeholder: string;
-  icon?: string | ReactElement;
+  icon?: Function;
   callToAction: CallToAction;
 }
 
 interface Item {
   title: string;
-  description: string;
+  description?: string;
   href?: string;
   form?: SmallForm;
+  icon?: Function;
+  btn?: string;
 }
 
 interface HeroProps {
@@ -39,4 +41,22 @@ interface CallToActionProps {
   subtitle: string;
   callToAction?: string | CallToAction;
   items?: Array<Item>;
+}
+
+interface FeaturesProps {
+  title?: string | ReactElement;
+  subtitle?: string;
+  highlight?: string;
+  items: Array<Item>;
+}
+
+interface ContentProps {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  content?: string;
+  items?: Array<Item>;
+  image?: string | any; // TODO: find HTMLElementProps
+  isReversed?: boolean;
+  isAfterContent?: boolean;
 }
