@@ -1,18 +1,21 @@
 import {
+  IconArrowDown,
   IconArrowsRightLeft,
   IconBrandTailwind,
   IconBulb,
+  IconCheck,
   IconComponents,
   IconDownload,
   IconListCheck,
   IconMail,
   IconRocket,
 } from '@tabler/icons';
-import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps } from './types';
+import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps, StepsProps } from './types';
 
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
+import gasImg from '~/assets/images/gas.jpg';
 
 // Hero data
 export const heroData: HeroProps = {
@@ -240,4 +243,37 @@ export const content2Data: ContentProps = {
   },
   isReversed: true,
   isAfterContent: true,
+};
+
+// Steps data
+export const stepsData: StepsProps = {
+  title: 'Sed ac magna sit amet risus tristique interdum. hac.',
+  items: [
+    {
+      title: 'Step 1',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
+      icon: IconArrowDown,
+    },
+    {
+      title: 'Step 2',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+      icon: IconArrowDown,
+    },
+    {
+      title: 'Step 3',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+      icon: IconArrowDown,
+    },
+    {
+      title: 'Ready!',
+      icon: IconCheck,
+    },
+  ],
+  image: {
+    src: gasImg,
+    alt: 'Steps image',
+  },
 };

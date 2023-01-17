@@ -60,3 +60,9 @@ interface ContentProps {
   isReversed?: boolean;
   isAfterContent?: boolean;
 }
+
+export interface StepsProps {
+  title?: string;
+  items: Array<Item>;
+  image?: string | any; // TODO: find HTMLElementProps
+}
