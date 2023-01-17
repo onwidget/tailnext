@@ -1,7 +1,9 @@
 import {
   IconArrowDown,
   IconArrowsRightLeft,
+  IconBrandLinkedin,
   IconBrandTailwind,
+  IconBrandTwitter,
   IconBulb,
   IconCheck,
   IconComponents,
@@ -10,7 +12,7 @@ import {
   IconMail,
   IconRocket,
 } from '@tabler/icons';
-import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps, StepsProps } from './types';
+import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps, StepsProps, TeamProps } from './types';
 
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
@@ -276,4 +278,114 @@ export const stepsData: StepsProps = {
     src: gasImg,
     alt: 'Steps image',
   },
+};
+
+// Team data
+export const teamData: TeamProps = {
+  title: 'Team Members',
+  subtitle:
+    'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
+  highlight: 'Team',
+  teams: [
+    {
+      name: 'Cindy Belcher',
+      occupation: 'SEO Consultant',
+      image: {
+        src: 'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: 'Cindy Belcher',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Toby Foster',
+      occupation: 'Marketing Tech',
+      image: {
+        src: 'https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80',
+        alt: 'Toby Foster',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Clark Bourne',
+      occupation: 'Content Manager',
+      image: {
+        src: 'https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Clark Bourne',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Bella Chase',
+      occupation: 'UX Designer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Bella Chase',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+  ],
 };
