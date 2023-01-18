@@ -80,3 +80,9 @@ interface TeamProps {
   highlight: string;
   teams: Array<Team>;
 }
+
+interface AnnouncementProps {
+  title: string;
+  callToAction?: CallToAction;
+  callToAction2?: CallToAction;
+}

@@ -12,12 +12,34 @@ import {
   IconMail,
   IconRocket,
 } from '@tabler/icons';
-import { CallToActionProps, ContentProps, FAQsProps, FeaturesProps, HeroProps, StepsProps, TeamProps } from './types';
+import {
+  AnnouncementProps,
+  CallToActionProps,
+  ContentProps,
+  FAQsProps,
+  FeaturesProps,
+  HeroProps,
+  StepsProps,
+  TeamProps,
+} from './types';
 
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
 import gasImg from '~/assets/images/gas.jpg';
+
+// Announcement data
+export const announcementData: AnnouncementProps = {
+  title: 'NEW',
+  callToAction: {
+    text: 'This template is made with Next.js 13 using the new app directory »',
+    href: 'https://beta.nextjs.org/docs/app-directory-roadmap',
+  },
+  callToAction2: {
+    text: 'Follow @onWidget on Twitter',
+    href: 'https://twitter.com/intent/user?screen_name=onwidget',
+  },
+};
 
 // Hero data
 export const heroData: HeroProps = {
