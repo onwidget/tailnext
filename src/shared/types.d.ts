@@ -24,8 +24,17 @@ interface Item {
 interface Team {
   name: string;
   occupation: string;
+  image: string | any; // TODO: find HTMLElementProps
+  items?: Array<Item>;
+}
+
+interface Testimonial {
+  name: string;
+  occupation: string;
+  comment: string;
   image?: string | any; // TODO: find HTMLElementProps
-  items: Array<Item>;
+  icon?: Function;
+  href?: string;
 }
 
 interface HeroProps {
@@ -85,4 +94,11 @@ interface AnnouncementProps {
   title: string;
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
+}
+
+interface TestimonialProps {
+  title: string;
+  subtitle: string;
+  highlight: string;
+  testimonials: Array<Testimonial>;
 }

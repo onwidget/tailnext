@@ -30,7 +30,7 @@ const FAQs2 = () => {
             </p>
           )}
           {title && (
-            <h2 className="font-heading mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+            <h2 className="font-heading mb-4 text-3xl font-bold leading-none tracking-tight sm:text-5xl md:mx-auto">
               {title}
             </h2>
           )}
