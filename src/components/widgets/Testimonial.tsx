@@ -28,7 +28,7 @@ const Testimonial = () => {
           )}
         </div>
         <div className="flex items-stretch justify-center">
-          <div className="mt-8 grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {testimonials.map(({ name, occupation, comment, image, icon: Icon, href }, index) => (
               <div
                 key={`item-testimonial-${index}`}

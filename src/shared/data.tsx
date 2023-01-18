@@ -19,6 +19,7 @@ import {
   FAQsProps,
   FeaturesProps,
   HeroProps,
+  PricingProps,
   StepsProps,
   TeamProps,
   TestimonialProps,
@@ -455,6 +456,51 @@ export const testimonialData: TestimonialProps = {
       },
       icon: IconBrandTwitter,
       href: '#',
+    },
+  ],
+};
+
+// Pricing data
+export const pricingData: PricingProps = {
+  title: 'Pricing for every business',
+  subtitle:
+    'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
+  highlight: 'Pricing',
+  prices: [
+    {
+      title: 'basic',
+      value: 29,
+      period: 'per month',
+      texts: [
+        'Etiam in libero',
+        'Aenean ac nunc',
+        'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
+        'In hac habitasse',
+      ],
+      btnText: 'free 7-day trial',
+      hasRibbon: false,
+    },
+    {
+      title: 'standard',
+      value: 69,
+      period: 'per month',
+      texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
+      btnText: 'free 15-day trial',
+      hasRibbon: true,
+      ribbonText: 'Popular',
+    },
+    {
+      title: 'pro',
+      value: 199,
+      period: 'per month',
+      texts: [
+        'Curabitur suscipit risus',
+        'Aliquam blandit malesuada',
+        'Suspendisse sit amet',
+        'Suspendisse auctor dui',
+      ],
+      btnText: 'free 30-day trial',
+      hasRibbon: false,
     },
   ],
 };

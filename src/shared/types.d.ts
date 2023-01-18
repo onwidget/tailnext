@@ -37,6 +37,16 @@ interface Testimonial {
   href?: string;
 }
 
+interface Price {
+  title: string;
+  value: number;
+  period?: string;
+  texts?: Array<string>;
+  btnText?: string;
+  hasRibbon?: boolean;
+  ribbonText?: string;
+}
+
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -101,4 +111,11 @@ interface TestimonialProps {
   subtitle: string;
   highlight: string;
   testimonials: Array<Testimonial>;
+}
+
+interface PricingProps {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  prices: Array<Price>;
 }
