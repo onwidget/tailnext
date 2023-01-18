@@ -20,6 +20,7 @@ import {
   FeaturesProps,
   HeroProps,
   PricingProps,
+  SocialProofProps,
   StepsProps,
   TeamProps,
   TestimonialProps,
@@ -29,6 +30,10 @@ import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
 import gasImg from '~/assets/images/gas.jpg';
+import nextJsLogo from '~/assets/images/nextjs-logo.png';
+import reactLogo from '~/assets/images/react-logo.png';
+import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
+import typescriptLogo from '~/assets/images/typescript-logo.png';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
@@ -72,7 +77,32 @@ export const heroData: HeroProps = {
     text: 'Learn more',
     href: '/',
   },
-  image: heroImg,
+  image: {
+    src: heroImg,
+    alt: 'Hero TailNext',
+  },
+};
+
+// SocialProof data
+export const socialProofData: SocialProofProps = {
+  images: [
+    {
+      src: nextJsLogo,
+      alt: 'NextJs Logo',
+    },
+    {
+      src: reactLogo,
+      alt: 'React Logo',
+    },
+    {
+      src: tailwindCssLogo,
+      alt: 'Tailwind CSS Logo',
+    },
+    {
+      src: typescriptLogo,
+      alt: 'Typescript Logo',
+    },
+  ],
 };
 
 // FAQS data
