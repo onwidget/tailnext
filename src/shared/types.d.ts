@@ -21,6 +21,13 @@ interface Item {
   btn?: string;
 }
 
+interface Team {
+  name: string;
+  occupation: string;
+  image?: string | any; // TODO: find HTMLElementProps
+  items: Array<Item>;
+}
+
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -59,4 +66,23 @@ interface ContentProps {
   image?: string | any; // TODO: find HTMLElementProps
   isReversed?: boolean;
   isAfterContent?: boolean;
+}
+
+interface StepsProps {
+  title?: string;
+  items: Array<Item>;
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+interface TeamProps {
+  title: string;
+  subtitle: string;
+  highlight: string;
+  teams: Array<Team>;
+}
+
+interface AnnouncementProps {
+  title: string;
+  callToAction?: CallToAction;
+  callToAction2?: CallToAction;
 }

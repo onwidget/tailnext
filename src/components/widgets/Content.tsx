@@ -39,7 +39,7 @@ const Content: FC<ContentProps> = ({
               {items.map(({ title, description }, index) => (
                 <div key={`item-content-${index}`} className="flex">
                   <div className="flex-shrink-0">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-800 text-gray-50">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-900 text-gray-50">
                       <IconCheck className="h-5 w-5" />
                     </div>
                   </div>
