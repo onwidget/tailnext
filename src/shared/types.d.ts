@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
 
 interface CallToAction {
@@ -6,24 +7,42 @@ interface CallToAction {
   icon?: Function;
 }
 
+interface Button {
+  title: string;
+  type: 'button' | 'submit' | 'reset' | undefined;
+}
+
+interface Input {
+  type: string;
+  name: string;
+  placeholder?: string;
+}
+
 interface SmallForm {
-  placeholder: string;
   icon?: Function;
-  callToAction: CallToAction;
+  input: Input;
+  btn: Button;
+}
+
+interface Form {
+  title?: string;
+  description?: string;
+  inputs: Array<Input>;
+  btn: Button;
+}
+
+interface Image {
+  src: string | StaticImageData;
+  alt: string;
 }
 
 interface Item {
   title: string;
-  description?: string;
+  description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
   icon?: Function;
-  btn?: string;
-}
-
-interface Image {
-  src: string | any; // TODO: find HTMLElementProps
-  alt: string;
+  callToAction?: CallToAction;
 }
 
 interface Team {
@@ -70,7 +89,7 @@ interface FAQsProps {
 interface CallToActionProps {
   title: string;
   subtitle: string;
-  callToAction?: string | CallToAction;
+  callToAction?: CallToAction;
   items?: Array<Item>;
 }
 
@@ -127,4 +146,13 @@ interface PricingProps {
 
 interface SocialProofProps {
   images: Array<Image>;
+}
+
+interface ContactProps {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  content?: string;
+  items: Array<Item>;
+  form: Form;
 }

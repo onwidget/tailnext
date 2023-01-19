@@ -55,18 +55,14 @@ const Content: FC<ContentProps> = ({
         <div aria-hidden="true" className="mt-10 md:mt-0 md:basis-1/2">
           {image && (
             <div className="relative m-auto max-w-4xl">
-              {typeof image === 'string' ? (
-                <Fragment>{image}</Fragment>
-              ) : (
-                <Image
-                  src={image.src}
-                  width={500}
-                  height={500}
-                  alt={image.alt}
-                  sizes="(max-width: 768px) 100vw, 432px"
-                  className="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
-                />
-              )}
+              <Image
+                src={image.src}
+                width={500}
+                height={500}
+                alt={image.alt}
+                sizes="(max-width: 768px) 100vw, 432px"
+                className="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+              />
             </div>
           )}
         </div>

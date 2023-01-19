@@ -14,23 +14,17 @@ const CallToAction = () => {
               </h2>
             )}
             {subtitle && <p className="text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
-            {typeof callToAction === 'string' ? (
-              <>{callToAction}</>
-            ) : (
-              callToAction &&
-              callToAction.text &&
-              callToAction.href && (
-                <div className="mx-auto mt-6 max-w-xs">
-                  <a
-                    className="btn btn-primary w-full sm:w-auto"
-                    href={callToAction.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
-                  </a>
-                </div>
-              )
+            {callToAction && callToAction.text && callToAction.href && (
+              <div className="mx-auto mt-6 max-w-xs">
+                <a
+                  className="btn btn-primary w-full sm:w-auto"
+                  href={callToAction.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
+                </a>
+              </div>
             )}
           </div>
         </div>

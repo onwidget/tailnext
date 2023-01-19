@@ -24,7 +24,7 @@ const Features3 = () => {
           </div>
         )}
         <div className="mb-0 grid grid-cols-3 items-start gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {items.map(({ title, description, icon: Icon, href, btn }, index) => (
+          {items.map(({ title, description, icon: Icon, callToAction }, index) => (
             <div
               key={`item-feature3-${index}`}
               className="col-span-3 pb-6 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
@@ -40,11 +40,16 @@ const Features3 = () => {
                     <h3 className="mb-3 text-xl font-bold">{title}</h3>
                     <p className="text-gray-600 dark:text-slate-400">{description}</p>
                   </>
-                  <div className="pt-2">
-                    <a className="flex font-bold text-blue-600 hover:underline dark:text-gray-200" href={href}>
-                      {btn}
-                    </a>
-                  </div>
+                  {callToAction && (
+                    <div className="pt-2">
+                      <a
+                        className="flex font-bold text-blue-600 hover:underline dark:text-gray-200"
+                        href={callToAction.href}
+                      >
+                        {callToAction.text}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

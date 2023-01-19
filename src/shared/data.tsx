@@ -6,15 +6,19 @@ import {
   IconBrandTwitter,
   IconBulb,
   IconCheck,
+  IconClock,
   IconComponents,
   IconDownload,
   IconListCheck,
   IconMail,
+  IconMapPin,
+  IconPhoneCall,
   IconRocket,
 } from '@tabler/icons';
 import {
   AnnouncementProps,
   CallToActionProps,
+  ContactProps,
   ContentProps,
   FAQsProps,
   FeaturesProps,
@@ -164,11 +168,15 @@ export const callToActionData: CallToActionProps = {
       title: 'Subscribe',
       description: 'Morbi orci nunc, euismod ac dui id, convallis.',
       form: {
-        placeholder: 'Enter your email address',
         icon: IconMail,
-        callToAction: {
-          text: 'Subscribe',
-          href: 'https://github.com/onwidget/tailnext',
+        input: {
+          type: 'email',
+          name: 'email',
+          placeholder: 'Enter your email address',
+        },
+        btn: {
+          title: 'Subscribe',
+          type: 'submit',
         },
       },
     },
@@ -191,48 +199,60 @@ export const featuresData: FeaturesProps = {
       description:
         'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
       icon: IconBrandTailwind,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
     {
       title: 'Ready-to-use Components',
       description:
         'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
       icon: IconComponents,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
     {
       title: 'Best Practices',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconListCheck,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
     {
       title: 'Excellent Page Speed',
       description:
         'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
       icon: IconRocket,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
     {
       title: 'Search Engine Optimization (SEO)',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconArrowsRightLeft,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
     {
       title: 'Open to new ideas and contributions',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconBulb,
-      btn: 'Discover now',
-      href: '#',
+      callToAction: {
+        text: 'Discover now',
+        href: '/',
+      },
     },
   ],
 };
@@ -533,4 +553,49 @@ export const pricingData: PricingProps = {
       hasRibbon: false,
     },
   ],
+};
+
+// Contact data
+export const contactData: ContactProps = {
+  title: 'Get in Touch',
+  subtitle: 'In hac habitasse platea dictumst',
+  highlight: 'Contact',
+  content:
+    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
+  items: [
+    {
+      title: 'Our Address',
+      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      icon: IconMapPin,
+    },
+    {
+      title: 'Contact',
+      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      icon: IconPhoneCall,
+    },
+    {
+      title: 'Working hours',
+      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+      icon: IconClock,
+    },
+  ],
+  form: {
+    title: 'Ready to Get Started?',
+    inputs: [
+      {
+        type: 'text',
+        name: 'name',
+        placeholder: 'Your name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        placeholder: 'Your email address',
+      },
+    ],
+    btn: {
+      title: 'Send Message',
+      type: 'submit',
+    },
+  },
 };
