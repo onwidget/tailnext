@@ -43,8 +43,8 @@ const Hero = () => {
           {image && (
             <div className="relative m-auto max-w-5xl">
               <Image
-                src={image}
-                alt="Hero TailNext"
+                src={image.src}
+                alt={image.alt}
                 className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
                 placeholder="blur"
                 loading="eager"

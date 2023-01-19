@@ -19,14 +19,21 @@ import {
   FAQsProps,
   FeaturesProps,
   HeroProps,
+  PricingProps,
+  SocialProofProps,
   StepsProps,
   TeamProps,
+  TestimonialProps,
 } from './types';
 
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
 import gasImg from '~/assets/images/gas.jpg';
+import nextJsLogo from '~/assets/images/nextjs-logo.png';
+import reactLogo from '~/assets/images/react-logo.png';
+import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
+import typescriptLogo from '~/assets/images/typescript-logo.png';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
@@ -70,7 +77,32 @@ export const heroData: HeroProps = {
     text: 'Learn more',
     href: '/',
   },
-  image: heroImg,
+  image: {
+    src: heroImg,
+    alt: 'Hero TailNext',
+  },
+};
+
+// SocialProof data
+export const socialProofData: SocialProofProps = {
+  images: [
+    {
+      src: nextJsLogo,
+      alt: 'NextJs Logo',
+    },
+    {
+      src: reactLogo,
+      alt: 'React Logo',
+    },
+    {
+      src: tailwindCssLogo,
+      alt: 'Tailwind CSS Logo',
+    },
+    {
+      src: typescriptLogo,
+      alt: 'Typescript Logo',
+    },
+  ],
 };
 
 // FAQS data
@@ -408,6 +440,97 @@ export const teamData: TeamProps = {
           href: '#',
         },
       ],
+    },
+  ],
+};
+
+// Testimonial data
+export const testimonialData: TestimonialProps = {
+  title: 'What our customers say about us',
+  subtitle:
+    'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
+  highlight: 'Testimonial',
+  testimonials: [
+    {
+      name: 'Tayla Kirsten',
+      occupation: 'Marketing Manager',
+      comment:
+        'Suspendisse mollis ante turpis, ut fermentum nulla finibus ac. Integer ut justo id dolor lobortis pharetra. Integer ultrices leo a nunc ullamcorper commodo. In id nulla et nibh pretium pretium non vel metus. Suspendisse dapibus quis lorem sit amet fermentum. Ut a dapibus justo. In faucibus molestie pretium. Cras eros orci, bibendum fringilla elit at, vehicula maximus eros. Aenean placerat aliquet mi, et pellentesque dolor gravida at.',
+      image: {
+        src: 'https://images.unsplash.com/photo-1619734086067-24bf8889ea7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: '',
+      },
+      icon: IconBrandTwitter,
+      href: '#',
+    },
+    {
+      name: 'Silver Jordan',
+      occupation: 'Senior Marketer',
+      comment:
+        'Mauris semper enim dolor, ac dictum sapien sollicitudin quis. Quisque id pharetra mi. Phasellus eu posuere lectus, vitae rhoncus velit. Nullam imperdiet purus quis dapibus vestibulum. Integer purus ex, hendrerit at elementum non, varius a nibh. Ut eget convallis mi. Morbi mattis, felis sit amet consectetur scelerisque, odio purus ornare sapien, in feugiat lorem tellus et magna. Pellentesque luctus dolor in ornare mattis.',
+      image: {
+        src: 'https://images.unsplash.com/photo-1565049786474-1dea82a8b995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: '',
+      },
+      icon: IconBrandTwitter,
+      href: '#',
+    },
+    {
+      name: 'Kelsey Arden',
+      occupation: 'Co-Founder & CEO',
+      comment:
+        'Sed malesuada rhoncus arcu, sit amet condimentum leo pharetra feugiat. In augue quam, venenatis nec dui in, auctor tempus libero. Aliquam tempus ex id metus viverra blandit. Proin varius venenatis tortor, a pellentesque enim malesuada a. Aliquam lectus magna, interdum eget odio non, consequat imperdiet ipsum.',
+      image: {
+        src: 'https://images.unsplash.com/photo-1659057106920-da022cfbc0cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: '',
+      },
+      icon: IconBrandTwitter,
+      href: '#',
+    },
+  ],
+};
+
+// Pricing data
+export const pricingData: PricingProps = {
+  title: 'Pricing for every business',
+  subtitle:
+    'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
+  highlight: 'Pricing',
+  prices: [
+    {
+      title: 'basic',
+      value: 29,
+      period: 'per month',
+      texts: [
+        'Etiam in libero',
+        'Aenean ac nunc',
+        'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
+        'In hac habitasse',
+      ],
+      btnText: 'free 7-day trial',
+      hasRibbon: false,
+    },
+    {
+      title: 'standard',
+      value: 69,
+      period: 'per month',
+      texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
+      btnText: 'free 15-day trial',
+      hasRibbon: true,
+      ribbonText: 'Popular',
+    },
+    {
+      title: 'pro',
+      value: 199,
+      period: 'per month',
+      texts: [
+        'Curabitur suscipit risus',
+        'Aliquam blandit malesuada',
+        'Suspendisse sit amet',
+        'Suspendisse auctor dui',
+      ],
+      btnText: 'free 30-day trial',
+      hasRibbon: false,
     },
   ],
 };

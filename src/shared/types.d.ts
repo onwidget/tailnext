@@ -21,11 +21,35 @@ interface Item {
   btn?: string;
 }
 
+interface Image {
+  src: string | any; // TODO: find HTMLElementProps
+  alt: string;
+}
+
 interface Team {
   name: string;
   occupation: string;
-  image?: string | any; // TODO: find HTMLElementProps
-  items: Array<Item>;
+  image: Image;
+  items?: Array<Item>;
+}
+
+interface Testimonial {
+  name: string;
+  occupation: string;
+  comment: string;
+  image?: Image;
+  icon?: Function;
+  href?: string;
+}
+
+interface Price {
+  title: string;
+  value: number;
+  period?: string;
+  texts?: Array<string>;
+  btnText?: string;
+  hasRibbon?: boolean;
+  ribbonText?: string;
 }
 
 interface HeroProps {
@@ -33,7 +57,7 @@ interface HeroProps {
   subtitle?: string | ReactElement;
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
-  image?: string | any; // TODO: find HTMLElementProps
+  image?: Image;
 }
 
 interface FAQsProps {
@@ -63,7 +87,7 @@ interface ContentProps {
   highlight?: string;
   content?: string;
   items?: Array<Item>;
-  image?: string | any; // TODO: find HTMLElementProps
+  image?: Image;
   isReversed?: boolean;
   isAfterContent?: boolean;
 }
@@ -71,7 +95,7 @@ interface ContentProps {
 interface StepsProps {
   title?: string;
   items: Array<Item>;
-  image?: string | any; // TODO: find HTMLElementProps
+  image?: Image;
 }
 
 interface TeamProps {
@@ -85,4 +109,22 @@ interface AnnouncementProps {
   title: string;
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
+}
+
+interface TestimonialProps {
+  title: string;
+  subtitle: string;
+  highlight: string;
+  testimonials: Array<Testimonial>;
+}
+
+interface PricingProps {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  prices: Array<Price>;
+}
+
+interface SocialProofProps {
+  images: Array<Image>;
 }

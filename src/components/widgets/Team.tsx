@@ -22,7 +22,7 @@ const Team = () => {
         )}
       </div>
       <div className="flex items-stretch justify-center">
-        <div className="mt-8 grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {teams.map(({ name, occupation, image, items }, index) => (
             <div key={`item-team-${index}`} className="p-2">
               <Image
