@@ -111,10 +111,12 @@ export const socialProofData: SocialProofProps = {
 
 // FAQS data
 export const faqsData: FAQsProps = {
-  title: 'Frequently Asked Questions',
-  subtitle:
-    'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
-  highlight: 'FAQS',
+  header: {
+    title: 'Frequently Asked Questions',
+    subtitle:
+      'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
+    highlight: 'FAQS',
+  },
   items: [
     {
       title: 'What do I need to start?',
@@ -185,14 +187,16 @@ export const callToActionData: CallToActionProps = {
 
 // Feature data
 export const featuresData: FeaturesProps = {
-  title: (
-    <>
-      What you get with <span className="whitespace-nowrap">TailNext</span>
-    </>
-  ),
-  subtitle:
-    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
-  highlight: 'Features',
+  header: {
+    title: (
+      <>
+        What you get with <span className="whitespace-nowrap">TailNext</span>
+      </>
+    ),
+    subtitle:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
+    highlight: 'Features',
+  },
   items: [
     {
       title: 'Next.Js + Tailwind CSS Integration',
@@ -259,9 +263,11 @@ export const featuresData: FeaturesProps = {
 
 // Content data
 export const contentData: ContentProps = {
-  highlight: 'Content',
-  title: 'Aliquip definiebas ad est',
-  subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
+  header: {
+    title: 'Aliquip definiebas ad est',
+    subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
+    highlight: 'Content',
+  },
   content:
     'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
   items: [
@@ -356,10 +362,12 @@ export const stepsData: StepsProps = {
 
 // Team data
 export const teamData: TeamProps = {
-  title: 'Team Members',
-  subtitle:
-    'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
-  highlight: 'Team',
+  header: {
+    title: 'Team Members',
+    subtitle:
+      'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
+    // highlight: 'Team',
+  },
   teams: [
     {
       name: 'Cindy Belcher',
@@ -466,10 +474,12 @@ export const teamData: TeamProps = {
 
 // Testimonial data
 export const testimonialData: TestimonialProps = {
-  title: 'What our customers say about us',
-  subtitle:
-    'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
-  highlight: 'Testimonial',
+  header: {
+    title: 'What our customers say about us',
+    subtitle:
+      'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
+    // highlight: 'Testimonial',
+  },
   testimonials: [
     {
       name: 'Tayla Kirsten',
@@ -512,10 +522,12 @@ export const testimonialData: TestimonialProps = {
 
 // Pricing data
 export const pricingData: PricingProps = {
-  title: 'Pricing for every business',
-  subtitle:
-    'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
-  highlight: 'Pricing',
+  header: {
+    title: 'Pricing for every business',
+    subtitle:
+      'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
+    // highlight: 'Pricing',
+  },
   prices: [
     {
       title: 'basic',
@@ -557,9 +569,11 @@ export const pricingData: PricingProps = {
 
 // Contact data
 export const contactData: ContactProps = {
-  title: 'Get in Touch',
-  subtitle: 'In hac habitasse platea dictumst',
-  highlight: 'Contact',
+  header: {
+    title: 'Get in Touch',
+    subtitle: 'In hac habitasse platea dictumst',
+    highlight: 'Contact',
+  },
   content:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
   items: [

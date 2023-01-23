@@ -1,32 +1,15 @@
 import Image from 'next/image';
 
 import { testimonialData } from '~/shared/data';
+import HeaderWidget from '../common/HeaderWidget';
 
 const Testimonial = () => {
-  const { title, subtitle, highlight, testimonials } = testimonialData;
+  const { header, testimonials } = testimonialData;
 
   return (
     <section className="bg-primary-50 dark:bg-slate-800" id="testimonial">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="mb-4 text-center">
-          {(title || subtitle || highlight) && (
-            <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-              {highlight && (
-                <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-                  {highlight}
-                </p>
-              )}
-              {title && (
-                <h2 className="font-heading mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-                  {title}
-                </h2>
-              )}
-              {subtitle && (
-                <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>
-              )}
-            </div>
-          )}
-        </div>
+        {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
         <div className="flex items-stretch justify-center">
           <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {testimonials.map(({ name, occupation, comment, image, icon: Icon, href }, index) => (

@@ -1,28 +1,13 @@
 import { featuresData } from '~/shared/data';
+import HeaderWidget from '../common/HeaderWidget';
 
 const Features = () => {
-  const { title, subtitle, highlight, items } = featuresData;
+  const { header, items } = featuresData;
 
   return (
     <section className="scroll-mt-16" id="features">
       <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
-        {(title || subtitle || highlight) && (
-          <div className="mb-10 max-w-3xl sm:text-center md:mx-auto md:mb-12">
-            {highlight && (
-              <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-                {highlight}
-              </p>
-            )}
-            {title && (
-              <h2 className="leading-tighter font-heading mb-4 text-4xl font-bold tracking-tighter md:text-5xl">
-                {title}
-              </h2>
-            )}
-            {subtitle && (
-              <p className="mx-auto max-w-3xl text-xl text-gray-600 dark:text-slate-400 sm:text-center">{subtitle}</p>
-            )}
-          </div>
-        )}
+        {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
         <div className="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
           {items.map(({ title, description, icon: Icon }, index) => (
             <div key={`item-feature-${index}`} className="space-y-8 sm:px-8">
