@@ -1,4 +1,11 @@
+import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
+
+interface Header {
+  title?: string | ReactElement;
+  subtitle?: string;
+  highlight?: string;
+}
 
 interface CallToAction {
   text: string;
@@ -6,24 +13,42 @@ interface CallToAction {
   icon?: Function;
 }
 
+interface Button {
+  title: string;
+  type: 'button' | 'submit' | 'reset' | undefined;
+}
+
+interface Input {
+  type: string;
+  name: string;
+  placeholder?: string;
+}
+
 interface SmallForm {
-  placeholder: string;
   icon?: Function;
-  callToAction: CallToAction;
+  input: Input;
+  btn: Button;
+}
+
+interface Form {
+  title?: string;
+  description?: string;
+  inputs: Array<Input>;
+  btn: Button;
+}
+
+interface Image {
+  src: string | StaticImageData;
+  alt: string;
 }
 
 interface Item {
   title: string;
-  description?: string;
+  description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
   icon?: Function;
-  btn?: string;
-}
-
-interface Image {
-  src: string | any; // TODO: find HTMLElementProps
-  alt: string;
+  callToAction?: CallToAction;
 }
 
 interface Team {
@@ -61,30 +86,24 @@ interface HeroProps {
 }
 
 interface FAQsProps {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
+  header?: Header;
   items: Array<Item>;
 }
 
 interface CallToActionProps {
   title: string;
   subtitle: string;
-  callToAction?: string | CallToAction;
+  callToAction?: CallToAction;
   items?: Array<Item>;
 }
 
 interface FeaturesProps {
-  title?: string | ReactElement;
-  subtitle?: string;
-  highlight?: string;
+  header?: Header;
   items: Array<Item>;
 }
 
 interface ContentProps {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
+  header?: Header;
   content?: string;
   items?: Array<Item>;
   image?: Image;
@@ -99,9 +118,7 @@ interface StepsProps {
 }
 
 interface TeamProps {
-  title: string;
-  subtitle: string;
-  highlight: string;
+  header?: Header;
   teams: Array<Team>;
 }
 
@@ -112,19 +129,22 @@ interface AnnouncementProps {
 }
 
 interface TestimonialProps {
-  title: string;
-  subtitle: string;
-  highlight: string;
+  header?: Header;
   testimonials: Array<Testimonial>;
 }
 
 interface PricingProps {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
+  header?: Header;
   prices: Array<Price>;
 }
 
 interface SocialProofProps {
   images: Array<Image>;
+}
+
+interface ContactProps {
+  header?: Header;
+  content?: string;
+  items: Array<Item>;
+  form: Form;
 }

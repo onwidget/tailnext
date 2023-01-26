@@ -9,6 +9,7 @@ import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import { content2Data, contentData } from '~/shared/data';
+import Contact from '~/components/widgets/Contact';
 
 export default function Page() {
   return (
@@ -23,6 +24,7 @@ export default function Page() {
       <FAQs2 />
       <Pricing />
       <Team />
+      <Contact />
       <CallToAction2 />
     </>
   );

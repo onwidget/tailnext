@@ -25,17 +25,16 @@ const Card = ({ title, description, href, form }: Item) => (
               </span>
             )}
             <input
-              type="email"
-              name="EMAIL"
-              placeholder="Enter your email address"
+              type={form.input.type}
+              name={form.input.name}
+              placeholder={form.input.placeholder}
               className="w-full py-2 pl-2 pr-4 dark:text-gray-300"
             />
             <button
-              name="subscribe"
-              type="submit"
+              type={form.btn.type}
               className="rounded-tr rounded-br border-l-[1px] border-gray-400 bg-primary-600 px-4 py-2 text-white"
             >
-              {form.callToAction.text}
+              {form.btn.title}
             </button>
           </div>
         </form>
