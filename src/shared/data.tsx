@@ -14,7 +14,7 @@ import {
   IconMapPin,
   IconPhoneCall,
   IconRocket,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import {
   AnnouncementProps,
   CallToActionProps,

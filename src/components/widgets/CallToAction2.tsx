@@ -1,4 +1,4 @@
-import { IconChevronRight } from '@tabler/icons';
+import { IconChevronRight } from '@tabler/icons-react';
 import { callToActionData } from '~/shared/data';
 import { Item } from '~/shared/types';
 

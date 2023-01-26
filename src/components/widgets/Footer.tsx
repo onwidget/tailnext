@@ -1,4 +1,4 @@
-import { IconBrandTwitter, IconBrandInstagram, IconBrandFacebook, IconRss, IconBrandGithub } from '@tabler/icons';
+import { IconBrandTwitter, IconBrandInstagram, IconBrandFacebook, IconRss, IconBrandGithub } from '@tabler/icons-react';
 
 const items = [
   {

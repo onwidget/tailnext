@@ -1,4 +1,4 @@
-import { IconArrowDownRight } from '@tabler/icons';
+import { IconArrowDownRight } from '@tabler/icons-react';
 import { faqsData } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
 

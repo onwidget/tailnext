@@ -1,4 +1,4 @@
-import { IconCheck } from '@tabler/icons';
+import { IconCheck } from '@tabler/icons-react';
 import { pricingData } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
 
