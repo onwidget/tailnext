@@ -77,6 +77,17 @@ interface Price {
   ribbonText?: string;
 }
 
+interface Link {
+  label: string;
+  icon?: Function;
+  href: string;
+}
+
+interface Links {
+  title?: string;
+  links: Array<Link>;
+}
+
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -147,4 +158,13 @@ interface ContactProps {
   content?: string;
   items: Array<Item>;
   form: Form;
+}
+
+interface FooterProps {
+  title: string;
+  links: Array<Link>;
+  columns: Array<Links>;
+  socials: Array<Link>;
+  footNote?: string | ReactElement;
+  theme?: string;
 }

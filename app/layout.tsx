@@ -9,7 +9,7 @@ import '~/assets/styles/base.css';
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
 
 export interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: LayoutProps) {
