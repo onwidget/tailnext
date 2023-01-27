@@ -16,35 +16,39 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-muted text-sm">
-              {links.map(({ label, href }, index) => (
-                <Fragment key={`item-link-${index}`}>
-                  <a
-                    className="text-muted duration-150 ease-in-out placeholder:transition hover:text-gray-700 hover:underline dark:text-gray-400"
-                    aria-label={label}
-                    href={href}
-                  >
-                    {label}
-                  </a>
-                  {links.length - 1 !== index && <span className="mx-1"> · </span>}
-                </Fragment>
-              ))}
+              <ul className="mb-4 -ml-2 flex pl-2 md:order-1 md:mb-0">
+                {links &&
+                  links.map(({ label, href }, index) => (
+                    <li key={`item-link-${index}`}>
+                      <a
+                        className="duration-150 ease-in-out placeholder:transition hover:text-gray-700 hover:underline dark:text-gray-400"
+                        aria-label={label}
+                        href={href}
+                      >
+                        {label}
+                      </a>
+                      {links.length - 1 !== index && <span className="mr-1"> · </span>}
+                    </li>
+                  ))}
+              </ul>
             </div>
           </div>
           {columns.map(({ title, links }, index) => (
             <div key={`item-column-${index}`} className="col-span-6 md:col-span-3 lg:col-span-2">
               <div className="mb-2 font-medium dark:text-gray-300">{title}</div>
               <ul className="text-sm">
-                {links.map(({ label, href }, index2) => (
-                  <li key={`item-column-link-${index2}`} className="mb-2">
-                    <a
-                      className="text-muted transition duration-150 ease-in-out hover:text-gray-700 hover:underline dark:text-gray-400"
-                      aria-label={label}
-                      href={href}
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
+                {links &&
+                  links.map(({ label, href }, index2) => (
+                    <li key={`item-column-link-${index2}`} className="mb-2">
+                      <a
+                        className="text-muted transition duration-150 ease-in-out hover:text-gray-700 hover:underline dark:text-gray-400"
+                        aria-label={label}
+                        href={href}
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </div>
           ))}

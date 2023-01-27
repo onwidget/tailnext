@@ -85,7 +85,8 @@ interface Link {
 
 interface Links {
   title?: string;
-  links: Array<Link>;
+  links?: Array<Link>;
+  texts?: Array<string>;
 }
 
 interface HeroProps {
@@ -161,8 +162,8 @@ interface ContactProps {
 }
 
 interface FooterProps {
-  title: string;
-  links: Array<Link>;
+  title?: string;
+  links?: Array<Link>;
   columns: Array<Links>;
   socials: Array<Link>;
   footNote?: string | ReactElement;
