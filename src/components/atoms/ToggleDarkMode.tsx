@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { IconSun, IconMoon } from '@tabler/icons';
+import { IconSun, IconMoon } from '@tabler/icons-react';
 
 const ToggleDarkMode = () => {
   const [mounted, setMounted] = useState<boolean>(false);

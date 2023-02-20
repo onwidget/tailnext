@@ -19,7 +19,7 @@ import {
   IconPhoneCall,
   IconRocket,
   IconRss,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import {
   AnnouncementProps,
   CallToActionProps,

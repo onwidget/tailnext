@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { footerData } from '~/shared/data';
 
 const Footer = () => {

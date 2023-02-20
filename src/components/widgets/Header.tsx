@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { IconRss } from '@tabler/icons';
+import { IconRss } from '@tabler/icons-react';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';

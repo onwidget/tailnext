@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { IconCheck } from '@tabler/icons';
+import { IconCheck } from '@tabler/icons-react';
 
 import { ContentProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { IconChevronDown, IconChevronUp } from '@tabler/icons';
+import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
 import { faqsData } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
 
