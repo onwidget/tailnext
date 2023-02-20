@@ -9,6 +9,7 @@ import {
   IconBrandTwitter,
   IconBulb,
   IconCheck,
+  IconChevronDown,
   IconClock,
   IconComponents,
   IconDownload,
@@ -27,6 +28,7 @@ import {
   FAQsProps,
   FeaturesProps,
   FooterProps,
+  HeaderProps,
   HeroProps,
   PricingProps,
   SocialProofProps,
@@ -55,6 +57,42 @@ export const announcementData: AnnouncementProps = {
     text: 'Follow @onWidget on Twitter',
     href: 'https://twitter.com/intent/user?screen_name=onwidget',
   },
+};
+
+// Header data
+export const headerData: HeaderProps = {
+  links: [
+    {
+      label: 'Pages',
+      href: '',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Pricing',
+          href: '/',
+        },
+        {
+          label: 'Contact',
+          href: '/',
+        },
+      ],
+    },
+    {
+      label: 'Blog',
+      href: '/blog',
+    },
+  ],
+  actions: [
+    {
+      label: 'Download',
+      href: 'https://github.com/onwidget/tailnext',
+      type: 'primary',
+    },
+  ],
+  isSticky: true,
+  showToggleTheme: true,
+  showRssFeed: false,
+  position: 'center',
 };
 
 // Hero data

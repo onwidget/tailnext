@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { IconSun, IconMoon } from '@tabler/icons';
 
-function ToggleDarkMode() {
+const ToggleDarkMode = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
@@ -23,6 +23,6 @@ function ToggleDarkMode() {
       {mounted && theme === 'dark' ? <IconMoon className="h-5 w-5" /> : <IconSun className="h-5 w-5" />}
     </button>
   );
-}
+};
 
 export default ToggleDarkMode;

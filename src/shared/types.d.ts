@@ -78,9 +78,18 @@ interface Price {
 }
 
 interface Link {
-  label: string;
-  icon?: Function;
+  label?: string;
   href: string;
+  ariaLabel?: string;
+  icon?: Function;
+}
+
+interface ActionLink extends Link {
+  type?: string;
+}
+
+interface MenuLink extends Link {
+  links?: Array<Link>;
 }
 
 interface Links {
@@ -168,4 +177,18 @@ interface FooterProps {
   socials: Array<Link>;
   footNote?: string | ReactElement;
   theme?: string;
+}
+
+interface HeaderProps {
+  links?: Array<MenuLink>;
+  actions?: Array<ActionLink>;
+  isSticky?: boolean;
+  showToggleTheme?: boolean;
+  showRssFeed?: boolean;
+  position?: string;
+}
+
+interface ToggleMenuProps {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
 }
