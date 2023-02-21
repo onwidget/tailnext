@@ -77,6 +77,27 @@ interface Price {
   ribbonText?: string;
 }
 
+interface Link {
+  label?: string;
+  href: string;
+  ariaLabel?: string;
+  icon?: Function;
+}
+
+interface ActionLink extends Link {
+  type?: string;
+}
+
+interface MenuLink extends Link {
+  links?: Array<Link>;
+}
+
+interface Links {
+  title?: string;
+  links?: Array<Link>;
+  texts?: Array<string>;
+}
+
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -147,4 +168,27 @@ interface ContactProps {
   content?: string;
   items: Array<Item>;
   form: Form;
+}
+
+interface FooterProps {
+  title?: string;
+  links?: Array<Link>;
+  columns: Array<Links>;
+  socials: Array<Link>;
+  footNote?: string | ReactElement;
+  theme?: string;
+}
+
+interface HeaderProps {
+  links?: Array<MenuLink>;
+  actions?: Array<ActionLink>;
+  isSticky?: boolean;
+  showToggleTheme?: boolean;
+  showRssFeed?: boolean;
+  position?: string;
+}
+
+interface ToggleMenuProps {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
 }

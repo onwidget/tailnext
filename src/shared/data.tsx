@@ -1,11 +1,15 @@
 import {
   IconArrowDown,
   IconArrowsRightLeft,
+  IconBrandFacebook,
+  IconBrandGithub,
+  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTailwind,
   IconBrandTwitter,
   IconBulb,
   IconCheck,
+  IconChevronDown,
   IconClock,
   IconComponents,
   IconDownload,
@@ -14,6 +18,7 @@ import {
   IconMapPin,
   IconPhoneCall,
   IconRocket,
+  IconRss,
 } from '@tabler/icons-react';
 import {
   AnnouncementProps,
@@ -22,6 +27,8 @@ import {
   ContentProps,
   FAQsProps,
   FeaturesProps,
+  FooterProps,
+  HeaderProps,
   HeroProps,
   PricingProps,
   SocialProofProps,
@@ -50,6 +57,42 @@ export const announcementData: AnnouncementProps = {
     text: 'Follow @onWidget on Twitter',
     href: 'https://twitter.com/intent/user?screen_name=onwidget',
   },
+};
+
+// Header data
+export const headerData: HeaderProps = {
+  links: [
+    {
+      label: 'Pages',
+      href: '',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Pricing',
+          href: '/',
+        },
+        {
+          label: 'Contact',
+          href: '/',
+        },
+      ],
+    },
+    {
+      label: 'Blog',
+      href: '/blog',
+    },
+  ],
+  actions: [
+    {
+      label: 'Download',
+      href: 'https://github.com/onwidget/tailnext',
+      type: 'primary',
+    },
+  ],
+  isSticky: true,
+  showToggleTheme: true,
+  showRssFeed: false,
+  position: 'center',
 };
 
 // Hero data
@@ -612,4 +655,196 @@ export const contactData: ContactProps = {
       type: 'submit',
     },
   },
+};
+
+// Footer data
+export const footerData: FooterProps = {
+  title: 'TailNext',
+  links: [
+    {
+      label: 'Terms of Use',
+      href: '',
+    },
+    {
+      label: 'Legal Disclaimer',
+      href: '',
+    },
+    {
+      label: 'Privacy Policy',
+      href: '',
+    },
+  ],
+  columns: [
+    {
+      title: 'Product',
+      links: [
+        {
+          label: 'Features',
+          href: '',
+        },
+        {
+          label: 'Security',
+          href: '',
+        },
+        {
+          label: 'Team',
+          href: '',
+        },
+        {
+          label: 'Enterprise',
+          href: '',
+        },
+        {
+          label: 'Customer stories',
+          href: '',
+        },
+        {
+          label: 'Pricing',
+          href: '',
+        },
+        {
+          label: 'Resources',
+          href: '',
+        },
+      ],
+    },
+    {
+      title: 'Platform',
+      links: [
+        {
+          label: 'Developer API',
+          href: '',
+        },
+        {
+          label: 'Partners',
+          href: '',
+        },
+      ],
+    },
+    {
+      title: 'Support',
+      links: [
+        {
+          label: 'Docs',
+          href: '',
+        },
+        {
+          label: 'Community Forum',
+          href: '',
+        },
+        {
+          label: 'Professional Services',
+          href: '',
+        },
+        {
+          label: 'Skills',
+          href: '',
+        },
+        {
+          label: 'Status',
+          href: '',
+        },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        {
+          label: 'About',
+          href: '',
+        },
+        {
+          label: 'Blog',
+          href: '',
+        },
+        {
+          label: 'Careers',
+          href: '',
+        },
+        {
+          label: 'Press',
+          href: '',
+        },
+        {
+          label: 'Inclusion',
+          href: '',
+        },
+        {
+          label: 'Social Impact',
+          href: '',
+        },
+        {
+          label: 'Shop',
+          href: '',
+        },
+      ],
+    },
+  ],
+  socials: [
+    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
+    { label: 'RSS', icon: IconRss, href: '#' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
+  ],
+  footNote: (
+    <div className="mr-4 text-sm dark:text-slate-400">
+      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      Made by{' '}
+      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+        {' '}
+        onWidget
+      </a>{' '}
+      · All rights reserved.
+    </div>
+  ),
+};
+
+export const footerData2: FooterProps = {
+  links: [
+    {
+      label: 'Terms of Use',
+      href: '',
+    },
+    {
+      label: 'Legal Disclaimer',
+      href: '',
+    },
+    {
+      label: 'Privacy Policy',
+      href: '',
+    },
+  ],
+  columns: [
+    {
+      title: 'Address',
+      texts: ['51 Phasellus Avenue Maecenas', 'Aliquam, AQ 52098'],
+    },
+    {
+      title: 'Phone',
+      texts: ['Reception: +105 123 4567', 'Office: +107 235 7890'],
+    },
+    {
+      title: 'Email',
+      texts: ['Office: info@example.com', 'Site: https://example.com'],
+    },
+  ],
+  socials: [
+    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
+    { label: 'RSS', icon: IconRss, href: '#' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
+  ],
+  footNote: (
+    <div className="mr-4 text-sm dark:text-slate-400">
+      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      Made by{' '}
+      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+        {' '}
+        onWidget
+      </a>{' '}
+      · All rights reserved.
+    </div>
+  ),
 };
