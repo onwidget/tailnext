@@ -11,7 +11,7 @@ const Pricing = () => {
         {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
         <div className="flex items-stretch justify-center">
           <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-            {prices.map(({ title, value, period, texts, btnText, hasRibbon, ribbonText: ribbonTitle }, index) => (
+            {prices.map(({ title, value, period, texts, link, hasRibbon, ribbonTitle }, index) => (
               <div
                 className="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
                 key={`item-pricing-${index}`}
@@ -47,9 +47,9 @@ const Pricing = () => {
                       ))}
                   </ul>
                   <div className="mt-8 flex w-full uppercase sm:w-auto">
-                    {btnText && (
-                      <a href="#" className={`btn ${hasRibbon && 'btn-primary sm:mb-0'} w-full`}>
-                        {btnText}
+                    {link && (
+                      <a href={link.href} className={`btn ${hasRibbon && 'btn-primary sm:mb-0'} w-full`}>
+                        {link.label}
                       </a>
                     )}
                   </div>

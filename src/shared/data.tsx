@@ -23,6 +23,7 @@ import {
 import {
   AnnouncementProps,
   CallToActionProps,
+  ComparisonProps,
   ContactProps,
   ContentProps,
   FAQsProps,
@@ -69,7 +70,7 @@ export const headerData: HeaderProps = {
       links: [
         {
           label: 'Pricing',
-          href: '/',
+          href: '/pricing',
         },
         {
           label: 'Contact',
@@ -582,7 +583,10 @@ export const pricingData: PricingProps = {
         'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
         'In hac habitasse',
       ],
-      btnText: 'free 7-day trial',
+      link: {
+        label: 'Free 7-day trial',
+        href: '#',
+      },
       hasRibbon: false,
     },
     {
@@ -590,12 +594,15 @@ export const pricingData: PricingProps = {
       value: 69,
       period: 'per month',
       texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
-      btnText: 'free 15-day trial',
+      link: {
+        label: 'Free 15-day trial',
+        href: '#',
+      },
       hasRibbon: true,
-      ribbonText: 'Popular',
+      ribbonTitle: 'Popular',
     },
     {
-      title: 'pro',
+      title: 'premium',
       value: 199,
       period: 'per month',
       texts: [
@@ -604,8 +611,127 @@ export const pricingData: PricingProps = {
         'Suspendisse sit amet',
         'Suspendisse auctor dui',
       ],
-      btnText: 'free 30-day trial',
+      link: {
+        label: 'Free 30-day trial',
+        href: '#',
+      },
       hasRibbon: false,
+    },
+  ],
+};
+
+// Comparison data
+export const comparisonData: ComparisonProps = {
+  header: {
+    title: "What's available for each plan?",
+    subtitle:
+      'Morbi ut imperdiet ex. Nullam sed tincidunt purus. Donec finibus dui at odio dictum facilisis. Maecenas ut orci quis nisi congue maximus. Sed quis augue sapien.',
+    // highlight: 'Comparison',
+  },
+  columns: [
+    {
+      title: 'compare plans',
+      items: [
+        {
+          title: 'In vitae finibus',
+        },
+        {
+          title: 'Cras sollicitudin',
+        },
+        {
+          title: 'Suspendisse',
+        },
+        {
+          title: 'Vestibulum ornare',
+        },
+        {
+          title: 'In hendrerit',
+        },
+        {
+          title: 'Ut pharetra',
+        },
+      ],
+    },
+    {
+      title: 'basic',
+      items: [
+        {
+          title: 'Free 7-day trial',
+        },
+        {
+          title: 'Limited',
+        },
+        {
+          title: '$29',
+        },
+        {
+          title: false,
+        },
+        {
+          title: false,
+        },
+        {
+          title: true,
+        },
+      ],
+      link: {
+        label: 'Get started',
+        href: '#',
+      },
+    },
+    {
+      title: 'standard',
+      items: [
+        {
+          title: 'Free 15-day trial',
+        },
+        {
+          title: 'Unlimited',
+        },
+        {
+          title: '$69',
+        },
+        {
+          title: false,
+        },
+        {
+          title: true,
+        },
+        {
+          title: true,
+        },
+      ],
+      link: {
+        label: 'Get started',
+        href: '#',
+      },
+    },
+    {
+      title: 'premium',
+      items: [
+        {
+          title: 'Free 30-day trial',
+        },
+        {
+          title: 'Unlimited',
+        },
+        {
+          title: '$199',
+        },
+        {
+          title: true,
+        },
+        {
+          title: true,
+        },
+        {
+          title: true,
+        },
+      ],
+      link: {
+        label: 'Get started',
+        href: '#',
+      },
     },
   ],
 };
