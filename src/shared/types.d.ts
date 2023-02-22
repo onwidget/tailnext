@@ -5,6 +5,7 @@ interface Header {
   title?: string | ReactElement;
   subtitle?: string;
   highlight?: string;
+  position?: string;
 }
 
 interface CallToAction {
@@ -115,6 +116,7 @@ interface HeroProps {
 interface FAQsProps {
   header?: Header;
   items: Array<Item>;
+  link?: Link;
 }
 
 interface CallToActionProps {

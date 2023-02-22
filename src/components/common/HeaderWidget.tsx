@@ -2,12 +2,16 @@ import { Header } from '~/shared/types';
 
 const HeaderWidget = (props: { header: Header; titleClassname: string }) => {
   const { header, titleClassname } = props;
-  const { title, subtitle, highlight } = header;
+  const { title, subtitle, highlight, position } = header;
 
   return (
-    <div className="mb-4 text-center">
+    <div className="mb-4">
       {(title || subtitle || highlight) && (
-        <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+        <div
+          className={`mb-6 max-w-3xl text-center ${
+            position === 'left' ? 'sm:text-left' : position === 'right' ? 'sm:text-right' : 'sm:text-center'
+          } md:mx-auto md:mb-12`}
+        >
           {highlight && (
             <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
               {highlight}

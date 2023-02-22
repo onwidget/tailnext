@@ -31,7 +31,7 @@ const FAQs2 = () => {
             onClick={() => handleSetIndex(index)}
             className="mx-auto mb-2 max-w-3xl select-none rounded-md border border-gray-300 bg-transparent px-5 py-4 text-base text-gray-700 shadow-md"
           >
-            <div className="py-1 px-3">
+            <div className="py-1 px-0 md:px-3">
               <div
                 className="align-center flex justify-between"
                 id={`accordion__heading-${index}`}
@@ -40,7 +40,7 @@ const FAQs2 = () => {
                 aria-controls={`accordion__panel-${index}`}
                 role="button"
               >
-                <h2 className="text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">{title}</h2>
+                <h2 className="w-full pr-2 text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">{title}</h2>
                 <>
                   {activeIndex === index ? (
                     <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
