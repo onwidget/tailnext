@@ -122,6 +122,8 @@ interface FAQsProps {
 interface CollapseProps {
   items: Array<Item>;
   classCollapseItem?: string;
+  iconUp?: ReactElement;
+  iconDown?: ReactElement;
 }
 
 interface CallToActionProps {

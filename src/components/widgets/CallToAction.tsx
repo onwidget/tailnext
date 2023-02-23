@@ -4,10 +4,10 @@ const CallToAction = () => {
   const { title, subtitle, callToAction } = callToActionData;
 
   return (
-    <section className="relative" id="callToActionOne">
+    <section className="bg-primary-50 dark:bg-slate-800" id="callToActionOne">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 md:py-20">
-          <div className="mx-auto max-w-3xl rounded-md p-6 text-center shadow-xl dark:border dark:border-slate-600 dark:shadow-none">
+        <div className="pt-4 pb-12 md:pb-20 md:pt-12">
+          <div className="card mx-auto max-w-3xl p-6 text-center">
             {title && (
               <h2 className="leading-tighter font-heading mb-4 text-4xl font-bold tracking-tighter md:text-4xl">
                 {title}
