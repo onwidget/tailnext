@@ -119,6 +119,11 @@ interface FAQsProps {
   link?: Link;
 }
 
+interface CollapseProps {
+  items: Array<Item>;
+  classCollapseItem?: string;
+}
+
 interface CallToActionProps {
   title: string;
   subtitle: string;
