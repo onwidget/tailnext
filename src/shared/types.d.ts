@@ -5,6 +5,7 @@ interface Header {
   title?: string | ReactElement;
   subtitle?: string;
   highlight?: string;
+  position?: string;
 }
 
 interface CallToAction {
@@ -43,7 +44,7 @@ interface Image {
 }
 
 interface Item {
-  title: string;
+  title: string | boolean;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
@@ -67,21 +68,27 @@ interface Testimonial {
   href?: string;
 }
 
-interface Price {
-  title: string;
-  value: number;
-  period?: string;
-  texts?: Array<string>;
-  btnText?: string;
-  hasRibbon?: boolean;
-  ribbonText?: string;
-}
-
 interface Link {
   label?: string;
   href: string;
   ariaLabel?: string;
   icon?: Function;
+}
+
+interface Price {
+  title: string;
+  value: number;
+  period?: string;
+  texts?: Array<string>;
+  link?: Link;
+  hasRibbon?: boolean;
+  ribbonTitle?: string;
+}
+
+interface Column {
+  title: string;
+  items: Array<Item>;
+  link?: Link;
 }
 
 interface ActionLink extends Link {
@@ -109,6 +116,14 @@ interface HeroProps {
 interface FAQsProps {
   header?: Header;
   items: Array<Item>;
+  link?: Link;
+}
+
+interface CollapseProps {
+  items: Array<Item>;
+  classCollapseItem?: string;
+  iconUp?: ReactElement;
+  iconDown?: ReactElement;
 }
 
 interface CallToActionProps {
@@ -157,6 +172,11 @@ interface TestimonialProps {
 interface PricingProps {
   header?: Header;
   prices: Array<Price>;
+}
+
+interface ComparisonProps {
+  header?: Header;
+  columns: Array<Column>;
 }
 
 interface SocialProofProps {
