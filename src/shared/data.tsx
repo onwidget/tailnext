@@ -13,9 +13,12 @@ import {
   IconClock,
   IconComponents,
   IconDownload,
+  IconHeadset,
+  IconHelp,
   IconListCheck,
   IconMail,
   IconMapPin,
+  IconMessages,
   IconPhoneCall,
   IconRocket,
   IconRss,
@@ -287,8 +290,8 @@ export const featuresData: FeaturesProps = {
       description:
         'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
       icon: IconBrandTailwind,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -297,8 +300,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
       icon: IconComponents,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -307,8 +310,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconListCheck,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -317,8 +320,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
       icon: IconRocket,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -327,8 +330,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconArrowsRightLeft,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -337,8 +340,41 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconBulb,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
+        href: '/',
+      },
+    },
+  ],
+};
+
+export const featuresData1: FeaturesProps = {
+  header: {
+    title: 'Support Center',
+    subtitle: 'Looking for something in particular?',
+  },
+  items: [
+    {
+      title: 'Have a question?',
+      description: 'See our frequently asked questions',
+      icon: IconHelp,
+      link: {
+        href: '/',
+      },
+    },
+    {
+      title: 'Chat with us',
+      description: 'Live chat with our support team',
+      icon: IconMessages,
+      link: {
+        href: '/',
+      },
+    },
+    {
+      title: 'Get help',
+      description: 'Speak to our team today',
+      icon: IconHeadset,
+      link: {
         href: '/',
       },
     },

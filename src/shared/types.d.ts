@@ -78,6 +78,7 @@ interface Item {
   form?: SmallForm;
   icon?: Function;
   callToAction?: CallToAction;
+  link?: Link;
 }
 
 interface Team {
