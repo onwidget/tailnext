@@ -5,7 +5,7 @@ interface Header {
   title?: string | ReactElement;
   subtitle?: string;
   highlight?: string;
-  position?: string;
+  position?: 'center' | 'right' | 'left';
 }
 
 interface CallToAction {
@@ -21,8 +21,32 @@ interface Button {
 
 interface Input {
   type: string;
+  label?: string;
+  value?: string;
   name: string;
   placeholder?: string;
+}
+
+interface Textarea {
+  cols?: number;
+  rows?: number;
+  label?: string;
+  name: string;
+  placeholder?: string;
+}
+
+interface Checkbox {
+  label: string;
+  value: string;
+}
+
+interface Radio {
+  label: string;
+}
+
+interface RadioBtn {
+  label?: string;
+  radios: Array<Radio>;
 }
 
 interface SmallForm {
@@ -31,11 +55,15 @@ interface SmallForm {
   btn: Button;
 }
 
-interface Form {
+interface FormProps {
   title?: string;
   description?: string;
   inputs: Array<Input>;
+  radioBtns?: RadioBtn;
+  textarea?: Textarea;
+  checkboxes?: Array<Checkbox>;
   btn: Button;
+  btnPosition?: 'center' | 'right' | 'left';
 }
 
 interface Image {
@@ -187,7 +215,7 @@ interface ContactProps {
   header?: Header;
   content?: string;
   items: Array<Item>;
-  form: Form;
+  form: FormProps;
 }
 
 interface FooterProps {
@@ -205,7 +233,7 @@ interface HeaderProps {
   isSticky?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
-  position?: string;
+  position?: 'center' | 'right' | 'left';
 }
 
 interface ToggleMenuProps {
