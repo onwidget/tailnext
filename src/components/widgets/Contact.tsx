@@ -1,4 +1,5 @@
 import { contactData } from '~/shared/data';
+import Form from '../common/Form';
 import HeaderWidget from '../common/HeaderWidget';
 
 const Contact = () => {
@@ -9,7 +10,7 @@ const Contact = () => {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-5xl" />}
         <div className="flex items-stretch justify-center">
-          <div className="grid md:grid-cols-2 md:items-center">
+          <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               {content && <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">{content}</p>}
               <ul className="mb-6 md:mb-0">
@@ -37,40 +38,7 @@ const Contact = () => {
                 ))}
               </ul>
             </div>
-            <div className="card h-full p-5 md:p-8">
-              <h2 className="text-2xl font-bold">{form.title}</h2>
-              <p>{form.description}</p>
-              <form id="contactForm" className="mt-4">
-                <div className="mb-4">
-                  <div className="my-1 grid grid-cols-1 md:my-0">
-                    {form.inputs.map(({ type, name, placeholder }, index) => (
-                      <div key={`item-input-${index}`} className="my-1 mx-0">
-                        <input
-                          type={type}
-                          name={name}
-                          placeholder={placeholder}
-                          className="w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300"
-                        />
-                        <div className="invalid-feedback" style={{ display: 'block' }}></div>
-                      </div>
-                    ))}
-                    <div className="mx-0 my-1">
-                      <textarea
-                        name="text"
-                        cols={30}
-                        rows={5}
-                        placeholder="Write your message..."
-                        className="w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300"
-                      ></textarea>
-                      <div className="invalid-feedback" style={{ display: 'block' }}></div>
-                    </div>
-                  </div>
-                </div>
-                <button type={form.btn.type} className="btn btn-primary sm:mb-0">
-                  {form.btn.title}
-                </button>
-              </form>
-            </div>
+            <Form {...form} btnPosition="center" />
           </div>
         </div>
       </div>

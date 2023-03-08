@@ -13,9 +13,12 @@ import {
   IconClock,
   IconComponents,
   IconDownload,
+  IconHeadset,
+  IconHelp,
   IconListCheck,
   IconMail,
   IconMapPin,
+  IconMessages,
   IconPhoneCall,
   IconRocket,
   IconRss,
@@ -74,7 +77,7 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'Contact',
-          href: '/',
+          href: '/contact',
         },
       ],
     },
@@ -287,8 +290,8 @@ export const featuresData: FeaturesProps = {
       description:
         'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
       icon: IconBrandTailwind,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -297,8 +300,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
       icon: IconComponents,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -307,8 +310,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconListCheck,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -317,8 +320,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
       icon: IconRocket,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -327,8 +330,8 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconArrowsRightLeft,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
         href: '/',
       },
     },
@@ -337,8 +340,41 @@ export const featuresData: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconBulb,
-      callToAction: {
-        text: 'Discover now',
+      link: {
+        label: 'Discover now',
+        href: '/',
+      },
+    },
+  ],
+};
+
+export const featuresData1: FeaturesProps = {
+  header: {
+    title: 'Support Center',
+    subtitle: 'Looking for something in particular?',
+  },
+  items: [
+    {
+      title: 'Have a question?',
+      description: 'See our frequently asked questions',
+      icon: IconHelp,
+      link: {
+        href: '/',
+      },
+    },
+    {
+      title: 'Chat with us',
+      description: 'Live chat with our support team',
+      icon: IconMessages,
+      link: {
+        href: '/',
+      },
+    },
+    {
+      title: 'Get help',
+      description: 'Speak to our team today',
+      icon: IconHeadset,
+      link: {
         href: '/',
       },
     },
@@ -814,6 +850,103 @@ export const contactData: ContactProps = {
         type: 'email',
         name: 'email',
         placeholder: 'Your email address',
+      },
+    ],
+    textarea: {
+      cols: 30,
+      rows: 5,
+      name: 'textarea',
+      placeholder: 'Write your message...',
+    },
+    btn: {
+      title: 'Send Message',
+      type: 'submit',
+    },
+  },
+};
+
+// Contact2 data
+export const contact2Data: ContactProps = {
+  header: {
+    title: 'Get in Touch',
+    subtitle: 'In hac habitasse platea dictumst',
+    highlight: 'Contact',
+  },
+  content:
+    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
+  items: [
+    {
+      title: 'Our Address',
+      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      icon: IconMapPin,
+    },
+    {
+      title: 'Contact',
+      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      icon: IconPhoneCall,
+    },
+    {
+      title: 'Working hours',
+      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+      icon: IconClock,
+    },
+  ],
+  form: {
+    title: 'Ready to Get Started?',
+    description:
+      'Mauris consequat, urna vel varius auctor, enim risus ornare felis, at hendrerit erat justo eu justo. Curabitur sagittis efficitur aliquam. Duis eget porttitor lectus, vel pharetra ex. Nam volutpat nibh ut porta egestas.',
+    inputs: [
+      {
+        type: 'text',
+        label: 'First name',
+        name: 'name',
+        placeholder: 'First name',
+      },
+      {
+        type: 'text',
+        label: 'Last name',
+        name: 'lastName',
+        placeholder: 'Last name',
+      },
+      {
+        type: 'email',
+        label: 'Email address',
+        name: 'email',
+        placeholder: 'Email address',
+      },
+    ],
+    radioBtns: {
+      label: 'What is the reason for your contact?',
+      radios: [
+        {
+          label: 'General inquiries',
+        },
+        {
+          label: 'Technical help',
+        },
+        {
+          label: 'Claims',
+        },
+        {
+          label: 'Others',
+        },
+      ],
+    },
+    textarea: {
+      cols: 30,
+      rows: 5,
+      label: 'How can we help you?',
+      name: 'textarea',
+      placeholder: 'Write your message...',
+    },
+    checkboxes: [
+      {
+        label: 'Have you read our privacy policy?',
+        value: '',
+      },
+      {
+        label: 'Do you want to receive monthly updates by email?',
+        value: '',
       },
     ],
     btn: {

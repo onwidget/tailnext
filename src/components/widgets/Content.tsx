@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import Image from 'next/image';
 import { IconCheck } from '@tabler/icons-react';
 
 import { ContentProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 
-const Content: FC<ContentProps> = ({ header, content, items, image, isReversed, isAfterContent }) => (
+const Content = ({ header, content, items, image, isReversed, isAfterContent }: ContentProps) => (
   <section className="bg-primary-50 dark:bg-slate-800">
     <div
       className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 ${isAfterContent ? 'pt-1 pb-16 md:pb-20' : 'py-16 md:py-20'}`}
