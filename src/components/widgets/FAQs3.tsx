@@ -2,6 +2,7 @@ import { faqs3Data } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
 import Collapse from '../common/Collapse';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
+import { Item } from '~/shared/types';
 
 const FAQs3 = () => {
   const { header, items, link } = faqs3Data;
@@ -23,7 +24,7 @@ const FAQs3 = () => {
             </div>
             <div className="mt-4 h-fit md:col-span-2 md:mx-4 md:mt-0 md:px-4">
               <Collapse
-                items={items}
+                items={items as Item[]}
                 classCollapseItem="border-b border-solid border-slate-300 dark:border-slate-500 py-5"
                 iconUp={<IconMinus className="h-6 w-6 text-primary-600 dark:text-slate-200" />}
                 iconDown={<IconPlus className="h-6 w-6 text-primary-600 dark:text-slate-200" />}

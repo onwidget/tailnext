@@ -1,5 +1,6 @@
 'use client';
 
+import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
 import { useState } from 'react';
 import { CollapseProps } from '~/shared/types';
 
@@ -35,7 +36,17 @@ const Collapse = ({ items, classCollapseItem, iconUp, iconDown }: CollapseProps)
               role="button"
             >
               <h2 className="w-full pr-2 text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">{title}</h2>
-              {activeIndex === index ? iconUp : iconDown}
+              {iconDown && iconUp ? (
+                activeIndex === index ? (
+                  iconUp
+                ) : (
+                  iconDown
+                )
+              ) : activeIndex === index ? (
+                <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+              ) : (
+                <IconChevronDown className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+              )}
             </div>
             {activeIndex === index && (
               <div
