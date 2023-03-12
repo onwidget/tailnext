@@ -1,5 +1,6 @@
 import { IconArrowDownRight } from '@tabler/icons-react';
 import { faqsData } from '~/shared/data';
+import { Item } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 
 const FAQs = () => {
@@ -11,7 +12,7 @@ const FAQs = () => {
         {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
         <div className="max-w-screen-xl sm:mx-auto">
           <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:gap-x-16">
-            {items.map(({ title, description }, index) => (
+            {(items as Item[]).map(({ title, description }, index) => (
               <div className="space-y-8" key={`faqs-item-${index}`}>
                 <div>
                   <h3 className="mb-4 text-xl font-bold">
