@@ -8,7 +8,7 @@ import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
-import { content2Data, contentData, featuresData } from '~/shared/data';
+import { callToActionData, content2Data, contentData, featuresData } from '~/shared/data';
 import Contact from '~/components/widgets/Contact';
 
 export default function Page() {
@@ -25,7 +25,7 @@ export default function Page() {
       <Pricing />
       <Team />
       <Contact />
-      <CallToAction2 />
+      <CallToAction2 {...callToActionData} />
     </>
   );
 }

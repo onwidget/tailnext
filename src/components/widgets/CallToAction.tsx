@@ -1,7 +1,8 @@
-import { callToActionData } from '~/shared/data';
+import { CallToActionProps, CallToAction } from '~/shared/types';
 
-const CallToAction = () => {
-  const { title, subtitle, callToAction } = callToActionData;
+const CallToAction = (props: { cta: CallToActionProps }) => {
+  const { title, subtitle, callToAction } = props.cta;
+  const { text, href, icon: Icon } = callToAction as CallToAction;
 
   return (
     <section className="bg-primary-50 dark:bg-slate-800" id="callToActionOne">
@@ -14,15 +15,10 @@ const CallToAction = () => {
               </h2>
             )}
             {subtitle && <p className="text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
-            {callToAction && callToAction.text && callToAction.href && (
+            {text && href && (
               <div className="mx-auto mt-6 max-w-xs">
-                <a
-                  className="btn btn-primary w-full sm:w-auto"
-                  href={callToAction.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
+                <a className="btn btn-primary w-full sm:w-auto" href={href}>
+                  {Icon && <Icon className="mr-1 -ml-1.5 h-5 w-5" />} {text}
                 </a>
               </div>
             )}

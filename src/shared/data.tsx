@@ -377,6 +377,17 @@ export const callToActionData: CallToActionProps = {
   ],
 };
 
+// CallToAction2 data
+export const callToActionData2: CallToActionProps = {
+  title: 'Still have questions?',
+  subtitle:
+    'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut in leo odio. Cras finibus ex a ante convallis ullamcorper.',
+  callToAction: {
+    text: 'Contact us',
+    href: '/contact',
+  },
+};
+
 // Feature data
 export const featuresData: FeaturesProps = {
   header: {
@@ -454,7 +465,7 @@ export const featuresData: FeaturesProps = {
 };
 
 // Feature2 data
-export const featuresData1: FeaturesProps = {
+export const featuresData2: FeaturesProps = {
   header: {
     title: 'Support Center',
     subtitle: 'Looking for something in particular?',
@@ -465,7 +476,7 @@ export const featuresData1: FeaturesProps = {
       description: 'See our frequently asked questions',
       icon: IconHelp,
       link: {
-        href: '/',
+        href: '/faqs',
       },
     },
     {

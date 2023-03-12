@@ -2,7 +2,7 @@
 
 import HeaderWidget from '../common/HeaderWidget';
 import Collapse from '../common/Collapse';
-import { IconChevronDown, IconChevronUp, IconMinus, IconPlus } from '@tabler/icons-react';
+import { IconMinus, IconPlus } from '@tabler/icons-react';
 import { FAQsProps, Item, Tab } from '~/shared/types';
 import { useState } from 'react';
 import useWindowSize from '~/hooks/useWindowSize';
@@ -25,7 +25,7 @@ const FAQs4 = ({ header, tabs }: FAQsProps) => {
             {width > 767 ? (
               <div className="block h-full sm:flex sm:items-center sm:justify-between md:mx-4 md:mt-10 md:block md:px-4">
                 <div className="flex h-fit w-full justify-center sm:w-auto sm:justify-start">
-                  <ul className="">
+                  <ul>
                     {(tabs as Tab[]).map((tab, index) => {
                       const onSelectTab = () => {
                         setActiveTab(index);
