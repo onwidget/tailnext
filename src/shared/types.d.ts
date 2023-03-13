@@ -134,6 +134,19 @@ interface Links {
   texts?: Array<string>;
 }
 
+interface Tab {
+  link?: Link;
+  items: Array<Item>;
+}
+
+interface Dropdown {
+  options: Tab[];
+  activeTab: number;
+  onActiveTabSelected: Function;
+  iconUp?: ReactElement;
+  iconDown?: ReactElement;
+}
+
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -144,7 +157,8 @@ interface HeroProps {
 
 interface FAQsProps {
   header?: Header;
-  items: Array<Item>;
+  items?: Array<Item>;
+  tabs?: Array<Tab>;
   link?: Link;
 }
 
@@ -240,4 +254,9 @@ interface HeaderProps {
 interface ToggleMenuProps {
   handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
   isToggleMenuOpen: boolean;
+}
+
+interface WindowSize {
+  width: number;
+  height: number;
 }
