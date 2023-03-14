@@ -232,7 +232,7 @@ export const faqs3Data: FAQsProps = {
   ],
   link: {
     label: 'Contact us',
-    href: '/',
+    href: '/contact',
   },
 };
 
