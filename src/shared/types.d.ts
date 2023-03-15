@@ -8,6 +8,11 @@ interface Header {
   position?: 'center' | 'right' | 'left';
 }
 
+interface HeaderWidgetProps {
+  header: Header;
+  titleClassname?: string;
+}
+
 interface CallToAction {
   text: string;
   href: string;
@@ -99,7 +104,7 @@ interface Testimonial {
 
 interface Link {
   label?: string;
-  href: string;
+  href?: string;
   ariaLabel?: string;
   icon?: Function;
 }
