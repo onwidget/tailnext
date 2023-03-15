@@ -20,7 +20,7 @@ const Contact = () => {
                       {Icon && <Icon className="h-6 w-6" />}
                     </div>
                     <div className="ml-4 mb-4">
-                      <h4 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h4>
+                      <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h3>
                       {typeof description === 'string' ? (
                         <p key={`text-description-${index}`} className="text-gray-600 dark:text-slate-400">
                           {description}
