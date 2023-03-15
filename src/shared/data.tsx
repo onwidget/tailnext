@@ -87,6 +87,10 @@ export const headerData: HeaderProps = {
           label: 'Terms & Conditions',
           href: '/terms',
         },
+        {
+          label: 'Privacy Policy',
+          href: '/privacy',
+        },
       ],
     },
     {
@@ -1087,7 +1091,7 @@ export const footerData: FooterProps = {
     },
     {
       label: 'Privacy Policy',
-      href: '/',
+      href: '/privacy',
     },
   ],
   columns: [
@@ -1225,7 +1229,7 @@ export const footerData2: FooterProps = {
     },
     {
       label: 'Privacy Policy',
-      href: '/',
+      href: '/privacy',
     },
   ],
   columns: [
