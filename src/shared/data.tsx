@@ -68,7 +68,7 @@ export const headerData: HeaderProps = {
   links: [
     {
       label: 'Pages',
-      href: '',
+      href: '#',
       icon: IconChevronDown,
       links: [
         {
@@ -82,6 +82,14 @@ export const headerData: HeaderProps = {
         {
           label: 'FAQs',
           href: '/faqs',
+        },
+        {
+          label: 'Terms & Conditions',
+          href: '/terms',
+        },
+        {
+          label: 'Privacy Policy',
+          href: '/privacy',
         },
       ],
     },
@@ -232,7 +240,7 @@ export const faqs3Data: FAQsProps = {
   ],
   link: {
     label: 'Contact us',
-    href: '/',
+    href: '/contact',
   },
 };
 
@@ -1078,16 +1086,12 @@ export const footerData: FooterProps = {
   title: 'TailNext',
   links: [
     {
-      label: 'Terms of Use',
-      href: '',
-    },
-    {
-      label: 'Legal Disclaimer',
-      href: '',
+      label: 'Terms & Conditions',
+      href: '/terms',
     },
     {
       label: 'Privacy Policy',
-      href: '',
+      href: '/privacy',
     },
   ],
   columns: [
@@ -1096,31 +1100,31 @@ export const footerData: FooterProps = {
       links: [
         {
           label: 'Features',
-          href: '',
+          href: '/',
         },
         {
           label: 'Security',
-          href: '',
+          href: '/',
         },
         {
           label: 'Team',
-          href: '',
+          href: '/',
         },
         {
           label: 'Enterprise',
-          href: '',
+          href: '/',
         },
         {
           label: 'Customer stories',
-          href: '',
+          href: '/',
         },
         {
           label: 'Pricing',
-          href: '',
+          href: '/pricing',
         },
         {
           label: 'Resources',
-          href: '',
+          href: '/',
         },
       ],
     },
@@ -1129,11 +1133,11 @@ export const footerData: FooterProps = {
       links: [
         {
           label: 'Developer API',
-          href: '',
+          href: '/',
         },
         {
           label: 'Partners',
-          href: '',
+          href: '/',
         },
       ],
     },
@@ -1142,23 +1146,23 @@ export const footerData: FooterProps = {
       links: [
         {
           label: 'Docs',
-          href: '',
+          href: '/',
         },
         {
           label: 'Community Forum',
-          href: '',
+          href: '/',
         },
         {
           label: 'Professional Services',
-          href: '',
+          href: '/',
         },
         {
           label: 'Skills',
-          href: '',
+          href: '/',
         },
         {
           label: 'Status',
-          href: '',
+          href: '/',
         },
       ],
     },
@@ -1167,31 +1171,31 @@ export const footerData: FooterProps = {
       links: [
         {
           label: 'About',
-          href: '',
+          href: '/',
         },
         {
           label: 'Blog',
-          href: '',
+          href: '/blog',
         },
         {
           label: 'Careers',
-          href: '',
+          href: '/',
         },
         {
           label: 'Press',
-          href: '',
+          href: '/',
         },
         {
           label: 'Inclusion',
-          href: '',
+          href: '/',
         },
         {
           label: 'Social Impact',
-          href: '',
+          href: '/',
         },
         {
           label: 'Shop',
-          href: '',
+          href: '/',
         },
       ],
     },
@@ -1220,16 +1224,12 @@ export const footerData: FooterProps = {
 export const footerData2: FooterProps = {
   links: [
     {
-      label: 'Terms of Use',
-      href: '',
-    },
-    {
-      label: 'Legal Disclaimer',
-      href: '',
+      label: 'Terms & Conditions',
+      href: '/terms',
     },
     {
       label: 'Privacy Policy',
-      href: '',
+      href: '/privacy',
     },
   ],
   columns: [
