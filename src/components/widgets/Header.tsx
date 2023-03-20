@@ -20,11 +20,15 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean[]>(updatedIsDropdownOpen as boolean[]);
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState<boolean>(false);
 
-  const handleOpenDropdownOnClick = (index: number) => {
+  const handleDropdownOnClick = (index: number) => {
     setIsDropdownOpen((prevValues) => {
       const newValues = [...(prevValues as boolean[])];
       newValues.forEach((value, i) => {
-        newValues[i] = i === index;
+        if (value === true) {
+          newValues[i] = false;
+        } else {
+          newValues[i] = i === index;
+        }
       });
       return newValues;
     });
@@ -51,7 +55,13 @@ const Header = () => {
     >
       <div className="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:py-3.5 md:px-4">
         <div className="flex justify-between">
-          <Link className="flex items-center" href="/">
+          <Link
+            className="flex items-center"
+            href="/"
+            onClick={() =>
+              isToggleMenuOpen ? handleToggleMenuOnClick() : setIsDropdownOpen(updatedIsDropdownOpen as boolean[])
+            }
+          >
             <Logo />
           </Link>
           <div className="flex items-center md:hidden">
@@ -72,9 +82,7 @@ const Header = () => {
                     <>
                       <button
                         className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
-                        onClick={() =>
-                          isToggleMenuOpen ? handleToggleMenuOnClick() : handleOpenDropdownOnClick(index)
-                        }
+                        onClick={() => handleDropdownOnClick(index)}
                       >
                         {label} {Icon && <Icon className="ml-0.5 hidden h-3.5 w-3.5 md:inline" />}
                       </button>
@@ -87,7 +95,7 @@ const Header = () => {
                           <li key={`item-link-${index2}`}>
                             <Link
                               className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
-                              href={href2}
+                              href={href2 as string}
                               onClick={() =>
                                 isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
                               }
@@ -101,8 +109,8 @@ const Header = () => {
                   ) : (
                     <Link
                       className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
-                      href={href}
-                      onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index))}
+                      href={href as string}
+                      onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
                     >
                       {label}
                     </Link>
@@ -134,7 +142,7 @@ const Header = () => {
                     key={`item-action-${index}`}
                     className={`btn m-1 w-fit py-2 px-5 text-sm font-semibold shadow-none sm:mb-0 md:px-6
                       ${type === 'ghost' ? 'btn-ghost' : type === 'primary' ? 'btn-primary' : ''}`}
-                    href={href}
+                    href={href as string}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

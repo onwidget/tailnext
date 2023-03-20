@@ -68,7 +68,6 @@ export const headerData: HeaderProps = {
   links: [
     {
       label: 'Pages',
-      href: '#',
       icon: IconChevronDown,
       links: [
         {
