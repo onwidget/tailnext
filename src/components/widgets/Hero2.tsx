@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { heroData } from '~/shared/data';
+import { HeroProps } from '~/shared/types';
 
-const Hero2 = () => {
-  const { title, subtitle, callToAction, callToAction2, image } = heroData;
+const Hero2 = (props: { data: HeroProps }) => {
+  const { title, subtitle, callToAction, callToAction2, image } = props.data;
 
   return (
     <section

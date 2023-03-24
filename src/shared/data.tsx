@@ -44,6 +44,7 @@ import {
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
+import hero2Img from '~/assets/images/hero2.jpg';
 import gasImg from '~/assets/images/gas.jpg';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
@@ -71,24 +72,28 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'Contact',
-          href: '/contact',
-        },
-        {
           label: 'FAQs',
           href: '/faqs',
         },
         {
-          label: 'Terms & Conditions',
-          href: '/terms',
+          label: 'Pricing',
+          href: '/pricing',
+        },
+        {
+          label: 'About us',
+          href: '/about',
+        },
+        {
+          label: 'Contact us',
+          href: '/contact',
         },
         {
           label: 'Privacy Policy',
           href: '/privacy',
+        },
+        {
+          label: 'Terms & Conditions',
+          href: '/terms',
         },
       ],
     },
@@ -141,6 +146,25 @@ export const heroData: HeroProps = {
   },
   image: {
     src: heroImg,
+    alt: 'Hero TailNext',
+  },
+};
+
+// Hero2 data
+export const hero2Data: HeroProps = {
+  title: 'Great companies are made by great people',
+  subtitle:
+    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui. Fusce pulvinar ante eget mattis semper. Suspendisse in diam massa.',
+  callToAction: {
+    text: 'View jobs',
+    href: 'https://www.linkedin.com/',
+  },
+  callToAction2: {
+    text: 'Contact us',
+    href: '/contact',
+  },
+  image: {
+    src: hero2Img,
     alt: 'Hero TailNext',
   },
 };
