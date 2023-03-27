@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
+      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
         isSticky ? 'sticky' : 'relative'
       }`}
       id="header"
@@ -124,7 +124,7 @@ const Header = () => {
         <div
           className={`${
             isToggleMenuOpen ? 'block' : 'hidden'
-          } fixed bottom-0 left-0 w-full justify-end bg-white/90 p-3 dark:bg-slate-900/90 md:static md:mb-0 md:flex md:w-auto md:self-center md:bg-white md:p-0 md:backdrop-blur-sm dark:md:bg-slate-900`}
+          } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0`}
         >
           <div className="flex w-full items-center justify-between md:w-auto">
             {showToggleTheme && <ToggleDarkMode />}
