@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data';
+import CTA from '../common/CTA';
+import CallToAction from './CallToAction';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
@@ -137,17 +139,12 @@ const Header = () => {
             )}
             {actions && actions.length > 0 && (
               <div className="ml-4 flex w-max flex-wrap justify-end">
-                {actions.map(({ label, href, type }, index) => (
-                  <Link
+                {actions.map((callToAction, index) => (
+                  <CTA
                     key={`item-action-${index}`}
-                    className={`btn m-1 w-fit py-2 px-5 text-sm font-semibold shadow-none sm:mb-0 md:px-6
-                      ${type === 'ghost' ? 'btn-ghost' : type === 'primary' ? 'btn-primary' : ''}`}
-                    href={href as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {label}
-                  </Link>
+                    data={callToAction as CallToAction}
+                    class="m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                  />
                 ))}
               </div>
             )}

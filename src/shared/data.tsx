@@ -104,9 +104,10 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      label: 'Download',
+      text: 'Download',
       href: 'https://github.com/onwidget/tailnext',
-      type: 'primary',
+      targetBlank: true,
+      btnType: 'primary',
     },
   ],
   isSticky: true,
@@ -139,6 +140,8 @@ export const heroData: HeroProps = {
     text: 'Get template',
     href: 'https://github.com/onwidget/tailnext',
     icon: IconDownload,
+    targetBlank: true,
+    btnType: 'primary',
   },
   callToAction2: {
     text: 'Learn more',
@@ -158,6 +161,8 @@ export const hero2Data: HeroProps = {
   callToAction: {
     text: 'View jobs',
     href: 'https://www.linkedin.com/',
+    targetBlank: true,
+    btnType: 'primary',
   },
   callToAction2: {
     text: 'Contact us',
@@ -261,9 +266,11 @@ export const faqs3Data: FAQsProps = {
       description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
     },
   ],
-  link: {
-    label: 'Contact us',
+  callToAction: {
+    text: 'Contact us',
     href: '/contact',
+    btnText: 'uppercase',
+    btnType: 'primary',
   },
 };
 
@@ -416,6 +423,7 @@ export const callToActionData2: CallToActionProps = {
   callToAction: {
     text: 'Contact us',
     href: '/contact',
+    btnType: 'primary',
   },
 };
 
@@ -807,9 +815,9 @@ export const pricingData: PricingProps = {
         'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
         'In hac habitasse',
       ],
-      link: {
-        label: 'Free 7-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 7-day trial',
+        href: '/',
       },
       hasRibbon: false,
     },
@@ -818,9 +826,9 @@ export const pricingData: PricingProps = {
       value: 69,
       period: 'per month',
       texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
-      link: {
-        label: 'Free 15-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 15-day trial',
+        href: '/',
       },
       hasRibbon: true,
       ribbonTitle: 'Popular',
@@ -835,9 +843,9 @@ export const pricingData: PricingProps = {
         'Suspendisse sit amet',
         'Suspendisse auctor dui',
       ],
-      link: {
-        label: 'Free 30-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 30-day trial',
+        href: '/',
       },
       hasRibbon: false,
     },
@@ -898,9 +906,10 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
     },
     {
@@ -925,9 +934,10 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
     },
     {
@@ -952,9 +962,10 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
     },
   ],
