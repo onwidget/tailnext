@@ -537,6 +537,72 @@ export const featuresData2: FeaturesProps = {
   ],
 };
 
+// Feature data 3
+export const featuresData3: FeaturesProps = {
+  header: {
+    title: 'Services',
+    // subtitle:
+    //   'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
+  },
+  items: [
+    {
+      title: 'Next.Js + Tailwind CSS Integration',
+      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      icon: IconBrandTailwind,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+    {
+      title: 'Ready-to-use Components',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: IconComponents,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+    {
+      title: 'Best Practices',
+      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      icon: IconListCheck,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+    {
+      title: 'Excellent Page Speed',
+      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
+      icon: IconRocket,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+    {
+      title: 'Search Engine Optimization (SEO)',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconArrowsRightLeft,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+    {
+      title: 'Open to new ideas and contributions',
+      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      icon: IconBulb,
+      link: {
+        label: 'Learn more',
+        href: '/',
+      },
+    },
+  ],
+};
+
 // Content data
 export const contentData: ContentProps = {
   header: {
