@@ -72,6 +72,7 @@ interface FormProps {
 }
 
 interface Image {
+  link?: string;
   src: string | StaticImageData;
   alt: string;
 }
