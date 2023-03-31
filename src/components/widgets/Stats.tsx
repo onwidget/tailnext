@@ -1,4 +1,5 @@
 import { StatsProps } from '~/shared/types';
+import { toUiAmount } from '~/utils/utils';
 
 const Stats = ({ items }: StatsProps) => {
   return (
@@ -11,7 +12,7 @@ const Stats = ({ items }: StatsProps) => {
               className="mb-12 text-center md:mb-0 md:border-r md:last:border-none dark:md:border-slate-500"
             >
               <div className="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
-                {title}
+                {toUiAmount(title as number)}
               </div>
               <p className="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
                 {description}
