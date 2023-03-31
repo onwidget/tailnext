@@ -80,7 +80,7 @@ interface Image {
 }
 
 interface Item {
-  title: string | boolean;
+  title: string | boolean | number;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
@@ -224,6 +224,10 @@ interface PricingProps {
 interface ComparisonProps {
   header?: Header;
   columns: Array<Column>;
+}
+
+interface StatsProps {
+  items: Array<Item>;
 }
 
 interface SocialProofProps {
