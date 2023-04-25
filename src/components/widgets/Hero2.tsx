@@ -6,10 +6,7 @@ const Hero2 = (props: { data: HeroProps }) => {
   const { title, subtitle, callToAction, callToAction2, image } = props.data;
 
   return (
-    <section
-      className="mt-[-72px] bg-gradient-to-b from-white via-purple-50 to-sky-100 dark:bg-none md:bg-gradient-to-r"
-      id="heroTwo"
-    >
+    <section className="mt-[-72px] bg-primary-50 dark:bg-slate-800" id="heroTwo">
       <div className="mx-auto max-w-6xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
         <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
           <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
