@@ -179,18 +179,22 @@ export const hero2Data: HeroProps = {
 export const socialProofData: SocialProofProps = {
   images: [
     {
+      link: 'https://nextjs.org/',
       src: nextJsLogo,
       alt: 'NextJs Logo',
     },
     {
+      link: 'https://react.dev/',
       src: reactLogo,
       alt: 'React Logo',
     },
     {
+      link: 'https://tailwindcss.com/',
       src: tailwindCssLogo,
       alt: 'Tailwind CSS Logo',
     },
     {
+      link: 'https://www.typescriptlang.org/',
       src: typescriptLogo,
       alt: 'Typescript Logo',
     },
