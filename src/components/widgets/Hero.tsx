@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import { heroData } from '~/shared/data';
+import { CallToAction, HeroProps } from '~/shared/types';
+import CTA from '../common/CTA';
 
-const Hero = () => {
-  const { title, subtitle, callToAction, callToAction2, image } = heroData;
+const Hero = (props: { data: HeroProps }) => {
+  const { title, subtitle, callToAction, callToAction2, image } = props.data;
 
   return (
     <section id="heroOne">
@@ -17,26 +18,8 @@ const Hero = () => {
             <div className="mx-auto max-w-3xl">
               {subtitle && <p className="mb-6 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
               <div className="flex max-w-none flex-col flex-nowrap gap-4 px-4 sm:flex-row sm:justify-center">
-                {callToAction && callToAction.text && callToAction.href && (
-                  <div className="flex w-full sm:w-auto">
-                    <a
-                      className="btn btn-primary w-full sm:mb-0"
-                      href={callToAction.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
-                    </a>
-                  </div>
-                )}
-                {callToAction2 && callToAction2.text && callToAction2.href && (
-                  <div className="flex w-full sm:w-auto">
-                    <a className="btn w-full" href={callToAction2.href}>
-                      {callToAction2.icon && <callToAction2.icon className="mr-1 -ml-1.5 h-5 w-5" />}{' '}
-                      {callToAction2.text}
-                    </a>
-                  </div>
-                )}
+                <CTA data={callToAction as CallToAction} />
+                <CTA data={callToAction2 as CallToAction} />
               </div>
             </div>
           </div>

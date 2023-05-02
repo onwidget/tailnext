@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <>
       <FAQs4 {...faqs4Data} />
-      <CallToAction cta={callToActionData2} />
+      <CallToAction data={callToActionData2} />
     </>
   );
 };

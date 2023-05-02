@@ -17,6 +17,9 @@ interface CallToAction {
   text: string;
   href: string;
   icon?: Function;
+  targetBlank?: boolean;
+  btnText?: 'uppercase' | 'capitalize';
+  btnType?: 'primary' | 'secondary';
 }
 
 interface Button {
@@ -77,7 +80,7 @@ interface Image {
 }
 
 interface Item {
-  title: string | boolean;
+  title: string | boolean | number;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
@@ -114,7 +117,7 @@ interface Price {
   value: number;
   period?: string;
   texts?: Array<string>;
-  link?: Link;
+  callToAction?: CallToAction;
   hasRibbon?: boolean;
   ribbonTitle?: string;
 }
@@ -122,11 +125,7 @@ interface Price {
 interface Column {
   title: string;
   items: Array<Item>;
-  link?: Link;
-}
-
-interface ActionLink extends Link {
-  type?: string;
+  callToAction?: CallToAction;
 }
 
 interface MenuLink extends Link {
@@ -164,7 +163,7 @@ interface FAQsProps {
   header?: Header;
   items?: Array<Item>;
   tabs?: Array<Tab>;
-  link?: Link;
+  callToAction?: CallToAction;
 }
 
 interface CollapseProps {
@@ -227,6 +226,10 @@ interface ComparisonProps {
   columns: Array<Column>;
 }
 
+interface StatsProps {
+  items: Array<Item>;
+}
+
 interface SocialProofProps {
   images: Array<Image>;
 }
@@ -249,7 +252,8 @@ interface FooterProps {
 
 interface HeaderProps {
   links?: Array<MenuLink>;
-  actions?: Array<ActionLink>;
+  actions?: Array<CallToAction>;
+  // actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;

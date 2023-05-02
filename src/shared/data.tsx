@@ -36,6 +36,7 @@ import {
   HeroProps,
   PricingProps,
   SocialProofProps,
+  StatsProps,
   StepsProps,
   TeamProps,
   TestimonialProps,
@@ -44,6 +45,7 @@ import {
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
+import hero2Img from '~/assets/images/hero2.jpg';
 import gasImg from '~/assets/images/gas.jpg';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
@@ -71,24 +73,28 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'Contact',
-          href: '/contact',
-        },
-        {
           label: 'FAQs',
           href: '/faqs',
         },
         {
-          label: 'Terms & Conditions',
-          href: '/terms',
+          label: 'Pricing',
+          href: '/pricing',
+        },
+        {
+          label: 'About us',
+          href: '/about',
+        },
+        {
+          label: 'Contact us',
+          href: '/contact',
         },
         {
           label: 'Privacy Policy',
           href: '/privacy',
+        },
+        {
+          label: 'Terms & Conditions',
+          href: '/terms',
         },
       ],
     },
@@ -99,9 +105,10 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      label: 'Download',
+      text: 'Download',
       href: 'https://github.com/onwidget/tailnext',
-      type: 'primary',
+      targetBlank: true,
+      btnType: 'primary',
     },
   ],
   isSticky: true,
@@ -134,6 +141,8 @@ export const heroData: HeroProps = {
     text: 'Get template',
     href: 'https://github.com/onwidget/tailnext',
     icon: IconDownload,
+    targetBlank: true,
+    btnType: 'primary',
   },
   callToAction2: {
     text: 'Learn more',
@@ -141,6 +150,27 @@ export const heroData: HeroProps = {
   },
   image: {
     src: heroImg,
+    alt: 'Hero TailNext',
+  },
+};
+
+// Hero2 data
+export const hero2Data: HeroProps = {
+  title: 'Great companies are made by great people',
+  subtitle:
+    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui. Fusce pulvinar ante eget mattis semper. Suspendisse in diam massa.',
+  callToAction: {
+    text: 'View jobs',
+    href: 'https://www.linkedin.com/',
+    targetBlank: true,
+    btnType: 'primary',
+  },
+  callToAction2: {
+    text: 'Contact us',
+    href: '/contact',
+  },
+  image: {
+    src: hero2Img,
     alt: 'Hero TailNext',
   },
 };
@@ -169,6 +199,42 @@ export const socialProofData: SocialProofProps = {
 
 // FAQS data
 export const faqsData: FAQsProps = {
+  header: {
+    title: 'Frequently Asked Questions',
+    subtitle:
+      'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
+    highlight: 'FAQS',
+  },
+  items: [
+    {
+      title: 'Who we are and what we do?',
+      description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+    },
+    {
+      title: 'What values and principles guide our work?',
+      description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+    },
+    {
+      title: 'What is our experience?',
+      description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+    },
+    {
+      title: 'What is our team like?',
+      description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
+    },
+    {
+      title: 'How do we engage with the community?',
+      description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
+    },
+    {
+      title: 'What support channels do we offer?',
+      description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+    },
+  ],
+};
+
+// FAQS data 2
+export const faqsData2: FAQsProps = {
   header: {
     title: 'Frequently Asked Questions',
     subtitle:
@@ -237,9 +303,11 @@ export const faqs3Data: FAQsProps = {
       description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
     },
   ],
-  link: {
-    label: 'Contact us',
+  callToAction: {
+    text: 'Contact us',
     href: '/contact',
+    btnText: 'uppercase',
+    btnType: 'primary',
   },
 };
 
@@ -392,6 +460,7 @@ export const callToActionData2: CallToActionProps = {
   callToAction: {
     text: 'Contact us',
     href: '/contact',
+    btnType: 'primary',
   },
 };
 
@@ -501,6 +570,46 @@ export const featuresData2: FeaturesProps = {
       link: {
         href: '/',
       },
+    },
+  ],
+};
+
+// Feature data 3
+export const featuresData3: FeaturesProps = {
+  header: {
+    title: 'Services',
+  },
+  items: [
+    {
+      title: 'Next.Js + Tailwind CSS Integration',
+      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      icon: IconBrandTailwind,
+    },
+    {
+      title: 'Ready-to-use Components',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: IconComponents,
+    },
+    {
+      title: 'Best Practices',
+      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      icon: IconListCheck,
+    },
+    {
+      title: 'Excellent Page Speed',
+      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
+      icon: IconRocket,
+    },
+    {
+      title: 'Search Engine Optimization (SEO)',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconArrowsRightLeft,
+    },
+    {
+      title: 'Open to new ideas and contributions',
+      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      icon: IconBulb,
     },
   ],
 };
@@ -783,9 +892,9 @@ export const pricingData: PricingProps = {
         'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
         'In hac habitasse',
       ],
-      link: {
-        label: 'Free 7-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 7-day trial',
+        href: '/',
       },
       hasRibbon: false,
     },
@@ -794,9 +903,9 @@ export const pricingData: PricingProps = {
       value: 69,
       period: 'per month',
       texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
-      link: {
-        label: 'Free 15-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 15-day trial',
+        href: '/',
       },
       hasRibbon: true,
       ribbonTitle: 'Popular',
@@ -811,9 +920,9 @@ export const pricingData: PricingProps = {
         'Suspendisse sit amet',
         'Suspendisse auctor dui',
       ],
-      link: {
-        label: 'Free 30-day trial',
-        href: '#',
+      callToAction: {
+        text: 'Free 30-day trial',
+        href: '/',
       },
       hasRibbon: false,
     },
@@ -874,9 +983,10 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
     },
     {
@@ -901,9 +1011,10 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
     },
     {
@@ -928,10 +1039,33 @@ export const comparisonData: ComparisonProps = {
           title: true,
         },
       ],
-      link: {
-        label: 'Get started',
-        href: '#',
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
       },
+    },
+  ],
+};
+
+// Stats
+export const statsData: StatsProps = {
+  items: [
+    {
+      title: 13269,
+      description: 'Downloads',
+    },
+    {
+      title: 24.8,
+      description: 'Stars',
+    },
+    {
+      title: 1767.77,
+      description: 'Forks',
+    },
+    {
+      title: 484000,
+      description: 'Users',
     },
   ],
 };

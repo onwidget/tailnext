@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data';
+import CTA from '../common/CTA';
+import CallToAction from './CallToAction';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
@@ -48,7 +50,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
+      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
         isSticky ? 'sticky' : 'relative'
       }`}
       id="header"
@@ -122,7 +124,7 @@ const Header = () => {
         <div
           className={`${
             isToggleMenuOpen ? 'block' : 'hidden'
-          } fixed bottom-0 left-0 w-full justify-end bg-white/90 p-3 dark:bg-slate-900/90 md:static md:mb-0 md:flex md:w-auto md:self-center md:bg-white md:p-0 md:backdrop-blur-sm dark:md:bg-slate-900`}
+          } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0`}
         >
           <div className="flex w-full items-center justify-between md:w-auto">
             {showToggleTheme && <ToggleDarkMode />}
@@ -137,17 +139,12 @@ const Header = () => {
             )}
             {actions && actions.length > 0 && (
               <div className="ml-4 flex w-max flex-wrap justify-end">
-                {actions.map(({ label, href, type }, index) => (
-                  <Link
+                {actions.map((callToAction, index) => (
+                  <CTA
                     key={`item-action-${index}`}
-                    className={`btn m-1 w-fit py-2 px-5 text-sm font-semibold shadow-none sm:mb-0 md:px-6
-                      ${type === 'ghost' ? 'btn-ghost' : type === 'primary' ? 'btn-primary' : ''}`}
-                    href={href as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {label}
-                  </Link>
+                    data={callToAction as CallToAction}
+                    class="m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                  />
                 ))}
               </div>
             )}
