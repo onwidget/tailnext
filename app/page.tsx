@@ -16,6 +16,7 @@ import {
   featuresData,
   heroData,
   pricingData,
+  socialProofData,
 } from '~/shared/data';
 import Contact from '~/components/widgets/Contact';
 
@@ -23,7 +24,7 @@ export default function Page() {
   return (
     <>
       <Hero data={heroData} />
-      <SocialProof />
+      <SocialProof {...socialProofData} />
       <Features3 {...featuresData} />
       <Content {...contentData} />
       <Content {...content2Data} />
