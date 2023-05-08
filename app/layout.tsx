@@ -18,6 +18,11 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="TailNext is a free and ready to start template to make your website using Next.js and Tailwind CSS."
+        />
+        <title>TailNext — Your website with Next.js + Tailwind CSS</title>
       </head>
       <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
         <Providers>
