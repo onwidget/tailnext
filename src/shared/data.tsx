@@ -56,8 +56,8 @@ import typescriptLogo from '~/assets/images/typescript-logo.png';
 export const announcementData: AnnouncementProps = {
   title: 'NEW',
   callToAction: {
-    text: 'This template is made with Next.js 13 using the new app directory »',
-    href: 'https://beta.nextjs.org/docs/app-directory-roadmap',
+    text: 'This template is made with Next.js 13 using the new App Router »',
+    href: 'https://nextjs.org/docs/app',
   },
   callToAction2: {
     text: 'Follow @onWidget on Twitter',
