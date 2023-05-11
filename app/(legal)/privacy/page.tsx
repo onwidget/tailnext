@@ -1,9 +1,17 @@
+import type { Metadata } from 'next';
+
 import fs from 'fs';
 import path from 'path';
 import md from 'markdown-it';
 
+import { SITE } from '~/config.js';
+
+export const metadata: Metadata = {
+  title: `Privacy — ${SITE.name}`,
+};
+
 const Page = () => {
-  const filePath = path.join(process.cwd(), 'src/content/terms/terms.md');
+  const filePath = path.join(process.cwd(), 'src/content/privacy/privacy.md');
   const fileContent = fs.readFileSync(filePath, 'utf8');
 
   return (

@@ -1,3 +1,7 @@
+import type { Metadata } from 'next';
+
+import { SITE } from '~/config.js';
+
 import Hero from '~/components/widgets/Hero';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features3 from '~/components/widgets/Features3';
@@ -19,6 +23,11 @@ import {
   socialProofData,
 } from '~/shared/data';
 import Contact from '~/components/widgets/Contact';
+
+export const metadata: Metadata = {
+  title: SITE.title,
+  description: SITE.description,
+};
 
 export default function Page() {
   return (

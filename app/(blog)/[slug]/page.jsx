@@ -1,12 +1,22 @@
-export const dynamicParams = false;
-
 import md from 'markdown-it';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+import { SITE } from '~/config.js';
+
 import { findPostBySlug, findLatestPosts } from '~/utils/posts';
 
+export const dynamicParams = false;
+
 const getFormattedDate = (date) => date;
+
+export async function generateMetadata({ params}) {
+  const post = await findPostBySlug(params.slug);
+  if (!post) {
+    return notFound();
+  }
+  return { title: `${post.title} — ${SITE.name}`, description: post.description };
+}
 
 export async function generateStaticParams() {
   return (await findLatestPosts()).map(({ slug }) => ({ slug }));
