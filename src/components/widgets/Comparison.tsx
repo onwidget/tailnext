@@ -5,7 +5,7 @@ import HeaderWidget from '../common/HeaderWidget';
 
 const Comparison = ({ header, columns }: ComparisonProps) => (
   <section id="comparison">
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
       <div className="relative ml-[-1em] flex overflow-x-auto md:pb-12">
         {columns.map(({ title, items, callToAction }, index) => (

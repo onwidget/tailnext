@@ -44,7 +44,7 @@ const Card = ({ title, description, href, form }: Item) => (
 
 const CallToAction2 = ({ title, subtitle, items }: CallToActionProps) => (
   <section className="bg-primary-900 text-gray-200" id="callToActionTwo">
-    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:pt-20">
+    <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:pt-20">
       <div className="row-gap-10 grid gap-6 md:grid-cols-2">
         <div className="mx-auto md:my-auto md:ml-0 md:pb-6 md:pr-24">
           <h2 className="mb-3 flex justify-center text-6xl font-bold md:justify-start">{title}</h2>

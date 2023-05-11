@@ -7,7 +7,7 @@ const Hero2 = (props: { data: HeroProps }) => {
 
   return (
     <section className="mt-[-72px] bg-primary-50 dark:bg-slate-800" id="heroTwo">
-      <div className="mx-auto max-w-6xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
+      <div className="mx-auto max-w-7xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
         <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
           <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
             <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">

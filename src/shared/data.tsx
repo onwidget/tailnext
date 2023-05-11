@@ -102,6 +102,10 @@ export const headerData: HeaderProps = {
       label: 'Blog',
       href: '/blog',
     },
+    {
+      label: 'Contact',
+      href: '/contact',
+    },
   ],
   actions: [
     {
@@ -114,7 +118,7 @@ export const headerData: HeaderProps = {
   isSticky: true,
   showToggleTheme: true,
   showRssFeed: false,
-  position: 'center',
+  position: 'right',
 };
 
 // Hero data

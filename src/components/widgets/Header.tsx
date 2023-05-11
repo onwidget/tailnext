@@ -55,7 +55,7 @@ const Header = () => {
       }`}
       id="header"
     >
-      <div className="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:py-3.5 md:px-4">
+      <div className="mx-auto w-full max-w-7xl py-3 px-3 md:flex md:justify-between md:py-3.5 md:px-4">
         <div className="flex justify-between">
           <Link
             className="flex items-center"

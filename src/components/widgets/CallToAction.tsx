@@ -7,7 +7,7 @@ const CallToAction = (props: { data: CallToActionProps }) => {
 
   return (
     <section className="bg-primary-50 dark:bg-slate-800" id="callToActionOne">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="pt-4 pb-12 md:pb-20 md:pt-12">
           <div className="card mx-auto max-w-3xl p-6 text-center">
             {title && (
