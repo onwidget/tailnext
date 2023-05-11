@@ -3,12 +3,10 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { SITE } from '~/config.js';
-
 import { findLatestPosts } from '~/utils/posts';
 
 export const metadata: Metadata = {
-  title: `Blog — ${SITE.name}`,
+  title: 'Blog',
 };
 
 export default async function Home({}) {

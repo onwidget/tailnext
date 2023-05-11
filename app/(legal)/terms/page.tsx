@@ -4,10 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import md from 'markdown-it';
 
-import { SITE } from '~/config.js';
-
 export const metadata: Metadata = {
-  title: `Terms and conditions — ${SITE.name}`,
+  title: 'Terms and conditions',
 };
 
 const Page = () => {

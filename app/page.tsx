@@ -26,7 +26,6 @@ import Contact from '~/components/widgets/Contact';
 
 export const metadata: Metadata = {
   title: SITE.title,
-  description: SITE.description,
 };
 
 export default function Page() {

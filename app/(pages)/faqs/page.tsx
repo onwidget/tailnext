@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 
-import { SITE } from '~/config.js';
-
 import CallToAction from '~/components/widgets/CallToAction';
 import FAQs4 from '~/components/widgets/FAQs4';
 import { callToActionData2, faqs4Data } from '~/shared/data';
 
 export const metadata: Metadata = {
-  title: `FAQs — ${SITE.name}`,
+  title: 'FAQs',
 };
 
 const Page = () => {
