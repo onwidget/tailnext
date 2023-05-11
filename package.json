@@ -1,7 +1,7 @@
 {
   "name": "@onwidget/tailnext",
   "description": "A template to make your website using Next.js + Tailwind CSS.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,12 +13,10 @@
     "prettier:check": "prettier --check --ignore-unknown ."
   },
   "dependencies": {
-    "@next/font": "^13.3.4",
-    "@tabler/icons-react": "^2.17.0",
+    "@tabler/icons-react": "^2.18.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "next": "^13.3.4",
-    "next-seo": "^6.0.0",
+    "next": "^13.4.1",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,12 +25,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.1",
-    "@types/react-dom": "18.2.3",
+    "@types/node": "20.1.3",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
     "autoprefixer": "^10.4.14",
-    "eslint": "8.39.0",
-    "eslint-config-next": "^13.3.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "^13.4.1",
     "next-sitemap": "^4.0.9",
     "postcss": "^8.4.23",
     "prettier": "2.8.8",
@@ -41,6 +39,6 @@
     "typescript": "^5.0.4"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.8.0"
   }
 }
