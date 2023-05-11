@@ -73,20 +73,20 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'FAQs',
-          href: '/faqs',
+          label: 'About us',
+          href: '/about',
         },
         {
           label: 'Pricing',
           href: '/pricing',
         },
         {
-          label: 'About us',
-          href: '/about',
-        },
-        {
           label: 'Contact us',
           href: '/contact',
+        },
+        {
+          label: 'FAQs',
+          href: '/faqs',
         },
         {
           label: 'Privacy Policy',
