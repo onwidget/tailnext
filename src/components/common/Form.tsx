@@ -48,14 +48,16 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
         <div className="mb-6">
           {/* Inputs */}
           <div className="mx-0 mb-1 sm:mb-4">
-            {inputs.map(({ type, label, name, placeholder }, index) => (
+            {inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
               <div key={`item-input-${index}`} className="mx-0 mb-1 sm:mb-4">
                 <label htmlFor={name} className="pb-1 text-xs uppercase tracking-wider">
                   {label}
                 </label>
                 <input
                   type={type}
+                  id={name}
                   name={name}
+                  autoComplete={autocomplete}
                   value={inputValues[index]}
                   onChange={changeInputValueHandler}
                   placeholder={placeholder}
@@ -92,6 +94,7 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
                 {textarea.label}
               </label>
               <textarea
+                id={textarea.name}
                 name={textarea.name}
                 cols={textarea.cols}
                 rows={textarea.rows}

@@ -449,6 +449,7 @@ export const callToActionData: CallToActionProps = {
         input: {
           type: 'email',
           name: 'email',
+          autocomplete: 'email',
           placeholder: 'Enter your email address',
         },
         btn: {
@@ -1110,11 +1111,13 @@ export const contactData: ContactProps = {
       {
         type: 'text',
         name: 'name',
+        autocomplete: 'given-name',
         placeholder: 'Your name',
       },
       {
         type: 'email',
         name: 'email',
+        autocomplete: 'email',
         placeholder: 'Your email address',
       },
     ],
@@ -1166,6 +1169,7 @@ export const contact2Data: ContactProps = {
         type: 'text',
         label: 'First name',
         name: 'name',
+        autocomplete: 'given-name',
         placeholder: 'First name',
       },
       {
