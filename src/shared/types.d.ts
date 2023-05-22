@@ -31,7 +31,8 @@ interface Input {
   type: string;
   label?: string;
   value?: string;
-  name: string;
+  name?: string;
+  autocomplete?: string;
   placeholder?: string;
 }
 
