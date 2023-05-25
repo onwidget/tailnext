@@ -32,7 +32,7 @@ const Hero = (props: { data: HeroProps }) => {
                 placeholder="blur"
                 loading="eager"
                 priority
-                sizes="(max-width: 64rem) 100w, 100v"
+                sizes="(max-width: 64rem) 100vw, 1024px"
               />
             </div>
           )}
