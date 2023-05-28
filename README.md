@@ -8,7 +8,6 @@
 - ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed Insights](https://pagespeed.web.dev/) reports.
 - ✅ **Image optimization** and **Font optimization**.
 - ✅ Fast and **SEO friendly blog**.
-- ✅ **Image optimization** and **Font optimization**.
 - ✅ Generation of **project sitemap** and **robots.txt** based on your routes.
 
 <br>
