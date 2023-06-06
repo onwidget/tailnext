@@ -1,3 +1,5 @@
+'use client';
+
 import { IconMenu, IconX } from '@tabler/icons-react';
 import { ToggleMenuProps } from '~/shared/types';
 
