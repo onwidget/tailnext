@@ -1,7 +1,7 @@
 {
   "name": "@onwidget/tailnext",
   "description": "A template to make your website using Next.js + Tailwind CSS.",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
