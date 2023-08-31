@@ -13,7 +13,7 @@
     "prettier:check": "prettier --check --ignore-unknown ."
   },
   "dependencies": {
-    "@tabler/icons-react": "^2.22.0",
+    "@tabler/icons-react": "^2.32.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "^13.4.19",
