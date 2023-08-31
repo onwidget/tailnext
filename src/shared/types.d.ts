@@ -13,10 +13,12 @@ interface HeaderWidgetProps {
   titleClassname?: string;
 }
 
+type Icon = React.ComponentType<React.ComponentProps<'svg'>>;
+
 interface CallToAction {
   text: string;
   href: string;
-  icon?: Function;
+  icon?: Icon;
   targetBlank?: boolean;
   btnText?: 'uppercase' | 'capitalize';
   btnType?: 'primary' | 'secondary';
@@ -59,7 +61,7 @@ interface RadioBtn {
 }
 
 interface SmallForm {
-  icon?: Function;
+  icon?: Icon;
   input: Input;
   btn: Button;
 }
@@ -86,7 +88,7 @@ interface Item {
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
-  icon?: Function;
+  icon?: Icon;
   callToAction?: CallToAction;
   link?: Link;
 }
@@ -103,7 +105,7 @@ interface Testimonial {
   occupation: string;
   comment: string;
   image?: Image;
-  icon?: Function;
+  icon?: Icon;
   href?: string;
 }
 
@@ -111,7 +113,7 @@ interface Link {
   label?: string;
   href?: string;
   ariaLabel?: string;
-  icon?: Function;
+  icon?: Icon;
 }
 
 interface Price {
