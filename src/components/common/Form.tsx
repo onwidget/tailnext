@@ -70,11 +70,12 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
           {/* Radio buttons */}
           {radioBtns && (
             <div className="mx-0 mb-1 sm:mb-3">
-              <label className="pb-1 text-xs uppercase tracking-wider">{radioBtns?.label}</label>
+              <span className="pb-1 text-xs uppercase tracking-wider">{radioBtns?.label}</span>
               <div className="flex flex-wrap">
                 {radioBtns.radios.map(({ label }, index) => (
                   <div key={`radio-btn-${index}`} className="mr-4 items-baseline">
                     <input
+                      id={label}
                       type="radio"
                       name={label}
                       value={`value${index}`}
@@ -82,7 +83,9 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
                       onChange={changeRadioBtnsHandler}
                       className="cursor-pointer"
                     />
-                    <label className="ml-2">{label}</label>
+                    <label htmlFor={label} className="ml-2">
+                      {label}
+                    </label>
                   </div>
                 ))}
               </div>
@@ -112,13 +115,16 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
               {checkboxes.map(({ label }, index) => (
                 <div key={`checkbox-${index}`} className="mx-0 my-1 flex items-baseline">
                   <input
+                    id={label}
                     type="checkbox"
                     name={label}
                     checked={checkedState[index]}
                     onChange={() => changeCheckboxHandler(index)}
                     className="cursor-pointer"
                   />
-                  <label className="ml-2">{label}</label>
+                  <label htmlFor={label} className="ml-2">
+                    {label}
+                  </label>
                 </div>
               ))}
             </div>
