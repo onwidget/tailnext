@@ -2,9 +2,7 @@ import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 
-const Hero = (props: { data: HeroProps }) => {
-  const { title, subtitle, callToAction, callToAction2, image } = props.data;
-
+const Hero = ({ title, subtitle, callToAction, callToAction2, image }: HeroProps) => {
   return (
     <section id="heroOne">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">

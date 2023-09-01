@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Hero data={heroData} />
+      <Hero {...heroData} />
       <SocialProof {...socialProofData} />
       <Features3 {...featuresData} />
       <Content {...contentData} />
