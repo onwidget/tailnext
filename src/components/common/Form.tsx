@@ -41,30 +41,31 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
   };
 
   return (
-    <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+    <div className="card h-fit max-w-2xl p-5 md:p-12" id="form">
       {title && <h2 className={`${description ? 'mb-2' : 'mb-4'} text-2xl font-bold`}>{title}</h2>}
       {description && <p className="mb-4">{description}</p>}
       <form id="contactForm">
         <div className="mb-6">
           {/* Inputs */}
           <div className="mx-0 mb-1 sm:mb-4">
-            {inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
-              <div key={`item-input-${index}`} className="mx-0 mb-1 sm:mb-4">
-                <label htmlFor={name} className="pb-1 text-xs uppercase tracking-wider">
-                  {label}
-                </label>
-                <input
-                  type={type}
-                  id={name}
-                  name={name}
-                  autoComplete={autocomplete}
-                  value={inputValues[index]}
-                  onChange={changeInputValueHandler}
-                  placeholder={placeholder}
-                  className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                />
-              </div>
-            ))}
+            {inputs &&
+              inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
+                <div key={`item-input-${index}`} className="mx-0 mb-1 sm:mb-4">
+                  <label htmlFor={name} className="pb-1 text-xs uppercase tracking-wider">
+                    {label}
+                  </label>
+                  <input
+                    type={type}
+                    id={name}
+                    name={name}
+                    autoComplete={autocomplete}
+                    value={inputValues[index]}
+                    onChange={changeInputValueHandler}
+                    placeholder={placeholder}
+                    className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                  />
+                </div>
+              ))}
           </div>
           {/* Radio buttons */}
           {radioBtns && (
@@ -123,13 +124,17 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
             </div>
           )}
         </div>
-        <div
-          className={`${btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'}`}
-        >
-          <button type={btn.type} className="btn btn-primary sm:mb-0">
-            {btn.title}
-          </button>
-        </div>
+        {btn && (
+          <div
+            className={`${
+              btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'
+            }`}
+          >
+            <button type={btn.type || 'button'} className="btn btn-primary sm:mb-0">
+              {btn.title}
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );

@@ -1079,7 +1079,7 @@ export const statsData: StatsProps = {
   ],
 };
 
-// Contact data
+// Contact data on home page
 export const contactData: ContactProps = {
   header: {
     title: 'Get in Touch',
@@ -1134,7 +1134,7 @@ export const contactData: ContactProps = {
   },
 };
 
-// Contact2 data
+// Contact data on contact page
 export const contact2Data: ContactProps = {
   header: {
     title: 'Get in Touch',
@@ -1221,6 +1221,67 @@ export const contact2Data: ContactProps = {
     ],
     btn: {
       title: 'Send Message',
+      type: 'submit',
+    },
+  },
+};
+
+// Contact data on about page
+export const contact3Data: ContactProps = {
+  header: {
+    title: 'Contact us',
+    subtitle: 'In hac habitasse platea dictumst',
+    highlight: 'Contact',
+  },
+  content:
+    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
+  items: [
+    {
+      title: 'Our Address',
+      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      icon: IconMapPin,
+    },
+    {
+      title: 'Contact',
+      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      icon: IconPhoneCall,
+    },
+    {
+      title: 'Working hours',
+      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+      icon: IconClock,
+    },
+  ],
+  form: {
+    inputs: [
+      {
+        type: 'text',
+        label: 'Name',
+        name: 'name',
+        placeholder: 'Introduce your name',
+      },
+      {
+        type: 'email',
+        label: 'Email address',
+        name: 'email',
+        placeholder: 'Introduce your email address',
+      },
+    ],
+    textarea: {
+      cols: 30,
+      rows: 5,
+      label: 'How can we help you?',
+      name: 'textarea',
+      placeholder: 'Write your message...',
+    },
+    checkboxes: [
+      {
+        label: 'Have you read our privacy policy?',
+        value: '',
+      },
+    ],
+    btn: {
+      title: 'Contact us',
       type: 'submit',
     },
   },

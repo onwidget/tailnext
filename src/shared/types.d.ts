@@ -26,7 +26,7 @@ interface CallToAction {
 
 interface Button {
   title: string;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type: 'button' | 'submit' | 'reset';
 }
 
 interface Input {
@@ -241,7 +241,7 @@ interface SocialProofProps {
 interface ContactProps {
   header?: Header;
   content?: string;
-  items: Array<Item>;
+  items?: Array<Item>;
   form: FormProps;
 }
 

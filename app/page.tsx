@@ -14,6 +14,7 @@ import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import {
   callToActionData,
+  contactData,
   content2Data,
   contentData,
   faqsData2,
@@ -41,7 +42,7 @@ export default function Page() {
       <FAQs2 {...faqsData2} />
       <Pricing {...pricingData} />
       <Team />
-      <Contact />
+      <Contact {...contactData} />
       <CallToAction2 {...callToActionData} />
     </>
   );
