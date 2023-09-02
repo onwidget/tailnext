@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import CallToAction from '~/components/widgets/CallToAction';
 import FAQs4 from '~/components/widgets/FAQs4';
-import { callToActionData2, faqs4Data } from '~/shared/data';
+import { callToAction2Faqs, faqs4Faqs } from '~/shared/data/pages/faqs.data';
 
 export const metadata: Metadata = {
   title: 'FAQs',
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <FAQs4 {...faqs4Data} />
-      <CallToAction data={callToActionData2} />
+      <FAQs4 {...faqs4Faqs} />
+      <CallToAction {...callToAction2Faqs} />
     </>
   );
 };

@@ -1,11 +1,9 @@
 import Image from 'next/image';
 
-import { testimonialData } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
+import { TestimonialProps } from '~/shared/types';
 
-const Testimonial = () => {
-  const { header, testimonials } = testimonialData;
-
+const Testimonial = ({ header, testimonials }: TestimonialProps) => {
   return (
     <section className="bg-primary-50 dark:bg-slate-800" id="testimonial">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">

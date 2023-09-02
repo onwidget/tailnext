@@ -12,18 +12,21 @@ import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
-import {
-  callToActionData,
-  contactData,
-  content2Data,
-  contentData,
-  faqsData2,
-  featuresData,
-  heroData,
-  pricingData,
-  socialProofData,
-} from '~/shared/data';
 import Contact from '~/components/widgets/Contact';
+import {
+  callToActionHome,
+  contactHome,
+  contentHomeOne,
+  contentHomeTwo,
+  faqsHome,
+  featuresHome,
+  heroHome,
+  pricingHome,
+  socialProofHome,
+  stepsHome,
+  teamHome,
+  testimonialHome,
+} from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
   title: SITE.title,
@@ -32,18 +35,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Hero {...heroData} />
-      <SocialProof {...socialProofData} />
-      <Features3 {...featuresData} />
-      <Content {...contentData} />
-      <Content {...content2Data} />
-      <Steps />
-      <Testimonial />
-      <FAQs2 {...faqsData2} />
-      <Pricing {...pricingData} />
-      <Team />
-      <Contact {...contactData} />
-      <CallToAction2 {...callToActionData} />
+      <Hero {...heroHome} />
+      <SocialProof {...socialProofHome} />
+      <Features3 {...featuresHome} />
+      <Content {...contentHomeOne} />
+      <Content {...contentHomeTwo} />
+      <Steps {...stepsHome} />
+      <Testimonial {...testimonialHome} />
+      <FAQs2 {...faqsHome} />
+      <Pricing {...pricingHome} />
+      <Team {...teamHome} />
+      <Contact {...contactHome} />
+      <CallToAction2 {...callToActionHome} />
     </>
   );
 }

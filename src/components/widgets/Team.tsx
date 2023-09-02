@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import { teamData } from '~/shared/data';
 import HeaderWidget from '../common/HeaderWidget';
+import { TeamProps } from '~/shared/types';
 
-const Team = () => {
-  const { header, teams } = teamData;
-
+const Team = ({ header, teams }: TeamProps) => {
   return (
     <section id="team">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">

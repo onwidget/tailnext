@@ -6,7 +6,7 @@ import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
-import { headerData } from '~/shared/data';
+import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import CallToAction from './CallToAction';
 
