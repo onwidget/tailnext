@@ -84,7 +84,7 @@ interface Image {
 }
 
 interface Item {
-  title: string | boolean | number;
+  title?: string | boolean | number;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
@@ -116,11 +116,22 @@ interface Link {
   icon?: Icon;
 }
 
-interface Price {
-  title: string;
-  value: number;
+// interface Price {
+//   title: string;
+//   value: number;
+//   period?: string;
+//   texts?: Array<string>;
+//   callToAction?: CallToAction;
+//   hasRibbon?: boolean;
+//   ribbonTitle?: string;
+// }
+export interface Price {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  price?: number;
   period?: string;
-  texts?: Array<string>;
+  items?: Array<Item>;
   callToAction?: CallToAction;
   hasRibbon?: boolean;
   ribbonTitle?: string;

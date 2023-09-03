@@ -1,3 +1,4 @@
+import { IconBrandTwitter } from '@tabler/icons-react';
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 
 // Pricing data on Pricing page *******************
@@ -11,15 +12,24 @@ export const pricingPricing: PricingProps = {
   prices: [
     {
       title: 'basic',
-      value: 29,
+      price: 29,
       period: 'per month',
-      texts: [
-        'Etiam in libero',
-        'Aenean ac nunc',
-        'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
-        'In hac habitasse',
+      items: [
+        {
+          description: 'Etiam in libero, et volutpat',
+        },
+        {
+          description: 'Aenean ac nunc dolor tristique',
+        },
+        {
+          description: 'Cras scelerisque accumsan lib',
+        },
+        {
+          description: 'In hac habitasse',
+        },
       ],
       callToAction: {
+        targetBlank: true,
         text: 'Free 7-day trial',
         href: '/',
       },
@@ -27,10 +37,24 @@ export const pricingPricing: PricingProps = {
     },
     {
       title: 'standard',
-      value: 69,
+      price: 69,
       period: 'per month',
-      texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
+      items: [
+        {
+          description: 'Proin vel laoreet',
+        },
+        {
+          description: 'Ut efficitur egestas',
+        },
+        {
+          description: 'Pellentesque ut nibh',
+        },
+        {
+          description: 'Donec fringilla sem',
+        },
+      ],
       callToAction: {
+        targetBlank: true,
         text: 'Free 15-day trial',
         href: '/',
       },
@@ -39,15 +63,24 @@ export const pricingPricing: PricingProps = {
     },
     {
       title: 'premium',
-      value: 199,
+      price: 199,
       period: 'per month',
-      texts: [
-        'Curabitur suscipit risus',
-        'Aliquam blandit malesuada',
-        'Suspendisse sit amet',
-        'Suspendisse auctor dui',
+      items: [
+        {
+          description: 'Curabitur suscipit risus',
+        },
+        {
+          description: 'Aliquam blandit malesuada',
+        },
+        {
+          description: 'Suspendisse sit amet',
+        },
+        {
+          description: 'Suspendisse auctor dui',
+        },
       ],
       callToAction: {
+        targetBlank: true,
         text: 'Free 30-day trial',
         href: '/',
       },
