@@ -333,7 +333,9 @@ export const testimonialHome: TestimonialProps = {
 };
 
 // FAQS data on Home page *******************
-export const faqsHome: FAQsProps = {
+export const faqsTwoHome: FAQsProps = {
+  id: 'faqsTwo-on-home',
+  isDark: true,
   header: {
     title: 'Frequently Asked Questions',
     subtitle:

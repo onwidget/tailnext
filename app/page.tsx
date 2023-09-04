@@ -18,7 +18,7 @@ import {
   contactHome,
   contentHomeOne,
   contentHomeTwo,
-  faqsHome,
+  faqsTwoHome,
   featuresHome,
   heroHome,
   pricingHome,
@@ -42,7 +42,7 @@ export default function Page() {
       <Content {...contentHomeTwo} />
       <Steps {...stepsHome} />
       <Testimonial {...testimonialHome} />
-      <FAQs2 {...faqsHome} />
+      <FAQs2 {...faqsTwoHome} />
       <Pricing {...pricingHome} />
       <Team {...teamHome} />
       <Contact {...contactHome} />
