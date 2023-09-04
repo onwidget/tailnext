@@ -182,6 +182,7 @@ export const featuresHome: FeaturesProps = {
 
 // Content data on Home page *******************
 export const contentHomeOne: ContentProps = {
+  id: 'contentOne-on-home-one',
   header: {
     title: 'Aliquip definiebas ad est',
     subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
@@ -216,6 +217,7 @@ export const contentHomeOne: ContentProps = {
 
 // Content data on Home page *******************
 export const contentHomeTwo: ContentProps = {
+  id: 'contentOne-on-home-two',
   content:
     'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
   items: [

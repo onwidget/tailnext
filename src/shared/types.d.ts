@@ -206,7 +206,7 @@ interface FeaturesProps extends Widget {
   items: Array<Item>;
 }
 
-interface ContentProps {
+interface ContentProps extends Widget {
   header?: Header;
   content?: string;
   items?: Array<Item>;
