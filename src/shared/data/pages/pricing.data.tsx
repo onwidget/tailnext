@@ -212,6 +212,7 @@ export const comparisonPricing: ComparisonProps = {
 
 // FAQS3 data on Pricing page *******************
 export const faqs3Pricing: FAQsProps = {
+  id: 'faqsThree',
   header: {
     title: 'Pricing FAQs',
     subtitle: 'Do you have other questions?',

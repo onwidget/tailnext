@@ -180,7 +180,7 @@ interface HeroProps {
   image?: Image;
 }
 
-interface FAQsProps {
+interface FAQsProps extends Widget {
   header?: Header;
   items?: Array<Item>;
   tabs?: Array<Tab>;
