@@ -3,6 +3,7 @@ import { ContactProps, FeaturesProps } from '~/shared/types';
 
 // Contact data on Contact page *******************
 export const contact2Contact: ContactProps = {
+  id: 'contactTwo-on-contact',
   header: {
     title: 'Get in Touch',
     subtitle: 'In hac habitasse platea dictumst',

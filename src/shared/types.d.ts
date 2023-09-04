@@ -255,7 +255,7 @@ interface SocialProofProps {
   images: Array<Image>;
 }
 
-interface ContactProps {
+interface ContactProps extends Widget {
   header?: Header;
   content?: string;
   items?: Array<Item>;

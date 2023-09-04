@@ -2,7 +2,7 @@ import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 
 // Pricing data on Pricing page *******************
 export const pricingPricing: PricingProps = {
-  id: 'pricing',
+  id: 'pricing-on-pricing',
   header: {
     title: 'Prices for each plan',
     subtitle:
@@ -91,7 +91,7 @@ export const pricingPricing: PricingProps = {
 
 // Comparison pricing data on Pricing page *******************
 export const comparisonPricing: ComparisonProps = {
-  id: 'comparison',
+  id: 'comparison-on-pricing',
   isDark: true,
   header: {
     title: "What's available for each plan?",
@@ -212,7 +212,7 @@ export const comparisonPricing: ComparisonProps = {
 
 // FAQS3 data on Pricing page *******************
 export const faqs3Pricing: FAQsProps = {
-  id: 'faqsThree',
+  id: 'faqsThree-on-pricing',
   header: {
     title: 'Pricing FAQs',
     subtitle: 'Do you have other questions?',
