@@ -251,7 +251,7 @@ interface StatsProps extends Widget {
   items: Array<Item>;
 }
 
-interface SocialProofProps {
+interface SocialProofProps extends Widget {
   images: Array<Image>;
 }
 

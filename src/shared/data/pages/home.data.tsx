@@ -76,6 +76,8 @@ export const heroHome: HeroProps = {
 
 // SocialProof data on Home page *******************
 export const socialProofHome: SocialProofProps = {
+  id: 'socialProof-on-home',
+  isDark: true,
   images: [
     {
       link: 'https://nextjs.org/',
