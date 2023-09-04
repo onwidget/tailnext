@@ -5,7 +5,7 @@ import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Comparison = ({ header, columns, id, isDark = false }: ComparisonProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-7xl mx-auto">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
     {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
     <div className="relative ml-[-1em] flex overflow-x-auto md:pb-12">
       {columns.map(({ title, items, callToAction }, index) => (

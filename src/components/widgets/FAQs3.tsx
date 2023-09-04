@@ -6,7 +6,7 @@ import CTA from '../common/CTA';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const FAQs3 = ({ header, items, callToAction, id, isDark = false }: FAQsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-7xl mx-auto">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
     <div className="flex items-stretch justify-center">
       <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
         <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">

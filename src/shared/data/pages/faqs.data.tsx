@@ -2,6 +2,7 @@ import { CallToActionProps, FAQsProps } from '~/shared/types';
 
 // FAQS4 data on FAQs page *******************
 export const faqs4Faqs: FAQsProps = {
+  id: 'faqsFour-on-faqs',
   header: {
     title: 'Frequently Asked Questions',
     subtitle:

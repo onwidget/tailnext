@@ -5,7 +5,7 @@ import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-7xl mx-auto">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
     {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
