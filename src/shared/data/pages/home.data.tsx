@@ -372,6 +372,7 @@ export const faqsTwoHome: FAQsProps = {
 
 // Pricing data on Home page *******************
 export const pricingHome: PricingProps = {
+  id: 'pricing-on-home',
   header: {
     title: 'Prices for each plan',
     subtitle:
@@ -460,6 +461,8 @@ export const pricingHome: PricingProps = {
 
 // Team data on Home page *******************
 export const teamHome: TeamProps = {
+  id: 'team-on-home',
+  isDark: true,
   header: {
     title: 'Team Members',
     subtitle:

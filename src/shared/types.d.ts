@@ -221,7 +221,7 @@ interface StepsProps extends Widget {
   image?: Image;
 }
 
-interface TeamProps {
+interface TeamProps extends Widget {
   header?: Header;
   teams: Array<Team>;
 }
