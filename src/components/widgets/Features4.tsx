@@ -3,7 +3,7 @@ import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Features4 = ({ header, items, id, isDark = false }: FeaturesProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="!max-w-6xl">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
     <div className="mb-0 grid gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {items.map(({ title, description, icon: Icon, link }, index) => (

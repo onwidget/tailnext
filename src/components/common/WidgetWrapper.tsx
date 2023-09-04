@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import { WrapperTagProps } from '~/shared/types';
 import Background from './Background';
 
@@ -7,9 +8,10 @@ const WidgetWrapper = ({ children, id, isDark, containerClass }: WrapperTagProps
       <Background isDark={isDark} />
     </div>
     <div
-      className={`relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default ${
-        containerClass ? containerClass : ''
-      }`}
+      className={twMerge(
+        'relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default',
+        containerClass,
+      )}
     >
       {children}
     </div>

@@ -4,7 +4,7 @@ import { ContactProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Contact = ({ header, content, items, form, id, isDark = false }: ContactProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-5xl" />}
     <div className="flex items-stretch justify-center">
       <div className={`grid ${!content && !items ? 'md:grid-cols-1' : 'md:grid-cols-2'}`}>

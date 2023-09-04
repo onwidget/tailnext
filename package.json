@@ -20,7 +20,8 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.5",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
