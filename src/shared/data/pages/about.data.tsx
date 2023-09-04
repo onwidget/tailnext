@@ -100,6 +100,7 @@ export const features4About: FeaturesProps = {
 
 // FAQS data on About page *******************
 export const faqsAbout: FAQsProps = {
+  id: 'faqs-on-faqs',
   header: {
     title: 'Frequently Asked Questions',
     subtitle:
