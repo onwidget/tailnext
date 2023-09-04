@@ -1,6 +1,21 @@
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
 
+interface Widget {
+  id?: string;
+  isDark?: boolean;
+}
+
+interface WrapperTagProps extends Widget {
+  children: React.ReactNode;
+  containerClass?: string;
+}
+
+interface BackgroundProps {
+  children?: React.ReactNode;
+  isDark?: boolean;
+}
+
 interface Header {
   title?: string | ReactElement;
   subtitle?: string;
@@ -116,16 +131,7 @@ interface Link {
   icon?: Icon;
 }
 
-// interface Price {
-//   title: string;
-//   value: number;
-//   period?: string;
-//   texts?: Array<string>;
-//   callToAction?: CallToAction;
-//   hasRibbon?: boolean;
-//   ribbonTitle?: string;
-// }
-export interface Price {
+interface Price {
   title?: string;
   subtitle?: string;
   description?: string;
@@ -231,7 +237,7 @@ interface TestimonialProps {
   testimonials: Array<Testimonial>;
 }
 
-interface PricingProps {
+interface PricingProps extends Widget {
   header?: Header;
   prices: Array<Price>;
 }

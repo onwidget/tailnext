@@ -1,8 +1,8 @@
-import { IconBrandTwitter } from '@tabler/icons-react';
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 
 // Pricing data on Pricing page *******************
 export const pricingPricing: PricingProps = {
+  id: 'pricing',
   header: {
     title: 'Prices for each plan',
     subtitle:
