@@ -242,7 +242,7 @@ interface PricingProps extends Widget {
   prices: Array<Price>;
 }
 
-interface ComparisonProps {
+interface ComparisonProps extends Widget {
   header?: Header;
   columns: Array<Column>;
 }

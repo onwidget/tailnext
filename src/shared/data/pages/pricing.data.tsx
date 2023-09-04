@@ -91,6 +91,8 @@ export const pricingPricing: PricingProps = {
 
 // Comparison pricing data on Pricing page *******************
 export const comparisonPricing: ComparisonProps = {
+  id: 'comparison',
+  isDark: true,
   header: {
     title: "What's available for each plan?",
     subtitle:
