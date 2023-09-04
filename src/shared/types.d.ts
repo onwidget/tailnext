@@ -201,7 +201,7 @@ interface CallToActionProps extends Widget {
   items?: Array<Item>;
 }
 
-interface FeaturesProps {
+interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
 }
