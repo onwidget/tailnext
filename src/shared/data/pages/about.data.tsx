@@ -35,6 +35,7 @@ export const hero2About: HeroProps = {
 
 // Stats data on About page *******************
 export const statsAbout: StatsProps = {
+  id: 'stats-on-about',
   items: [
     {
       title: 13269,

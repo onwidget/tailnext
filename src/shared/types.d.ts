@@ -247,7 +247,7 @@ interface ComparisonProps extends Widget {
   columns: Array<Column>;
 }
 
-interface StatsProps {
+interface StatsProps extends Widget {
   items: Array<Item>;
 }
 
