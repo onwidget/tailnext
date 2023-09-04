@@ -285,6 +285,7 @@ export const stepsHome: StepsProps = {
 
 // Testimonial data on Home page *******************
 export const testimonialHome: TestimonialProps = {
+  id: 'testimonial-on-home',
   header: {
     title: 'What our customers say about us',
     subtitle:

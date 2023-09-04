@@ -232,7 +232,7 @@ interface AnnouncementProps {
   callToAction2?: CallToAction;
 }
 
-interface TestimonialProps {
+interface TestimonialProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
 }
