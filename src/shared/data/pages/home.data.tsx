@@ -250,6 +250,8 @@ export const contentHomeTwo: ContentProps = {
 
 // Steps data on Home page *******************
 export const stepsHome: StepsProps = {
+  id: 'steps-on-home',
+  isDark: true,
   title: 'Sed ac magna sit amet risus tristique interdum. hac.',
   items: [
     {

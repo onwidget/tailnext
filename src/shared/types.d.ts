@@ -215,7 +215,7 @@ interface ContentProps extends Widget {
   isAfterContent?: boolean;
 }
 
-interface StepsProps {
+interface StepsProps extends Widget {
   title?: string;
   items: Array<Item>;
   image?: Image;
