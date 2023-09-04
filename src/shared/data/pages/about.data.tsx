@@ -36,6 +36,7 @@ export const hero2About: HeroProps = {
 // Stats data on About page *******************
 export const statsAbout: StatsProps = {
   id: 'stats-on-about',
+  isDark: true,
   items: [
     {
       title: 13269,
@@ -59,7 +60,6 @@ export const statsAbout: StatsProps = {
 // Feature4 data on About page *******************
 export const features4About: FeaturesProps = {
   id: 'featuresFour-on-about',
-  isDark: true,
   header: {
     title: 'Services',
   },
@@ -101,6 +101,7 @@ export const features4About: FeaturesProps = {
 // FAQS data on About page *******************
 export const faqsAbout: FAQsProps = {
   id: 'faqs-on-faqs',
+  isDark: true,
   header: {
     title: 'Frequently Asked Questions',
     subtitle:
@@ -137,6 +138,7 @@ export const faqsAbout: FAQsProps = {
 
 // Contact data on About page *******************
 export const contactAbout: ContactProps = {
+  id: 'contact-on-about',
   header: {
     title: 'Contact us',
     subtitle: 'In hac habitasse platea dictumst',
