@@ -194,7 +194,7 @@ interface CollapseProps {
   iconDown?: ReactElement;
 }
 
-interface CallToActionProps {
+interface CallToActionProps extends Widget {
   title: string;
   subtitle: string;
   callToAction?: CallToAction;
