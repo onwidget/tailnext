@@ -19,7 +19,7 @@ import {
   contentHomeOne,
   contentHomeTwo,
   faqsTwoHome,
-  featuresHome,
+  featuresThreeHome,
   heroHome,
   pricingHome,
   socialProofHome,
@@ -37,7 +37,7 @@ export default function Page() {
     <>
       <Hero {...heroHome} />
       <SocialProof {...socialProofHome} />
-      <Features3 {...featuresHome} />
+      <Features3 {...featuresThreeHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
       <Steps {...stepsHome} />

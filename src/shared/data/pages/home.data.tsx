@@ -102,8 +102,8 @@ export const socialProofHome: SocialProofProps = {
   ],
 };
 
-// Feature data on Home page *******************
-export const featuresHome: FeaturesProps = {
+// FeaturesThree data on Home page *******************
+export const featuresThreeHome: FeaturesProps = {
   id: 'features-on-home',
   isDark: true,
   header: {
