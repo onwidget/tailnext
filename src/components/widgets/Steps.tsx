@@ -48,7 +48,9 @@ const Steps = ({ title, items, image, id, isDark = false }: StepsProps) => (
             width={400}
             height={768}
             alt={image.alt}
-            className="inset-0 w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
+            placeholder="blur"
+            className="inset-0 w-full rounded-md object-cover object-top shadow-lg bg-gray-400 dark:bg-slate-700 md:absolute md:h-full"
+            quality={50}
           />
         )}
       </div>

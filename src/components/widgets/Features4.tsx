@@ -9,7 +9,7 @@ const Features4 = ({ header, items, id, isDark = false }: FeaturesProps) => (
       {items.map(({ title, description, icon: Icon, link }, index) => (
         <div
           key={`item-feature3-${index}`}
-          className="relative flex flex-col items-center justify-between rounded border border-transparent bg-white p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
+          className="relative flex flex-col items-center justify-between rounded border border-transparent bg-white dark:bg-slate-900 p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-900"
         >
           <div>
             <div className="mb-6 flex justify-center">

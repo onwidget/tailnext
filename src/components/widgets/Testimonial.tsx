@@ -28,7 +28,7 @@ const Testimonial = ({ header, testimonials, id, isDark = false }: TestimonialPr
                       width={48}
                       height={48}
                       alt={image.alt}
-                      className="mr-4 h-12 w-12 rounded-full object-cover shadow-lg"
+                      className="mr-4 h-12 w-12 rounded-full object-cover shadow-lg bg-gray-500 dark:bg-slate-700"
                     />
                   )}
                   <div className="text-left">
@@ -45,8 +45,6 @@ const Testimonial = ({ header, testimonials, id, isDark = false }: TestimonialPr
       </div>
     </div>
   </WidgetWrapper>
-  //   </div>
-  // </section>
 );
 
 export default Testimonial;

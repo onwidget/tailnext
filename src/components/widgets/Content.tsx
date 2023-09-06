@@ -43,7 +43,9 @@ const Content = ({ header, content, items, image, isReversed, isAfterContent, id
                 height={500}
                 alt={image.alt}
                 sizes="(max-width: 768px) 100vw, 432px"
-                className="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                className="mx-auto w-full rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
+                placeholder="blur"
+                quality={50}
               />
             </div>
           )}
