@@ -38,12 +38,12 @@ const Content = ({ header, content, items, image, isReversed, isAfterContent, id
           {image && (
             <div className="relative m-auto max-w-4xl">
               <Image
+                className="mx-auto w-full rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
                 src={image.src}
-                width={500}
-                height={500}
+                width={828}
+                height={828}
                 alt={image.alt}
                 sizes="(max-width: 768px) 100vw, 432px"
-                className="mx-auto w-full rounded-lg shadow-lg bg-gray-400 dark:bg-slate-700"
                 placeholder="blur"
                 quality={50}
               />

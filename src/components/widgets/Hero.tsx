@@ -24,13 +24,14 @@ const Hero = ({ title, subtitle, callToAction, callToAction2, image }: HeroProps
           {image && (
             <div className="relative m-auto max-w-5xl">
               <Image
+                className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
                 src={image.src}
                 alt={image.alt}
-                className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
-                placeholder="blur"
-                loading="eager"
-                priority
+                width={1024}
+                height={607}
                 sizes="(max-width: 64rem) 100vw, 1024px"
+                placeholder="blur"
+                priority
               />
             </div>
           )}
