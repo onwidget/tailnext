@@ -1,40 +1,21 @@
 import { FeaturesProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
-import CTA from '../common/CTA';
+import ItemGrid from '../common/ItemGrid';
 
-const Features3 = ({ header, items, id, isDark = false }: FeaturesProps) => (
+const Features3 = ({ header, items, columns, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
-    <div className="mb-0 grid grid-cols-3 items-start gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {items.map(({ title, description, icon: Icon, callToAction }, index) => (
-        <div
-          key={`item-feature3-${index}`}
-          className="col-span-3 pb-6 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
-        >
-          <div className="flex-flow flex">
-            <div className="mb-4 mr-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary-900">
-                {Icon && <Icon className="h-6 w-6 text-white dark:text-slate-200" />}
-              </div>
-            </div>
-            <div className="flex flex-col justify-between">
-              <>
-                <h3 className="mb-3 text-xl font-bold">{title}</h3>
-                <p className="text-gray-600 dark:text-slate-400">{description}</p>
-              </>
-              {callToAction && (
-                <CTA
-                  callToAction={callToAction}
-                  containerClass="pt-2"
-                  linkClass="justify-start font-bold text-blue-600 hover:underline dark:text-gray-200"
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <ItemGrid
+      items={items}
+      columns={columns}
+      containerClass="pb-6"
+      panelClass="flex justify-between"
+      iconClass="flex h-12 w-12 items-center justify-center rounded-md bg-primary-900 md:p-3 mb-4 mr-4 rtl:ml-4 rtl:mr-0"
+      titleClass="mb-3 text-xl font-bold"
+      descriptionClass="text-gray-600 dark:text-slate-400"
+      actionClass="justify-start font-bold text-blue-600 hover:underline dark:text-gray-200"
+    />
   </WidgetWrapper>
 );
 

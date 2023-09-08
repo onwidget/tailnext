@@ -105,6 +105,7 @@ export const socialProofHome: SocialProofProps = {
 export const featuresThreeHome: FeaturesProps = {
   id: 'features-on-home',
   isDark: true,
+  columns: 3,
   header: {
     title: (
       <>

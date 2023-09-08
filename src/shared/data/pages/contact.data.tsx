@@ -98,6 +98,7 @@ export const contact2Contact: ContactProps = {
 
 // Feature2 data on Contact page *******************
 export const features2Contact: FeaturesProps = {
+  columns: 3,
   header: {
     title: 'Support Center',
     subtitle: 'Looking for something in particular?',

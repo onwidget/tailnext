@@ -219,6 +219,7 @@ interface CallToActionProps extends Widget {
 interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
+  columns: number;
 }
 
 interface ContentProps extends Widget {
