@@ -31,12 +31,17 @@ interface HeaderWidgetProps {
 type Icon = React.ComponentType<React.ComponentProps<'svg'>>;
 
 interface CallToAction {
-  text: string;
+  text?: string;
   href: string;
   icon?: Icon;
   targetBlank?: boolean;
-  btnText?: 'uppercase' | 'capitalize';
-  btnType?: 'primary' | 'secondary';
+}
+
+interface LinkOrButton {
+  callToAction?: CallToAction;
+  containerClass?: string;
+  linkClass?: string;
+  iconClass?: string;
 }
 
 interface Button {
@@ -172,6 +177,7 @@ interface Dropdown {
   iconDown?: ReactElement;
 }
 
+// WIDGETS
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;

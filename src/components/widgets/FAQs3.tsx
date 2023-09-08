@@ -11,7 +11,12 @@ const FAQs3 = ({ header, items, callToAction, id, isDark = false }: FAQsProps) =
       <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
         <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">
           {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
-          {callToAction && <CTA data={callToAction as CallToAction} class="mb-8 sm:w-auto sm:justify-start" />}
+          {callToAction && (
+            <CTA
+              callToAction={callToAction as CallToAction}
+              linkClass="btn btn-primary mb-8 sm:w-auto sm:justify-start"
+            />
+          )}
         </div>
         <div className="mt-4 h-fit md:col-span-2 md:mx-4 md:mt-0 md:px-4">
           <Collapse

@@ -17,8 +17,8 @@ const Hero2 = ({ title, subtitle, callToAction, callToAction2, image }: HeroProp
               <div className="mx-auto max-w-3xl">
                 {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
                 <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                  {callToAction && <CTA data={callToAction} />}
-                  {callToAction2 && <CTA data={callToAction2} />}
+                  {callToAction && <CTA callToAction={callToAction} linkClass="btn btn-primary" />}
+                  {callToAction2 && <CTA callToAction={callToAction2} linkClass="btn" />}
                 </div>
               </div>
             </div>
@@ -33,6 +33,7 @@ const Hero2 = ({ title, subtitle, callToAction, callToAction2, image }: HeroProp
                   width={540}
                   height={405}
                   sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                  loading="eager"
                   placeholder="blur"
                   priority
                 />

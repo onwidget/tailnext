@@ -14,7 +14,7 @@ const CallToAction = ({ title, subtitle, callToAction, id, isDark = false }: Cal
         {subtitle && <p className="text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
         {text && href && (
           <div className="mt-6 sm:mx-auto sm:w-fit">
-            <CTA data={callToAction as CallToAction} />
+            <CTA callToAction={callToAction as CallToAction} linkClass="btn btn-primary" />
           </div>
         )}
       </div>

@@ -62,7 +62,6 @@ export const heroHome: HeroProps = {
     href: 'https://github.com/onwidget/tailnext',
     icon: IconDownload,
     targetBlank: true,
-    btnType: 'primary',
   },
   callToAction2: {
     text: 'Learn more',

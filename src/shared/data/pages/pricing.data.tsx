@@ -148,7 +148,6 @@ export const comparisonPricing: ComparisonProps = {
       callToAction: {
         text: 'Get started',
         href: '/',
-        btnType: 'primary',
       },
     },
     {
@@ -176,7 +175,6 @@ export const comparisonPricing: ComparisonProps = {
       callToAction: {
         text: 'Get started',
         href: '/',
-        btnType: 'primary',
       },
     },
     {
@@ -204,7 +202,6 @@ export const comparisonPricing: ComparisonProps = {
       callToAction: {
         text: 'Get started',
         href: '/',
-        btnType: 'primary',
       },
     },
   ],
@@ -248,7 +245,5 @@ export const faqs3Pricing: FAQsProps = {
   callToAction: {
     text: 'Contact us',
     href: '/contact',
-    btnText: 'uppercase',
-    btnType: 'primary',
   },
 };

@@ -41,7 +41,9 @@ const Comparison = ({ header, columns, id, isDark = false }: ComparisonProps) =>
                 )}
               </div>
             ))}
-          {index !== 0 && callToAction && <CTA data={callToAction as CallToAction} class="mt-8" />}
+          {index !== 0 && callToAction && (
+            <CTA callToAction={callToAction as CallToAction} linkClass="btn btn-primary mt-8" />
+          )}
         </div>
       ))}
     </div>

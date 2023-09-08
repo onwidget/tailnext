@@ -111,6 +111,5 @@ export const callToAction2Faqs: CallToActionProps = {
   callToAction: {
     text: 'Contact us',
     href: '/contact',
-    btnType: 'primary',
   },
 };

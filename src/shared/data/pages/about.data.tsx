@@ -21,7 +21,6 @@ export const hero2About: HeroProps = {
     text: 'View jobs',
     href: 'https://www.linkedin.com/',
     targetBlank: true,
-    btnType: 'primary',
   },
   callToAction2: {
     text: 'Contact us',

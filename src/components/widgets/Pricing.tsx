@@ -63,7 +63,10 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                       )}
                     </div>
                     {callToAction && (
-                      <CTA data={callToAction as CallToAction} class={`mt-8 ${hasRibbon ? 'btn-primary' : ''}`} />
+                      <CTA
+                        callToAction={callToAction as CallToAction}
+                        linkClass={`btn mt-8 ${hasRibbon ? 'btn-primary' : ''}`}
+                      />
                     )}
                   </div>
                 )}

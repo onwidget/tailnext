@@ -142,8 +142,8 @@ const Header = () => {
                 {actions.map((callToAction, index) => (
                   <CTA
                     key={`item-action-${index}`}
-                    data={callToAction as CallToAction}
-                    class="m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                    callToAction={callToAction as CallToAction}
+                    linkClass="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
                   />
                 ))}
               </div>
