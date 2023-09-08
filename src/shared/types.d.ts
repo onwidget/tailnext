@@ -110,7 +110,6 @@ interface Item {
   form?: SmallForm;
   icon?: Icon;
   callToAction?: CallToAction;
-  link?: Link;
 }
 
 interface Team {
@@ -175,6 +174,16 @@ interface Dropdown {
   onActiveTabSelected: Function;
   iconUp?: ReactElement;
   iconDown?: ReactElement;
+}
+
+interface ToggleMenuProps {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
+}
+
+interface WindowSize {
+  width: number;
+  height: number;
 }
 
 // WIDGETS
@@ -285,14 +294,4 @@ interface HeaderProps {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
-}
-
-interface ToggleMenuProps {
-  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
-  isToggleMenuOpen: boolean;
-}
-
-interface WindowSize {
-  width: number;
-  height: number;
 }

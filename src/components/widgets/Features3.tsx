@@ -1,12 +1,13 @@
 import { FeaturesProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
+import CTA from '../common/CTA';
 
 const Features3 = ({ header, items, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
     <div className="mb-0 grid grid-cols-3 items-start gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {items.map(({ title, description, icon: Icon, link }, index) => (
+      {items.map(({ title, description, icon: Icon, callToAction }, index) => (
         <div
           key={`item-feature3-${index}`}
           className="col-span-3 pb-6 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
@@ -22,12 +23,12 @@ const Features3 = ({ header, items, id, isDark = false }: FeaturesProps) => (
                 <h3 className="mb-3 text-xl font-bold">{title}</h3>
                 <p className="text-gray-600 dark:text-slate-400">{description}</p>
               </>
-              {link && (
-                <div className="pt-2">
-                  <a className="flex font-bold text-blue-600 hover:underline dark:text-gray-200" href={link.href}>
-                    {link.label}
-                  </a>
-                </div>
+              {callToAction && (
+                <CTA
+                  callToAction={callToAction}
+                  containerClass="pt-2"
+                  linkClass="justify-start font-bold text-blue-600 hover:underline dark:text-gray-200"
+                />
               )}
             </div>
           </div>

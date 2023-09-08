@@ -1,12 +1,13 @@
 import { FeaturesProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
+import CTA from '../common/CTA';
 
 const Features4 = ({ header, items, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
     <div className="mb-0 grid gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {items.map(({ title, description, icon: Icon, link }, index) => (
+      {items.map(({ title, description, icon: Icon, callToAction }, index) => (
         <div
           key={`item-feature3-${index}`}
           className="relative flex flex-col items-center justify-between rounded border border-transparent bg-white dark:bg-slate-900 p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-900"
@@ -18,12 +19,12 @@ const Features4 = ({ header, items, id, isDark = false }: FeaturesProps) => (
             <h3 className="mb-3 text-xl font-bold">{title}</h3>
             <p className="text-gray-600 dark:text-slate-400">{description}</p>
           </div>
-          {link && (
-            <div className="pt-4">
-              <a className="flex font-bold text-blue-600 hover:underline dark:text-gray-200" href={link.href}>
-                {link.label}
-              </a>
-            </div>
+          {callToAction && (
+            <CTA
+              callToAction={callToAction}
+              containerClass="pt-4"
+              linkClass="flex font-bold text-blue-600 hover:underline dark:text-gray-200"
+            />
           )}
         </div>
       ))}

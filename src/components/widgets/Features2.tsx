@@ -12,11 +12,11 @@ const Features2 = ({ header, items }: FeaturesProps) => (
           items.length > 2 ? 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'flex justify-center'
         } items-stretch gap-6`}
       >
-        {items.map(({ title, description, icon: Icon, link }, index) => (
+        {items.map(({ title, description, icon: Icon, callToAction }, index) => (
           <Fragment key={`item-feature2-${index}`}>
-            {link ? (
+            {callToAction ? (
               <a
-                href={link.href}
+                href={callToAction.href}
                 className="relative flex min-w-[22em] flex-col rounded border border-transparent bg-white p-6 shadow-lg transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900  dark:text-white dark:shadow-[0_4px_10px_4px_rgba(30,41,59,0.3)]"
               >
                 <div className="flex items-center">

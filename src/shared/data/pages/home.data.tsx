@@ -121,8 +121,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
       icon: IconBrandTailwind,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
@@ -131,8 +131,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
       icon: IconComponents,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
@@ -141,8 +141,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconListCheck,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
@@ -151,8 +151,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
       icon: IconRocket,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
@@ -161,8 +161,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconArrowsRightLeft,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
@@ -171,8 +171,8 @@ export const featuresThreeHome: FeaturesProps = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
       icon: IconBulb,
-      link: {
-        label: 'Discover now',
+      callToAction: {
+        text: 'Discover now',
         href: '/',
       },
     },
