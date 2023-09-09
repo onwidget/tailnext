@@ -59,7 +59,7 @@ export const statsAbout: StatsProps = {
 // Feature4 data on About page *******************
 export const features4About: FeaturesProps = {
   id: 'featuresFour-on-about',
-  columns: 2,
+  columns: 3,
   header: {
     title: 'Services',
   },

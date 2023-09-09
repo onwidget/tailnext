@@ -1,20 +1,9 @@
 import { twMerge } from 'tailwind-merge';
-import { Item } from '~/shared/types';
+import { ItemGrid } from '~/shared/types';
 import CTA from './CTA';
 
-interface ItemGrid {
-  items?: Array<Item>;
-  columns?: number;
-  defaultIcon?: string;
-  containerClass?: string;
-  panelClass?: string;
-  iconClass?: string;
-  titleClass?: string;
-  descriptionClass?: string;
-  actionClass?: string;
-}
-
 const ItemGrid = ({
+  id,
   items,
   columns,
   containerClass,
@@ -42,7 +31,7 @@ const ItemGrid = ({
           )}
         >
           {items.map(({ title, description, icon: Icon, callToAction }, index) => (
-            <div key={`item-grid-${index}`}>
+            <div key={id ? `item-${id}-${index}` : `item-grid-${index}`}>
               <div className={(twMerge('flex flex-row max-w-md'), panelClass)}>
                 <div className="flex justify-center">
                   {Icon && <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />}

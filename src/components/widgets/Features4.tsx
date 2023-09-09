@@ -1,34 +1,21 @@
 import { FeaturesProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 import WidgetWrapper from '../common/WidgetWrapper';
-import CTA from '../common/CTA';
+import ItemGrid from '../common/ItemGrid';
 
-const Features4 = ({ header, items, id, isDark = false }: FeaturesProps) => (
+const Features4 = ({ header, items, columns, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
-    <div className="mb-0 grid gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {items.map(({ title, description, icon: Icon, callToAction }, index) => (
-        <div
-          key={`item-feature3-${index}`}
-          className="relative flex flex-col items-center justify-between rounded border border-transparent bg-white dark:bg-slate-900 p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-900"
-        >
-          <div>
-            <div className="mb-6 flex justify-center">
-              {Icon && <Icon className="h-14 w-14 text-gray-700 dark:text-slate-200" />}
-            </div>
-            <h3 className="mb-3 text-xl font-bold">{title}</h3>
-            <p className="text-gray-600 dark:text-slate-400">{description}</p>
-          </div>
-          {callToAction && (
-            <CTA
-              callToAction={callToAction}
-              containerClass="pt-4"
-              linkClass="flex font-bold text-blue-600 hover:underline dark:text-gray-200"
-            />
-          )}
-        </div>
-      ))}
-    </div>
+    <ItemGrid
+      id={id}
+      items={items}
+      columns={columns}
+      panelClass="h-full relative flex flex-col rounded border border-transparent bg-white dark:bg-slate-900 p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-900"
+      iconClass="mb-6 flex justify-center items-center mx-auto h-14 w-14 text-gray-700 dark:text-slate-200"
+      titleClass="mb-3 text-xl font-bold"
+      descriptionClass="text-gray-600 dark:text-slate-400"
+      actionClass="flex font-bold text-blue-600 hover:underline dark:text-gray-200"
+    />
   </WidgetWrapper>
 );
 

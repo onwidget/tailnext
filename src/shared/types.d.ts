@@ -112,6 +112,19 @@ interface Item {
   callToAction?: CallToAction;
 }
 
+interface ItemGrid {
+  id?: string;
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+  actionClass?: string;
+}
+
 interface Team {
   name: string;
   occupation: string;
