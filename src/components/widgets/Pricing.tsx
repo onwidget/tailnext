@@ -1,8 +1,8 @@
-import { IconCheck } from '@tabler/icons-react';
 import { CallToAction, PricingProps } from '~/shared/types';
 import CTA from '../common/CTA';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
+import ItemGrid from '../common/ItemGrid';
 
 const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
@@ -45,27 +45,21 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                       </div>
                       {items && (
                         <ul role="list" className="my-8 md:my-10 space-y-2 text-left">
-                          {items.map(
-                            ({ description }, index2) =>
-                              description && (
-                                <li
-                                  key={`pricing-item-${index2}`}
-                                  className="mb-1.5 flex items-start space-x-3 leading-7"
-                                >
-                                  <div className="mt-1.5 mr-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600">
-                                    <IconCheck className="h-6 w-6 text-white dark:text-slate-200" />
-                                  </div>
-                                  <span>{description}</span>
-                                </li>
-                              ),
-                          )}
+                          <ItemGrid
+                            id={id}
+                            items={items}
+                            columns={1}
+                            containerClass="gap-2 md:gap-y-2"
+                            panelClass="flex items-start space-x-2"
+                            iconClass="w-4 h-4 mt-1.5 mr-2 rtl:mr-0 rtl:ml-2 mr-1.5 flex items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600 text-white dark:text-slate-200"
+                          />
                         </ul>
                       )}
                     </div>
                     {callToAction && (
                       <CTA
                         callToAction={callToAction as CallToAction}
-                        linkClass={`btn mt-8 ${hasRibbon ? 'btn-primary' : ''}`}
+                        linkClass={`btn ${hasRibbon ? 'btn-primary' : ''}`}
                       />
                     )}
                   </div>

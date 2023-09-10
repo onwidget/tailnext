@@ -1,3 +1,4 @@
+import { IconCheck } from '@tabler/icons-react';
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
@@ -5,7 +6,7 @@ import { HeroProps } from '~/shared/types';
 export const heroPricing: HeroProps = {
   title: 'Plans and Prices',
   subtitle: 'Discover our options and start today.',
-  tagline: 'Pricing',
+  tagline: 'Demo Pricing Page',
 };
 
 // Pricing data on Pricing page *******************
@@ -23,16 +24,20 @@ export const pricingPricing: PricingProps = {
       period: 'per month',
       items: [
         {
-          description: 'Etiam in libero, et volutpat',
+          icon: IconCheck,
+          description: 'Access to a selection of professionally designed website templates.',
         },
         {
-          description: 'Aenean ac nunc dolor tristique',
+          icon: IconCheck,
+          description: 'Email support to assist you with any questions or issues.',
         },
         {
-          description: 'Cras scelerisque accumsan lib',
+          icon: IconCheck,
+          description: 'Adequate storage space for small to medium-sized websites.',
         },
         {
-          description: 'In hac habitasse',
+          icon: IconCheck,
+          description: 'Core features for a functional online presence, such as SEO tools and contact forms.',
         },
       ],
       callToAction: {
@@ -48,16 +53,20 @@ export const pricingPricing: PricingProps = {
       period: 'per month',
       items: [
         {
-          description: 'Proin vel laoreet',
+          icon: IconCheck,
+          description: 'A larger variety of premium website templates to choose from.',
         },
         {
-          description: 'Ut efficitur egestas',
+          icon: IconCheck,
+          description: 'Faster response times and priority customer support.',
         },
         {
-          description: 'Pellentesque ut nibh',
+          icon: IconCheck,
+          description: 'More storage space to accommodate growing websites and content.',
         },
         {
-          description: 'Donec fringilla sem',
+          icon: IconCheck,
+          description: 'Enable e-commerce capabilities to sell products or services online.',
         },
       ],
       callToAction: {
@@ -74,16 +83,20 @@ export const pricingPricing: PricingProps = {
       period: 'per month',
       items: [
         {
-          description: 'Curabitur suscipit risus',
+          icon: IconCheck,
+          description: 'Access to exclusive and customizable premium website templates.',
         },
         {
-          description: 'Aliquam blandit malesuada',
+          icon: IconCheck,
+          description: 'Round-the-clock customer support for immediate assistance.',
         },
         {
-          description: 'Suspendisse sit amet',
+          icon: IconCheck,
+          description: 'No limits on storage, ideal for extensive websites and media.',
         },
         {
-          description: 'Suspendisse auctor dui',
+          icon: IconCheck,
+          description: 'Advanced SEO, analytics, and marketing tools for optimal performance and growth.',
         },
       ],
       callToAction: {
