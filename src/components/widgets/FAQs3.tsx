@@ -1,4 +1,4 @@
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import Collapse from '../common/Collapse';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
 import { CallToAction, FAQsProps, Item } from '~/shared/types';
@@ -10,7 +10,7 @@ const FAQs3 = ({ header, items, callToAction, id, isDark = false }: FAQsProps) =
     <div className="flex items-stretch justify-center">
       <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
         <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">
-          {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
+          {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
           {callToAction && (
             <CTA
               callToAction={callToAction as CallToAction}

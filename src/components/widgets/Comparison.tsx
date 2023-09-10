@@ -1,12 +1,12 @@
 import { IconCheck, IconMinus } from '@tabler/icons-react';
 import { CallToAction, ComparisonProps } from '~/shared/types';
 import CTA from '../common/CTA';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Comparison = ({ header, columns, id, isDark = false }: ComparisonProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
-    {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
+    {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
     <div className="relative ml-[-1em] flex overflow-x-auto md:pb-12">
       {columns.map(({ title, items, callToAction }, index) => (
         <div

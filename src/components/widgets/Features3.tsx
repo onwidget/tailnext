@@ -1,11 +1,11 @@
 import { FeaturesProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
 const Features3 = ({ header, items, columns, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
-    {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid
       id={id}
       items={items}

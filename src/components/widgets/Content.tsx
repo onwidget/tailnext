@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { IconCheck } from '@tabler/icons-react';
 
 import { ContentProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Content = ({ header, content, items, image, isReversed, isAfterContent, id, isDark = false }: ContentProps) => (
@@ -11,7 +11,7 @@ const Content = ({ header, content, items, image, isReversed, isAfterContent, id
     isDark={isDark}
     containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}
   >
-    {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
     <div className="mx-auto max-w-7xl">
       <div className={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
         <div className="self-center md:basis-1/2">

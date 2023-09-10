@@ -1,6 +1,6 @@
 'use client';
 
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import Collapse from '../common/Collapse';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
 import { FAQsProps, Item, Tab } from '~/shared/types';
@@ -19,7 +19,7 @@ const FAQs4 = ({ header, tabs, id, isDark = false }: FAQsProps) => {
 
   return (
     <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
-      {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
+      {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
       <div className="flex items-stretch justify-center">
         <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
           {width > 767 ? (

@@ -1,12 +1,12 @@
 import { IconCheck } from '@tabler/icons-react';
 import { CallToAction, PricingProps } from '~/shared/types';
 import CTA from '../common/CTA';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
-    {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
+    {header && <Headline header={header} containerClass="max-w-5xl" titleClass="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {prices &&

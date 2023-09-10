@@ -23,9 +23,11 @@ interface Header {
   position?: 'center' | 'right' | 'left';
 }
 
-interface HeaderWidgetProps {
+interface HeadlineProps {
   header: Header;
-  titleClassname?: string;
+  containerClass?: string;
+  titleClass?: string;
+  subtitleClass?: string;
 }
 
 type Icon = React.ComponentType<React.ComponentProps<'svg'>>;

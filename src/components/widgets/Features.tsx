@@ -1,10 +1,10 @@
 import { FeaturesProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Features = ({ header, items, id, isDark = false }: FeaturesProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
-    {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <div className="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
       {items.map(({ title, description, icon: Icon }, index) => (
         <div key={`item-feature-${index}`} className="space-y-8 sm:px-8">

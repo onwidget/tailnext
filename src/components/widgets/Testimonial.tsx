@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { TestimonialProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const Testimonial = ({ header, testimonials, id, isDark = false }: TestimonialProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
-    {header && <HeaderWidget header={header} titleClassname="text-2xl sm:text-3xl" />}
+    {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className="grid grid-cols-3 gap-3 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {testimonials.map(({ name, occupation, comment, image, icon: Icon, href }, index) => (

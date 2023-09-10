@@ -1,11 +1,11 @@
 import { IconArrowDownRight } from '@tabler/icons-react';
 import { FAQsProps, Item } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const FAQs = ({ header, items, id, isDark = false }: FAQsProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
-    {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
+    {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
     <div className="max-w-screen-xl sm:mx-auto">
       <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:gap-x-16">
         {(items as Item[]).map(({ title, description }, index) => (

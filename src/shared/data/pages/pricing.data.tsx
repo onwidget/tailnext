@@ -7,7 +7,6 @@ export const pricingPricing: PricingProps = {
     title: 'Prices for each plan',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
-    // tagline: 'Pricing',
   },
   prices: [
     {

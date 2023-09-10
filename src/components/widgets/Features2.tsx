@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import { FeaturesProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
 
 const Features2 = ({ header, items }: FeaturesProps) => (
   <section className="relative py-16 lg:py-20" id="features2">
     <div className="pointer-events-none absolute inset-0 mb-36 bg-primary-50 dark:bg-slate-800"></div>
     <div className="relative mx-auto -mb-12 max-w-6xl px-4 sm:px-6">
-      {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
+      {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
       <div
         className={`my-12 ${
           items.length > 2 ? 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'flex justify-center'
