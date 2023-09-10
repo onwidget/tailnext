@@ -205,6 +205,7 @@ interface WindowSize {
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
+  tagline?: string;
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
   image?: Image;

@@ -1,12 +1,20 @@
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
+import { HeroProps } from '~/shared/types';
+
+// Hero data on Pricing page *******************
+export const heroPricing: HeroProps = {
+  title: 'Plans and Prices',
+  subtitle: 'Discover our options and start today.',
+  tagline: 'Pricing',
+};
 
 // Pricing data on Pricing page *******************
 export const pricingPricing: PricingProps = {
   id: 'pricing-on-pricing',
   header: {
-    title: 'Prices for each plan',
+    title: 'Our plans',
     subtitle:
-      'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
+      'Discover our flexible pricing options designed to fit your needs perfectly, no matter the size of your project. We have the right plan for you.',
   },
   prices: [
     {
