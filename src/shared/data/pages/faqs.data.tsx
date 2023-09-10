@@ -7,7 +7,7 @@ export const faqs4Faqs: FAQsProps = {
     title: 'Frequently Asked Questions',
     subtitle:
       'Praesent rutrum purus in sem blandit, in consectetur mi pharetra. Ut sagittis sapien sit amet congue cursus. Nulla eu elementum ex, tincidunt semper nisi.',
-    highlight: 'FAQS',
+    tagline: 'FAQS',
     position: 'center',
   },
   tabs: [

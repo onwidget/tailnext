@@ -114,7 +114,7 @@ export const featuresThreeHome: FeaturesProps = {
     ),
     subtitle:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
-    highlight: 'Features',
+    tagline: 'Features',
   },
   items: [
     {
@@ -186,7 +186,7 @@ export const contentHomeOne: ContentProps = {
   header: {
     title: 'Aliquip definiebas ad est',
     subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
-    highlight: 'Content',
+    tagline: 'Content',
   },
   content:
     'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
@@ -290,7 +290,7 @@ export const testimonialHome: TestimonialProps = {
     title: 'What our customers say about us',
     subtitle:
       'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
-    // highlight: 'Testimonial',
+    // tagline: 'Testimonial',
   },
   testimonials: [
     {
@@ -340,7 +340,7 @@ export const faqsTwoHome: FAQsProps = {
     title: 'Frequently Asked Questions',
     subtitle:
       'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
-    highlight: 'FAQS',
+    tagline: 'FAQS',
   },
   items: [
     {
@@ -377,7 +377,7 @@ export const pricingHome: PricingProps = {
     title: 'Prices for each plan',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
-    // highlight: 'Pricing',
+    // tagline: 'Pricing',
   },
   prices: [
     {
@@ -467,7 +467,7 @@ export const teamHome: TeamProps = {
     title: 'Team Members',
     subtitle:
       'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
-    // highlight: 'Team',
+    // tagline: 'Team',
   },
   teams: [
     {
@@ -578,7 +578,7 @@ export const contactHome: ContactProps = {
   header: {
     title: 'Get in Touch',
     subtitle: 'In hac habitasse platea dictumst',
-    highlight: 'Contact',
+    tagline: 'Contact',
   },
   content:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',

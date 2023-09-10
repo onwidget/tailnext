@@ -7,7 +7,7 @@ export const contact2Contact: ContactProps = {
   header: {
     title: 'Get in Touch',
     subtitle: 'In hac habitasse platea dictumst',
-    highlight: 'Contact',
+    tagline: 'Contact',
   },
   content:
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',

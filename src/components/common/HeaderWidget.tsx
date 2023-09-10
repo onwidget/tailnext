@@ -1,19 +1,19 @@
 import { HeaderWidgetProps } from '~/shared/types';
 
 const HeaderWidget = ({ header, titleClassname }: HeaderWidgetProps) => {
-  const { title, subtitle, highlight, position } = header;
+  const { title, subtitle, tagline, position } = header;
 
   return (
     <div className="mb-4">
-      {(title || subtitle || highlight) && (
+      {(title || subtitle || tagline) && (
         <div
           className={`mb-6 max-w-3xl text-center ${
             position === 'left' ? 'sm:text-left' : position === 'right' ? 'sm:text-right' : 'sm:text-center'
           } md:mx-auto md:mb-12`}
         >
-          {highlight && (
+          {tagline && (
             <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-              {highlight}
+              {tagline}
             </p>
           )}
           {title && (

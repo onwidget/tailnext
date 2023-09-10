@@ -29,12 +29,12 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'About us',
-          href: '/about',
-        },
-        {
           label: 'Pricing',
           href: '/pricing',
+        },
+        {
+          label: 'About us',
+          href: '/about',
         },
         {
           label: 'Contact us',
@@ -45,12 +45,12 @@ export const headerData: HeaderProps = {
           href: '/faqs',
         },
         {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-        {
           label: 'Terms & Conditions',
           href: '/terms',
+        },
+        {
+          label: 'Privacy Policy',
+          href: '/privacy',
         },
       ],
     },

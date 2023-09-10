@@ -7,7 +7,7 @@ export const pricingPricing: PricingProps = {
     title: 'Prices for each plan',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
-    // highlight: 'Pricing',
+    // tagline: 'Pricing',
   },
   prices: [
     {
@@ -97,7 +97,7 @@ export const comparisonPricing: ComparisonProps = {
     title: "What's available for each plan?",
     subtitle:
       'Morbi ut imperdiet ex. Nullam sed tincidunt purus. Donec finibus dui at odio dictum facilisis. Maecenas ut orci quis nisi congue maximus. Sed quis augue sapien.',
-    // highlight: 'Comparison',
+    // tagline: 'Comparison',
   },
   columns: [
     {
@@ -213,7 +213,7 @@ export const faqs3Pricing: FAQsProps = {
   header: {
     title: 'Pricing FAQs',
     subtitle: 'Do you have other questions?',
-    // highlight: 'FAQS',
+    // tagline: 'FAQS',
     position: 'left',
   },
   items: [
