@@ -5,7 +5,15 @@ import { HeroProps } from '~/shared/types';
 // Hero data on Pricing page *******************
 export const heroPricing: HeroProps = {
   title: 'Plans and Prices',
-  subtitle: `Here, you'll find a clear breakdown of our service plans and their respective features. Whether you're a small business or a large enterprise, we have options tailored to your needs. You can choose the plan that best suits your goals!`,
+  subtitle: (
+    <>
+      <span className="hidden md:inline">
+        {`Here, you'll find a clear breakdown of our service plans and their respective features. Whether you're a small
+        business or a large enterprise, we have options tailored to your needs.`}
+      </span>
+      You can choose the plan that best suits your goals!
+    </>
+  ),
   tagline: 'Demo Pricing Page',
 };
 
@@ -14,8 +22,12 @@ export const pricingPricing: PricingProps = {
   id: 'pricing-on-pricing',
   header: {
     title: 'Our plans',
-    subtitle:
-      'Discover our flexible pricing options designed to fit your needs perfectly, no matter the size of your project. We have the right plan for you.',
+    subtitle: (
+      <>
+        Discover our flexible pricing options designed to fit your needs perfectly.{' '}
+        <span className="hidden md:inline">{`No matter the size of your project, we have the right plan for you.`}</span>
+      </>
+    ),
   },
   prices: [
     {
