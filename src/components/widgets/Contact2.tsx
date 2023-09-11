@@ -1,20 +1,15 @@
-import { contact2Data } from '~/shared/data';
 import Form from '../common/Form';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
+import { ContactProps } from '~/shared/types';
+import WidgetWrapper from '../common/WidgetWrapper';
 
-const Contact2 = () => {
-  const { header, form } = contact2Data;
-
-  return (
-    <section className="bg-primary-50 dark:bg-slate-800" id="contactTwo">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-5xl" />}
-        <div className="flex items-stretch justify-center">
-          <Form {...form} btnPosition="right" />
-        </div>
-      </div>
-    </section>
-  );
-};
+const Contact2 = ({ header, form, id, isDark = false }: ContactProps) => (
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-7xl mx-auto">
+    {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
+    <div className="flex items-stretch justify-center">
+      <Form {...form} btnPosition="right" />
+    </div>
+  </WidgetWrapper>
+);
 
 export default Contact2;

@@ -2,9 +2,7 @@ import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 
-const Hero2 = (props: { data: HeroProps }) => {
-  const { title, subtitle, callToAction, callToAction2, image } = props.data;
-
+const Hero2 = ({ title, subtitle, callToAction, callToAction2, image }: HeroProps) => {
   return (
     <section className="mt-[-72px] bg-primary-50 dark:bg-slate-800" id="heroTwo">
       <div className="mx-auto max-w-7xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
@@ -19,8 +17,8 @@ const Hero2 = (props: { data: HeroProps }) => {
               <div className="mx-auto max-w-3xl">
                 {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
                 <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                  {callToAction && <CTA data={callToAction} />}
-                  {callToAction2 && <CTA data={callToAction2} />}
+                  {callToAction && <CTA callToAction={callToAction} linkClass="btn btn-primary" />}
+                  {callToAction2 && <CTA callToAction={callToAction2} linkClass="btn" />}
                 </div>
               </div>
             </div>
@@ -29,13 +27,15 @@ const Hero2 = (props: { data: HeroProps }) => {
             <div className="relative m-auto h-full max-w-4xl object-cover">
               {image && (
                 <Image
+                  className="mx-auto h-full w-auto rounded-md bg-gray-400 object-cover drop-shadow-2xl dark:bg-slate-700"
                   src={image.src}
                   alt={image.alt}
-                  className="mx-auto h-full w-auto rounded-md bg-gray-400 object-cover drop-shadow-2xl dark:bg-slate-700"
-                  placeholder="blur"
+                  width={540}
+                  height={405}
+                  sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
                   loading="eager"
+                  placeholder="blur"
                   priority
-                  sizes="(max-width: 64rem) 100w, 100v"
                 />
               )}
             </div>

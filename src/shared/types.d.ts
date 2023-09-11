@@ -1,30 +1,54 @@
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
 
+interface Widget {
+  id?: string;
+  isDark?: boolean;
+}
+
+interface WrapperTagProps extends Widget {
+  children: React.ReactNode;
+  containerClass?: string;
+}
+
+interface BackgroundProps {
+  children?: React.ReactNode;
+  isDark?: boolean;
+}
+
 interface Header {
   title?: string | ReactElement;
   subtitle?: string;
-  highlight?: string;
+  tagline?: string;
   position?: 'center' | 'right' | 'left';
 }
 
-interface HeaderWidgetProps {
+interface HeadlineProps {
   header: Header;
-  titleClassname?: string;
+  containerClass?: string;
+  titleClass?: string;
+  subtitleClass?: string;
 }
 
+type Icon = React.ComponentType<React.ComponentProps<'svg'>>;
+
 interface CallToAction {
-  text: string;
+  text?: string;
   href: string;
-  icon?: Function;
+  icon?: Icon;
   targetBlank?: boolean;
-  btnText?: 'uppercase' | 'capitalize';
-  btnType?: 'primary' | 'secondary';
+}
+
+interface LinkOrButton {
+  callToAction?: CallToAction;
+  containerClass?: string;
+  linkClass?: string;
+  iconClass?: string;
 }
 
 interface Button {
   title: string;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type: 'button' | 'submit' | 'reset';
 }
 
 interface Input {
@@ -59,7 +83,7 @@ interface RadioBtn {
 }
 
 interface SmallForm {
-  icon?: Function;
+  icon?: Icon;
   input: Input;
   btn: Button;
 }
@@ -82,13 +106,25 @@ interface Image {
 }
 
 interface Item {
-  title: string | boolean | number;
+  title?: string | boolean | number;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
-  icon?: Function;
+  icon?: Icon;
   callToAction?: CallToAction;
-  link?: Link;
+}
+
+interface ItemGrid {
+  id?: string;
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+  actionClass?: string;
 }
 
 interface Team {
@@ -103,7 +139,7 @@ interface Testimonial {
   occupation: string;
   comment: string;
   image?: Image;
-  icon?: Function;
+  icon?: Icon;
   href?: string;
 }
 
@@ -111,14 +147,16 @@ interface Link {
   label?: string;
   href?: string;
   ariaLabel?: string;
-  icon?: Function;
+  icon?: Icon;
 }
 
 interface Price {
-  title: string;
-  value: number;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  price?: number;
   period?: string;
-  texts?: Array<string>;
+  items?: Array<Item>;
   callToAction?: CallToAction;
   hasRibbon?: boolean;
   ribbonTitle?: string;
@@ -153,15 +191,27 @@ interface Dropdown {
   iconDown?: ReactElement;
 }
 
+interface ToggleMenuProps {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
+}
+
+interface WindowSize {
+  width: number;
+  height: number;
+}
+
+// WIDGETS
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
+  tagline?: string;
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
   image?: Image;
 }
 
-interface FAQsProps {
+interface FAQsProps extends Widget {
   header?: Header;
   items?: Array<Item>;
   tabs?: Array<Tab>;
@@ -175,19 +225,20 @@ interface CollapseProps {
   iconDown?: ReactElement;
 }
 
-interface CallToActionProps {
+interface CallToActionProps extends Widget {
   title: string;
   subtitle: string;
   callToAction?: CallToAction;
   items?: Array<Item>;
 }
 
-interface FeaturesProps {
+interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
+  columns: number;
 }
 
-interface ContentProps {
+interface ContentProps extends Widget {
   header?: Header;
   content?: string;
   items?: Array<Item>;
@@ -196,13 +247,13 @@ interface ContentProps {
   isAfterContent?: boolean;
 }
 
-interface StepsProps {
+interface StepsProps extends Widget {
   title?: string;
   items: Array<Item>;
   image?: Image;
 }
 
-interface TeamProps {
+interface TeamProps extends Widget {
   header?: Header;
   teams: Array<Team>;
 }
@@ -213,33 +264,33 @@ interface AnnouncementProps {
   callToAction2?: CallToAction;
 }
 
-interface TestimonialProps {
+interface TestimonialProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
 }
 
-interface PricingProps {
+interface PricingProps extends Widget {
   header?: Header;
   prices: Array<Price>;
 }
 
-interface ComparisonProps {
+interface ComparisonProps extends Widget {
   header?: Header;
   columns: Array<Column>;
 }
 
-interface StatsProps {
+interface StatsProps extends Widget {
   items: Array<Item>;
 }
 
-interface SocialProofProps {
+interface SocialProofProps extends Widget {
   images: Array<Image>;
 }
 
-interface ContactProps {
+interface ContactProps extends Widget {
   header?: Header;
   content?: string;
-  items: Array<Item>;
+  items?: Array<Item>;
   form: FormProps;
 }
 
@@ -260,14 +311,4 @@ interface HeaderProps {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
-}
-
-interface ToggleMenuProps {
-  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
-  isToggleMenuOpen: boolean;
-}
-
-interface WindowSize {
-  width: number;
-  height: number;
 }
