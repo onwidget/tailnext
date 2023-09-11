@@ -1,16 +1,21 @@
 import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall } from '@tabler/icons-react';
 import { ContactProps, FeaturesProps } from '~/shared/types';
+import { HeroProps } from '~/shared/types';
+
+// Hero data on Contact page *******************
+export const heroContact: HeroProps = {
+  title: 'Get in touch with us',
+  subtitle: `Thank you for considering us for your project! We're excited to hear from you. Our team can assist you in building your dream website.`,
+  tagline: 'Demo Contact Page',
+};
 
 // Contact data on Contact page *******************
 export const contact2Contact: ContactProps = {
   id: 'contactTwo-on-contact',
   header: {
-    title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
-    tagline: 'Contact',
+    title: 'Contact us',
+    subtitle: `Please take a moment to fill out this form, so we can better understand your needs and get the process started smoothly.`,
   },
-  content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
   items: [
     {
       title: 'Our Address',
@@ -30,8 +35,6 @@ export const contact2Contact: ContactProps = {
   ],
   form: {
     title: 'Ready to Get Started?',
-    description:
-      'Mauris consequat, urna vel varius auctor, enim risus ornare felis, at hendrerit erat justo eu justo. Curabitur sagittis efficitur aliquam. Duis eget porttitor lectus, vel pharetra ex. Nam volutpat nibh ut porta egestas.',
     inputs: [
       {
         type: 'text',
