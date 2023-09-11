@@ -386,15 +386,19 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
+          icon: IconCheck,
           description: 'Etiam in libero, et volutpat',
         },
         {
+          icon: IconCheck,
           description: 'Aenean ac nunc dolor tristique',
         },
         {
+          icon: IconCheck,
           description: 'Cras scelerisque accumsan lib',
         },
         {
+          icon: IconCheck,
           description: 'In hac habitasse',
         },
       ],
@@ -411,15 +415,19 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
+          icon: IconCheck,
           description: 'Proin vel laoreet',
         },
         {
+          icon: IconCheck,
           description: 'Ut efficitur egestas',
         },
         {
+          icon: IconCheck,
           description: 'Pellentesque ut nibh',
         },
         {
+          icon: IconCheck,
           description: 'Donec fringilla sem',
         },
       ],
@@ -437,15 +445,19 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
+          icon: IconCheck,
           description: 'Curabitur suscipit risus',
         },
         {
+          icon: IconCheck,
           description: 'Aliquam blandit malesuada',
         },
         {
+          icon: IconCheck,
           description: 'Suspendisse sit amet',
         },
         {
+          icon: IconCheck,
           description: 'Suspendisse auctor dui',
         },
       ],

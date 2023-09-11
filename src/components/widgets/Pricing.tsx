@@ -44,7 +44,7 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                         </span>
                       </div>
                       {items && (
-                        <ul role="list" className="my-8 md:my-10 space-y-2 text-left">
+                        <div className="my-8 md:my-10 space-y-2 text-left">
                           <ItemGrid
                             id={id}
                             items={items}
@@ -53,7 +53,7 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                             panelClass="flex items-start space-x-2"
                             iconClass="w-4 h-4 mt-1.5 mr-2 rtl:mr-0 rtl:ml-2 mr-1.5 flex items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600 text-white dark:text-slate-200"
                           />
-                        </ul>
+                        </div>
                       )}
                     </div>
                     {callToAction && (
