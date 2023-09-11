@@ -4,7 +4,14 @@ import { HeroProps } from '~/shared/types';
 // Hero data on FAQs page *******************
 export const heroFaqs: HeroProps = {
   title: 'Frequently Asked Questions',
-  subtitle: `Whether you need help using our Next.js and Tailwind CSS templates, solving problems, or just want some useful tips, our FAQs are here to assist you. Explore them to optimize your experience with our website and products.`,
+  subtitle: (
+    <>
+      <span className="hidden md:inline">
+        {`Whether you need help using our Next.js and Tailwind CSS templates, solving problems, or just want some useful tips, our FAQs are here to assist you.`}
+      </span>{' '}
+      Explore them to optimize your experience with our website and products.
+    </>
+  ),
   tagline: 'Demo FAQs Page',
 };
 
