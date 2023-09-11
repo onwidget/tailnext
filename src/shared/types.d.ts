@@ -18,7 +18,7 @@ interface BackgroundProps {
 
 interface Header {
   title?: string | ReactElement;
-  subtitle?: string;
+  subtitle?: string | ReactElement;
   tagline?: string;
   position?: 'center' | 'right' | 'left';
 }
