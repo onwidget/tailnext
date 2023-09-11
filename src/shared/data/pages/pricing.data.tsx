@@ -5,7 +5,7 @@ import { HeroProps } from '~/shared/types';
 // Hero data on Pricing page *******************
 export const heroPricing: HeroProps = {
   title: 'Plans and Prices',
-  subtitle: 'Discover our options and start today.',
+  subtitle: `Here, you'll find a clear breakdown of our service plans and their respective features. Whether you're a small business or a large enterprise, we have options tailored to your needs. You can choose the plan that best suits your goals!`,
   tagline: 'Demo Pricing Page',
 };
 

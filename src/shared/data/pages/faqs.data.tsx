@@ -1,13 +1,19 @@
 import { CallToActionProps, FAQsProps } from '~/shared/types';
+import { HeroProps } from '~/shared/types';
+
+// Hero data on FAQs page *******************
+export const heroFaqs: HeroProps = {
+  title: 'Frequently Asked Questions',
+  subtitle: `Whether you need help using our Next.js and Tailwind CSS templates, solving problems, or just want some useful tips, our FAQs are here to assist you. Explore them to optimize your experience with our website and products.`,
+  tagline: 'Demo FAQs Page',
+};
 
 // FAQS4 data on FAQs page *******************
 export const faqs4Faqs: FAQsProps = {
   id: 'faqsFour-on-faqs',
   header: {
-    title: 'Frequently Asked Questions',
-    subtitle:
-      'Praesent rutrum purus in sem blandit, in consectetur mi pharetra. Ut sagittis sapien sit amet congue cursus. Nulla eu elementum ex, tincidunt semper nisi.',
-    tagline: 'FAQS',
+    title: 'Find what you need',
+    subtitle: 'Get quick answers to your questions: Everything you need in one spot.',
     position: 'center',
   },
   tabs: [
