@@ -135,11 +135,10 @@ interface Team {
 }
 
 interface Testimonial {
-  name: string;
-  occupation: string;
-  comment: string;
+  testimonial?: string;
+  name?: string;
+  job?: string;
   image?: Image;
-  icon?: Icon;
   href?: string;
 }
 
@@ -264,9 +263,10 @@ interface AnnouncementProps {
   callToAction2?: CallToAction;
 }
 
-interface TestimonialProps extends Widget {
+interface TestimonialsProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
+  callToAction?: CallToAction;
 }
 
 interface PricingProps extends Widget {

@@ -7,7 +7,7 @@ import SocialProof from '../src/components/widgets/SocialProof';
 import Features3 from '~/components/widgets/Features3';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
-import Testimonial from '~/components/widgets/Testimonial';
+import Testimonials from '~/components/widgets/Testimonials';
 import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
@@ -25,7 +25,7 @@ import {
   socialProofHome,
   stepsHome,
   teamHome,
-  testimonialHome,
+  testimonialsHome,
 } from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export default function Page() {
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
       <Steps {...stepsHome} />
-      <Testimonial {...testimonialHome} />
+      <Testimonials {...testimonialsHome} />
       <FAQs2 {...faqsTwoHome} />
       <Pricing {...pricingHome} />
       <Team {...teamHome} />
