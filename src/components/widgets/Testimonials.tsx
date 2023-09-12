@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { TestimonialsProps } from '~/shared/types';
 import Headline from '../common/Headline';
@@ -15,10 +16,10 @@ const Testimonials = ({ header, testimonials, callToAction, id, isDark = false }
             {testimonial && (
               <div
                 key={`item-testimonial-${index}`}
-                className="rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow max-w-sm"
+                className="card max-w-sm h-full hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100"
               >
-                <div className="card h-full p-6 border-b-[3px] border-transparent hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
-                  <a href={href} target="_blank" rel="noopener noreferrer" className="w-full text-center">
+                {href && (
+                  <Link href={href} target="_blank" rel="noopener noreferrer" className="w-full text-center">
                     {((image && name) || (name && job)) && (
                       <>
                         <div className="mb-4 flex items-center">
@@ -46,8 +47,8 @@ const Testimonials = ({ header, testimonials, callToAction, id, isDark = false }
                         <p className="m-b-30 font-light dark:text-slate-400">{`" ${testimonial.slice(0, 150)}... "`}</p>
                       </blockquote>
                     )}
-                  </a>
-                </div>
+                  </Link>
+                )}
               </div>
             )}
           </>

@@ -97,6 +97,7 @@ interface FormProps {
   checkboxes?: Array<Checkbox>;
   btn: Button;
   btnPosition?: 'center' | 'right' | 'left';
+  containerClass?: string;
 }
 
 interface Image {

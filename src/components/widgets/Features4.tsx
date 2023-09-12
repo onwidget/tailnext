@@ -10,7 +10,7 @@ const Features4 = ({ header, items, columns, id, isDark = false }: FeaturesProps
       id={id}
       items={items}
       columns={columns}
-      panelClass="h-full relative flex flex-col rounded border border-transparent bg-white dark:bg-slate-900 p-6 text-center shadow-lg transition hover:shadow-md dark:border-slate-900"
+      panelClass="card h-full relative flex flex-col text-center"
       iconClass="mb-6 flex justify-center items-center mx-auto h-14 w-14 text-gray-700 dark:text-slate-200"
       titleClass="mb-3 text-xl font-bold"
       descriptionClass="text-gray-600 dark:text-slate-400"
