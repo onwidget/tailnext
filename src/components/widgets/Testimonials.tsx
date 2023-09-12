@@ -3,6 +3,7 @@ import { TestimonialsProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import CTA from '../common/CTA';
+import DividerLine from '../common/DividerLine';
 
 const Testimonials = ({ header, testimonials, callToAction, id, isDark = false }: TestimonialsProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
@@ -36,7 +37,7 @@ const Testimonials = ({ header, testimonials, callToAction, id, isDark = false }
                             {job && <span className="text-sm dark:text-slate-400">{job}</span>}
                           </div>
                         </div>
-                        <hr className="border-gray-200 dark:border-gray-700 my-4" />
+                        <DividerLine />
                       </>
                     )}
 
