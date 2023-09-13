@@ -137,10 +137,12 @@ interface Team {
 
 interface Testimonial {
   testimonial?: string;
+  isTestimonialUp?: boolean;
   name?: string;
   job?: string;
   image?: Image;
   href?: string;
+  containerClass?: string;
 }
 
 interface Link {
@@ -267,6 +269,7 @@ interface AnnouncementProps {
 interface TestimonialsProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
+  isTestimonialUp?: boolean;
   callToAction?: CallToAction;
 }
 
