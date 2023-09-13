@@ -1,48 +1,9 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { Testimonial, TestimonialsProps } from '~/shared/types';
+import { TestimonialsProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import CTA from '../common/CTA';
-import DividerLine from '../common/DividerLine';
-import { twMerge } from 'tailwind-merge';
-
-const TestimonialItem = ({ name, job, testimonial, image, isTestimonialUp, containerClass }: Testimonial) => (
-  <div
-    className={twMerge(
-      `flex justify-between items-stretch select-none ${isTestimonialUp ? 'flex-col-reverse' : 'flex-col'}`,
-      containerClass,
-    )}
-  >
-    {((image && name) || (name && job)) && (
-      <>
-        <div className="flex items-center">
-          {image && (
-            <Image
-              src={image.src}
-              width={48}
-              height={48}
-              alt={image.alt}
-              className="mr-4 h-10 w-10 rounded-full object-cover shadow-lg bg-gray-500 dark:bg-slate-700"
-            />
-          )}
-
-          <div className="flex flex-col justify-center text-left">
-            {name && <h3 className="font-semibold">{name}</h3>}
-            {job && <span className="text-sm dark:text-slate-400">{job}</span>}
-          </div>
-        </div>
-        <DividerLine />
-      </>
-    )}
-
-    {testimonial && (
-      <blockquote className="flex-auto">
-        <p className="m-b-30 font-light dark:text-slate-400">{`" ${testimonial.slice(0, 150)}... "`}</p>
-      </blockquote>
-    )}
-  </div>
-);
+import ItemTestimonial from '../common/ItemTestimonial';
 
 const Testimonials = ({
   header,
@@ -69,23 +30,37 @@ const Testimonials = ({
               >
                 {!callToAction && href ? (
                   <Link href={href} target="_blank" rel="noopener noreferrer">
-                    <TestimonialItem
+                    <ItemTestimonial
                       name={name}
                       job={job}
                       testimonial={testimonial}
                       isTestimonialUp={isTestimonialUp}
+                      hasDividerLine={true}
+                      startSlice={0}
+                      endSlice={150}
                       image={image}
-                      containerClass="flex w-full h-full"
+                      containerClass="h-full"
+                      panelClass="justify-between items-stretch w-full h-full"
+                      nameJobClass="text-left"
+                      jobClass="text-sm"
+                      imageClass="mr-4 h-10 w-10 rounded-full"
                     />
                   </Link>
                 ) : (
-                  <TestimonialItem
+                  <ItemTestimonial
                     name={name}
                     job={job}
                     testimonial={testimonial}
                     isTestimonialUp={isTestimonialUp}
+                    hasDividerLine={true}
+                    startSlice={0}
+                    endSlice={150}
                     image={image}
-                    containerClass="flex w-full h-full"
+                    containerClass="h-full"
+                    panelClass="justify-between items-stretch w-full h-full"
+                    nameJobClass="text-left"
+                    jobClass="text-sm"
+                    imageClass="mr-4 h-10 w-10 rounded-full"
                   />
                 )}
               </div>

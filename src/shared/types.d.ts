@@ -137,12 +137,22 @@ interface Team {
 
 interface Testimonial {
   testimonial?: string;
+  startSlice?: number;
+  endSlice?: number;
   isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
   name?: string;
   job?: string;
   image?: Image;
   href?: string;
   containerClass?: string;
+  panelClass?: string;
+  imageClass?: string;
+  dataClass?: string;
+  nameJobClass?: string;
+  nameClass?: string;
+  jobClass?: string;
+  testimonialClass?: string;
 }
 
 interface Link {
@@ -270,6 +280,9 @@ interface TestimonialsProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
   isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  startSlice?: number;
+  endSlice?: number;
   callToAction?: CallToAction;
 }
 

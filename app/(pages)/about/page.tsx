@@ -5,7 +5,15 @@ import FAQs from '~/components/widgets/FAQs';
 import Features4 from '~/components/widgets/Features4';
 import Hero2 from '~/components/widgets/Hero2';
 import Stats from '~/components/widgets/Stats';
-import { contactAbout, faqsAbout, features4About, hero2About, statsAbout } from '~/shared/data/pages/about.data';
+import Testimonials2 from '~/components/widgets/Testimonials2';
+import {
+  contactAbout,
+  faqsAbout,
+  features4About,
+  hero2About,
+  statsAbout,
+  testimonials2About,
+} from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
   title: `About us`,
@@ -17,6 +25,7 @@ const Page = () => {
       <Hero2 {...hero2About} />
       <Stats {...statsAbout} />
       <Features4 {...features4About} />
+      <Testimonials2 {...testimonials2About} />
       <FAQs {...faqsAbout} />
       <Contact {...contactAbout} />
     </>

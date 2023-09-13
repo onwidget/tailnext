@@ -160,8 +160,9 @@ export const contentServicesTwo: ContentProps = {
 // Testimonials data on Services page *******************
 export const testimonialsServices: TestimonialsProps = {
   id: 'testimonials-on-home',
+  isTestimonialUp: true,
   header: {
-    title: 'What our customers say about us',
+    title: 'Satisfied Client Experiences',
     subtitle:
       'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
   },
