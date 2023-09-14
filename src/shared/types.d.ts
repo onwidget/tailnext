@@ -248,6 +248,9 @@ interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
   columns: number;
+  image?: Image;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
 }
 
 interface ContentProps extends Widget {

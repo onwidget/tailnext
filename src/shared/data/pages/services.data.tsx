@@ -16,24 +16,9 @@ import cameraBackImg from '~/assets/images/camera-back.jpg';
 
 // Hero data on Services page *******************
 export const heroServices: HeroProps = {
-  title: (
-    <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
-    </>
-  ),
-  subtitle: (
-    <>
-      <span className="hidden md:inline">
-        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
-        </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
-      </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
-    </>
-  ),
+  title: 'Elevate your projects with our stunning templates',
+  subtitle:
+    'Donec aliquam pharetra nibh quis vestibulum. Praesent hendrerit sem at lacus ullamcorper egestas. Morbi lacinia ipsum in nulla gravida, ac sagittis turpis pretium. ',
   callToAction: {
     text: 'Get template',
     href: 'https://github.com/onwidget/tailnext',
@@ -50,12 +35,12 @@ export const heroServices: HeroProps = {
   },
 };
 
-// Feature3 data on Services page *******************
+// Feature2 data on Services page *******************
 export const features2Services: FeaturesProps = {
   id: 'featuresTwo-on-services',
   columns: 3,
   header: {
-    title: 'Services',
+    title: 'Our Services',
   },
   items: [
     {
@@ -157,9 +142,58 @@ export const contentServicesTwo: ContentProps = {
   isAfterContent: true,
 };
 
+// Feature4 data on Services page *******************
+export const features4Services: FeaturesProps = {
+  id: 'featuresFour-on-services',
+  columns: 2,
+  header: {
+    title: 'Main Features',
+    subtitle:
+      'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
+  },
+  image: {
+    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
+    alt: 'Hero TailNext',
+  },
+  items: [
+    {
+      title: 'Next.Js + Tailwind CSS Integration',
+      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      icon: IconBrandTailwind,
+    },
+    {
+      title: 'Ready-to-use Components',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: IconComponents,
+    },
+    {
+      title: 'Best Practices',
+      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      icon: IconListCheck,
+    },
+    {
+      title: 'Excellent Page Speed',
+      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
+      icon: IconRocket,
+    },
+    {
+      title: 'Search Engine Optimization (SEO)',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconArrowsRightLeft,
+    },
+    {
+      title: 'Open to new ideas and contributions',
+      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      icon: IconBulb,
+    },
+  ],
+};
+
 // Testimonials data on Services page *******************
 export const testimonialsServices: TestimonialsProps = {
   id: 'testimonials-on-home',
+  isDark: true,
   isTestimonialUp: true,
   header: {
     title: 'Satisfied Client Experiences',
