@@ -101,8 +101,8 @@ export const socialProofHome: SocialProofProps = {
   ],
 };
 
-// FeaturesThree data on Home page *******************
-export const featuresThreeHome: FeaturesProps = {
+// Features data on Home page *******************
+export const featuresHome: FeaturesProps = {
   id: 'features-on-home',
   isDark: true,
   columns: 3,
@@ -356,7 +356,7 @@ export const testimonialsHome: TestimonialsProps = {
 };
 
 // FAQS data on Home page *******************
-export const faqsTwoHome: FAQsProps = {
+export const faqs2Home: FAQsProps = {
   id: 'faqsTwo-on-home',
   isDark: true,
   header: {
@@ -664,7 +664,7 @@ export const contactHome: ContactProps = {
 };
 
 // CallToAction data *******************
-export const callToActionHome: CallToActionProps = {
+export const callToAction2Home: CallToActionProps = {
   title: 'Next.js + Tailwind CSS',
   subtitle:
     'Aliquam sodales porttitor lacus ac tristique. Etiam posuere elit at leo feugiat sodales. Sed ac mauris quis sem tempor condimentum non at metus.',

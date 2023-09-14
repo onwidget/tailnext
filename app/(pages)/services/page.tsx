@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import CallToAction from '~/components/widgets/CallToAction';
 import Content from '~/components/widgets/Content';
-import Features4 from '~/components/widgets/Features4';
+import Features2 from '~/components/widgets/Features2';
 import Hero from '~/components/widgets/Hero';
 import Testimonials from '~/components/widgets/Testimonials';
 import {
   callToActionServices,
   contentServicesOne,
   contentServicesTwo,
-  features4Services,
+  features2Services,
   heroServices,
   testimonialsServices,
 } from '~/shared/data/pages/services.data';
@@ -21,7 +21,7 @@ const Page = () => {
   return (
     <>
       <Hero {...heroServices} />
-      <Features4 {...features4Services} />
+      <Features2 {...features2Services} />
       <Content {...contentServicesOne} />
       <Content {...contentServicesTwo} />
       <Testimonials {...testimonialsServices} />

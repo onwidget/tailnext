@@ -122,6 +122,7 @@ export const features2Contact: FeaturesProps = {
       description: 'See our frequently asked questions',
       icon: IconHelp,
       callToAction: {
+        text: 'Go to FAQ page',
         href: '/faqs',
       },
     },
@@ -130,6 +131,7 @@ export const features2Contact: FeaturesProps = {
       description: 'Live chat with our support team',
       icon: IconMessages,
       callToAction: {
+        text: 'Write to us',
         href: '/',
       },
     },
@@ -138,6 +140,7 @@ export const features2Contact: FeaturesProps = {
       description: 'Speak to our team today',
       icon: IconHeadset,
       callToAction: {
+        text: 'Call us',
         href: '/',
       },
     },

@@ -117,7 +117,7 @@ export const faqs4Faqs: FAQsProps = {
 
 // CallToAction data on FAQs page *******************
 export const callToActionFaqs: CallToActionProps = {
-  id: 'callToActionTwo-on-faqs',
+  id: 'callToAction-on-faqs',
   title: 'Still have questions?',
   subtitle:
     'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut in leo odio. Cras finibus ex a ante convallis ullamcorper.',

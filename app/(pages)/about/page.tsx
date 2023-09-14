@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import Contact from '~/components/widgets/Contact';
 
 import FAQs from '~/components/widgets/FAQs';
-import Features4 from '~/components/widgets/Features4';
+import Features3 from '~/components/widgets/Features3';
 import Hero2 from '~/components/widgets/Hero2';
 import Stats from '~/components/widgets/Stats';
 import Testimonials2 from '~/components/widgets/Testimonials2';
 import {
   contactAbout,
   faqsAbout,
-  features4About,
+  features3About,
   hero2About,
   statsAbout,
   testimonials2About,
@@ -24,7 +24,7 @@ const Page = () => {
     <>
       <Hero2 {...hero2About} />
       <Stats {...statsAbout} />
-      <Features4 {...features4About} />
+      <Features3 {...features3About} />
       <Testimonials2 {...testimonials2About} />
       <FAQs {...faqsAbout} />
       <Contact {...contactAbout} />

@@ -50,9 +50,9 @@ export const heroServices: HeroProps = {
   },
 };
 
-// Feature4 data on Services page *******************
-export const features4Services: FeaturesProps = {
-  id: 'featuresFour-on-services',
+// Feature3 data on Services page *******************
+export const features2Services: FeaturesProps = {
+  id: 'featuresTwo-on-services',
   columns: 3,
   header: {
     title: 'Services',
@@ -207,7 +207,7 @@ export const testimonialsServices: TestimonialsProps = {
 
 // CallToAction data on Services page *******************
 export const callToActionServices: CallToActionProps = {
-  id: 'callToActionTwo-on-services',
+  id: 'callToAction-on-services',
   isDark: true,
   title: 'Still have questions?',
   subtitle:

@@ -39,13 +39,19 @@ const ItemGrid = ({
                 <div className="mt-0.5">
                   {title && <h3 className={twMerge('text-xl font-bold', titleClass)}>{title}</h3>}
                   {description && (
-                    <p className={twMerge('text-gray-600 dark:text-slate-400', descriptionClass)}>{description}</p>
+                    <p
+                      className={twMerge(`text-gray-600 dark:text-slate-400 ${title ? 'mt-3' : ''}`, descriptionClass)}
+                    >
+                      {description}
+                    </p>
                   )}
                   {callToAction && (
                     <CTA
                       callToAction={callToAction}
                       linkClass={twMerge(
-                        `${title || description ? 'mt-3' : ''} text-primary cursor-pointer`,
+                        `${
+                          title || description ? 'mt-3' : ''
+                        } text-primary font-bold text-blue-600 hover:underline dark:text-gray-200 cursor-pointer`,
                         actionClass,
                       )}
                     />
