@@ -201,7 +201,7 @@ export const testimonialsServices: TestimonialsProps = {
   callToAction: {
     targetBlank: true,
     text: 'More testimonials...',
-    href: 'https://github.com/onwidget/astrowind',
+    href: '/',
   },
 };
 
