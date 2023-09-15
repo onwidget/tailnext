@@ -2,13 +2,20 @@ import {
   IconArrowsRightLeft,
   IconBrandTailwind,
   IconBulb,
+  IconChevronsRight,
   IconComponents,
-  IconDownload,
   IconListCheck,
   IconRocket,
 } from '@tabler/icons-react';
 
-import { CallToActionProps, ContentProps, FeaturesProps, HeroProps, TestimonialsProps } from '~/shared/types';
+import {
+  CallToActionProps,
+  ContentProps,
+  FAQsProps,
+  FeaturesProps,
+  HeroProps,
+  TestimonialsProps,
+} from '~/shared/types';
 
 import heroImg from '~/assets/images/hero.jpg';
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
@@ -20,14 +27,9 @@ export const heroServices: HeroProps = {
   subtitle:
     'Donec aliquam pharetra nibh quis vestibulum. Praesent hendrerit sem at lacus ullamcorper egestas. Morbi lacinia ipsum in nulla gravida, ac sagittis turpis pretium. ',
   callToAction: {
-    text: 'Get template',
+    text: 'Start Exploring',
     href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
     targetBlank: true,
-  },
-  callToAction2: {
-    text: 'Learn more',
-    href: '/',
   },
   image: {
     src: heroImg,
@@ -38,7 +40,6 @@ export const heroServices: HeroProps = {
 // Feature2 data on Services page *******************
 export const features2Services: FeaturesProps = {
   id: 'featuresTwo-on-services',
-  columns: 3,
   header: {
     title: 'Our Services',
   },
@@ -237,6 +238,39 @@ export const testimonialsServices: TestimonialsProps = {
     text: 'More testimonials...',
     href: '/',
   },
+};
+
+// FAQS data on Services page *******************
+export const faqsServices: FAQsProps = {
+  id: 'faqs-on-services',
+  header: {
+    title: 'Answers to Common Queries',
+    subtitle:
+      'Etiam laoreet mi eros, vitae iaculis mi egestas blandit. Sed nisl diam, congue sed justo et, cursus sollicitudin ligula.',
+  },
+  columns: 1,
+  items: [
+    {
+      title: 'Can I customize the templates to match my brand?',
+      description: `Ut accumsan, massa at sagittis maximus, libero justo rhoncus metus, quis finibus neque justo quis nisi. Suspendisse sed sapien et justo iaculis faucibus.`,
+      icon: IconChevronsRight,
+    },
+    {
+      title: 'What if I need help customizing the template?',
+      description: `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent imperdiet ultricies ex consequat egestas.`,
+      icon: IconChevronsRight,
+    },
+    {
+      title: 'Are there setup guides available?',
+      description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+      icon: IconChevronsRight,
+    },
+    {
+      title: 'Can I hire you for template customization?',
+      description: `Phasellus est quam, mollis tincidunt dictum pulvinar, tempor vel justo. Mauris eu lobortis leo. Proin pretium arcu lectus, a mattis nisi fermentum quis.`,
+      icon: IconChevronsRight,
+    },
+  ],
 };
 
 // CallToAction data on Services page *******************

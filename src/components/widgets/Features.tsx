@@ -10,8 +10,9 @@ const Features = ({ header, items, columns, id, isDark = false }: FeaturesProps)
       id={id}
       items={items}
       columns={columns}
-      containerClass="pb-6"
-      panelClass="flex justify-start"
+      defaultColumns={2}
+      containerClass={`pb-6 ${columns === 2 ? 'max-w-5xl' : ''}`}
+      panelClass={`flex max-w-full ${columns === 2 ? 'sm:max-w-md mx-auto' : ''}`}
       iconClass="h-12 w-12 flex items-center justify-center rounded-md text-white bg-primary-900 md:p-3 mt-1.5 mb-4 mr-4 rtl:ml-4 rtl:mr-0"
       titleClass="mb-3 text-xl font-bold"
       descriptionClass="text-gray-600 dark:text-slate-400"

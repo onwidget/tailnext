@@ -4,12 +4,13 @@ import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 import { IconArrowDownRight } from '@tabler/icons-react';
 
-const FAQs = ({ header, items, id, isDark = false }: FAQsProps) => (
+const FAQs = ({ header, items, columns, id, isDark = false }: FAQsProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
     <ItemGrid
       items={items}
-      columns={2}
+      columns={columns}
+      defaultColumns={2}
       defaultIcon={IconArrowDownRight}
       containerClass="mt-12"
       panelClass="flex max-w-full"

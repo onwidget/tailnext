@@ -11,6 +11,7 @@ const Features2 = ({ header, items, columns, id }: FeaturesProps) => (
         id={id}
         items={items}
         columns={columns}
+        defaultColumns={3}
         panelClass="card flex flex-start min-w-screen-sm items-stretch h-full"
         iconClass="h-8 w-8 mr-4 text-primary-800 dark:text-primary-600"
         titleClass="text-xl font-bold"

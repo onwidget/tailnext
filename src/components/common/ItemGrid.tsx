@@ -6,6 +6,7 @@ const ItemGrid = ({
   id,
   items,
   columns,
+  defaultColumns,
   defaultIcon: DefaultIcon,
   containerClass,
   panelClass,
@@ -20,13 +21,13 @@ const ItemGrid = ({
         <div
           className={twMerge(
             `grid mx-auto gap-8 md:gap-y-12 ${
-              columns === 4
+              (columns || defaultColumns) === 4
                 ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
-                : columns === 3
+                : (columns || defaultColumns) === 3
                 ? 'lg:grid-cols-3 sm:grid-cols-2'
-                : columns === 2
-                ? 'sm:grid-cols-2 '
-                : ''
+                : (columns || defaultColumns) === 2
+                ? 'sm:grid-cols-2'
+                : 'max-w-4xl'
             }`,
             containerClass,
           )}

@@ -59,7 +59,6 @@ export const statsAbout: StatsProps = {
 export const features3About: FeaturesProps = {
   id: 'featuresThree-on-about',
   isDark: true,
-  columns: 3,
   header: {
     title: 'Services',
   },

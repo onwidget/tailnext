@@ -119,6 +119,7 @@ interface ItemGrid {
   id?: string;
   items?: Array<Item>;
   columns?: number;
+  defaultColumns?: number;
   defaultIcon?: Icon;
   containerClass?: string;
   panelClass?: string;
@@ -226,6 +227,7 @@ interface HeroProps {
 interface FAQsProps extends Widget {
   header?: Header;
   items?: Array<Item>;
+  columns?: number;
   tabs?: Array<Tab>;
   callToAction?: CallToAction;
 }
@@ -247,7 +249,8 @@ interface CallToActionProps extends Widget {
 interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
-  columns: number;
+  columns?: number;
+  defaultColumns?: number;
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
