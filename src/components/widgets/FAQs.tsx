@@ -2,6 +2,7 @@ import { FAQsProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
+import { IconArrowDownRight } from '@tabler/icons-react';
 
 const FAQs = ({ header, items, id, isDark = false }: FAQsProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
@@ -9,8 +10,9 @@ const FAQs = ({ header, items, id, isDark = false }: FAQsProps) => (
     <ItemGrid
       items={items}
       columns={2}
+      defaultIcon={IconArrowDownRight}
       containerClass="mt-12"
-      panelClass="flex max-w-full sm:max-w-md"
+      panelClass="flex max-w-full"
       titleClass="text-lg font-semibold mb-2"
       descriptionClass="mt-0.5"
       iconClass="flex-shrink-0 mr-2 mt-1 w-6 h-6 text-primary-800 dark:text-primary-600"

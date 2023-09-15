@@ -6,6 +6,7 @@ const ItemGrid = ({
   id,
   items,
   columns,
+  defaultIcon: DefaultIcon,
   containerClass,
   panelClass,
   iconClass,
@@ -34,7 +35,11 @@ const ItemGrid = ({
             <div key={id ? `item-${id}-${index}` : `item-grid-${index}`}>
               <div className={(twMerge('flex flex-row max-w-md'), panelClass)}>
                 <div className="flex justify-center">
-                  {Icon && <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />}
+                  {Icon ? (
+                    <Icon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                  ) : DefaultIcon ? (
+                    <DefaultIcon className={twMerge('w-6 h-6 mr-2 rtl:mr-0 rtl:ml-2', iconClass)} />
+                  ) : null}
                 </div>
                 <div className="mt-0.5">
                   {title && <h3 className={twMerge('text-xl font-bold', titleClass)}>{title}</h3>}

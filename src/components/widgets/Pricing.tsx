@@ -3,6 +3,7 @@ import CTA from '../common/CTA';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
+import { IconCheck } from '@tabler/icons-react';
 
 const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
   <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
@@ -49,6 +50,7 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                             id={id}
                             items={items}
                             columns={1}
+                            defaultIcon={IconCheck}
                             containerClass="gap-2 md:gap-y-2"
                             panelClass="flex items-start space-x-2"
                             iconClass="w-4 h-4 mt-1.5 mr-2 rtl:mr-0 rtl:ml-2 mr-1.5 flex items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600 text-white dark:text-slate-200"

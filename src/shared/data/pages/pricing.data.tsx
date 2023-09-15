@@ -1,4 +1,3 @@
-import { IconCheck } from '@tabler/icons-react';
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
@@ -32,23 +31,20 @@ export const pricingPricing: PricingProps = {
   prices: [
     {
       title: 'basic',
+      subtitle: 'Optimal choice for personal use',
       price: 29,
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'Access to a selection of professionally designed website templates.',
         },
         {
-          icon: IconCheck,
           description: 'Email support to assist you with any questions or issues.',
         },
         {
-          icon: IconCheck,
           description: 'Adequate storage space for small to medium-sized websites.',
         },
         {
-          icon: IconCheck,
           description: 'Core features for a functional online presence, such as SEO tools and contact forms.',
         },
       ],
@@ -61,23 +57,20 @@ export const pricingPricing: PricingProps = {
     },
     {
       title: 'standard',
+      subtitle: 'Optimal choice for small teams',
       price: 69,
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'A larger variety of premium website templates to choose from.',
         },
         {
-          icon: IconCheck,
           description: 'Faster response times and priority customer support.',
         },
         {
-          icon: IconCheck,
           description: 'More storage space to accommodate growing websites and content.',
         },
         {
-          icon: IconCheck,
           description: 'Enable e-commerce capabilities to sell products or services online.',
         },
       ],
@@ -91,23 +84,20 @@ export const pricingPricing: PricingProps = {
     },
     {
       title: 'premium',
+      subtitle: 'Optimal choice for companies',
       price: 199,
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'Access to exclusive and customizable premium website templates.',
         },
         {
-          icon: IconCheck,
           description: 'Round-the-clock customer support for immediate assistance.',
         },
         {
-          icon: IconCheck,
           description: 'No limits on storage, ideal for extensive websites and media.',
         },
         {
-          icon: IconCheck,
           description: 'Advanced SEO, analytics, and marketing tools for optimal performance and growth.',
         },
       ],

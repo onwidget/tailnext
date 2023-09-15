@@ -119,7 +119,7 @@ interface ItemGrid {
   id?: string;
   items?: Array<Item>;
   columns?: number;
-  defaultIcon?: string;
+  defaultIcon?: Icon;
   containerClass?: string;
   panelClass?: string;
   iconClass?: string;
