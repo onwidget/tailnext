@@ -36,7 +36,7 @@ const Contact = ({ header, content, items, form, id, isDark = false }: ContactPr
               ))}
           </ul>
         </div>
-        <Form {...form} btnPosition="center" />
+        <Form {...form} containerClass="card h-fit max-w-2xl mx-auto p-5 md:p-12" btnPosition="center" />
       </div>
     </div>
   </WidgetWrapper>

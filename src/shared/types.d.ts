@@ -97,6 +97,7 @@ interface FormProps {
   checkboxes?: Array<Checkbox>;
   btn: Button;
   btnPosition?: 'center' | 'right' | 'left';
+  containerClass?: string;
 }
 
 interface Image {
@@ -118,7 +119,8 @@ interface ItemGrid {
   id?: string;
   items?: Array<Item>;
   columns?: number;
-  defaultIcon?: string;
+  defaultColumns?: number;
+  defaultIcon?: Icon;
   containerClass?: string;
   panelClass?: string;
   iconClass?: string;
@@ -135,12 +137,23 @@ interface Team {
 }
 
 interface Testimonial {
-  name: string;
-  occupation: string;
-  comment: string;
+  testimonial?: string;
+  startSlice?: number;
+  endSlice?: number;
+  isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  name?: string;
+  job?: string;
   image?: Image;
-  icon?: Icon;
   href?: string;
+  containerClass?: string;
+  panelClass?: string;
+  imageClass?: string;
+  dataClass?: string;
+  nameJobClass?: string;
+  nameClass?: string;
+  jobClass?: string;
+  testimonialClass?: string;
 }
 
 interface Link {
@@ -214,6 +227,7 @@ interface HeroProps {
 interface FAQsProps extends Widget {
   header?: Header;
   items?: Array<Item>;
+  columns?: number;
   tabs?: Array<Tab>;
   callToAction?: CallToAction;
 }
@@ -235,7 +249,11 @@ interface CallToActionProps extends Widget {
 interface FeaturesProps extends Widget {
   header?: Header;
   items: Array<Item>;
-  columns: number;
+  columns?: number;
+  defaultColumns?: number;
+  image?: Image;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
 }
 
 interface ContentProps extends Widget {
@@ -264,9 +282,14 @@ interface AnnouncementProps {
   callToAction2?: CallToAction;
 }
 
-interface TestimonialProps extends Widget {
+interface TestimonialsProps extends Widget {
   header?: Header;
   testimonials: Array<Testimonial>;
+  isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  startSlice?: number;
+  endSlice?: number;
+  callToAction?: CallToAction;
 }
 
 interface PricingProps extends Widget {

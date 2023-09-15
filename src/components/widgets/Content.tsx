@@ -4,6 +4,7 @@ import { IconCheck } from '@tabler/icons-react';
 import { ContentProps } from '~/shared/types';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
+import ItemGrid from '../common/ItemGrid';
 
 const Content = ({ header, content, items, image, isReversed, isAfterContent, id, isDark = false }: ContentProps) => (
   <WidgetWrapper
@@ -15,24 +16,17 @@ const Content = ({ header, content, items, image, isReversed, isAfterContent, id
     <div className="mx-auto max-w-7xl">
       <div className={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
         <div className="self-center md:basis-1/2">
-          {content && <div className="mb-12 text-lg text-gray-600 dark:text-slate-400">{content}</div>}
-          {items && (
-            <div className="space-y-8">
-              {items.map(({ title, description }, index) => (
-                <div key={`item-content-${index}`} className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-900 text-gray-50">
-                      <IconCheck className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    {title && <h3 className="text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h3>}
-                    {description && <p className="mt-2 text-gray-600 dark:text-slate-400">{description}</p>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          {content && <div className="mb-8 lg:mb-12 text-lg text-gray-600 dark:text-slate-400">{content}</div>}
+          <ItemGrid
+            items={items}
+            columns={1}
+            defaultIcon={IconCheck}
+            containerClass="gap-4 md:gap-y-6"
+            panelClass="flex max-w-full"
+            titleClass="text-lg font-medium leading-6 text-gray-900 dark:text-white mt-1 mb-2"
+            descriptionClass="mt-1 text-gray-600 dark:text-slate-400"
+            iconClass="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-primary-900 text-gray-50 mr-4 mt-1 p-1"
+          />
         </div>
         <div aria-hidden="true" className="mt-10 md:mt-0 md:basis-1/2">
           {image && (

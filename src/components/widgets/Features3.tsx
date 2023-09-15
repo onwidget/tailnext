@@ -4,18 +4,17 @@ import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
 const Features3 = ({ header, items, columns, id, isDark = false }: FeaturesProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
+  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid
       id={id}
       items={items}
       columns={columns}
-      containerClass="pb-6"
-      panelClass="flex justify-between"
-      iconClass="flex h-12 w-12 items-center justify-center rounded-md bg-primary-900 md:p-3 mb-4 mr-4 rtl:ml-4 rtl:mr-0"
+      defaultColumns={3}
+      panelClass="h-full relative flex flex-col text-center rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 shadow p-8"
+      iconClass="h-12 w-12 flex justify-center items-center rounded-md text-white bg-primary-900 mb-6 md:p-3 mx-auto"
       titleClass="mb-3 text-xl font-bold"
       descriptionClass="text-gray-600 dark:text-slate-400"
-      actionClass="justify-start font-bold text-blue-600 hover:underline dark:text-gray-200"
     />
   </WidgetWrapper>
 );

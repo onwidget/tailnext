@@ -4,28 +4,28 @@ import { SITE } from '~/config.js';
 
 import Hero from '~/components/widgets/Hero';
 import SocialProof from '../src/components/widgets/SocialProof';
-import Features3 from '~/components/widgets/Features3';
+import Features from '~/components/widgets/Features';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
-import Testimonial from '~/components/widgets/Testimonial';
+import Testimonials from '~/components/widgets/Testimonials';
 import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
 import {
-  callToActionHome,
+  callToAction2Home,
   contactHome,
   contentHomeOne,
   contentHomeTwo,
-  faqsTwoHome,
-  featuresThreeHome,
+  faqs2Home,
+  featuresHome,
   heroHome,
   pricingHome,
   socialProofHome,
   stepsHome,
   teamHome,
-  testimonialHome,
+  testimonialsHome,
 } from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
@@ -37,16 +37,16 @@ export default function Page() {
     <>
       <Hero {...heroHome} />
       <SocialProof {...socialProofHome} />
-      <Features3 {...featuresThreeHome} />
+      <Features {...featuresHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
       <Steps {...stepsHome} />
-      <Testimonial {...testimonialHome} />
-      <FAQs2 {...faqsTwoHome} />
+      <Testimonials {...testimonialsHome} />
+      <FAQs2 {...faqs2Home} />
       <Pricing {...pricingHome} />
       <Team {...teamHome} />
       <Contact {...contactHome} />
-      <CallToAction2 {...callToActionHome} />
+      <CallToAction2 {...callToAction2Home} />
     </>
   );
 }

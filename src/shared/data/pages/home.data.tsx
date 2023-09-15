@@ -26,7 +26,7 @@ import {
   SocialProofProps,
   StepsProps,
   TeamProps,
-  TestimonialProps,
+  TestimonialsProps,
 } from '../../types';
 import heroImg from '~/assets/images/hero.jpg';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
@@ -101,8 +101,8 @@ export const socialProofHome: SocialProofProps = {
   ],
 };
 
-// FeaturesThree data on Home page *******************
-export const featuresThreeHome: FeaturesProps = {
+// Features data on Home page *******************
+export const featuresHome: FeaturesProps = {
   id: 'features-on-home',
   isDark: true,
   columns: 3,
@@ -283,57 +283,80 @@ export const stepsHome: StepsProps = {
   },
 };
 
-// Testimonial data on Home page *******************
-export const testimonialHome: TestimonialProps = {
-  id: 'testimonial-on-home',
+// Testimonials data on Home page *******************
+export const testimonialsHome: TestimonialsProps = {
+  id: 'testimonials-on-home',
   header: {
     title: 'What our customers say about us',
     subtitle:
       'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
-    // tagline: 'Testimonial',
   },
   testimonials: [
     {
       name: 'Tayla Kirsten',
-      occupation: 'Marketing Manager',
-      comment:
-        'Suspendisse mollis ante turpis, ut fermentum nulla finibus ac. Integer ut justo id dolor lobortis pharetra. Integer ultrices leo a nunc ullamcorper commodo. In id nulla et nibh pretium pretium non vel metus. Suspendisse dapibus quis lorem sit amet fermentum. Ut a dapibus justo. In faucibus molestie pretium. Cras eros orci, bibendum fringilla elit at, vehicula maximus eros. Aenean placerat aliquet mi, et pellentesque dolor gravida at.',
+      job: 'Marketing Manager',
+      testimonial: `I'm impressed by the speed and performance of these templates. My website now loads in the blink of an eye, significantly enhancing my visitors' experience. Thanks to TailNext, my online business is thriving.`,
       image: {
         src: 'https://images.unsplash.com/photo-1619734086067-24bf8889ea7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: '',
+        alt: 'Tayla Kirsten',
       },
-      icon: IconBrandTwitter,
-      href: '#',
+      href: '/',
     },
     {
       name: 'Silver Jordan',
-      occupation: 'Senior Marketer',
-      comment:
-        'Mauris semper enim dolor, ac dictum sapien sollicitudin quis. Quisque id pharetra mi. Phasellus eu posuere lectus, vitae rhoncus velit. Nullam imperdiet purus quis dapibus vestibulum. Integer purus ex, hendrerit at elementum non, varius a nibh. Ut eget convallis mi. Morbi mattis, felis sit amet consectetur scelerisque, odio purus ornare sapien, in feugiat lorem tellus et magna. Pellentesque luctus dolor in ornare mattis.',
+      job: 'Senior Marketer',
+      testimonial: `I had never found it so easy to customize a website. TailNext's templates are incredibly flexible, and with Tailwind CSS, I've managed to give my website the look and feel I always wanted. Highly recommended!`,
       image: {
         src: 'https://images.unsplash.com/photo-1565049786474-1dea82a8b995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: '',
+        alt: 'Silver Jordan',
       },
-      icon: IconBrandTwitter,
-      href: '#',
+      href: '/',
     },
     {
       name: 'Kelsey Arden',
-      occupation: 'Co-Founder & CEO',
-      comment:
-        'Sed malesuada rhoncus arcu, sit amet condimentum leo pharetra feugiat. In augue quam, venenatis nec dui in, auctor tempus libero. Aliquam tempus ex id metus viverra blandit. Proin varius venenatis tortor, a pellentesque enim malesuada a. Aliquam lectus magna, interdum eget odio non, consequat imperdiet ipsum.',
+      job: 'Co-Founder & CEO',
+      testimonial: `As a beginner in web development, I really needed clear guidance. Tailnext made it possible. I was able to install and customize my website seamlessly, and I'm thrilled with the results!`,
       image: {
         src: 'https://images.unsplash.com/photo-1659057106920-da022cfbc0cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: '',
+        alt: 'Kelsey Arden',
       },
-      icon: IconBrandTwitter,
-      href: '#',
+      href: '/',
+    },
+    {
+      name: 'Sarah Johnson',
+      job: 'Business Owner',
+      testimonial: `They've not only saved me a ton of time but have also made my websites look incredibly professional. The level of detail and thought that went into designing these templates is truly impressive.`,
+      image: {
+        src: 'https://images.unsplash.com/photo-1572417884940-c24659be6068?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: 'Sarah Johnson',
+      },
+      href: '/',
+    },
+    {
+      name: 'Keith Young',
+      job: 'Freelance Developer',
+      testimonial: `The clean code and integration with Next.js make my projects a breeze. Plus, the responsive design ensures that my clients' websites look amazing on any device. These templates have become my secret weapon for success!`,
+      image: {
+        src: 'https://images.unsplash.com/photo-1694287877106-ee22f764aef1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: 'Keith Young',
+      },
+      href: '/',
+    },
+    {
+      name: 'Lisa Gordon',
+      job: 'Project Manager',
+      testimonial: `Their templates are not only stunning but also user-friendly. The support I received from their community has been exceptional. I'm proud to say that I've built my dream website with TailNext.`,
+      image: {
+        src: 'https://images.unsplash.com/photo-1665984867752-6370ab5ae35e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        alt: 'Lisa Gordon',
+      },
+      href: '/',
     },
   ],
 };
 
 // FAQS data on Home page *******************
-export const faqsTwoHome: FAQsProps = {
+export const faqs2Home: FAQsProps = {
   id: 'faqsTwo-on-home',
   isDark: true,
   header: {
@@ -386,19 +409,15 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'Etiam in libero, et volutpat',
         },
         {
-          icon: IconCheck,
           description: 'Aenean ac nunc dolor tristique',
         },
         {
-          icon: IconCheck,
           description: 'Cras scelerisque accumsan lib',
         },
         {
-          icon: IconCheck,
           description: 'In hac habitasse',
         },
       ],
@@ -415,19 +434,15 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'Proin vel laoreet',
         },
         {
-          icon: IconCheck,
           description: 'Ut efficitur egestas',
         },
         {
-          icon: IconCheck,
           description: 'Pellentesque ut nibh',
         },
         {
-          icon: IconCheck,
           description: 'Donec fringilla sem',
         },
       ],
@@ -445,19 +460,15 @@ export const pricingHome: PricingProps = {
       period: 'per month',
       items: [
         {
-          icon: IconCheck,
           description: 'Curabitur suscipit risus',
         },
         {
-          icon: IconCheck,
           description: 'Aliquam blandit malesuada',
         },
         {
-          icon: IconCheck,
           description: 'Suspendisse sit amet',
         },
         {
-          icon: IconCheck,
           description: 'Suspendisse auctor dui',
         },
       ],
@@ -641,7 +652,7 @@ export const contactHome: ContactProps = {
 };
 
 // CallToAction data *******************
-export const callToActionHome: CallToActionProps = {
+export const callToAction2Home: CallToActionProps = {
   title: 'Next.js + Tailwind CSS',
   subtitle:
     'Aliquam sodales porttitor lacus ac tristique. Etiam posuere elit at leo feugiat sodales. Sed ac mauris quis sem tempor condimentum non at metus.',
