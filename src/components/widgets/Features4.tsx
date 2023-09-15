@@ -39,9 +39,9 @@ const Features4 = ({
       columns={columns}
       containerClass="mt-12"
       panelClass="flex max-w-full sm:max-w-md"
-      titleClass="text-lg font-semibold"
+      titleClass="text-lg font-semibold mb-2"
       descriptionClass="mt-0.5"
-      iconClass="flex-shrink-0 mr-4 mt-1 text-primary w-6 h-6"
+      iconClass="flex-shrink-0 mr-4 mt-1 w-6 h-6 text-primary-800 dark:text-primary-600"
     />
   </WidgetWrapper>
 );
