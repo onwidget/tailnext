@@ -1,4 +1,12 @@
-import { ContactProps, FAQsProps, FeaturesProps, HeroProps, StatsProps, TestimonialsProps } from '~/shared/types';
+import {
+  ContactProps,
+  FAQsProps,
+  FeaturesProps,
+  HeroProps,
+  StatsProps,
+  StepsProps,
+  TestimonialsProps,
+} from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
 import {
   IconArrowsRightLeft,
@@ -60,7 +68,9 @@ export const features3About: FeaturesProps = {
   id: 'featuresThree-on-about',
   isDark: true,
   header: {
-    title: 'Services',
+    title: 'Vivamus eu scelerisque',
+    subtitle:
+      'Nullam maximus ante eros, ac eleifend mi condimentum ut. Donec volutpat felis ac purus pretium, vitae mollis quam scelerisque.',
   },
   items: [
     {
@@ -93,6 +103,44 @@ export const features3About: FeaturesProps = {
       title: 'Open to new ideas and contributions',
       description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
       icon: IconBulb,
+    },
+  ],
+};
+
+// Steps data on About page *******************
+export const stepsAbout: StepsProps = {
+  id: 'steps-on-about',
+  header: {
+    title: 'Praesent sed mauris',
+    subtitle:
+      'Duis sit amet magna et sapien cursus fermentum. Curabitur ac mauris non magna condimentum scelerisque. Aliquam nunc ipsum, semper ac scelerisque sit amet, pulvinar vitae libero.',
+    tagline: 'Steps',
+  },
+  items: [
+    {
+      title: 'Step 1',
+      description:
+        'Donec pharetra, justo a rutrum venenatis, augue erat porta leo, non eleifend dui lectus ut turpis. Fusce tincidunt mattis magna eu commodo. Proin non facilisis enim, ut luctus dolor.',
+    },
+    {
+      title: 'Step 2',
+      description:
+        'Nunc scelerisque dui non nulla faucibus, sed elementum urna congue. Donec varius nisi sit amet massa malesuada euismod. Donec auctor interdum leo eget ultricies.',
+    },
+    {
+      title: 'Step 3',
+      description:
+        'Vestibulum euismod dolor vel magna consectetur, vitae ornare metus finibus. Nam nec magna lacinia, cursus purus ut, pellentesque ex. Aliquam nec porta sapien, nec iaculis odio. Donec sed lacus arcu.',
+    },
+    {
+      title: 'Step 4',
+      description:
+        'Aenean mollis est ac quam viverra, eget dictum justo iaculis. Morbi venenatis neque sed blandit faucibus. Pellentesque sit amet justo at ligula eleifend lacinia. Etiam nec orci quam.',
+    },
+    {
+      title: 'Step 5',
+      description:
+        'Sed vel purus a odio tincidunt mollis. Nam et tortor est. Aliquam sodales interdum tortor ac condimentum. Suspendisse laoreet nulla est, ac luctus est tempus ut.',
     },
   ],
 };

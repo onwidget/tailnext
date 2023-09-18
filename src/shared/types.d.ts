@@ -129,6 +129,17 @@ interface ItemGrid {
   actionClass?: string;
 }
 
+interface Timeline {
+  id?: string;
+  items?: Array<Item>;
+  defaultIcon?: Icon;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+}
+
 interface Team {
   name: string;
   occupation: string;
@@ -266,9 +277,10 @@ interface ContentProps extends Widget {
 }
 
 interface StepsProps extends Widget {
-  title?: string;
+  header?: Header;
   items: Array<Item>;
   image?: Image;
+  isReversed?: boolean;
 }
 
 interface TeamProps extends Widget {

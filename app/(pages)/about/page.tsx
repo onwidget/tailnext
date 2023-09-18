@@ -5,6 +5,7 @@ import FAQs from '~/components/widgets/FAQs';
 import Features3 from '~/components/widgets/Features3';
 import Hero2 from '~/components/widgets/Hero2';
 import Stats from '~/components/widgets/Stats';
+import Steps from '~/components/widgets/Steps';
 import Testimonials2 from '~/components/widgets/Testimonials2';
 import {
   contactAbout,
@@ -12,6 +13,7 @@ import {
   features3About,
   hero2About,
   statsAbout,
+  stepsAbout,
   testimonials2About,
 } from '~/shared/data/pages/about.data';
 
@@ -25,6 +27,7 @@ const Page = () => {
       <Hero2 {...hero2About} />
       <Stats {...statsAbout} />
       <Features3 {...features3About} />
+      <Steps {...stepsAbout} />
       <Testimonials2 {...testimonials2About} />
       <FAQs {...faqsAbout} />
       <Contact {...contactAbout} />
