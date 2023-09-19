@@ -1,4 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
@@ -9,9 +8,17 @@ module.exports = {
       colors: {
         primary: colors.blue,
         secondary: colors.blue,
+        'umass-red': '#881c1c',
+        'umass-black': '#212721',
+        'umass-neutral': {
+          light: '#a2aaad',
+          DEFAULT: '#505759',
+          dark: '#373a36'
+        }
       },
       fontFamily: {
-        sans: ['var(--font-custom)', ...defaultTheme.fontFamily.sans],
+        sans: ['--var(font-primary)'],
+        serif: ['--var(font-secondary)'],
       },
     },
   },
