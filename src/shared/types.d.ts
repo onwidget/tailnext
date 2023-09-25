@@ -145,6 +145,12 @@ interface Team {
   occupation: string;
   image: Image;
   items?: Array<Item>;
+  containerClass?: string;
+  imageClass?: string;
+  panelClass?: string;
+  nameClass?: string;
+  occupationClass?: string;
+  itemsClass?: string;
 }
 
 interface Testimonial {

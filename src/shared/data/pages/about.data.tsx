@@ -5,6 +5,7 @@ import {
   HeroProps,
   StatsProps,
   StepsProps,
+  TeamProps,
   TestimonialsProps,
 } from '~/shared/types';
 import hero2Img from '~/assets/images/hero2.jpg';
@@ -12,12 +13,15 @@ import {
   IconAdjustments,
   IconAward,
   IconBook,
+  IconBrandLinkedin,
+  IconBrandTwitter,
   IconBulb,
   IconCirclesRelation,
   IconClock,
   IconFlame,
   IconHeartHandshake,
   IconHomeEco,
+  IconMail,
   IconMapPin,
   IconNumber1,
   IconNumber2,
@@ -249,6 +253,220 @@ export const featuresAbout: FeaturesProps = {
       description:
         'Sed non tortor sit amet nisl tristique facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent in tempor orci. Vestibulum velit justo, dignissim quis nisl nec, scelerisque ultrices mi sapien diam quis elit.',
       icon: IconAward,
+    },
+  ],
+};
+
+// Team data on About page *******************
+export const teamAbout: TeamProps = {
+  id: 'team-on-about',
+  isDark: true,
+  header: {
+    title: 'Meet our executive team',
+    subtitle:
+      'Proin quis neque vehicula, sagittis felis ut, scelerisque mi. Nullam consequat, erat eu luctus sodales, ipsum tellus facilisis magna, eu condimentum lectus.',
+    tagline: 'team',
+  },
+  teams: [
+    {
+      name: 'John Peterson',
+      occupation: 'Founder & CEO',
+      image: {
+        src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'John Peterson',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Sarah Mitchell',
+      occupation: 'Chief Creative Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Sarah Mitchell',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'David Foster',
+      occupation: 'Chief Technology Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=80',
+        alt: 'David Foster',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Mary Smith',
+      occupation: 'Chief Marketing Office',
+      image: {
+        src: 'https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Mary Smith',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Michael Turner',
+      occupation: 'Chief Financial Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1619380061814-58f03707f082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Michael Turner',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Laura Adams',
+      occupation: 'Chief Customer Relations Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Laura Adams',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Robert Williams',
+      occupation: 'Chief Operations Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Robert Williams',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Emily Davis',
+      occupation: 'Chief Strategy Officer',
+      image: {
+        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+        alt: 'Emily Davis',
+      },
+      items: [
+        {
+          title: 'Know more on Twitter',
+          icon: IconBrandTwitter,
+          href: '#',
+        },
+        {
+          title: 'Know more on Linkedin',
+          icon: IconBrandLinkedin,
+          href: '#',
+        },
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
     },
   ],
 };
