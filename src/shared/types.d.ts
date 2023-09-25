@@ -129,11 +129,28 @@ interface ItemGrid {
   actionClass?: string;
 }
 
+interface Timeline {
+  id?: string;
+  items?: Array<Item>;
+  defaultIcon?: Icon;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+}
+
 interface Team {
   name: string;
   occupation: string;
   image: Image;
   items?: Array<Item>;
+  containerClass?: string;
+  imageClass?: string;
+  panelClass?: string;
+  nameClass?: string;
+  occupationClass?: string;
+  itemsClass?: string;
 }
 
 interface Testimonial {
@@ -248,7 +265,7 @@ interface CallToActionProps extends Widget {
 
 interface FeaturesProps extends Widget {
   header?: Header;
-  items: Array<Item>;
+  items?: Array<Item>;
   columns?: number;
   defaultColumns?: number;
   image?: Image;
@@ -266,9 +283,10 @@ interface ContentProps extends Widget {
 }
 
 interface StepsProps extends Widget {
-  title?: string;
+  header?: Header;
   items: Array<Item>;
   image?: Image;
+  isReversed?: boolean;
 }
 
 interface TeamProps extends Widget {
