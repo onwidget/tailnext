@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
+import { formUrlQuery, removeKeysFromUrlQuery } from '~/utils/utils';
+
 type TCustomInput = {
   route: string;
   placeholder: string;
@@ -24,8 +26,21 @@ const LocalSearch: React.FC<TCustomInput> = ({ route, placeholder, otherClasses,
     const delayDebounceFn = setTimeout(() => {
       if (search) {
         // Form new url query with search params
+        const newUrl = formUrlQuery({
+          params: searchParams.toString(),
+          key: 'q',
+          value: search,
+        });
+
+        router.push(newUrl, { scroll: false });
       } else {
         // Remove search params from url
+        const newUrl = removeKeysFromUrlQuery({
+          params: searchParams.toString(),
+          keysToRemove: ['q'],
+        });
+
+        router.push(newUrl, { scroll: false });
       }
     }, 300);
 
