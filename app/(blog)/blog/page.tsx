@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import LocalSearch from '~/components/search/LocalSearch';
+import Pagination from '~/components/atoms/Pagination';
 
 import { getPosts } from '~/utils/posts';
 
@@ -31,6 +32,10 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
             </Link>
           </div>
         ))}
+      </div>
+
+      <div className="mt-10">
+        <Pagination pageNumber={searchParams.page ? +searchParams.page : 1} isNext />
       </div>
     </section>
   );
