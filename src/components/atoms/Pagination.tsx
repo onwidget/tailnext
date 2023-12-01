@@ -5,12 +5,12 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 import { formUrlQuery } from '~/utils/utils';
 
-interface Props {
+type TPagination = {
   pageNumber: number;
   isNext: boolean;
-}
+};
 
-const Pagination: React.FC<Props> = ({ pageNumber, isNext }) => {
+const Pagination: React.FC<TPagination> = ({ pageNumber, isNext }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
