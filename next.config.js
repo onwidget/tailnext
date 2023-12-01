@@ -20,6 +20,5 @@ module.exports = {
         hostname: 'source.unsplash.com',
       },
     ],
-  },
-  experimental: { appDir: true },
+  }
 };
