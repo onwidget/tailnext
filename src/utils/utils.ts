@@ -2,7 +2,12 @@ import qs from 'query-string';
 
 import type { UrlQueryParams, RemoveUrlQueryParams } from '~/shared/types';
 
-// Function to format a number in thousands (K) or millions (M) format depending on its value
+/**
+ * `getSuffixNumber` formats large numbers by adding a suffix (K, M, G, T, P, E) and optional decimal digits.
+ * @param number - number to format
+ * @param digits - number of decimal digits
+ * @returns formatted number
+ */
 export const getSuffixNumber = (number: number, digits: number = 1): string => {
   const lookup = [
     { value: 1, symbol: '' },
@@ -21,7 +26,6 @@ export const getSuffixNumber = (number: number, digits: number = 1): string => {
     .find((item) => number >= item.value);
   return lookupItem ? (number / lookupItem.value).toFixed(digits).replace(rx, '$1') + lookupItem.symbol : '0';
 };
-//"Add function getSuffixNumber for formatting large numbers with optional decimal digits."
 
 export const formUrlQuery = ({ params, key, value }: UrlQueryParams): string => {
   const currentUrl = qs.parse(params);
