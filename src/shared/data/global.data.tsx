@@ -12,8 +12,8 @@ import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
 export const announcementData: AnnouncementProps = {
   title: 'NEW',
   callToAction: {
-    text: 'This template is made with Next.js 13 using the new App Router »',
-    href: 'https://nextjs.org/docs/app',
+    text: 'This template is made with Next.js 14 using the new App Router »',
+    href: 'https://nextjs.org/blog/next-14',
   },
   callToAction2: {
     text: 'Follow @onWidget on Twitter',
