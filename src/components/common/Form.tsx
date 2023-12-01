@@ -1,9 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { FormProps } from '../../shared/types';
 
-const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn, btnPosition }: FormProps) => {
+const Form = ({
+  title,
+  description,
+  inputs,
+  radioBtns,
+  textarea,
+  checkboxes,
+  btn,
+  btnPosition,
+  containerClass,
+}: FormProps) => {
   const [inputValues, setInputValues] = useState([]);
   const [radioBtnValue, setRadioBtnValue] = useState('');
   const [textareaValues, setTextareaValues] = useState('');
@@ -41,14 +52,14 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
   };
 
   return (
-    <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+    <form id="contactForm" className={twMerge('', containerClass)}>
       {title && <h2 className={`${description ? 'mb-2' : 'mb-4'} text-2xl font-bold`}>{title}</h2>}
       {description && <p className="mb-4">{description}</p>}
-      <form id="contactForm">
-        <div className="mb-6">
-          {/* Inputs */}
-          <div className="mx-0 mb-1 sm:mb-4">
-            {inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
+      <div className="mb-6">
+        {/* Inputs */}
+        <div className="mx-0 mb-1 sm:mb-4">
+          {inputs &&
+            inputs.map(({ type, label, name, autocomplete, placeholder }, index) => (
               <div key={`item-input-${index}`} className="mx-0 mb-1 sm:mb-4">
                 <label htmlFor={name} className="pb-1 text-xs uppercase tracking-wider">
                   {label}
@@ -65,73 +76,80 @@ const Form = ({ title, description, inputs, radioBtns, textarea, checkboxes, btn
                 />
               </div>
             ))}
-          </div>
-          {/* Radio buttons */}
-          {radioBtns && (
-            <div className="mx-0 mb-1 sm:mb-3">
-              <label className="pb-1 text-xs uppercase tracking-wider">{radioBtns?.label}</label>
-              <div className="flex flex-wrap">
-                {radioBtns.radios.map(({ label }, index) => (
-                  <div key={`radio-btn-${index}`} className="mr-4 items-baseline">
-                    <input
-                      type="radio"
-                      name={label}
-                      value={`value${index}`}
-                      checked={radioBtnValue === `value${index}`}
-                      onChange={changeRadioBtnsHandler}
-                      className="cursor-pointer"
-                    />
-                    <label className="ml-2">{label}</label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          {/* Textarea */}
-          {textarea && (
-            <div className={`mx-0 mb-1 sm:mb-4`}>
-              <label htmlFor={textarea.name} className="pb-1 text-xs uppercase tracking-wider">
-                {textarea.label}
-              </label>
-              <textarea
-                id={textarea.name}
-                name={textarea.name}
-                cols={textarea.cols}
-                rows={textarea.rows}
-                value={textareaValues}
-                onChange={(e) => changeTextareaHandler(e)}
-                placeholder={textarea.placeholder}
-                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-              />
-            </div>
-          )}
-          {/* Checkboxes */}
-          {checkboxes && (
-            <div className="mx-0 mb-1 sm:mb-4">
-              {checkboxes.map(({ label }, index) => (
-                <div key={`checkbox-${index}`} className="mx-0 my-1 flex items-baseline">
+        </div>
+        {/* Radio buttons */}
+        {radioBtns && (
+          <div className="mx-0 mb-1 sm:mb-3">
+            <span className="pb-1 text-xs uppercase tracking-wider">{radioBtns?.label}</span>
+            <div className="flex flex-wrap">
+              {radioBtns.radios.map(({ label }, index) => (
+                <div key={`radio-btn-${index}`} className="mr-4 items-baseline">
                   <input
-                    type="checkbox"
+                    id={label}
+                    type="radio"
                     name={label}
-                    checked={checkedState[index]}
-                    onChange={() => changeCheckboxHandler(index)}
+                    value={`value${index}`}
+                    checked={radioBtnValue === `value${index}`}
+                    onChange={changeRadioBtnsHandler}
                     className="cursor-pointer"
                   />
-                  <label className="ml-2">{label}</label>
+                  <label htmlFor={label} className="ml-2">
+                    {label}
+                  </label>
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
+        {/* Textarea */}
+        {textarea && (
+          <div className={`mx-0 mb-1 sm:mb-4`}>
+            <label htmlFor={textarea.name} className="pb-1 text-xs uppercase tracking-wider">
+              {textarea.label}
+            </label>
+            <textarea
+              id={textarea.name}
+              name={textarea.name}
+              cols={textarea.cols}
+              rows={textarea.rows}
+              value={textareaValues}
+              onChange={(e) => changeTextareaHandler(e)}
+              placeholder={textarea.placeholder}
+              className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+            />
+          </div>
+        )}
+        {/* Checkboxes */}
+        {checkboxes && (
+          <div className="mx-0 mb-1 sm:mb-4">
+            {checkboxes.map(({ label }, index) => (
+              <div key={`checkbox-${index}`} className="mx-0 my-1 flex items-baseline">
+                <input
+                  id={label}
+                  type="checkbox"
+                  name={label}
+                  checked={checkedState[index]}
+                  onChange={() => changeCheckboxHandler(index)}
+                  className="cursor-pointer"
+                />
+                <label htmlFor={label} className="ml-2">
+                  {label}
+                </label>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      {btn && (
         <div
           className={`${btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'}`}
         >
-          <button type={btn.type} className="btn btn-primary sm:mb-0">
+          <button type={btn.type || 'button'} className="btn btn-primary sm:mb-0">
             {btn.title}
           </button>
         </div>
-      </form>
-    </div>
+      )}
+    </form>
   );
 };
 
