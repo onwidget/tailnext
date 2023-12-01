@@ -29,6 +29,32 @@ export const fetchPosts = async () => {
 };
 
 /** */
+export const getPosts = async (params) => {
+  const posts = await fetchPosts();
+
+  const { searchQuery } = params;
+
+  let query = [];
+
+  query = [
+    {
+      title: { $regex: new RegExp(searchQuery, 'i') },
+      content: { $regex: new RegExp(searchQuery, 'i') },
+    },
+  ];
+
+  const data = posts.filter((post) => {
+    return query.every((q) => {
+      return Object.keys(q).every((field) => {
+        return new RegExp(q[field].$regex).test(post[field]);
+      });
+    });
+  });
+
+  return { posts: data };
+};
+
+/** */
 export const findLatestPosts = async ({ count } = {}) => {
   const _count = count || 4;
   const posts = await fetchPosts();
