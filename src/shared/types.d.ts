@@ -271,3 +271,14 @@ interface WindowSize {
   width: number;
   height: number;
 }
+
+interface UrlQueryParams {
+  params: string;
+  key: string;
+  value: string | null;
+}
+
+interface RemoveUrlQueryParams {
+  params: string;
+  keysToRemove: string[];
+}

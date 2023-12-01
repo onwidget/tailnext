@@ -1,3 +1,7 @@
+import qs from 'query-string';
+
+import type { UrlQueryParams, RemoveUrlQueryParams } from '~/shared/types';
+
 // Function to format a number in thousands (K) or millions (M) format depending on its value
 export const getSuffixNumber = (number: number, digits: number = 1): string => {
   const lookup = [
@@ -16,4 +20,33 @@ export const getSuffixNumber = (number: number, digits: number = 1): string => {
     .reverse()
     .find((item) => number >= item.value);
   return lookupItem ? (number / lookupItem.value).toFixed(digits).replace(rx, '$1') + lookupItem.symbol : '0';
+};
+//"Add function getSuffixNumber for formatting large numbers with optional decimal digits."
+
+export const formUrlQuery = ({ params, key, value }: UrlQueryParams): string => {
+  const currentUrl = qs.parse(params);
+
+  currentUrl[key] = value;
+
+  return qs.stringifyUrl(
+    {
+      url: window.location.pathname,
+      query: currentUrl,
+    },
+    { skipNull: true },
+  );
+};
+
+export const removeKeysFromUrlQuery = ({ params, keysToRemove }: RemoveUrlQueryParams): string => {
+  const currentUrl = qs.parse(params);
+
+  keysToRemove.forEach((key) => delete currentUrl[key]);
+
+  return qs.stringifyUrl(
+    {
+      url: window.location.pathname,
+      query: currentUrl,
+    },
+    { skipNull: true },
+  );
 };
