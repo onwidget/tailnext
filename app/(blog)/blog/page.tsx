@@ -13,7 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default async function Home({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
-  const result = await getPosts({ searchQuery: searchParams.q });
+  const result = await getPosts({
+    searchQuery: searchParams.q,
+    page: searchParams.page ? +searchParams.page : 1,
+  });
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-16 lg:py-20">
@@ -35,7 +38,7 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
       </div>
 
       <div className="mt-10">
-        <Pagination pageNumber={searchParams.page ? +searchParams.page : 1} isNext />
+        <Pagination pageNumber={searchParams.page ? +searchParams.page : 1} isNext={result.isNext} />
       </div>
     </section>
   );
