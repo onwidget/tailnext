@@ -58,7 +58,7 @@ export const getPosts = async (params) => {
 
   const totalPosts = posts.length;
 
-  const isNext = totalPosts > skipAmount + data.length;
+  const isNext = data.length > 0 && totalPosts > skipAmount + data.length;
 
   return { posts: data, isNext };
 };

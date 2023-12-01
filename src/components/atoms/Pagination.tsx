@@ -40,7 +40,7 @@ const Pagination: React.FC<TPagination> = ({ pageNumber, isNext }) => {
       <div className="btn btn-primary pointer-events-none flex items-center justify-center rounded-md px-3 py-2 md:px-4">
         <p>{pageNumber}</p>
       </div>
-      <button className="btn btn-primary px-3 py-2 md:px-4" onClick={() => handleNavigation('next')}>
+      <button className="btn btn-primary px-3 py-2 md:px-4" onClick={() => handleNavigation('next')} disabled={!isNext}>
         <p>Next</p>
       </button>
     </div>
