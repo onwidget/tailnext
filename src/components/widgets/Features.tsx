@@ -1,29 +1,30 @@
 import { FeaturesProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
+import WidgetWrapper from '../common/WidgetWrapper';
+import ItemGrid from '../common/ItemGrid';
 
-const Features = ({ header, items }: FeaturesProps) => (
-  <section className="scroll-mt-16" id="features">
-    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
-      {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
-      <div className="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
-        {items.map(({ title, description, icon: Icon }, index) => (
-          <div key={`item-feature-${index}`} className="space-y-8 sm:px-8">
-            <div className="flex md:max-w-md">
-              <div className="mb-4 mr-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-500 dark:bg-primary-700">
-                  {Icon && <Icon className="icon-light h-6 w-6 text-white" />}
-                </div>
-              </div>
-              <div className="mb-0 md:mb-8">
-                <h3 className="mb-3 text-xl font-bold">{title}</h3>
-                <p className="text-gray-600 dark:text-slate-400">{description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+const Features = ({ header, items, columns, isBeforeContent, isAfterContent, id, isDark = false }: FeaturesProps) => (
+  <WidgetWrapper
+    id={id ? id : ''}
+    isDark={isDark}
+    containerClass={`scroll-mt-16 max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
+      isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
+    }`}
+  >
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
+    <ItemGrid
+      id={id}
+      items={items}
+      columns={columns}
+      defaultColumns={2}
+      containerClass={`pb-6 ${columns === 2 ? 'max-w-5xl' : ''}`}
+      panelClass={`flex max-w-full ${columns === 2 ? 'sm:max-w-md mx-auto' : ''}`}
+      iconClass="h-12 w-12 flex items-center justify-center rounded-md text-white bg-primary-900 md:p-3 mt-1.5 mb-4 mr-4 rtl:ml-4 rtl:mr-0"
+      titleClass="mb-3 text-xl font-bold"
+      descriptionClass="text-gray-600 dark:text-slate-400"
+      actionClass="justify-start"
+    />
+  </WidgetWrapper>
 );
 
 export default Features;
