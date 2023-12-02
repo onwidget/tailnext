@@ -1,22 +1,11 @@
 'use client';
 
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
-import { useState } from 'react';
+import useCollapse from '~/hooks/useCollapse';
 import { CollapseProps } from '~/shared/types';
 
 const Collapse = ({ items, classCollapseItem, iconUp, iconDown }: CollapseProps) => {
-  const [toggle, setToggle] = useState<boolean>(true);
-  const [activeIndex, setActiveIndex] = useState<undefined | number>(undefined);
-
-  const handleSetIndex = (index: number) => {
-    if (activeIndex !== index) {
-      setActiveIndex(index);
-      setToggle(!toggle);
-    } else {
-      setActiveIndex(undefined);
-      setToggle(!toggle);
-    }
-  };
+  const { activeIndex, handleSetIndex } = useCollapse();
 
   return (
     <>
