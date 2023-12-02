@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { ItemGrid } from '~/shared/types';
+import type { ItemGrid as ItemGridType } from '~/shared/types';
 import CTA from './CTA';
 
 const ItemGrid = ({
@@ -14,7 +14,7 @@ const ItemGrid = ({
   titleClass,
   descriptionClass,
   actionClass,
-}: ItemGrid) => {
+}: ItemGridType) => {
   return (
     <>
       {items && (
