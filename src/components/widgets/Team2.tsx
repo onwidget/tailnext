@@ -9,18 +9,18 @@ const Team = ({ header, teams, id, isDark = false }: TeamProps) => (
     <div className="flex items-stretch justify-center">
       <div className="grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
         {teams.map(({ name, occupation, image, items }, index) => (
-          <div key={`item-team-${index}`} className="p-2">
+          <div key={`item-team-two-${index}`} className="p-2">
             <ItemTeam
               name={name}
               occupation={occupation}
               image={image}
               items={items}
-              containerClass=""
-              imageClass="h-72 w-60 rounded-md object-cover shadow-lg bg-gray-500 dark:bg-slate-700"
-              panelClass="relative mt-3 text-center"
-              nameClass="mb-1.5 text-xl font-bold"
-              occupationClass="mb-7 text-base font-medium capitalize text-gray-600 dark:text-slate-400"
-              itemsClass="absolute right-[-10px] top-[-290px] block list-none rounded-md bg-white/70 shadow-[0_0_8px_rgba(0,0,0,0.2)] backdrop-blur-sm dark:bg-white/40"
+              containerClass="card flex flex-col justify-center w-full px-8 my-12 text-center"
+              imageClass="self-center flex-shrink-0 w-36 h-36 -mt-20 bg-center bg-cover rounded-full dark:bg-gray-500 ring-4 ring-gray-300 object-cover"
+              panelClass="flex-1 mt-6"
+              nameClass="text-base font-semibold text-dark"
+              occupationClass="text-sm text-body-color"
+              itemsClass="flex justify-center relative px-3 pt-5 mx-5 overflow-hidden"
             />
           </div>
         ))}
