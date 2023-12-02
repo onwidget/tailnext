@@ -1,32 +1,32 @@
 import Link from 'next/link';
-import { CallToAction } from '~/shared/types';
+import { twMerge } from 'tailwind-merge';
+import { CallToAction, LinkOrButton } from '~/shared/types';
 
-const CTA = (props: { data: CallToAction; class?: string }) => {
-  const { text, href, icon: Icon, targetBlank, btnText, btnType } = props.data;
+const CTA = ({ callToAction, containerClass, linkClass, iconClass }: LinkOrButton) => {
+  const { text, href, icon: Icon, targetBlank } = callToAction as CallToAction;
 
   return (
     <>
-      {props.data && text && href && (
-        <div className="flex w-full sm:w-auto">
+      {href && (text || Icon) && (
+        <div className={twMerge('flex w-auto cursor-pointer', containerClass)}>
           {targetBlank ? (
             <Link
-              className={`btn ${btnType === 'primary' ? 'btn-primary' : ''} w-full sm:mb-0 ${
-                props.class ? props.class : ''
-              } ${btnText === 'uppercase' ? 'uppercase' : ''}`}
+              className={twMerge('inline-flex items-center justify-center w-full sm:mb-0', linkClass)}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {Icon && <Icon className="mr-1 -ml-1.5 h-5 w-5" />} {text}
+              {Icon && (
+                <Icon className={twMerge(`w-5 h-5 ${text ? 'mr-1 -ml-1.5 rtl:ml-1 rtl:-mr-1.5' : ''}`, iconClass)} />
+              )}
+              {text}
             </Link>
           ) : (
-            <Link
-              className={`btn ${btnType === 'primary' ? 'btn-primary' : ''} w-full sm:mb-0 ${
-                props.class ? props.class : ''
-              } ${btnText === 'uppercase' ? 'uppercase' : ''}`}
-              href={href}
-            >
-              {Icon && <Icon className="mr-1 -ml-1.5 h-5 w-5" />} {text}
+            <Link className={twMerge('inline-flex items-center justify-center w-full sm:mb-0 ', linkClass)} href={href}>
+              {Icon && (
+                <Icon className={twMerge(`w-5 h-5 ${text ? 'mr-1 -ml-1.5 rtl:ml-1 rtl:-mr-1.5' : ''}`, iconClass)} />
+              )}
+              {text}
             </Link>
           )}
         </div>
