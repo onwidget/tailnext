@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import "~/assets/styles/base.css"
-import { featuresHome as mockData } from "~/shared/data/pages/home.data"
-
 import Component from '~/components/widgets/Features';
+import { featuresHome as mockData } from "~/shared/data/pages/home.data"
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
