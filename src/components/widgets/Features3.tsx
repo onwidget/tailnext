@@ -1,41 +1,28 @@
 import { FeaturesProps } from '~/shared/types';
-import HeaderWidget from '../common/HeaderWidget';
+import Headline from '../common/Headline';
+import WidgetWrapper from '../common/WidgetWrapper';
+import ItemGrid from '../common/ItemGrid';
 
-const Features3 = ({ header, items }: FeaturesProps) => (
-  <section className="scroll-mt-16" id="features3">
-    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
-      {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
-      <div className="mb-0 grid grid-cols-3 items-start gap-6 dark:text-white sm:grid-cols-2 md:my-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {items.map(({ title, description, icon: Icon, link }, index) => (
-          <div
-            key={`item-feature3-${index}`}
-            className="col-span-3 pb-6 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
-          >
-            <div className="flex-flow flex">
-              <div className="mb-4 mr-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary-900">
-                  {Icon && <Icon className="h-6 w-6 text-white dark:text-slate-200" />}
-                </div>
-              </div>
-              <div className="flex flex-col justify-between">
-                <>
-                  <h3 className="mb-3 text-xl font-bold">{title}</h3>
-                  <p className="text-gray-600 dark:text-slate-400">{description}</p>
-                </>
-                {link && (
-                  <div className="pt-2">
-                    <a className="flex font-bold text-blue-600 hover:underline dark:text-gray-200" href={link.href}>
-                      {link.label}
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+const Features3 = ({ header, items, columns, isBeforeContent, isAfterContent, id, isDark = false }: FeaturesProps) => (
+  <WidgetWrapper
+    id={id ? id : ''}
+    isDark={isDark}
+    containerClass={`max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
+      isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
+    }`}
+  >
+    {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
+    <ItemGrid
+      id={id}
+      items={items}
+      columns={columns}
+      defaultColumns={3}
+      panelClass="h-full relative flex flex-col text-center rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 shadow p-8"
+      iconClass="h-12 w-12 flex justify-center items-center rounded-md text-white bg-primary-900 mb-6 md:p-3 mx-auto"
+      titleClass="mb-3 text-xl font-bold"
+      descriptionClass="text-gray-600 dark:text-slate-400"
+    />
+  </WidgetWrapper>
 );
 
 export default Features3;
