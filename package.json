@@ -26,6 +26,7 @@
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.3",
     "@storybook/addon-essentials": "^7.6.3",
     "@storybook/addon-interactions": "^7.6.3",
     "@storybook/addon-links": "^7.6.3",
