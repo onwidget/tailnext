@@ -1,9 +1,9 @@
-import { CallToActionProps, CallToAction } from '~/shared/types';
+import { CallToActionProps, CallToActioType } from '~/shared/types';
 import CTA from '../common/CTA';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const CallToAction = ({ title, subtitle, callToAction, id, isDark = false }: CallToActionProps) => {
-  const { text, href } = callToAction as CallToAction;
+  const { text, href } = callToAction as CallToActioType;
 
   return (
     <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
@@ -14,7 +14,7 @@ const CallToAction = ({ title, subtitle, callToAction, id, isDark = false }: Cal
         {subtitle && <p className="text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
         {text && href && (
           <CTA
-            callToAction={callToAction as CallToAction}
+            callToAction={callToAction as CallToActioType}
             containerClass="mt-6 sm:mx-auto sm:w-fit"
             linkClass="btn btn-primary"
           />

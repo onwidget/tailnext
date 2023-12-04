@@ -1,7 +1,7 @@
 import Headline from '../common/Headline';
 import Collapse from '../common/Collapse';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
-import { CallToAction, FAQsProps, Item } from '~/shared/types';
+import { CallToActioType, FAQsProps, Item } from '~/shared/types';
 import CTA from '../common/CTA';
 import WidgetWrapper from '../common/WidgetWrapper';
 
@@ -13,7 +13,7 @@ const FAQs3 = ({ header, items, callToAction, id, isDark = false }: FAQsProps) =
           {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
           {callToAction && (
             <CTA
-              callToAction={callToAction as CallToAction}
+              callToAction={callToAction as CallToActioType}
               linkClass="btn btn-primary mb-8 sm:w-auto sm:justify-start"
             />
           )}

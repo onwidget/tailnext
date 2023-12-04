@@ -32,7 +32,7 @@ interface HeadlineProps {
 
 type Icon = React.ComponentType<React.ComponentProps<'svg'>>;
 
-interface CallToAction {
+interface CallToActioType {
   text?: string;
   href: string;
   icon?: Icon;
@@ -40,7 +40,7 @@ interface CallToAction {
 }
 
 interface LinkOrButton {
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
   containerClass?: string;
   linkClass?: string;
   iconClass?: string;
@@ -112,7 +112,7 @@ interface Item {
   href?: string;
   form?: SmallForm;
   icon?: Icon;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
 }
 
 interface ItemGrid {
@@ -187,7 +187,7 @@ interface Price {
   price?: number;
   period?: string;
   items?: Array<Item>;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
   hasRibbon?: boolean;
   ribbonTitle?: string;
 }
@@ -195,7 +195,7 @@ interface Price {
 interface Column {
   title: string;
   items: Array<Item>;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
 }
 
 interface MenuLink extends Link {
@@ -236,8 +236,8 @@ interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
   tagline?: string;
-  callToAction?: CallToAction;
-  callToAction2?: CallToAction;
+  callToAction?: CallToActioType;
+  callToAction2?: CallToActioType;
   image?: Image;
 }
 
@@ -246,7 +246,7 @@ interface FAQsProps extends Widget {
   items?: Array<Item>;
   columns?: number;
   tabs?: Array<Tab>;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
 }
 
 interface CollapseProps {
@@ -259,7 +259,7 @@ interface CollapseProps {
 interface CallToActionProps extends Widget {
   title: string;
   subtitle: string;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
   items?: Array<Item>;
 }
 
@@ -296,8 +296,8 @@ interface TeamProps extends Widget {
 
 interface AnnouncementProps {
   title: string;
-  callToAction?: CallToAction;
-  callToAction2?: CallToAction;
+  callToAction?: CallToActioType;
+  callToAction2?: CallToActioType;
 }
 
 interface TestimonialsProps extends Widget {
@@ -307,7 +307,7 @@ interface TestimonialsProps extends Widget {
   hasDividerLine?: boolean;
   startSlice?: number;
   endSlice?: number;
-  callToAction?: CallToAction;
+  callToAction?: CallToActioType;
 }
 
 interface PricingProps extends Widget {
@@ -346,7 +346,7 @@ interface FooterProps {
 
 interface HeaderProps {
   links?: Array<MenuLink>;
-  actions?: Array<CallToAction>;
+  actions?: Array<CallToActioType>;
   // actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
