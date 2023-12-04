@@ -1,4 +1,4 @@
-import { CallToActioType, PricingProps } from '~/shared/types';
+import { CallToActionType, PricingProps } from '~/shared/types';
 import CTA from '../common/CTA';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
@@ -60,7 +60,7 @@ const Pricing = ({ header, prices, id, isDark = false }: PricingProps) => (
                     </div>
                     {callToAction && (
                       <CTA
-                        callToAction={callToAction as CallToActioType}
+                        callToAction={callToAction as CallToActionType}
                         linkClass={`btn ${hasRibbon ? 'btn-primary' : ''}`}
                       />
                     )}

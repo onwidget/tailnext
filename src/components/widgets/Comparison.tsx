@@ -1,5 +1,5 @@
 import { IconCheck, IconMinus } from '@tabler/icons-react';
-import { CallToActioType, ComparisonProps } from '~/shared/types';
+import { CallToActionType, ComparisonProps } from '~/shared/types';
 import CTA from '../common/CTA';
 import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
@@ -42,7 +42,7 @@ const Comparison = ({ header, columns, id, isDark = false }: ComparisonProps) =>
               </div>
             ))}
           {index !== 0 && callToAction && (
-            <CTA callToAction={callToAction as CallToActioType} linkClass="btn btn-primary mt-8" />
+            <CTA callToAction={callToAction as CallToActionType} linkClass="btn btn-primary mt-8" />
           )}
         </div>
       ))}
