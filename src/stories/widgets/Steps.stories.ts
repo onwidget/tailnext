@@ -27,6 +27,13 @@ export const Base: Story = {
   },
 };
 
+export const Reverse: Story = {
+  args: {
+    ...mockData,
+    isReversed: true,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,
