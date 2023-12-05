@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconChevronsRight } from '@tabler/icons-react';
 
 import Component from '~/components/widgets/FAQs';
 import { faqs2Home as mockData } from '~/shared/data/pages/home.data';
@@ -35,5 +36,12 @@ export const Mobile: Story = {
     viewport: {
       defaultViewport: 'SMALL',
     },
+  },
+};
+
+export const OneColumn: Story = {
+  args: {
+    ...mockData,
+    columns: 1,
   },
 };
