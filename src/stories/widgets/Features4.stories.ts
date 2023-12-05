@@ -34,6 +34,13 @@ export const OneColumn: Story = {
   },
 };
 
+export const ThreeColumns: Story = {
+  args: {
+    ...mockData,
+    columns: 3,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,

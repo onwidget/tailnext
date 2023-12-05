@@ -34,7 +34,7 @@ export const OneColumn: Story = {
   },
 };
 
-export const TwoColumn: Story = {
+export const TwoColumns: Story = {
   args: {
     ...mockData,
     columns: 2,
