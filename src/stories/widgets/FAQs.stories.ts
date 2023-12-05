@@ -28,6 +28,13 @@ export const Base: Story = {
   },
 };
 
+export const OneColumn: Story = {
+  args: {
+    ...mockData,
+    columns: 1,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,
@@ -36,12 +43,5 @@ export const Mobile: Story = {
     viewport: {
       defaultViewport: 'SMALL',
     },
-  },
-};
-
-export const OneColumn: Story = {
-  args: {
-    ...mockData,
-    columns: 1,
   },
 };

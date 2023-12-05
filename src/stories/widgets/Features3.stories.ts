@@ -27,6 +27,20 @@ export const Base: Story = {
   },
 };
 
+export const OneColumn: Story = {
+  args: {
+    ...mockData,
+    columns: 1,
+  },
+};
+
+export const TwoColumn: Story = {
+  args: {
+    ...mockData,
+    columns: 2,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,
