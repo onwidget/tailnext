@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Component from '~/components/widgets/FAQs3';
-import { faqs2Home as mockData } from "~/shared/data/pages/home.data"
+import { faqs2Home as mockData } from '~/shared/data/pages/home.data';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -14,8 +14,7 @@ const meta = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-  },
+  argTypes: {},
 } satisfies Meta<typeof Component>;
 
 export default meta;
@@ -24,6 +23,17 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Base: Story = {
   args: {
-    ...mockData
+    ...mockData,
+  },
+};
+
+export const Mobile: Story = {
+  args: {
+    ...mockData,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'SMALL',
+    },
   },
 };

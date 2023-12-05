@@ -1,11 +1,31 @@
 import React from 'react';
 import type { Preview, ReactRenderer } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
+
+const CUSTOM_VIEWPORTS = {
+  SMALL: {
+    name: 'Mobile View',
+    styles: {
+      width: '360px',
+      height: '640px',
+    },
+    type: 'mobile',
+  },
+  MEDIUM: {
+    name: 'Tablet View',
+    styles: {
+      width: '960px',
+      height: '640px',
+    },
+    type: 'tablet',
+  },
+};
 
 const preview: Preview = {
   parameters: {
@@ -14,6 +34,12 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+    },
+    viewport: {
+      viewports: {
+        ...CUSTOM_VIEWPORTS,
+        ...INITIAL_VIEWPORTS,
       },
     },
     backgrounds: {

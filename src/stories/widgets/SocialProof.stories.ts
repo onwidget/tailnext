@@ -26,3 +26,14 @@ export const Base: Story = {
     ...mockData,
   },
 };
+
+export const Mobile: Story = {
+  args: {
+    ...mockData,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'SMALL',
+    },
+  },
+};
