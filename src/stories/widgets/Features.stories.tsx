@@ -11,6 +11,7 @@ const meta = {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
+    // Offers several doc blocks to help document your components. More info: https://storybook.js.org/docs/writing-docs/doc-blocks
     docs: {
       page: () => (
         <>
@@ -18,7 +19,7 @@ const meta = {
           <Subtitle />
           <Description />
           <Primary />
-          <Controls exclude={['id', 'image']} />
+          <Controls exclude={['id', 'header', 'image', 'isBeforeContent', 'isAfterContent']} />
           <Stories includePrimary={false} title={'Stories'} />
         </>
       ),
