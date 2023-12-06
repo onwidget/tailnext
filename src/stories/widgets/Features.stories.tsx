@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Title, Subtitle, Description, Primary, Controls, Story, Stories } from '@storybook/blocks';
 
 import Component from '~/components/widgets/Features';
 import { featuresHome as mockData } from '~/shared/data/pages/home.data';
@@ -10,6 +11,18 @@ const meta = {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Subtitle />
+          <Description />
+          <Primary />
+          <Controls exclude={['id', 'image']} />
+          <Stories includePrimary={false} title={'Stories'} />
+        </>
+      ),
+    },
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
