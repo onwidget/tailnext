@@ -266,8 +266,8 @@ type CallToActionProps = Widget & {
 type FeaturesProps = Widget & {
   header?: Header;
   items?: Array<Item>;
-  columns?: number;
-  defaultColumns?: number;
+  /** How many columns should it have? */
+  columns?: 1 | 2 | 3;
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
