@@ -3,10 +3,18 @@ import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
-const Features3 = ({ header, items, columns, isBeforeContent, isAfterContent, id, isDark = false }: FeaturesProps) => (
+const Features3 = ({
+  header,
+  items,
+  columns,
+  isBeforeContent,
+  isAfterContent,
+  id,
+  hasBackground = false,
+}: FeaturesProps) => (
   <WidgetWrapper
     id={id ? id : ''}
-    isDark={isDark}
+    hasBackground={hasBackground}
     containerClass={`max-w-6xl ${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
       isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
     }`}

@@ -18,6 +18,7 @@ export const heroFaqs: HeroProps = {
 // FAQS4 data on FAQs page *******************
 export const faqs4Faqs: FAQsProps = {
   id: 'faqsFour-on-faqs',
+  hasBackground: true,
   header: {
     title: 'Find what you need',
     subtitle: 'Get quick answers to your questions: Everything you need in one spot.',
@@ -118,6 +119,7 @@ export const faqs4Faqs: FAQsProps = {
 // CallToAction data on FAQs page *******************
 export const callToActionFaqs: CallToActionProps = {
   id: 'callToAction-on-faqs',
+  hasBackground: true,
   title: 'Still have questions?',
   subtitle:
     'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut in leo odio. Cras finibus ex a ante convallis ullamcorper.',

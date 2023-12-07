@@ -60,6 +60,7 @@ export const hero2About: HeroProps = {
 // Stats data on About page *******************
 export const statsAbout: StatsProps = {
   id: 'stats-on-about',
+  hasBackground: true,
   items: [
     {
       title: 13269,
@@ -83,7 +84,7 @@ export const statsAbout: StatsProps = {
 // FeaturesFour data on About page *******************
 export const featuresFourAbout: FeaturesProps = {
   id: 'features-four-on-about',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: 'Our mission',
     subtitle:
@@ -95,7 +96,7 @@ export const featuresFourAbout: FeaturesProps = {
 // FeaturesFour data on About page (Two) *******************
 export const featuresFourAboutTwo: FeaturesProps = {
   id: 'features-four-on-about-two',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: 'Our values',
     subtitle: 'Etiam tellus tortor, mattis id mauris et, lobortis ullamcorper nunc.',
@@ -141,6 +142,7 @@ export const featuresFourAboutTwo: FeaturesProps = {
 // Steps data on About page *******************
 export const stepsAbout: StepsProps = {
   id: 'steps-on-about',
+  hasBackground: true,
   header: {
     title: 'History of TailNext',
     subtitle:
@@ -184,7 +186,7 @@ export const stepsAbout: StepsProps = {
 // Features3 data on About page *******************
 export const features3About: FeaturesProps = {
   id: 'featuresThree-on-about',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: 'Our culture',
     subtitle:
@@ -228,6 +230,7 @@ export const features3About: FeaturesProps = {
 // Features data on About page *******************
 export const featuresAbout: FeaturesProps = {
   id: 'features-on-about',
+  hasBackground: true,
   header: {
     title: 'Our record of excellence',
     subtitle:
@@ -260,7 +263,7 @@ export const featuresAbout: FeaturesProps = {
 // Team data on About page *******************
 export const teamAbout: TeamProps = {
   id: 'team-on-about',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: 'Meet our executive team',
     subtitle:
@@ -474,6 +477,7 @@ export const teamAbout: TeamProps = {
 // Testimonial2 data on About page *******************
 export const testimonials2About: TestimonialsProps = {
   id: 'testimonialsTwo-on-about',
+  hasBackground: true,
   isTestimonialUp: true,
   header: {
     title: 'Our success stories',
@@ -546,7 +550,7 @@ export const testimonials2About: TestimonialsProps = {
 // FAQS data on About page *******************
 export const faqsAbout: FAQsProps = {
   id: 'faqs-on-faqs',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: 'Frequently Asked Questions',
     subtitle:
@@ -584,6 +588,7 @@ export const faqsAbout: FAQsProps = {
 // Contact data on About page *******************
 export const contactAbout: ContactProps = {
   id: 'contact-on-about',
+  hasBackground: true,
   header: {
     title: 'Contact us',
     tagline: 'Contact info',

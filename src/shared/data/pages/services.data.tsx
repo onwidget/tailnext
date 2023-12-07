@@ -81,7 +81,7 @@ export const features2Services: FeaturesProps = {
 // Content data on Services page *******************
 export const contentServicesOne: ContentProps = {
   id: 'contentOne-on-services-one',
-  isDark: true,
+  hasBackground: false,
   content:
     'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
   items: [
@@ -112,7 +112,7 @@ export const contentServicesOne: ContentProps = {
 // Content data on Services page *******************
 export const contentServicesTwo: ContentProps = {
   id: 'contentOne-on-services-two',
-  isDark: true,
+  hasBackground: false,
   content:
     'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
   items: [
@@ -146,6 +146,7 @@ export const contentServicesTwo: ContentProps = {
 // Feature4 data on Services page *******************
 export const features4Services: FeaturesProps = {
   id: 'featuresFour-on-services',
+  hasBackground: true,
   columns: 2,
   header: {
     title: 'Main Features',
@@ -194,7 +195,7 @@ export const features4Services: FeaturesProps = {
 // Testimonials data on Services page *******************
 export const testimonialsServices: TestimonialsProps = {
   id: 'testimonials-on-home',
-  isDark: true,
+  hasBackground: false,
   isTestimonialUp: true,
   header: {
     title: 'Satisfied Client Experiences',
@@ -243,6 +244,7 @@ export const testimonialsServices: TestimonialsProps = {
 // FAQS data on Services page *******************
 export const faqsServices: FAQsProps = {
   id: 'faqs-on-services',
+  hasBackground: true,
   header: {
     title: 'Answers to Common Queries',
     subtitle:
@@ -276,7 +278,7 @@ export const faqsServices: FAQsProps = {
 // CallToAction data on Services page *******************
 export const callToActionServices: CallToActionProps = {
   id: 'callToAction-on-services',
-  isDark: true,
+  hasBackground: false,
   title: 'Still have questions?',
   subtitle:
     'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut in leo odio. Cras finibus ex a ante convallis ullamcorper.',

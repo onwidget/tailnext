@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 
 type Widget = {
   id?: string;
-  isDark?: boolean;
+  hasBackground?: boolean;
 };
 
 type WrapperTagProps = Widget & {
@@ -13,7 +13,7 @@ type WrapperTagProps = Widget & {
 
 type BackgroundProps = {
   children?: React.ReactNode;
-  isDark?: boolean;
+  hasBackground?: boolean;
 };
 
 type Header = {

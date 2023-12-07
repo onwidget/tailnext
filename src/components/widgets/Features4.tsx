@@ -12,11 +12,11 @@ const Features4 = ({
   isBeforeContent,
   isAfterContent,
   id,
-  isDark = false,
+  hasBackground = false,
 }: FeaturesProps) => (
   <WidgetWrapper
     id={id}
-    isDark={isDark}
+    hasBackground={hasBackground}
     containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''}`}
   >
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}

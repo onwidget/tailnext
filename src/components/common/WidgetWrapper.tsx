@@ -2,10 +2,10 @@ import { twMerge } from 'tailwind-merge';
 import { WrapperTagProps } from '~/shared/types';
 import Background from './Background';
 
-const WidgetWrapper = ({ children, id, isDark, containerClass }: WrapperTagProps) => (
+const WidgetWrapper = ({ children, id, hasBackground, containerClass }: WrapperTagProps) => (
   <section className="relative not-prose scroll-mt-[72px]" id={id}>
     <div className="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
-      <Background isDark={isDark} />
+      <Background hasBackground={hasBackground} />
     </div>
     <div
       className={twMerge(

@@ -4,8 +4,8 @@ import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
 import { FAQsProps, Item } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const FAQs2 = ({ header, items, id, isDark = false }: FAQsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl">
+const FAQs2 = ({ header, items, id, hasBackground = false }: FAQsProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="max-w-6xl">
     {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
     <Collapse
       items={items as Item[]}

@@ -5,8 +5,8 @@ import WidgetWrapper from '../common/WidgetWrapper';
 import Timeline from '../common/Timeline';
 import Headline from '../common/Headline';
 
-const Steps = ({ header, items, image, id, isReversed, isDark = false }: StepsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="max-w-6xl ">
+const Steps = ({ header, items, image, id, isReversed, hasBackground = false }: StepsProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="max-w-6xl ">
     <div
       className={`flex flex-col gap-8 md:gap-12 ${isReversed ? 'md:flex-row-reverse' : ''} ${
         image ? 'md:flex-row' : ''

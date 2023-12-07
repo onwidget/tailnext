@@ -3,8 +3,8 @@ import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
-const Features = ({ id, header, items, columns = 3, isDark = false }: FeaturesProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="scroll-mt-16 max-w-6xl">
+const Features = ({ id, header, items, columns = 3, hasBackground = false }: FeaturesProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="scroll-mt-16 max-w-6xl">
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
     <ItemGrid
       id={id}
