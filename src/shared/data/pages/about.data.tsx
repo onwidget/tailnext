@@ -143,6 +143,7 @@ export const featuresFourAboutTwo: FeaturesProps = {
 export const stepsAbout: StepsProps = {
   id: 'steps-on-about',
   hasBackground: true,
+  isImageDisplayed: false,
   header: {
     title: 'History of TailNext',
     subtitle:

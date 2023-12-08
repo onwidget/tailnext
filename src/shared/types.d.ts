@@ -288,7 +288,10 @@ type ContentProps = Widget & {
 type StepsProps = Widget & {
   header?: Header;
   items: Array<Item>;
+  /** Do you want the image to be displayed? */
+  isImageDisplayed?: boolean;
   image?: Image;
+  /** Do you want to reverse the widget? */
   isReversed?: boolean;
 };
 

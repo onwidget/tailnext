@@ -254,6 +254,12 @@ export const contentHomeTwo: ContentProps = {
 export const stepsHome: StepsProps = {
   id: 'steps-on-home',
   hasBackground: false,
+  isReversed: false,
+  isImageDisplayed: true,
+  image: {
+    src: gasImg,
+    alt: 'Steps image',
+  },
   header: {
     title: 'Sed ac magna sit amet risus tristique interdum.',
   },
@@ -280,11 +286,6 @@ export const stepsHome: StepsProps = {
       title: 'Ready!',
     },
   ],
-  image: {
-    src: gasImg,
-    alt: 'Steps image',
-  },
-  // isReversed: true,
 };
 
 // Testimonials data on Home page *******************

@@ -19,7 +19,7 @@ const meta = {
           <Subtitle />
           <Description />
           <Primary />
-          <Controls exclude={['id', 'header', 'image', 'isBeforeContent', 'isAfterContent']} />
+          <Controls exclude={['id', 'header', 'image', 'isImageDisplayed', 'isBeforeContent', 'isAfterContent']} />
           <Stories includePrimary={false} title={'Stories'} />
         </>
       ),
