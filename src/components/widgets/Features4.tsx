@@ -7,7 +7,7 @@ import ItemGrid from '../common/ItemGrid';
 const Features4 = ({
   header,
   items,
-  columns,
+  columns = 2,
   image,
   isBeforeContent,
   isAfterContent,

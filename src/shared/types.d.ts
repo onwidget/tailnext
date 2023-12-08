@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 
 type Widget = {
   id?: string;
+  /** Does it have a background? */
   hasBackground?: boolean;
 };
 

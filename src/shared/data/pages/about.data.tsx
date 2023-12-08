@@ -187,6 +187,7 @@ export const stepsAbout: StepsProps = {
 export const features3About: FeaturesProps = {
   id: 'featuresThree-on-about',
   hasBackground: false,
+  columns: 3,
   header: {
     title: 'Our culture',
     subtitle:
