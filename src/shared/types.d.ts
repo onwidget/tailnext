@@ -269,6 +269,8 @@ type FeaturesProps = Widget & {
   items?: Array<Item>;
   /** How many columns should it have? */
   columns?: 1 | 2 | 3;
+  /** Do you want the image to be displayed? */
+  isImageDisplayed?: boolean;
   image?: Image;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;

@@ -13,6 +13,7 @@ const Features4 = ({
   isAfterContent,
   id,
   hasBackground = false,
+  isImageDisplayed = true,
 }: FeaturesProps) => (
   <WidgetWrapper
     id={id}
@@ -20,20 +21,20 @@ const Features4 = ({
     containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''}`}
   >
     {header && <Headline header={header} titleClass="text-4xl md:text-5xl" />}
-
-    <div aria-hidden="true" className="aspect-w-16 aspect-h-7">
-      {image && (
-        <Image
-          className="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
-          src={image.src}
-          alt={image.alt}
-          width={728}
-          height={320}
-          sizes="(max-width: 64rem) 100vw, 1024px"
-        />
-      )}
-    </div>
-
+    {isImageDisplayed && (
+      <div aria-hidden="true" className="aspect-w-16 aspect-h-7">
+        {image && (
+          <Image
+            className="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
+            src={image.src}
+            alt={image.alt}
+            width={728}
+            height={320}
+            sizes="(max-width: 64rem) 100vw, 1024px"
+          />
+        )}
+      </div>
+    )}
     <ItemGrid
       items={items}
       columns={columns}

@@ -55,6 +55,13 @@ export const ThreeColumns: Story = {
   },
 };
 
+export const NoImage: Story = {
+  args: {
+    ...mockData,
+    isImageDisplayed: false,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,
