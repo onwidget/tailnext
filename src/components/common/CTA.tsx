@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
-import { CallToActioType, LinkOrButton } from '~/shared/types';
+import { CallToActionType, LinkOrButton } from '~/shared/types';
 
 const CTA = ({ callToAction, containerClass, linkClass, iconClass }: LinkOrButton) => {
-  const { text, href, icon: Icon, targetBlank } = callToAction as CallToActioType;
+  const { text, href, icon: Icon, targetBlank } = callToAction as CallToActionType;
 
   return (
     <>
