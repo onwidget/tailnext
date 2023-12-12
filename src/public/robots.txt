@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tailnext.vercel.app/
+
+# Sitemaps
+Sitemap: https://tailnext.vercel.app/sitemap.xml

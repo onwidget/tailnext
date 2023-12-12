@@ -34,6 +34,7 @@ import {
   FooterProps,
   HeaderProps,
   HeroProps,
+  LogoProps,
   PricingProps,
   SocialProofProps,
   StatsProps,
@@ -53,67 +54,58 @@ import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
 
 // Announcement data
-export const announcementData: AnnouncementProps = {
-  title: 'NEW',
-  callToAction: {
-    text: 'This template is made with Next.js 13 using the new App Router »',
-    href: 'https://nextjs.org/docs/app',
-  },
-  callToAction2: {
-    text: 'Follow @onWidget on Twitter',
-    href: 'https://twitter.com/intent/user?screen_name=onwidget',
-  },
-};
+// export const announcementData: AnnouncementProps = {
+//   title: 'NEW',
+//   callToAction: {
+//     text: 'This template is made with Next.js 13 using the new App Router »',
+//     href: 'https://nextjs.org/docs/app',
+//   },
+//   callToAction2: {
+//     text: 'Follow @onWidget on Twitter',
+//     href: 'https://twitter.com/intent/user?screen_name=onwidget',
+//   },
+// };
 
 // Header data
 export const headerData: HeaderProps = {
   links: [
-    {
-      label: 'Pages',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
-        },
-        {
-          label: 'FAQs',
-          href: '/faqs',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-      ],
+    // {
+    //   label: 'Our Services',
+    //   links: [
+    //     {          
+    //       label: 'Web Development',
+    //       href: '/about',
+    //     },
+    //     {
+    //       label: 'Devops',
+    //       href: '/pricing',
+    //     },
+    //     {
+    //       label: 'Software Solutions',
+    //       href: '/privacy',
+    //     },
+    //     {
+    //       label: 'Terms & Conditions',
+    //       href: '/terms',
+    //     },
+    //   ],
+    // },
+    {          
+      label: 'Web Development',
+      href: '/about',
     },
     {
-      label: 'Blog',
-      href: '/blog',
-    },
-    {
-      label: 'Contact',
+      label: 'Contact Us',
       href: '/contact',
     },
   ],
   actions: [
-    {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
-      targetBlank: true,
-      btnType: 'primary',
-    },
+    // {
+    //   text: 'Download',
+    //   href: 'https://github.com/onwidget/tailnext',
+    //   targetBlank: true,
+    //   btnType: 'primary',
+    // },
   ],
   isSticky: true,
   showToggleTheme: true,
@@ -160,24 +152,21 @@ export const heroData: HeroProps = {
 
 // Hero2 data
 export const hero2Data: HeroProps = {
-  title: 'Great companies are made by great people',
+  title: 'Code can really solve complex problems',
   subtitle:
-    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui. Fusce pulvinar ante eget mattis semper. Suspendisse in diam massa.',
-  callToAction: {
-    text: 'View jobs',
-    href: 'https://www.linkedin.com/',
-    targetBlank: true,
-    btnType: 'primary',
-  },
-  callToAction2: {
-    text: 'Contact us',
-    href: '/contact',
-  },
+    'we at codecrack solutions aiming to provide best services to our clients.',
   image: {
     src: hero2Img,
     alt: 'Hero TailNext',
   },
 };
+
+export const logoData: LogoProps = {
+  image: {
+    src: hero2Img,
+    alt: 'Hero TailNext',
+  },
+}
 
 // SocialProof data
 export const socialProofData: SocialProofProps = {
@@ -590,34 +579,34 @@ export const featuresData3: FeaturesProps = {
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      title: 'On Time Delivery',
+      description: '',
       icon: IconBrandTailwind,
     },
     {
-      title: 'Ready-to-use Components',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      title: 'Mobile App Developement',
+      description: '',
       icon: IconComponents,
     },
     {
       title: 'Best Practices',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      description: '',
       icon: IconListCheck,
     },
     {
-      title: 'Excellent Page Speed',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
+      title: 'Cloud Solutions',
+      description: '',
       icon: IconRocket,
     },
     {
       title: 'Search Engine Optimization (SEO)',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        '',
       icon: IconArrowsRightLeft,
     },
     {
-      title: 'Open to new ideas and contributions',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      title: 'Build solutions out of box',
+      description: '',
       icon: IconBulb,
     },
   ],
@@ -837,46 +826,58 @@ export const teamData: TeamProps = {
 // Testimonial data
 export const testimonialData: TestimonialProps = {
   header: {
-    title: 'What our customers say about us',
+    title: 'Tech stack we work with',
     subtitle:
-      'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
+      'providing cutting edge technology solutions with ease of access and piece of mind with cloud solutions',
     // highlight: 'Testimonial',
   },
   testimonials: [
     {
-      name: 'Tayla Kirsten',
-      occupation: 'Marketing Manager',
+      name: 'Web Development',
+      occupation: 'Front End Web Solutions',
+      icon:IconArrowDown,
       comment:
-        'Suspendisse mollis ante turpis, ut fermentum nulla finibus ac. Integer ut justo id dolor lobortis pharetra. Integer ultrices leo a nunc ullamcorper commodo. In id nulla et nibh pretium pretium non vel metus. Suspendisse dapibus quis lorem sit amet fermentum. Ut a dapibus justo. In faucibus molestie pretium. Cras eros orci, bibendum fringilla elit at, vehicula maximus eros. Aenean placerat aliquet mi, et pellentesque dolor gravida at.',
+        'Building a web applications with latest technologies to deliver custom web solutions.Our team of experts has unparellel experience dealing with your application as well solving your problems.',
       image: {
-        src: 'https://images.unsplash.com/photo-1619734086067-24bf8889ea7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        src: `/web-development.jpg`,
         alt: '',
       },
-      icon: IconBrandTwitter,
       href: '#',
     },
     {
-      name: 'Silver Jordan',
-      occupation: 'Senior Marketer',
+      name: 'Cloud Solutions',
+      occupation: 'Custom Solutions with cloud',
       comment:
-        'Mauris semper enim dolor, ac dictum sapien sollicitudin quis. Quisque id pharetra mi. Phasellus eu posuere lectus, vitae rhoncus velit. Nullam imperdiet purus quis dapibus vestibulum. Integer purus ex, hendrerit at elementum non, varius a nibh. Ut eget convallis mi. Morbi mattis, felis sit amet consectetur scelerisque, odio purus ornare sapien, in feugiat lorem tellus et magna. Pellentesque luctus dolor in ornare mattis.',
+        'Cloud is must so We take care of everything on cloud so less burden at your fingertips.Our Experts are fully equipped with cloud solutions as you need.',
       image: {
-        src: 'https://images.unsplash.com/photo-1565049786474-1dea82a8b995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        src: `/aws.jpg`,
         alt: '',
       },
-      icon: IconBrandTwitter,
+      icon: IconArrowDown,
       href: '#',
     },
     {
-      name: 'Kelsey Arden',
-      occupation: 'Co-Founder & CEO',
+      name: 'CI/CD',
+      occupation: 'Continuous Delivery in your hand',
       comment:
-        'Sed malesuada rhoncus arcu, sit amet condimentum leo pharetra feugiat. In augue quam, venenatis nec dui in, auctor tempus libero. Aliquam tempus ex id metus viverra blandit. Proin varius venenatis tortor, a pellentesque enim malesuada a. Aliquam lectus magna, interdum eget odio non, consequat imperdiet ipsum.',
+        'Continuous Integration and Continuous Deployment are crucial for fast moving application. Need to provide continue delivery of assigned work and handover to customers.',
       image: {
-        src: 'https://images.unsplash.com/photo-1659057106920-da022cfbc0cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        src: `/cicd.png`,
         alt: '',
       },
-      icon: IconBrandTwitter,
+      icon: IconArrowDown,
+      href: '#',
+    },
+    {
+      name: 'Looking for developer to hire?',
+      occupation: 'Looking for developer to hire?',
+      comment:
+        'codecrack solutions supporting your application journey with staffing with best available developer in market within your budget and timeline with various options for part time, full time, taks bases services.Please reach out to us to schedule a free session or inquiry!',
+      image: {
+        src: `/resources-hire.jpg`,
+        alt: '',
+      },
+      icon: IconArrowDown,
       href: '#',
     },
   ],
@@ -1083,30 +1084,35 @@ export const statsData: StatsProps = {
 export const contactData: ContactProps = {
   header: {
     title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
+    subtitle: 'Ready to explore your journey with us?',
     highlight: 'Contact',
   },
   content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
+    'Our leading expert with global presence are ready to explore your problems and provide solutions.',
   items: [
     {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      title: 'USA Office',
+      description: ['CodeCrack Solutions', 'Maple shade, NJ 08052'],
+      icon: IconMapPin,
+    },
+    {
+      title: 'India Office',
+      description: ['CodeCrack Solutions', 'Plot No. 5143, Behind State Bank of India, Sachin GIDC, Surat 394230'],
       icon: IconMapPin,
     },
     {
       title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      description: ['Mobile: +1 (609) 975 9801','Mobile: +91 (992) 508 2687', 'Mail: info@codecracksolutions.com'],
       icon: IconPhoneCall,
     },
     {
       title: 'Working hours',
-      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+      description: ['Monday - Friday: 08:00 - 17:00'],
       icon: IconClock,
     },
   ],
   form: {
-    title: 'Ready to Get Started?',
+    title: 'Let\'s connect!',
     inputs: [
       {
         type: 'text',
@@ -1135,96 +1141,96 @@ export const contactData: ContactProps = {
 };
 
 // Contact2 data
-export const contact2Data: ContactProps = {
-  header: {
-    title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
-    highlight: 'Contact',
-  },
-  content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
-  items: [
-    {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
-      icon: IconMapPin,
-    },
-    {
-      title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
-      icon: IconPhoneCall,
-    },
-    {
-      title: 'Working hours',
-      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
-      icon: IconClock,
-    },
-  ],
-  form: {
-    title: 'Ready to Get Started?',
-    description:
-      'Mauris consequat, urna vel varius auctor, enim risus ornare felis, at hendrerit erat justo eu justo. Curabitur sagittis efficitur aliquam. Duis eget porttitor lectus, vel pharetra ex. Nam volutpat nibh ut porta egestas.',
-    inputs: [
-      {
-        type: 'text',
-        label: 'First name',
-        name: 'name',
-        autocomplete: 'given-name',
-        placeholder: 'First name',
-      },
-      {
-        type: 'text',
-        label: 'Last name',
-        name: 'lastName',
-        placeholder: 'Last name',
-      },
-      {
-        type: 'email',
-        label: 'Email address',
-        name: 'email',
-        placeholder: 'Email address',
-      },
-    ],
-    radioBtns: {
-      label: 'What is the reason for your contact?',
-      radios: [
-        {
-          label: 'General inquiries',
-        },
-        {
-          label: 'Technical help',
-        },
-        {
-          label: 'Claims',
-        },
-        {
-          label: 'Others',
-        },
-      ],
-    },
-    textarea: {
-      cols: 30,
-      rows: 5,
-      label: 'How can we help you?',
-      name: 'textarea',
-      placeholder: 'Write your message...',
-    },
-    checkboxes: [
-      {
-        label: 'Have you read our privacy policy?',
-        value: '',
-      },
-      {
-        label: 'Do you want to receive monthly updates by email?',
-        value: '',
-      },
-    ],
-    btn: {
-      title: 'Send Message',
-      type: 'submit',
-    },
-  },
-};
+// export const contact2Data: ContactProps = {
+//   header: {
+//     title: 'Get in Touch',
+//     subtitle: 'We are happy to explore with you!',
+//     highlight: 'Contact',
+//   },
+//   content:
+//     'Our global presence with experts will be able to mark your journey with us as success story.',
+//   items: [
+//     {
+//       title: 'Our Address',
+//       description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+//       icon: IconMapPin,
+//     },
+//     {
+//       title: 'Contact',
+//       description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+//       icon: IconPhoneCall,
+//     },
+//     {
+//       title: 'Working hours',
+//       description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+//       icon: IconClock,
+//     },
+//   ],
+//   form: {
+//     title: 'Ready to Get Started?',
+//     description:
+//       'Mauris consequat, urna vel varius auctor, enim risus ornare felis, at hendrerit erat justo eu justo. Curabitur sagittis efficitur aliquam. Duis eget porttitor lectus, vel pharetra ex. Nam volutpat nibh ut porta egestas.',
+//     inputs: [
+//       {
+//         type: 'text',
+//         label: 'First name',
+//         name: 'name',
+//         autocomplete: 'given-name',
+//         placeholder: 'First name',
+//       },
+//       {
+//         type: 'text',
+//         label: 'Last name',
+//         name: 'lastName',
+//         placeholder: 'Last name',
+//       },
+//       {
+//         type: 'email',
+//         label: 'Email address',
+//         name: 'email',
+//         placeholder: 'Email address',
+//       },
+//     ],
+//     radioBtns: {
+//       label: 'What is the reason for your contact?',
+//       radios: [
+//         {
+//           label: 'General inquiries',
+//         },
+//         {
+//           label: 'Technical help',
+//         },
+//         {
+//           label: 'Claims',
+//         },
+//         {
+//           label: 'Others',
+//         },
+//       ],
+//     },
+//     textarea: {
+//       cols: 30,
+//       rows: 5,
+//       label: 'How can we help you?',
+//       name: 'textarea',
+//       placeholder: 'Write your message...',
+//     },
+//     checkboxes: [
+//       {
+//         label: 'Have you read our privacy policy?',
+//         value: '',
+//       },
+//       {
+//         label: 'Do you want to receive monthly updates by email?',
+//         value: '',
+//       },
+//     ],
+//     btn: {
+//       title: 'Send Message',
+//       type: 'submit',
+//     },
+//   },
+// };
 
 // Footer data
 export const footerData: FooterProps = {
@@ -1354,7 +1360,6 @@ export const footerData: FooterProps = {
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       Made by{' '}
       <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
         {' '}
@@ -1379,16 +1384,20 @@ export const footerData2: FooterProps = {
   ],
   columns: [
     {
-      title: 'Address',
-      texts: ['51 Phasellus Avenue Maecenas', 'Aliquam, AQ 52098'],
+      title: 'USA Office',
+      texts: ['CodeCrack Solutions', 'Maple shade, NJ 08052'],
+    },
+    {
+      title: 'India Office',
+      texts: ['CodeCrack Solutions', 'Plot No. 5143, Behind State Bank of India, Sachin GIDC, Surat 394230'],
     },
     {
       title: 'Phone',
-      texts: ['Reception: +105 123 4567', 'Office: +107 235 7890'],
+      texts: ['', 'Office: +91 99250 82687'],
     },
     {
       title: 'Email',
-      texts: ['Office: info@example.com', 'Site: https://example.com'],
+      texts: ['Office: info@codecracksulutions.com', 'Site: https://www.codecracksolutions.com'],
     },
   ],
   socials: [
@@ -1400,11 +1409,11 @@ export const footerData2: FooterProps = {
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      {/* <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span> */}
       Made by{' '}
-      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+      <a className="text-blue-600 hover:underline dark:text-gray-200" href="http://codecracksolutions.com/">
         {' '}
-        onWidget
+        CodeCrack Solutions
       </a>{' '}
       · All rights reserved.
     </div>

@@ -6,7 +6,7 @@ import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
-import { headerData } from '~/shared/data';
+import { headerData, logoData } from '~/shared/data';
 import CTA from '../common/CTA';
 import CallToAction from './CallToAction';
 
@@ -48,6 +48,7 @@ const Header = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
 
+
   return (
     <header
       className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
@@ -64,7 +65,7 @@ const Header = () => {
               isToggleMenuOpen ? handleToggleMenuOnClick() : setIsDropdownOpen(updatedIsDropdownOpen as boolean[])
             }
           >
-            <Logo />
+            <Logo data= {logoData}/>
           </Link>
           <div className="flex items-center md:hidden">
             <ToggleMenu handleToggleMenuOnClick={handleToggleMenuOnClick} isToggleMenuOpen={isToggleMenuOpen} />

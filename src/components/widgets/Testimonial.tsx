@@ -15,9 +15,9 @@ const Testimonial = () => {
             {testimonials.map(({ name, occupation, comment, image, icon: Icon, href }, index) => (
               <div
                 key={`item-testimonial-${index}`}
-                className="col-span-3 flex sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
+                className="flex-col col-span-3 flex sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1"
               >
-                <div className="flex-flow card flex border-b-[3px] border-transparent text-center hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
+                <div className="flex-col flex-flow card flex border-b-[3px] border-transparent text-center hover:border-primary-600 hover:shadow-lg hover:transition hover:duration-100">
                   <a
                     href={href}
                     target="_blank"
@@ -25,23 +25,23 @@ const Testimonial = () => {
                     key={`item-testimonial-${index}`}
                     className="card-body"
                   >
-                    <div className="mb-4 flex">
+                    <div className="mb-4">
                       {image && (
                         <Image
                           src={image.src}
-                          width={48}
-                          height={48}
+                          width={348}
+                          height={348}
                           alt={image.alt}
-                          className="mr-4 h-12 w-12 rounded-full object-cover shadow-lg"
+                          className="object-cover h-48 w-96 shadow-lg"
                         />
                       )}
-                      <div className="text-left">
+                      <div className="text-center my-4">
                         <h3 className="font-semibold">{name}</h3>
-                        <span className="">{occupation}</span>
+                        {/* <span className="">{occupation}</span> */}
                       </div>
                     </div>
                     {comment && (
-                      <p className="m-b-30 font-light dark:text-slate-400">{`"${comment.slice(0, 150)}..."`}</p>
+                      <p className="text-left work-break list-disc">{`${comment}`}</p>
                     )}
                     {href && Icon && <Icon className="mx-auto mt-4 h-6 w-6 text-primary-600 dark:text-slate-200" />}
                   </a>

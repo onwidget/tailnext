@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <Pricing {...pricingData} />
-      <Comparison {...comparisonData} />
-      <FAQs3 {...faqs3Data} />
+      {/* <Pricing {...pricingData} /> */}
+      {/* <Comparison {...comparisonData} /> */}
+      {/* <FAQs3 {...faqs3Data} /> */}
     </>
   );
 };

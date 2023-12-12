@@ -1,0 +1,47 @@
+.dashboard {
+    /* padding: 24px; */
+    background-color: red;
+    position: absolute;
+
+  }
+
+/* .testimonial-comment {
+  m-b-30;
+  font-light;
+  dark:text-slate-400;
+} */
+
+.comment {
+  /* padding: 24px; */
+  background-color: red;
+  position: absolute;
+  width: 519px;
+
+}
+
+.icon {
+  background-color: orange;
+  margin-top: 100px;
+}
+
+.root {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: bottom;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  background-color: orange; /* Should be removed. Only for demonstration */
+  border-radius: 15px;
+  border-color: blue;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

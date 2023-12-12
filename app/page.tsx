@@ -31,18 +31,21 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Hero data={heroData} />
+      {
+        <Hero data={heroData} />
+      /* 
       <SocialProof {...socialProofData} />
       <Features3 {...featuresData} />
       <Content {...contentData} />
       <Content {...content2Data} />
-      <Steps />
+      <Steps /> */}
       <Testimonial />
-      <FAQs2 {...faqsData2} />
-      <Pricing {...pricingData} />
-      <Team />
-      <Contact />
-      <CallToAction2 {...callToActionData} />
+      {/* <FAQs2 {...faqsData2} /> */}
+      {/* <Pricing {...pricingData} /> */}
+      {/* <Team /> */}
+      {/* <Contact /> */}
+      {/* <CallToAction2 {...callToActionData} />  */}
+      
     </>
   );
 }

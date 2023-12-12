@@ -161,6 +161,10 @@ interface HeroProps {
   image?: Image;
 }
 
+interface LogoProps {ß
+  image?: Image;
+}
+
 interface FAQsProps {
   header?: Header;
   items?: Array<Item>;

@@ -6,7 +6,7 @@ module.exports = {
 
   trailingSlash: SITE.trailingSlash,
   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
-
+  output: "export",
   swcMinify: true,
   poweredByHeader: false,
   images: {
@@ -20,6 +20,11 @@ module.exports = {
         hostname: 'source.unsplash.com',
       },
     ],
+    domains: ['s3.amazonaws.com'],
+    unoptimized: true
   },
   experimental: { appDir: true },
+  env: {
+    s3_url: 'https://s3.amazonaws.com/codecracksolutions.com/' 
+  }
 };
