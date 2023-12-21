@@ -27,6 +27,13 @@ export const Base: Story = {
   },
 };
 
+export const WithBackground: Story = {
+  args: {
+    ...mockData,
+    hasBackground: true,
+  },
+};
+
 export const Mobile: Story = {
   args: {
     ...mockData,

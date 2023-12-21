@@ -41,6 +41,13 @@ export const Base: Story = {
   },
 };
 
+export const WithBackground: Story = {
+  args: {
+    ...mockData,
+    hasBackground: true,
+  },
+};
+
 export const OneColumn: Story = {
   args: {
     ...mockData,

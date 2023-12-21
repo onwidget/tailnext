@@ -38,6 +38,14 @@ type Story = StoryObj<typeof meta>;
 export const Base: Story = {
   args: {
     ...mockData,
+    hasBackground: false,
+  },
+};
+
+export const WithBackground: Story = {
+  args: {
+    ...mockData,
+    hasBackground: true,
   },
 };
 
