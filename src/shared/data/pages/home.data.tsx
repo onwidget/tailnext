@@ -113,7 +113,7 @@ export const featuresHome: FeaturesProps = {
       </>
     ),
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
+      "Elevating Your Digital Presence: Discover the Synergies Unleashed in Our Platform's Core Strengths, from Seamless Integration to Open Collaboration.",
     tagline: 'Features',
   },
   items: [
@@ -140,7 +140,7 @@ export const featuresHome: FeaturesProps = {
     {
       title: 'Best Practices',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        'By prioritizing maintainability and scalability through coding standards and design principles, your website stays robust and efficient.',
       icon: IconListCheck,
       callToAction: {
         text: 'Discover now',
@@ -160,7 +160,7 @@ export const featuresHome: FeaturesProps = {
     {
       title: 'Search Engine Optimization (SEO)',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        "Boost online visibility with our SEO-friendly website. Effective strategies and practices enhance your website's search engine ranking, making it easier for users to find your content.",
       icon: IconArrowsRightLeft,
       callToAction: {
         text: 'Discover now',
@@ -170,7 +170,7 @@ export const featuresHome: FeaturesProps = {
     {
       title: 'Open to new ideas and contributions',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        'We welcome new ideas and contributions to our platform. Whether you have feature suggestions, want to contribute code, or share insights, our platform is open for collaboration.',
       icon: IconBulb,
       callToAction: {
         text: 'Discover now',
