@@ -1,19 +1,19 @@
 import Headline from '../common/Headline';
 import Collapse from '../common/Collapse';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
-import { CallToAction, FAQsProps, Item } from '~/shared/types';
+import { CallToActionType, FAQsProps, Item } from '~/shared/types';
 import CTA from '../common/CTA';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const FAQs3 = ({ header, items, callToAction, id, isDark = false }: FAQsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+const FAQs3 = ({ header, items, callToAction, id, hasBackground = false }: FAQsProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     <div className="flex items-stretch justify-center">
       <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
         <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">
           {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
           {callToAction && (
             <CTA
-              callToAction={callToAction as CallToAction}
+              callToAction={callToAction as CallToActionType}
               linkClass="btn btn-primary mb-8 sm:w-auto sm:justify-start"
             />
           )}

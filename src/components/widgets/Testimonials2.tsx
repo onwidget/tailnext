@@ -7,7 +7,7 @@ import ItemTestimonial from '../common/ItemTestimonial';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { useState } from 'react';
 
-const Testimonials2 = ({ header, testimonials, isTestimonialUp, id, isDark = false }: TestimonialsProps) => {
+const Testimonials2 = ({ header, testimonials, isTestimonialUp, id, hasBackground = false }: TestimonialsProps) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const firstIndex = 0;
@@ -26,7 +26,7 @@ const Testimonials2 = ({ header, testimonials, isTestimonialUp, id, isDark = fal
   };
 
   return (
-    <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+    <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
       {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
       <div className="card flex overflow-hidden mx-auto max-w-6xl">
         {testimonials.map(

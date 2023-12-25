@@ -6,10 +6,19 @@ import Headline from '../common/Headline';
 import WidgetWrapper from '../common/WidgetWrapper';
 import ItemGrid from '../common/ItemGrid';
 
-const Content = ({ header, content, items, image, isReversed, isAfterContent, id, isDark = false }: ContentProps) => (
+const Content = ({
+  header,
+  content,
+  items,
+  image,
+  isReversed,
+  isAfterContent,
+  id,
+  hasBackground = false,
+}: ContentProps) => (
   <WidgetWrapper
     id={id ? id : ''}
-    isDark={isDark}
+    hasBackground={hasBackground}
     containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}
   >
     {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
