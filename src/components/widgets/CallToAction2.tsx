@@ -5,7 +5,7 @@ const Card = ({ title, description, href, form }: Item) => (
   <div className="card mb-6 px-5 py-4">
     <div className="flex items-center justify-between">
       <div className="w-full">
-        <h3 className="mb-3 text-xl font-bold dark:text-white">{title}</h3>
+        <h3 className="mb-3 text-xl font-bold text-gray-700 dark:text-white">{title}</h3>
         <p className="text-gray-600 dark:text-slate-400">{description}</p>
       </div>
       {href && (
