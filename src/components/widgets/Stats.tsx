@@ -2,8 +2,8 @@ import { StatsProps } from '~/shared/types';
 import { getSuffixNumber } from '~/utils/utils';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const Stats = ({ items, id, isDark = false }: StatsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+const Stats = ({ items, id, hasBackground = false }: StatsProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     <div className="row-gap-8 grid grid-cols-2 md:grid-cols-4">
       {items.map(({ title, description }, index) => (
         <div
