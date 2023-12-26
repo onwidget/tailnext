@@ -19,6 +19,7 @@ export const heroPricing: HeroProps = {
 // Pricing data on Pricing page *******************
 export const pricingPricing: PricingProps = {
   id: 'pricing-on-pricing',
+  hasBackground: true,
   header: {
     title: 'Our plans',
     subtitle: (
@@ -114,7 +115,7 @@ export const pricingPricing: PricingProps = {
 // Comparison pricing data on Pricing page *******************
 export const comparisonPricing: ComparisonProps = {
   id: 'comparison-on-pricing',
-  isDark: true,
+  hasBackground: false,
   header: {
     title: "What's available for each plan?",
     subtitle:
@@ -232,6 +233,7 @@ export const comparisonPricing: ComparisonProps = {
 // FAQS3 data on Pricing page *******************
 export const faqs3Pricing: FAQsProps = {
   id: 'faqsThree-on-pricing',
+  hasBackground: true,
   header: {
     title: 'Pricing FAQs',
     subtitle: 'Do you have other questions?',

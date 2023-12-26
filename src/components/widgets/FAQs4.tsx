@@ -9,7 +9,7 @@ import useWindowSize from '~/hooks/useWindowSize';
 import Dropdown from '../common/Dropdown';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const FAQs4 = ({ header, tabs, id, isDark = false }: FAQsProps) => {
+const FAQs4 = ({ header, tabs, id, hasBackground = false }: FAQsProps) => {
   const { width } = useWindowSize();
   const [activeTab, setActiveTab] = useState(0);
 
@@ -18,7 +18,7 @@ const FAQs4 = ({ header, tabs, id, isDark = false }: FAQsProps) => {
   };
 
   return (
-    <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+    <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
       {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
       <div className="flex items-stretch justify-center">
         <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">

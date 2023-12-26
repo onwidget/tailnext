@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { SocialProofProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const SocialProof = ({ images, id, isDark = false }: SocialProofProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+const SocialProof = ({ images, id, hasBackground = false }: SocialProofProps) => (
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     <div className="flex items-center justify-center gap-6 md:gap-9">
       {images &&
         images.map(({ src, alt, link }, index) => (
