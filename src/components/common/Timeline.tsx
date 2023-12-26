@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { Timeline } from '~/shared/types';
+import { Timeline as TimelineType } from '~/shared/types';
 
 const Timeline = ({
   id,
@@ -10,7 +10,7 @@ const Timeline = ({
   iconClass,
   titleClass,
   descriptionClass,
-}: Timeline) => {
+}: TimelineType) => {
   return (
     <>
       {items && items.length && (

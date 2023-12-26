@@ -8,6 +8,9 @@ import type { UrlQueryParams, RemoveUrlQueryParams } from '~/shared/types';
  * @param digits - number of decimal digits
  * @returns formatted number
  */
+
+// Function to format a number in thousands (K) or millions (M) format depending on its value
+
 export const getSuffixNumber = (number: number, digits: number = 1): string => {
   const lookup = [
     { value: 1, symbol: '' },
