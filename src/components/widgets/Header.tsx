@@ -8,7 +8,7 @@ import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
-import CallToAction from './CallToAction';
+import { CallToActionType } from '~/shared/types';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
@@ -142,7 +142,7 @@ const Header = () => {
                 {actions.map((callToAction, index) => (
                   <CTA
                     key={`item-action-${index}`}
-                    callToAction={callToAction as CallToAction}
+                    callToAction={callToAction as CallToActionType}
                     linkClass="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
                   />
                 ))}

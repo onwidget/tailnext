@@ -2,12 +2,8 @@ import qs from 'query-string';
 
 import type { UrlQueryParams, RemoveUrlQueryParams } from '~/shared/types';
 
-/**
- * `getSuffixNumber` formats large numbers by adding a suffix (K, M, G, T, P, E) and optional decimal digits.
- * @param number - number to format
- * @param digits - number of decimal digits
- * @returns formatted number
- */
+// Function to format a number in thousands (K) or millions (M) format depending on its value
+
 export const getSuffixNumber = (number: number, digits: number = 1): string => {
   const lookup = [
     { value: 1, symbol: '' },
