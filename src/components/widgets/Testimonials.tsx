@@ -11,9 +11,9 @@ const Testimonials = ({
   callToAction,
   isTestimonialUp,
   id,
-  isDark = false,
+  hasBackground = false,
 }: TestimonialsProps) => (
-  <WidgetWrapper id={id ? id : ''} isDark={isDark} containerClass="">
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
