@@ -358,4 +358,25 @@ type HeaderProps = {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
-};
+}
+
+interface ToggleMenuProps {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
+}
+
+interface WindowSize {
+  width: number;
+  height: number;
+}
+
+interface UrlQueryParams {
+  params: string;
+  key: string;
+  value: string | null;
+}
+
+interface RemoveUrlQueryParams {
+  params: string;
+  keysToRemove: string[];
+}
