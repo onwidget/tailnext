@@ -86,7 +86,14 @@ const Header = () => {
                         className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
                         onClick={() => handleDropdownOnClick(index)}
                       >
-                        {label} {Icon && <Icon className="ml-0.5 hidden h-3.5 w-3.5 md:inline" />}
+                        {label}{' '}
+                        {Icon && (
+                          <Icon
+                            className={`${
+                              isDropdownOpen[index] ? 'rotate-180' : ''
+                            } ml-0.5 hidden h-3.5 w-3.5 md:inline`}
+                          />
+                        )}
                       </button>
                       <ul
                         className={`${

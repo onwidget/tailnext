@@ -17,9 +17,9 @@ const Testimonials = ({
     {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {testimonials.map(({ name, job, testimonial, image, href }, index) => (
-          <>
-            {testimonial && (
+        {testimonials.map(
+          ({ name, job, testimonial, image, href }, index) =>
+            testimonial && (
               <div
                 key={`item-testimonial-${index}`}
                 className={`card max-w-sm h-full ${
@@ -64,9 +64,8 @@ const Testimonials = ({
                   />
                 )}
               </div>
-            )}
-          </>
-        ))}
+            ),
+        )}
       </div>
     </div>
     {callToAction && (
