@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { IconRss } from '@tabler/icons-react';
+import { useOnClickOutside } from '~/hooks/useOnClickOutside';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
@@ -12,6 +13,8 @@ import { CallToActionType } from '~/shared/types';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
+
+  const ref = useRef(null);
 
   const updatedIsDropdownOpen =
     links &&
@@ -48,6 +51,10 @@ const Header = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
 
+  useOnClickOutside(ref, () => {
+    setIsDropdownOpen(updatedIsDropdownOpen as boolean[]);
+  });
+
   return (
     <header
       className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
@@ -82,7 +89,10 @@ const Header = () => {
           } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
           aria-label="Main navigation"
         >
-          <ul className="flex w-full flex-col mt-2 mb-36 md:m-0 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
+          <ul
+            ref={ref}
+            className="flex w-full flex-col mt-2 mb-36 md:m-0 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
+          >
             {links &&
               links.map(({ label, href, icon: Icon, links }, index) => (
                 <li key={`item-link-${index}`} className={links?.length ? 'dropdown' : ''}>
