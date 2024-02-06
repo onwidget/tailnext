@@ -107,7 +107,7 @@ const Header = () => {
                           <Icon
                             className={`${
                               isDropdownOpen[index] ? 'rotate-180' : ''
-                            } ml-0.5 hidden h-3.5 w-3.5 md:inline`}
+                            } ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden h-3.5 w-3.5 md:inline`}
                           />
                         )}
                       </button>
@@ -161,7 +161,7 @@ const Header = () => {
               </Link>
             )}
             {actions && actions.length > 0 && (
-              <div className="ml-4 flex w-max flex-wrap justify-end">
+              <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end">
                 {actions.map((callToAction, index) => (
                   <CTA
                     key={`item-action-${index}`}

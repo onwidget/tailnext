@@ -207,14 +207,19 @@ export const footerData: FooterProps = {
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
   ],
   footNote: (
-    <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
-        {' '}
-        onWidget
-      </a>{' '}
-      · All rights reserved.
+    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
+      <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      <span>
+        Made by{' '}
+        <a
+          className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
+          href="https://onwidget.com/"
+        >
+          {' '}
+          onWidget
+        </a>{' '}
+        · All rights reserved.
+      </span>
     </div>
   ),
 };
@@ -253,17 +258,19 @@ export const footerData2: FooterProps = {
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
   ],
   footNote: (
-    <div className="mr-4 text-sm">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a
-        className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
-        href="https://onwidget.com/"
-      >
-        {' '}
-        onWidget
-      </a>{' '}
-      · All rights reserved.
+    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
+      <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      <span>
+        Made by{' '}
+        <a
+          className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
+          href="https://onwidget.com/"
+        >
+          {' '}
+          onWidget
+        </a>{' '}
+        · All rights reserved.
+      </span>
     </div>
   ),
 };

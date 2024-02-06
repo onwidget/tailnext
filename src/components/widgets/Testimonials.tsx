@@ -41,9 +41,9 @@ const Testimonials = ({
                       image={image}
                       containerClass="h-full"
                       panelClass="justify-between items-stretch w-full h-full"
-                      nameJobClass="text-left"
+                      nameJobClass="text-left rtl:text-right"
                       jobClass="text-sm"
-                      imageClass="mr-4 h-10 w-10 rounded-full"
+                      imageClass="mr-4 rtl:mr-0 rtl:ml-4 h-10 w-10 rounded-full"
                     />
                   </Link>
                 ) : (
@@ -58,9 +58,9 @@ const Testimonials = ({
                     image={image}
                     containerClass="h-full"
                     panelClass="justify-between items-stretch w-full h-full"
-                    nameJobClass="text-left"
+                    nameJobClass="text-left rtl:text-right"
                     jobClass="text-sm"
-                    imageClass="mr-4 h-10 w-10 rounded-full"
+                    imageClass="mr-4 rtl:mr-0 rtl:ml-4 h-10 w-10 rounded-full"
                   />
                 )}
               </div>
