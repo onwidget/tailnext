@@ -21,64 +21,13 @@ import heroImg from '~/assets/images/hero.jpg';
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 
-// Hero data on code page *******************
-export const heroCode: HeroProps = {
-  title: 'Fullstack Software Engineer',
-  subtitle:
-    "I am a Software Engineer based in Kalamazoo, Michigan. I'm passionate about architecting and building innovative user-informed features. I have an insatiable curiosity that drives me to learn how things work.",
-};
-
 // Hero data on art page *******************
 export const heroArt: HeroProps = {
   title: "Art & Prints",
   subtitle:
     'Themes of nature and the in between ',
-  image: {
-    src: heroImg,
-    alt: 'Hero TailNext',
-  },
 };
 
-// Feature2 data on Services page *******************
-export const features2Services: FeaturesProps = {
-  id: 'featuresTwo-on-services',
-  header: {
-    title: 'Our Services',
-  },
-  items: [
-    {
-      title: 'Next.Js + Tailwind CSS Integration',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
-      icon: IconBrandTailwind,
-    },
-    {
-      title: 'Ready-to-use Components',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      icon: IconComponents,
-    },
-    {
-      title: 'Best Practices',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
-      icon: IconListCheck,
-    },
-    {
-      title: 'Excellent Page Speed',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconRocket,
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      icon: IconArrowsRightLeft,
-    },
-    {
-      title: 'Open to new ideas and contributions',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
-      icon: IconBulb,
-    },
-  ],
-};
 
 // Content data on Services page *******************
 export const contentServicesOne: ContentProps = {

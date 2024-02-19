@@ -1,10 +1,10 @@
 module.exports.SITE = {
-  name: 'TailNext',
+  name: 'Tonia Gonzalez',
 
-  origin: 'https://tailnext.vercel.app',
+  origin: 'https://software-artist.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'TailNext — Your website with Next.js + Tailwind CSS',
-  description: 'TailNext is a free and ready to start template to make your website using Next.js and Tailwind CSS.',
+  title: 'Tonia Gonzalez - Software Engineer & Printmaker',
+  description: 'Resume & Portfolio',
 };
