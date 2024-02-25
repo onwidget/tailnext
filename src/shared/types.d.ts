@@ -9,12 +9,15 @@ type Widget = {
 
 type WrapperTagProps = Widget & {
   children: React.ReactNode;
+  hasBackground?: boolean;
+  backgroundKey? : string;
   containerClass?: string;
 };
 
 type BackgroundProps = {
   children?: React.ReactNode;
   hasBackground?: boolean;
+  backgroundKey? : string;
 };
 
 type Header = {
@@ -242,6 +245,7 @@ type HeroProps = {
   callToAction?: CallToActionType;
   callToAction2?: CallToActionType;
   image?: Image;
+  backgroundKey?: string;
 };
 
 type FAQsProps = Widget & {

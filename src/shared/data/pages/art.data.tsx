@@ -27,6 +27,7 @@ export const heroArt: HeroProps = {
   title: "Art & Prints",
   subtitle:
     'Themes of nature and the in between ',
+  backgroundKey: 'art',
 };
 
 

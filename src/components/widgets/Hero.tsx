@@ -1,9 +1,17 @@
 import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
+import WidgetWrapper from '../common/WidgetWrapper';
 
-const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps) => {
+const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image, backgroundKey }: HeroProps) => {
+  const id = 'heroOne';
   return (
+    <WidgetWrapper
+    id={id ? id : ''}
+    hasBackground={true}
+    backgroundKey={backgroundKey}
+    containerClass={""}
+  >
     <section id="heroOne">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
@@ -44,6 +52,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
         </div>
       </div>
     </section>
+    </WidgetWrapper>
   );
 };
 

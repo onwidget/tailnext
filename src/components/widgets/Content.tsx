@@ -14,7 +14,7 @@ const Content = ({
   isReversed,
   isAfterContent,
   id,
-  hasBackground = false,
+  hasBackground = true,
 }: ContentProps) => (
   <WidgetWrapper
     id={id ? id : ''}

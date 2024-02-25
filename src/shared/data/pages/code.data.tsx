@@ -14,6 +14,7 @@ export const heroCode: HeroProps = {
   title: 'Fullstack Software Engineer',
   subtitle:
     "I am a Software Engineer based in Kalamazoo, Michigan. I'm passionate about architecting and building innovative user-informed features. I have an insatiable curiosity that drives me to learn how things work.",
+  backgroundKey: 'code',
 };
 
 // Feature2 data on code page *******************

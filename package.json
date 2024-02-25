@@ -26,17 +26,6 @@
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^7.6.10",
-    "@storybook/addon-essentials": "^7.6.10",
-    "@storybook/addon-interactions": "^7.6.10",
-    "@storybook/addon-links": "^7.6.10",
-    "@storybook/addon-onboarding": "^1.0.10",
-    "@storybook/addon-themes": "^7.6.10",
-    "@storybook/addon-viewport": "^7.6.10",
-    "@storybook/blocks": "^7.6.10",
-    "@storybook/nextjs": "^7.6.10",
-    "@storybook/react": "^7.6.10",
-    "@storybook/test": "^7.6.10",
     "@tailwindcss/typography": "^0.5.10",
     "@types/markdown-it": "^13.0.7",
     "@types/node": "20.11.5",

@@ -10,9 +10,10 @@ export const heroHome: HeroProps = {
   ),
   subtitle: (
     <>    
-   I am a Fullstack Software Engineer &amp; Printmaker based in Kalamazoo Michigan. 
+   I am a Fullstack Senior Software Engineer &amp; Printmaker based in Kalamazoo Michigan. 
     </>
   ),
+  backgroundKey: 'home',
   callToAction: {
     text: 'Code stuff',
     href: '/code',
