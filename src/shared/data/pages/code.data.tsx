@@ -6,8 +6,8 @@ import {
   HeroProps,
 } from '~/shared/types';
 
-import cameraFrontImg from '~/assets/images/camera-front.jpg';
-import cameraBackImg from '~/assets/images/camera-back.jpg';
+import projectsImg from '~/assets/images/pexels-ketut-subiyanto-4559555.jpg';
+import laptopImg from '~/assets/images/pexels-junior-teixeira-2047905.jpeg';
 
 // Hero data on code page *******************
 export const heroCode: HeroProps = {
@@ -98,7 +98,7 @@ export const contentServicesOne: ContentProps = {
     },
   ],
   image: {
-    src: cameraFrontImg,
+    src: projectsImg,
     alt: 'Colorful Image',
   },
   isReversed: true,
@@ -142,7 +142,7 @@ export const contentServicesTwo: ContentProps = {
     },
   ],
   image: {
-    src: cameraBackImg,
+    src: laptopImg,
     alt: 'Colorful Image',
   },
   isReversed: false,

@@ -8,7 +8,7 @@ import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
 
 const Header = () => {
-  const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
+  const { links, isSticky, showToggleTheme, position } = headerData;
 
   const updatedIsDropdownOpen =
     links &&

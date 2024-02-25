@@ -3,7 +3,9 @@ import { BackgroundProps } from '~/shared/types';
 const Background = ({ children, hasBackground, backgroundKey}: BackgroundProps) => {
   function backgroundSwitch(backgroundkey: string | undefined) {
     switch(backgroundKey) {
-      case 'art' :
+      case 'about':
+        return 'bg-about bg-no-repeat bg-cover bg-center bg-fixed';
+      case 'art':
         return 'bg-art bg-no-repeat bg-cover bg-center bg-fixed';
       case 'code': 
       return 'bg-code bg-no-repeat bg-cover bg-center bg-fixed';

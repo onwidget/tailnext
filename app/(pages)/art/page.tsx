@@ -3,6 +3,8 @@ import ArtContent from '~/components/widgets/ArtContent';
 import Hero from '~/components/widgets/Hero';
 import {
   artImageContent,
+  artImageContent2,
+  artImageContent3,
   heroArt,
 } from '~/shared/data/pages/art.data';
 
@@ -15,9 +17,8 @@ const Page = () => {
     <>
       <Hero {...heroArt} />
       <ArtContent {...artImageContent} />
-      <ArtContent {...artImageContent} />
-      <ArtContent {...artImageContent} />
-      <ArtContent {...artImageContent} />
+      <ArtContent {...artImageContent2} />
+      <ArtContent {...artImageContent3} />
     </>
   );
 };
