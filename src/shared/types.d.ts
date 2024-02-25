@@ -236,6 +236,8 @@ type WindowSize = {
 type HeroProps = {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
+  subtitle1?: string | ReactElement;
+  subtitle2?: string | ReactElement;
   tagline?: string;
   callToAction?: CallToActionType;
   callToAction2?: CallToActionType;
@@ -280,7 +282,11 @@ type ContentProps = Widget & {
   header?: Header;
   content?: string;
   items?: Array<Item>;
+  images: Array<Image>;
   image?: Image;
+  image2?: Image;
+  image3?: Image;
+  images?: Array<Image>;
   isReversed?: boolean;
   isAfterContent?: boolean;
 };

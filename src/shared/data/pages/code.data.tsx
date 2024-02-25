@@ -1,12 +1,4 @@
-import {
-  IconArrowsRightLeft,
-  IconBrandTailwind,
-  IconBulb,
-  IconChevronsRight,
-  IconComponents,
-  IconListCheck,
-  IconRocket,
-} from '@tabler/icons-react';
+import { IconChevronsRight, IconComponents } from '@tabler/icons-react';
 
 import {
   ContentProps,
@@ -28,39 +20,38 @@ export const heroCode: HeroProps = {
 export const features2Services: FeaturesProps = {
   id: 'featuresTwo-on-services',
   header: {
-    title: 'Experience / Certification',
+    title: 'Latest Projects',
   },
   items: [
     {
-      title: 'Senior Software Engineer - Bounti.ai',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
-      icon: IconBrandTailwind,
+      title: 'Web platform w/Next.js',
+      description:
+        'Developing SASS platform for Bounit.ai which is built with Next.js, Prisma, and deployed via Vercel',
+        icon: IconComponents,
     },
     {
-      title: 'Software Engineer - New Relic',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      title: 'React/Typescript Micro Service',
+      description:
+        'Collaborated with product and design to create an observability maturity application performance management feature using React/Typescript',
       icon: IconComponents,
     },
     {
-      title: 'Ux / UI Consultant (Freelance)',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
-      icon: IconListCheck,
-    },
-    {
-      title: 'Web Developer (Freelance)',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconRocket,
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
+      title: 'Java GraphQL Endpoint',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      icon: IconArrowsRightLeft,
+        'Helped design and build a Java graphql endpoint with a postgresql.',
+      icon: IconComponents,
     },
     {
-      title: 'AWS: Cloud Practioner',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
-      icon: IconBulb,
+      title: 'Migration to Cloud',
+      description:
+        'Planned initiative to migrate team’s services and databases from on premise to AWS using Terraform and Argo workflows',
+      icon: IconComponents,
+    },
+    {
+      title: 'New Relic Alerting via Terraform',
+      description:
+        'Configured alerting for backend and front end services via Terraform using New Relic’s workflows api',
+        icon: IconComponents,
     },
   ],
 };
@@ -70,33 +61,39 @@ export const contentServicesOne: ContentProps = {
   id: 'contentOne-on-services-one',
   hasBackground: false,
   header: {
-    title: 'Latest Projects & Technologies',
+    title: 'Experience / Certification',
   },
   items: [
     {
-      title: 'Web platform w/Next.js',
-      description:
-        '(current) Build web platform with Next.js, Prisma, and Vercel',
+      title: 'Senior Software Engineer - Bounti.ai',
+      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      icon: IconChevronsRight,
     },
     {
-      title: 'React/Typescript Micro Service',
-      description:
-        'Collaborated with product and design to create an observability maturity application performance management feature using React/Typescript',
+      title: 'Software Engineer - New Relic',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: IconChevronsRight,
     },
     {
-      title: 'Java GraphQL Endpoint',
-      description:
-        'Helped design and build a Java graphql endpoint with a postgresql.',
+      title: 'Ux / UI Consultant (Freelance)',
+      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      icon: IconChevronsRight,
     },
     {
-      title: 'Migration to Cloud',
-      description:
-        'Planned initiative to migrate team’s services and databases from on premise to AWS using Terraform and Argo workflows',
+      title: 'Web Developer (Freelance)',
+      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
+      icon: IconChevronsRight,
     },
     {
-      title: 'New Relic Alerting via Terraform',
+      title: 'Search Engine Optimization (SEO)',
       description:
-        'Configured alerting for backend and front end services via Terraform using New Relic’s workflows api',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      icon: IconChevronsRight,
+    },
+    {
+      title: 'AWS: Cloud Practioner',
+      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      icon: IconChevronsRight,
     },
   ],
   image: {
@@ -111,6 +108,9 @@ export const contentServicesOne: ContentProps = {
 export const contentServicesTwo: ContentProps = {
   id: 'contentOne-on-services-two',
   hasBackground: false,
+  header: {
+    title: 'Technologies',
+  },
   items: [
     {
       title: 'React / Next.js',
@@ -135,6 +135,9 @@ export const contentServicesTwo: ContentProps = {
     },
     {
       title: 'Git version control',
+    },
+    {
+      title: 'AWS',
     },
   ],
   image: {

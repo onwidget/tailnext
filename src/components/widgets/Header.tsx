@@ -1,14 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { IconRss } from '@tabler/icons-react';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
-import CTA from '../common/CTA';
-import { CallToActionType } from '~/shared/types';
 
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
@@ -128,26 +125,6 @@ const Header = () => {
         >
           <div className="flex w-full items-center justify-between md:w-auto">
             {showToggleTheme && <ToggleDarkMode />}
-            {showRssFeed && (
-              <Link
-                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                aria-label="RSS Feed"
-                href=""
-              >
-                <IconRss className="h-5 w-5" />
-              </Link>
-            )}
-            {actions && actions.length > 0 && (
-              <div className="ml-4 flex w-max flex-wrap justify-end">
-                {actions.map((callToAction, index) => (
-                  <CTA
-                    key={`item-action-${index}`}
-                    callToAction={callToAction as CallToActionType}
-                    linkClass="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
-                  />
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>

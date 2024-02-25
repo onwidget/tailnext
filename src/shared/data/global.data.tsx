@@ -37,10 +37,6 @@ export const headerData: HeaderProps = {
       label: 'About',
       href: '/about',
     },
-    {
-      label: 'Contact',
-      href: '/contact',
-    },
   ],
   isSticky: true,
   showToggleTheme: true,

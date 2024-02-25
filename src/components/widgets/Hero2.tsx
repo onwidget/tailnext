@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
-import CTA from '../common/CTA';
 
-const Hero2 = ({ title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps) => {
+const Hero2 = ({ title, subtitle1, subtitle2, tagline, image }: HeroProps) => {
   return (
     <section className="mt-[-72px] bg-primary-50 dark:bg-slate-800" id="heroTwo">
       <div className="mx-auto max-w-7xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
@@ -20,11 +19,8 @@ const Hero2 = ({ title, subtitle, tagline, callToAction, callToAction2, image }:
                 </h1>
               )}
               <div className="mx-auto max-w-3xl">
-                {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
-                <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                  {callToAction && <CTA callToAction={callToAction} linkClass="btn btn-primary" />}
-                  {callToAction2 && <CTA callToAction={callToAction2} linkClass="btn" />}
-                </div>
+                {subtitle1 && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle1}</p>}
+                {subtitle2 && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle2}</p>}
               </div>
             </div>
           </div>

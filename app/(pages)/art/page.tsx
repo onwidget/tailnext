@@ -2,8 +2,7 @@ import { Metadata } from 'next';
 import ArtContent from '~/components/widgets/ArtContent';
 import Hero from '~/components/widgets/Hero';
 import {
-  contentServicesOne,
-  contentServicesTwo,
+  artImageContent,
   heroArt,
 } from '~/shared/data/pages/art.data';
 
@@ -15,10 +14,10 @@ const Page = () => {
   return (
     <>
       <Hero {...heroArt} />
-      <ArtContent {...contentServicesOne} />
-      <ArtContent {...contentServicesTwo} />
-      <ArtContent {...contentServicesOne} />
-      <ArtContent {...contentServicesTwo} />
+      <ArtContent {...artImageContent} />
+      <ArtContent {...artImageContent} />
+      <ArtContent {...artImageContent} />
+      <ArtContent {...artImageContent} />
     </>
   );
 };
