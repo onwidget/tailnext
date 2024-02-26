@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const Hero2 = ({ title, subtitle1, subtitle2, tagline, image, backgroundKey }: HeroProps) => {
+const Hero2 = ({ title, subtitle1, subtitle2, image, backgroundKey }: HeroProps) => {
   const id = 'heroTwo';
   return (
     <WidgetWrapper
@@ -11,16 +11,11 @@ const Hero2 = ({ title, subtitle1, subtitle2, tagline, image, backgroundKey }: H
     backgroundKey={backgroundKey}
     containerClass={""}
   >
-    <section className="mt-[-72px] bg-primary-50 bg-opacity-75 dark:bg-slate-800 dark:bg-opacity-75" id="heroTwo">
+    <section className="bg-zinc-50 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-75" id="heroTwo">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto">
         <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
-          <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
+          <div className="mx-auto flex max-w-5xl basis-[40%] items-center">
             <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
-              {tagline && (
-                <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-                  {tagline}
-                </p>
-              )}
               {title && (
                 <h1 className="leading-tighter font-heading mb-4 px-4 text-5xl font-bold tracking-tighter md:px-0 md:text-[3.48rem]">
                   {title}

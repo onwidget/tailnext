@@ -4,7 +4,6 @@ import { SITE } from '~/config.js';
 
 import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
-import Announcement from '~/components/widgets/Announcement';
 import Footer2 from '~/components/widgets/Footer2';
 
 import { Inter as CustomFont } from 'next/font/google';
@@ -30,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.svg" sizes="32x32"/>
       </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>

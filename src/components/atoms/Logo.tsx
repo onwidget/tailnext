@@ -13,9 +13,12 @@ const Logo = () => {
   const logo = currentTheme === 'dark' ? toniaLogoDark : toniaLogo;
 
   return (
-  <span className="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
-    <Image src={logo} width="40" height="40" alt="logo"/>
-  </span>
+  <div className="md:flex md:gap-4">
+    <span className="ml-2 self-center  text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
+      <Image src={logo} width="40" height="40" alt="logo"/>
+    </span>
+    <span>Tonia Gonzalez</span>
+  </div>
   )
 };
 

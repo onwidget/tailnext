@@ -181,7 +181,7 @@ export const footerData2: FooterProps = {
     { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/encantolosarboles/' },
   ],
   footNote: (
-    <div className="mr-4 text-sm">
+    <div className="mr-4 text-md">
       Tonia Gonzalez <span>&copy;</span>2024
     </div>
   ),
