@@ -171,7 +171,7 @@ export const footerData2: FooterProps = {
   links: [],
   columns: [
     {
-      title: 'Email',
+      title: 'Email:',
       texts: ['toniagonzalez.design@gmail.com'],
     },
   ],

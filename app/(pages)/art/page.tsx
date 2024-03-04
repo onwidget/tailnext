@@ -5,6 +5,7 @@ import {
   artImageContent,
   artImageContent2,
   artImageContent3,
+  artImageContent4,
   heroArt,
 } from '~/shared/data/pages/art.data';
 
@@ -19,6 +20,7 @@ const Page = () => {
       <ArtContent {...artImageContent} />
       <ArtContent {...artImageContent2} />
       <ArtContent {...artImageContent3} />
+      <ArtContent {...artImageContent4} />
     </>
     )
 };

@@ -2,19 +2,19 @@ import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const Hero2 = ({ title, subtitle1, subtitle2, image, backgroundKey }: HeroProps) => {
+const Hero2 = ({ title, subtitle, subtitle1, subtitle2, image, backgroundKey }: HeroProps) => {
   const id = 'heroTwo';
   return (
     <WidgetWrapper
     id={id ? id : ''}
-    hasBackground={true}
+    hasBackground={false}
     backgroundKey={backgroundKey}
     containerClass={""}
   >
-    <section className="bg-zinc-50 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-75" id="heroTwo">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto">
+    <section className="mt-[-50px] bg-zinc-50 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-75" id="heroTwo">
+      <div className="mx-auto max-w-7xl px-4  pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
         <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
-          <div className="mx-auto flex max-w-5xl basis-[40%] items-center">
+          <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
             <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
               {title && (
                 <h1 className="leading-tighter font-heading mb-4 px-4 text-5xl font-bold tracking-tighter md:px-0 md:text-[3.48rem]">
@@ -22,6 +22,7 @@ const Hero2 = ({ title, subtitle1, subtitle2, image, backgroundKey }: HeroProps)
                 </h1>
               )}
               <div className="mx-auto max-w-3xl">
+                {subtitle && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle}</p>}
                 {subtitle1 && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle1}</p>}
                 {subtitle2 && <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">{subtitle2}</p>}
               </div>

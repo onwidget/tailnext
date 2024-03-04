@@ -1,5 +1,10 @@
 import { HeroProps } from '../../types';
 
+import {
+  IconCode,
+  IconPalette,
+} from '@tabler/icons-react';
+
 
 // Hero data on Home page *******************
 export const heroHome: HeroProps = {
@@ -17,10 +22,12 @@ export const heroHome: HeroProps = {
   callToAction: {
     text: 'Code stuff',
     href: '/code',
+    icon: IconCode
   },
   callToAction2: {
     text: 'Art stuff',
     href: '/art',
+    icon: IconPalette
   },
 };
 

@@ -67,33 +67,27 @@ export const contentServicesOne: ContentProps = {
   items: [
     {
       title: 'Senior Software Engineer - Bounti.ai',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
+      description: 'Building a SAAS product that surfaces growth signals for outbound sales.',
       icon: IconChevronsRight,
     },
     {
       title: 'Software Engineer - New Relic',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      description: 'Developed and maintained a high throughput observabilty software product.',
       icon: IconChevronsRight,
     },
     {
-      title: 'Ux / UI Consultant (Freelance)',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
+      title: 'UX / UI Consultant (Freelance)',
+      description: 'Provide tools for lead generation, create basic wireframes and full website prototypes.',
       icon: IconChevronsRight,
     },
     {
       title: 'Web Developer (Freelance)',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconChevronsRight,
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      description: 'Build branded layouts and custom redesigns',
       icon: IconChevronsRight,
     },
     {
       title: 'AWS: Cloud Practioner',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
+      description: '',
       icon: IconChevronsRight,
     },
   ],
@@ -133,9 +127,6 @@ export const contentServicesTwo: ContentProps = {
     },
     {
       title: 'GraphQL',
-    },
-    {
-      title: 'Git version control',
     },
     {
       title: 'AWS',

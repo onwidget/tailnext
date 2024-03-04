@@ -286,7 +286,7 @@ type ContentProps = Widget & {
   header?: Header;
   content?: string;
   items?: Array<Item>;
-  images: Array<Image>;
+  images: Array<SlideImage>;
   image?: Image;
   image2?: Image;
   image3?: Image;

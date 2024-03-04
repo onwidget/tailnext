@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
+import Hero from '~/components/widgets/Hero';
 import Hero2 from '~/components/widgets/Hero2';
-import { hero2About } from '~/shared/data/pages/about.data';
+import { heroAbout, hero2About, } from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
   title: `About`,
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
+      <Hero {...heroAbout} />
       <Hero2 {...hero2About} />
     </>
   );
