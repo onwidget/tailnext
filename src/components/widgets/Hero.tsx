@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 import WidgetWrapper from '../common/WidgetWrapper';

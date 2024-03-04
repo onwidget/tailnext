@@ -248,13 +248,6 @@ type HeroProps = {
   backgroundKey?: string;
 };
 
-type FAQsProps = Widget & {
-  header?: Header;
-  items?: Array<Item>;
-  columns?: number;
-  tabs?: Array<Tab>;
-  callToAction?: CallToActionType;
-};
 
 type CollapseProps = {
   items: Array<Item>;
@@ -331,24 +324,12 @@ type PricingProps = Widget & {
   prices: Array<Price>;
 };
 
-type ComparisonProps = Widget & {
-  header?: Header;
-  columns: Array<Column>;
-};
-
 type StatsProps = Widget & {
   items: Array<Item>;
 };
 
 type SocialProofProps = Widget & {
   images: Array<Image>;
-};
-
-type ContactProps = Widget & {
-  header?: Header;
-  content?: string;
-  items?: Array<Item>;
-  form: FormProps;
 };
 
 type FooterProps = {
