@@ -14,14 +14,14 @@ const Footer2 = () => {
             {texts &&
               texts.map((text, index2) => (
                 <p key={`item-text-${index2}`} className="text-gray-600 dark:text-slate-400">
-                 <span className="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</span> {text}
+                  <span className="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</span> {text}
                 </p>
               ))}
           </div>
         ))}
         <div className="col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
           <ul className="mb-4 -ml-2 flex md:order-1 md:mb-0">
-          <li className=" font-medium text-gray-800 dark:text-gray-300 px-2.5">Social:</li>
+            <li className=" font-medium text-gray-800 dark:text-gray-300 px-2.5">Social:</li>
             {socials.map(({ label, icon: Icon, href }, index) => (
               <li key={`item-social-${index}`}>
                 <a
@@ -36,9 +36,7 @@ const Footer2 = () => {
             ))}
           </ul>
         </div>
-        <div className="font-medium">
-         {footNote}
-          </div>
+        <div className="font-medium">{footNote}</div>
       </div>
     </div>
   );

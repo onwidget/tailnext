@@ -1,10 +1,6 @@
 import { IconChevronsRight, IconComponents } from '@tabler/icons-react';
 
-import {
-  ContentProps,
-  FeaturesProps,
-  HeroProps,
-} from '~/shared/types';
+import { ContentProps, FeaturesProps, HeroProps } from '~/shared/types';
 
 import projectsImg from '~/assets/images/pexels-ketut-subiyanto-4559555.jpg';
 import laptopImg from '~/assets/images/pexels-junior-teixeira-2047905.jpeg';
@@ -18,7 +14,7 @@ export const heroCode: HeroProps = {
 };
 
 // Feature2 data on code page *******************
-export const features2Services: FeaturesProps = {
+export const featuresCode: FeaturesProps = {
   id: 'featuresTwo-on-services',
   header: {
     title: 'Latest Projects',
@@ -28,7 +24,7 @@ export const features2Services: FeaturesProps = {
       title: 'Web platform w/Next.js',
       description:
         'Developing SASS platform for Bounit.ai which is built with Next.js, Prisma, and deployed via Vercel',
-        icon: IconComponents,
+      icon: IconComponents,
     },
     {
       title: 'React/Typescript Micro Service',
@@ -38,8 +34,7 @@ export const features2Services: FeaturesProps = {
     },
     {
       title: 'Java GraphQL Endpoint',
-      description:
-        'Helped design and build a Java graphql endpoint with a postgresql.',
+      description: 'Helped design and build a Java graphql endpoint with a postgresql.',
       icon: IconComponents,
     },
     {
@@ -52,7 +47,7 @@ export const features2Services: FeaturesProps = {
       title: 'New Relic Alerting via Terraform',
       description:
         'Configured alerting for backend and front end services via Terraform using New Relic’s workflows api',
-        icon: IconComponents,
+      icon: IconComponents,
     },
   ],
 };
@@ -139,5 +134,3 @@ export const contentServicesTwo: ContentProps = {
   isReversed: false,
   isAfterContent: true,
 };
-
-

@@ -2,7 +2,6 @@
 
 Hello, I'm Tonia Gonzalez. I am a software engineer and a printmaker. This repo is my current resume & art portfolio. The initial template was forked from [tailnext](https://github.com/onwidget/tailnext) and the site is hosted on Vercel. It can be viewed at [toniagonzalez.com](https://toniagonzalez.com/).
 
-
 ### Running locally
 
 All commands are run from the root of the project, from a terminal:
@@ -16,7 +15,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run storybook`   | Open storybook to view stories by widgets    |
 | `npm run format`      | Format codes with Prettier                   |
 | `npm run lint:eslint` | Run Eslint                                   |
-
 
 ## Acknowledgements
 

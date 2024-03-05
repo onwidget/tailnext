@@ -22,7 +22,7 @@ const Page = () => {
       <ArtContent {...artImageContent3} />
       <ArtContent {...artImageContent4} />
     </>
-    )
+  );
 };
 
 export default Page;

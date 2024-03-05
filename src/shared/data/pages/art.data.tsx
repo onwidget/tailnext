@@ -1,7 +1,4 @@
-import {
-  ContentProps,
-  HeroProps,
-} from '~/shared/types';
+import { ContentProps, HeroProps } from '~/shared/types';
 
 import sheWeepsImg from '~/assets/images/SheWeeps.jpg';
 import fortyThreeImg from '~/assets/images/fortyThree.jpg';
@@ -21,16 +18,15 @@ export type SlideImage = {
   alt: string;
   title: string;
   medium: string;
-}
+};
 
 // Hero data on art page *******************
 export const heroArt: HeroProps = {
-  title: "Printmaking",
+  title: 'Printmaking',
   subtitle:
     'My art explores themes of identity, nature, and current events. While I primarly work with linocuts and plate lithograpghy, I enjoy combining printmaking with other mediums.',
   backgroundKey: 'art',
 };
-
 
 // Content data on Art page *******************
 export const artImageContent: ContentProps = {
@@ -38,16 +34,16 @@ export const artImageContent: ContentProps = {
   hasBackground: false,
   images: [
     {
-    src: sheWeepsImg,
-    alt: 'Print of black madonna weeping',
-    title: 'She weeps',
-    medium: 'Linocut - three plates',
+      src: sheWeepsImg,
+      alt: 'Print of black madonna weeping',
+      title: 'She weeps',
+      medium: 'Linocut - three plates',
     },
     {
-    src: treesImg,
-    alt: 'Print of wooded scene with water',
-    title: 'Finding asylum',
-    medium: 'Hand printed linocut on unryu',
+      src: treesImg,
+      alt: 'Print of wooded scene with water',
+      title: 'Finding asylum',
+      medium: 'Hand printed linocut on unryu',
     },
     {
       src: pierImg,
@@ -63,22 +59,22 @@ export const artImageContent2: ContentProps = {
   hasBackground: false,
   images: [
     {
-    src: itsAGirlImg as unknown as string,
-    alt: 'Three jars containing a gun, a girl, reading, and a pregancy test',
-    title: `it's a girl! `,
-    medium: 'Linocut w/chine collé',
+      src: itsAGirlImg as unknown as string,
+      alt: 'Three jars containing a gun, a girl, reading, and a pregancy test',
+      title: `it's a girl! `,
+      medium: 'Linocut w/chine collé',
     },
     {
-    src: ourHeartsImg as unknown as string,
-    alt: 'Two figures connected by anatomical hearts',
-    title: 'our hearts toward',
-    medium: 'Plate lithography - multi plate',
+      src: ourHeartsImg as unknown as string,
+      alt: 'Two figures connected by anatomical hearts',
+      title: 'our hearts toward',
+      medium: 'Plate lithography - multi plate',
     },
     {
-    src: collageImg as unknown as string,
-    alt: 'Collage of prints and photos',
-    title: 'memories live in the canopy',
-    medium: ' Mixed media collage - linocuts, photos',
+      src: collageImg as unknown as string,
+      alt: 'Collage of prints and photos',
+      title: 'memories live in the canopy',
+      medium: ' Mixed media collage - linocuts, photos',
     },
   ],
 };
@@ -94,16 +90,16 @@ export const artImageContent3: ContentProps = {
       medium: 'Linocut - multiple plates',
     },
     {
-    src: astoriaImg as unknown as string,
-    alt: 'Print of trees',
-    title: 'astoria',
-    medium: 'Plate lithography - multiple plates',
+      src: astoriaImg as unknown as string,
+      alt: 'Print of trees',
+      title: 'astoria',
+      medium: 'Plate lithography - multiple plates',
     },
     {
-    src: dnaImg,
-    alt: 'Black and white print, figure ans skeleton separated by dna strands',
-    title: 'in our dna',
-    medium: 'Linocut',
+      src: dnaImg,
+      alt: 'Black and white print, figure ans skeleton separated by dna strands',
+      title: 'in our dna',
+      medium: 'Linocut',
     },
   ],
 };
@@ -125,10 +121,10 @@ export const artImageContent4: ContentProps = {
       medium: 'Plate lithography - multiple plates',
     },
     {
-    src: familyTreeImg,
-    alt: 'Hanging quilt',
-    title: 'family tree',
-    medium: 'Hand stitched quilt with linocuts',
+      src: familyTreeImg,
+      alt: 'Hanging quilt',
+      title: 'family tree',
+      medium: 'Hand stitched quilt with linocuts',
     },
   ],
 };

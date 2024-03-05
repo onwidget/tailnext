@@ -10,14 +10,14 @@ type Widget = {
 type WrapperTagProps = Widget & {
   children: React.ReactNode;
   hasBackground?: boolean;
-  backgroundKey? : string;
+  backgroundKey?: string;
   containerClass?: string;
 };
 
 type BackgroundProps = {
   children?: React.ReactNode;
   hasBackground?: boolean;
-  backgroundKey? : string;
+  backgroundKey?: string;
 };
 
 type Header = {
@@ -247,7 +247,6 @@ type HeroProps = {
   image?: Image;
   backgroundKey?: string;
 };
-
 
 type CollapseProps = {
   items: Array<Item>;

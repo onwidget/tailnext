@@ -10,7 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-      <Hero {...heroHome} />
-  );
+  return <Hero {...heroHome} />;
 }

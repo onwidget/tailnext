@@ -1,10 +1,5 @@
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
 import { FooterProps, HeaderProps } from '../types';
-
 
 // Header data
 export const headerData: HeaderProps = {
@@ -28,7 +23,6 @@ export const headerData: HeaderProps = {
   position: 'right',
 };
 
-
 // Footer2 data
 export const footerData2: FooterProps = {
   links: [],
@@ -39,7 +33,7 @@ export const footerData2: FooterProps = {
     },
   ],
   socials: [
-    { label: 'LinkedIn', icon: IconBrandLinkedin, href: 'https://www.linkedin.com/in/tonia-gonzalez-71404416a/'},
+    { label: 'LinkedIn', icon: IconBrandLinkedin, href: 'https://www.linkedin.com/in/tonia-gonzalez-71404416a/' },
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/toniagonzalez' },
     { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/encantolosarboles/' },
   ],
