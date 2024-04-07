@@ -4,8 +4,8 @@ import { SITE } from '~/config.js';
 
 import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
-import Announcement from '~/components/widgets/Announcement';
-import Footer2 from '~/components/widgets/Footer2';
+// import Announcement from '~/components/widgets/Announcement';
+import Footer from '~/components/widgets/Footer';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
@@ -33,10 +33,10 @@ export default function RootLayout({ children }: LayoutProps) {
       </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
-          <Announcement />
+          {/* <Announcement /> */}
           <Header />
           <main>{children}</main>
-          <Footer2 />
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import Hero from '~/components/widgets/Hero';
+import Hero from '~/components/widgets/Hero2';
 import Pricing from '~/components/widgets/Pricing';
 import Comparison from '~/components/widgets/Comparison';
 import FAQs3 from '~/components/widgets/FAQs3';

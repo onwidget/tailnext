@@ -14,6 +14,7 @@ import {
   IconMapPin,
   IconPhoneCall,
   IconRocket,
+  IconCalendarEvent,
 } from '@tabler/icons-react';
 import {
   CallToActionProps,
@@ -28,7 +29,7 @@ import {
   TeamProps,
   TestimonialsProps,
 } from '../../types';
-import heroImg from '~/assets/images/hero.jpg';
+import heroImg from '~/assets/images/Need-Support-Banner.webp';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
@@ -41,36 +42,30 @@ import gasImg from '~/assets/images/gas.jpg';
 export const heroHome: HeroProps = {
   title: (
     <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
+      <span className="font-semibold text-lg md:text-3xl lg:text-5xl">IT &amp; Repair Solutions for Businesses</span>
     </>
   ),
   subtitle: (
     <>
-      <span className="hidden md:inline">
-        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
-        </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
-      </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
+      <span className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400">
+        Your on-demand IT department—enjoy all the perks without the full-time costs.
+      </span>
     </>
   ),
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
+    text: 'Book an Appointment',
+    href: '/book-an-appointment',
+    icon: IconCalendarEvent,
     targetBlank: true,
   },
   callToAction2: {
-    text: 'Learn more',
-    href: '/',
+    text: 'Learn More',
+    href: '/about',
   },
-  image: {
-    src: heroImg,
-    alt: 'Hero TailNext',
-  },
+  // image: {
+  //   src: heroImg,
+  //   alt: 'Support Banner',
+  // },
 };
 
 // SocialProof data on Home page *******************

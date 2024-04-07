@@ -36,7 +36,7 @@ export default function Page() {
   return (
     <>
       <Hero {...heroHome} />
-      <SocialProof {...socialProofHome} />
+      {/* <SocialProof {...socialProofHome} />
       <Features {...featuresHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
@@ -46,7 +46,7 @@ export default function Page() {
       <Pricing {...pricingHome} />
       <Team {...teamHome} />
       <Contact {...contactHome} />
-      <CallToAction2 {...callToAction2Home} />
+      <CallToAction2 {...callToAction2Home} /> */}
     </>
   );
 }

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Component from '~/components/widgets/Hero';
+import Component from '~/components/widgets/Hero2';
 import { heroHome as mockData } from '~/shared/data/pages/home.data';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

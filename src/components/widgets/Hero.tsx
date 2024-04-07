@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
 
@@ -26,7 +26,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
               </div>
             </div>
           </div>
-          {image && (
+          {/* {image && (
             <div className="relative m-auto max-w-5xl">
               <Image
                 className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
@@ -40,7 +40,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
                 priority
               />
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </section>

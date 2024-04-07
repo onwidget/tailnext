@@ -4,6 +4,7 @@ import {
   IconBrandInstagram,
   IconBrandTwitter,
   IconChevronDown,
+  IconUser,
   IconRss,
 } from '@tabler/icons-react';
 import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
@@ -25,36 +26,36 @@ export const announcementData: AnnouncementProps = {
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Pages',
+      label: 'Services',
       icon: IconChevronDown,
       links: [
         {
-          label: 'Services',
-          href: '/services',
+          label: 'Tech Support',
+          href: '/it-services',
         },
         {
-          label: 'Pricing',
-          href: '/pricing',
+          label: 'Electronics Repair',
+          href: '/repair-services',
         },
         {
-          label: 'About us',
-          href: '/about',
+          label: 'Data Recovery',
+          href: '/data-recovery-services',
         },
         {
-          label: 'Contact us',
-          href: '/contact',
+          label: 'Network Solutions',
+          href: '/networking-services',
         },
         {
-          label: 'FAQs',
+          label: 'Data Storage',
           href: '/faqs',
         },
         {
-          label: 'Terms & Conditions',
-          href: '/terms',
+          label: 'Web & App Development',
+          href: '/web-development',
         },
         {
-          label: 'Privacy Policy',
-          href: '/privacy',
+          label: 'Electronics Recycling',
+          href: '/recycling-services',
         },
       ],
     },
@@ -66,23 +67,28 @@ export const headerData: HeaderProps = {
       label: 'Contact',
       href: '/contact',
     },
+    {
+      label: 'Visit Our Shop',
+      href: 'https://easttexaselectronics.com',
+      
+    },
   ],
   actions: [
     {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
-      targetBlank: true,
+      text: 'Customer Portal',
+      href: '/customer-portal',
+      targetBlank: false,
     },
   ],
   isSticky: true,
   showToggleTheme: true,
   showRssFeed: false,
-  position: 'right',
+  position: 'center',
 };
 
 // Footer data
 export const footerData: FooterProps = {
-  title: 'TailNext',
+  title: 'East Texas Electronics',
   links: [
     {
       label: 'Terms & Conditions',
@@ -95,48 +101,43 @@ export const footerData: FooterProps = {
   ],
   columns: [
     {
-      title: 'Product',
+      title: 'Top Services',
       links: [
         {
-          label: 'Features',
-          href: '/',
+          label: 'Tech Support',
+          href: '/it-services',
         },
         {
-          label: 'Security',
-          href: '/',
+          label: 'Electronics Repair',
+          href: '/repair-services',
+        },
+
+
+        {
+          label: 'Data Storage',
+          href: '/faqs',
         },
         {
-          label: 'Team',
-          href: '/',
+          label: 'Web & App Development',
+          href: '/web-development',
         },
-        {
-          label: 'Enterprise',
-          href: '/',
-        },
-        {
-          label: 'Customer stories',
-          href: '/',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'Resources',
-          href: '/',
-        },
+
       ],
     },
     {
-      title: 'Platform',
+      title: 'Upcoming ',
       links: [
         {
-          label: 'Developer API',
-          href: '/',
+          label: 'Employee Portal',
+          href: '/upcoming',
         },
         {
-          label: 'Partners',
-          href: '/',
+          label: 'Employee Management',
+          href: '/upcoming',
+        },
+        {
+          label: 'Asset Management',
+          href: '/upcoming',
         },
       ],
     },
@@ -144,23 +145,15 @@ export const footerData: FooterProps = {
       title: 'Support',
       links: [
         {
-          label: 'Docs',
+          label: 'Contact Us',
           href: '/',
         },
         {
-          label: 'Community Forum',
+          label: 'Book an Appointment',
           href: '/',
         },
         {
-          label: 'Professional Services',
-          href: '/',
-        },
-        {
-          label: 'Skills',
-          href: '/',
-        },
-        {
-          label: 'Status',
+          label: 'Request a Consultation',
           href: '/',
         },
       ],
@@ -181,20 +174,8 @@ export const footerData: FooterProps = {
           href: '/',
         },
         {
-          label: 'Press',
-          href: '/',
-        },
-        {
-          label: 'Inclusion',
-          href: '/',
-        },
-        {
-          label: 'Social Impact',
-          href: '/',
-        },
-        {
-          label: 'Shop',
-          href: '/',
+          label: 'Online Store',
+          href: 'https://easttexaselectronics.com',
         },
       ],
     },
@@ -203,67 +184,18 @@ export const footerData: FooterProps = {
     { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
     { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
     { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
-    { label: 'RSS', icon: IconRss, href: '#' },
-    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
+    // { label: 'RSS', icon: IconRss, href: '#' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/easttexaselectronics' },
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://www.easttexaselectronics.com">
         {' '}
-        onWidget
+        East Texas Electronics, LLC.
       </a>{' '}
-      · All rights reserved.
-    </div>
-  ),
-};
-
-// Footer2 data
-export const footerData2: FooterProps = {
-  links: [
-    {
-      label: 'Terms & Conditions',
-      href: '/terms',
-    },
-    {
-      label: 'Privacy Policy',
-      href: '/privacy',
-    },
-  ],
-  columns: [
-    {
-      title: 'Address',
-      texts: ['51 Phasellus Avenue Maecenas', 'Aliquam, AQ 52098'],
-    },
-    {
-      title: 'Phone',
-      texts: ['Reception: +105 123 4567', 'Office: +107 235 7890'],
-    },
-    {
-      title: 'Email',
-      texts: ['Office: info@example.com', 'Site: https://example.com'],
-    },
-  ],
-  socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
-    { label: 'RSS', icon: IconRss, href: '#' },
-    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
-  ],
-  footNote: (
-    <div className="mr-4 text-sm">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a
-        className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
-        href="https://onwidget.com/"
-      >
-        {' '}
-        onWidget
-      </a>{' '}
-      · All rights reserved.
+      · All Rights Reserved.
+      {' '}
+      <span className="text-xs text-gray-600 dark:text-slate-300">©2022</span>
     </div>
   ),
 };
