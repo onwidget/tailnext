@@ -29,6 +29,41 @@ export const fetchPosts = async () => {
 };
 
 /** */
+const POSTS_PER_PAGE = 4;
+
+export const getPosts = async (params) => {
+  const posts = await fetchPosts();
+
+  const { searchQuery, page = 1, pageSize = POSTS_PER_PAGE } = params;
+
+  // Calculate the number of posts to skip based on the page number and page size
+  const skipAmount = (page - 1) * pageSize;
+
+  let query = [];
+
+  query = [
+    {
+      title: { $regex: new RegExp(searchQuery, 'i') },
+      content: { $regex: new RegExp(searchQuery, 'i') },
+    },
+  ];
+
+  const filteredPosts = posts.filter((post) => {
+    return query.every((q) => {
+      return Object.keys(q).every((field) => {
+        return new RegExp(q[field].$regex).test(post[field]);
+      });
+    });
+  });
+
+  const data = filteredPosts.slice(skipAmount, skipAmount + pageSize);
+
+  const isNext = filteredPosts.length > skipAmount + pageSize;
+
+  return { posts: data, isNext };
+};
+
+/** */
 export const findLatestPosts = async ({ count } = {}) => {
   const _count = count || 4;
   const posts = await fetchPosts();
