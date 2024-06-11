@@ -17,7 +17,7 @@ const Contact = ({ header, content, items, form, id, hasBackground = false }: Co
                   <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
                     {Icon && <Icon className="h-6 w-6" />}
                   </div>
-                  <div className="ml-4 mb-4">
+                  <div className="ml-4 rtl:ml-0 rtl:mr-4 mb-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h3>
                     {typeof description === 'string' ? (
                       <p key={`text-description-${index}`} className="text-gray-600 dark:text-slate-400">

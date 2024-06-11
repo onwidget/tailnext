@@ -238,7 +238,6 @@ export const faqs3Pricing: FAQsProps = {
     title: 'Pricing FAQs',
     subtitle: 'Do you have other questions?',
     // tagline: 'FAQS',
-    position: 'left',
   },
   items: [
     {
