@@ -8,7 +8,7 @@ export const dynamicParams = false;
 
 const getFormattedDate = (date) => date;
 
-export async function generateMetadata({ params}) {
+export async function generateMetadata({ params }) {
   const post = await findPostBySlug(params.slug);
   if (!post) {
     return notFound();

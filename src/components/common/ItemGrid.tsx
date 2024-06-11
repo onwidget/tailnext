@@ -24,10 +24,10 @@ const ItemGrid = ({
               (columns || defaultColumns) === 4
                 ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
                 : (columns || defaultColumns) === 3
-                ? 'lg:grid-cols-3 sm:grid-cols-2'
-                : (columns || defaultColumns) === 2
-                ? 'sm:grid-cols-2'
-                : 'max-w-4xl'
+                  ? 'lg:grid-cols-3 sm:grid-cols-2'
+                  : (columns || defaultColumns) === 2
+                    ? 'sm:grid-cols-2'
+                    : 'max-w-4xl'
             }`,
             containerClass,
           )}
