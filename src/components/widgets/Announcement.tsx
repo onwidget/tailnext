@@ -22,7 +22,7 @@ const Announcement = () => {
           href={callToAction2.href}
           target="_blank"
           rel="noreferrer"
-          className="float-right"
+          className="float-right rtl:float-left"
           title={callToAction2.text}
         >
           <img

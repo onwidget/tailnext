@@ -9,8 +9,16 @@ const FAQs3 = ({ header, items, callToAction, id, hasBackground = false }: FAQsP
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     <div className="flex items-stretch justify-center">
       <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
-        <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">
-          {header && <Headline header={header} titleClass="text-3xl sm:text-4xl" />}
+        <div
+          className={`h-full ${callToAction ? 'block sm:flex md:block' : ''} sm:items-center sm:justify-between md:mt-10`}
+        >
+          {header && (
+            <Headline
+              header={header}
+              titleClass={`text-3xl sm:text-4xl text-center ${callToAction ? 'sm:text-left' : 'md:text-left'}`}
+              subtitleClass={`text-center ${callToAction ? 'sm:text-left' : 'md:text-left'}`}
+            />
+          )}
           {callToAction && (
             <CTA
               callToAction={callToAction as CallToActionType}
