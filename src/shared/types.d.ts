@@ -233,7 +233,19 @@ type WindowSize = {
   height: number;
 };
 
+type PaginationProps = {
+  pageNumber: number;
+  isNext: boolean;
+};
+
 // WIDGETS
+type LocalSearchProps = {
+  route: string;
+  placeholder: string;
+  otherClasses?: string;
+  label?: string;
+};
+
 type HeroProps = {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -359,4 +371,15 @@ type HeaderProps = {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
+};
+
+type UrlQueryParams = {
+  params: string;
+  key: string;
+  value: string | null;
+};
+
+type RemoveUrlQueryParams = {
+  params: string;
+  keysToRemove: string[];
 };
