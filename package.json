@@ -64,7 +64,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.14",
     "@tailwindcss/vite": "4.3.3",
-    "@types/node": "24.13.4",
+    "@types/node": "26.5.1",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "@vitest/browser": "4.1.11",
