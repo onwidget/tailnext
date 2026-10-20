@@ -9,23 +9,32 @@ const server = spawn(process.execPath, [require.resolve('next/dist/bin/next'), '
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 let output = '';
-for (const stream of [server.stdout, server.stderr]) stream.on('data', (data) => { output += data; });
+for (const stream of [server.stdout, server.stderr])
+  stream.on('data', (data) => {
+    output += data;
+  });
 const origin = 'http://127.0.0.1:3100';
 let browser;
 try {
   let ready = false;
   for (let i = 0; i < 120; i++) {
     if (server.exitCode !== null) throw new Error(output);
-    try { ready = (await fetch(origin)).ok; } catch { /* startup */ }
+    try {
+      ready = (await fetch(origin)).ok;
+    } catch {
+      /* startup */
+    }
     if (ready) break;
     await new Promise((done) => setTimeout(done, 500));
   }
   assert.ok(ready, output);
   browser = await chromium.launch({ headless: true });
   const routes = [
-    ...(await readdir('src/content/blog')).filter((name) => name.endsWith('.mdx'))
+    ...(await readdir('src/content/blog'))
+      .filter((name) => name.endsWith('.mdx'))
       .map((name) => '/blog/' + name.slice(0, -4)),
-    '/privacy', '/terms',
+    '/privacy',
+    '/terms',
   ];
   for (const width of [390, 1440]) {
     const page = await browser.newPage({ viewport: { width, height: 900 } });

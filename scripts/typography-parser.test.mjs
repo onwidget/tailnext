@@ -21,19 +21,25 @@ test('Typography retains selector groups, attributes and trailing pseudo-element
   }
 });
 
-test('generated Typography CSS agrees with the original parser', {
-  skip: !process.env.BASELINE_TYPOGRAPHY_PATH,
-}, async () => {
-  async function compile(plugin) {
-    const input = '@import "tailwindcss";\n@plugin ' + JSON.stringify(plugin) +
-      ';\n@source inline("prose prose-sm prose-lg prose-xl prose-2xl prose-invert");';
-    const result = await postcss([tailwind({ optimize: false })]).process(input, {
-      from: resolve('typography-regression.css'),
-    });
-    return result.css;
-  }
-  const current = await compile(require.resolve('@tailwindcss/typography'));
-  const previous = await compile(process.env.BASELINE_TYPOGRAPHY_PATH);
-  assert.match(current, /\.prose/);
-  assert.equal(current, previous);
-});
+test(
+  'generated Typography CSS agrees with the original parser',
+  {
+    skip: !process.env.BASELINE_TYPOGRAPHY_PATH,
+  },
+  async () => {
+    async function compile(plugin) {
+      const input =
+        '@import "tailwindcss";\n@plugin ' +
+        JSON.stringify(plugin) +
+        ';\n@source inline("prose prose-sm prose-lg prose-xl prose-2xl prose-invert");';
+      const result = await postcss([tailwind({ optimize: false })]).process(input, {
+        from: resolve('typography-regression.css'),
+      });
+      return result.css;
+    }
+    const current = await compile(require.resolve('@tailwindcss/typography'));
+    const previous = await compile(process.env.BASELINE_TYPOGRAPHY_PATH);
+    assert.match(current, /\.prose/);
+    assert.equal(current, previous);
+  },
+);
