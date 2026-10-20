@@ -38,7 +38,9 @@
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:typography": "node --test scripts/typography-parser.test.mjs",
+    "test:prose": "node scripts/test-prose-browser.mjs"
   },
   "dependencies": {
     "@tabler/icons-react": "3.46.0",

@@ -46,6 +46,10 @@ jobs:
       - run: npm run typegen
       # Las stories corren en un navegador real, así que hace falta el binario.
       - run: npx playwright install --with-deps chromium
+      - name: Compare Typography with the original parser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/typography-baseline" --ignore-scripts --no-audit --no-fund @tailwindcss/typography@0.5.20
+          BASELINE_TYPOGRAPHY_PATH="$RUNNER_TEMP/typography-baseline/node_modules/@tailwindcss/typography/src/index.js" npm run test:typography
       - run: npm test
 
   build:
@@ -59,4 +63,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:prose
       - run: npm run build-storybook
