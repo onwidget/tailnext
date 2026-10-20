@@ -50,10 +50,10 @@ test('YAML scalars, folded text, Unicode, BOM and CRLF retain their meaning', ()
   assert.deepEqual(matter('---\n---\nBody').data, {});
 });
 
-test('unquoted timestamps remain dates and malformed YAML is rejected', () => {
+test('unquoted timestamps are strings and malformed YAML is rejected', () => {
   for (const parser of [coreMatter, matter]) {
     const result = parser(dates).data;
-    assert.deepEqual(result.date, new Date('2022-11-02T00:00:00.000Z'));
+    assert.equal(result.date, '2022-11-02');
     assert.equal(result.quoted, '2022-11-02');
     assert.throws(() => parser(malformed));
   }
@@ -108,7 +108,6 @@ test('supported YAML agrees with the legacy parser', { skip: !legacy }, async ()
   const inputs = [
     source,
     '\ufeff' + source.replaceAll('\n', '\r\n'),
-    dates,
     '# No metadata',
     '---\n---\nBody',
     ...(await documents()),
@@ -121,4 +120,10 @@ test('supported YAML agrees with the legacy parser', { skip: !legacy }, async ()
       assert.equal(actual.content, baseline.content);
     }
   }
+});
+
+test('legacy timestamp conversion is an intentional compatibility difference', { skip: !legacy }, () => {
+  assert.deepEqual(legacy(dates).data.date, new Date('2022-11-02T00:00:00.000Z'));
+  assert.equal(matter(dates).data.date, '2022-11-02');
+  assert.equal(coreMatter(dates).data.date, '2022-11-02');
 });
