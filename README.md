@@ -101,7 +101,9 @@ Your content. Code blocks are highlighted by Shiki.
 Frontmatter uses the maintained `@11ty/gray-matter` parser in both Content
 Collections and the MDX compiler. YAML is supported; executable JavaScript
 frontmatter is intentionally unsupported. Keep `publishDate` quoted to match
-the string schema.
+the string schema. Unquoted YAML timestamps now remain strings instead of
+legacy JavaScript `Date` objects; consumers needing dates must convert them
+explicitly.
 
 Run `npm run test:content` for parser and MDX regressions. To compare YAML with
 the previous parser, install `gray-matter@4.0.3` in a separate temporary
