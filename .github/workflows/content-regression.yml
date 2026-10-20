@@ -1,0 +1,26 @@
+name: Content regression
+on:
+  push:
+    branches: [main, chore/content-maintenance]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - name: Compare frontmatter with the previous parser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/frontmatter-baseline" --ignore-scripts --no-audit --no-fund gray-matter@4.0.3
+          LEGACY_MATTER_PATH="$RUNNER_TEMP/frontmatter-baseline/node_modules/gray-matter/index.js" npm run test:content
