@@ -33,7 +33,10 @@ npm run dev
 
 Then open <http://localhost:3000>.
 
-Node 24 is the target. `.nvmrc` pins it, and `engines` sets the floor at 20.9.
+Node 24 is the target; `.nvmrc` selects it. Supported versions are Node
+20.19+, Node 22.13+, and Node 24 or newer. Node 21 and 23 are excluded by
+the locked test toolchain. CI checks the Node 20 and 22 minimums and the
+current Node 22 and 24 releases.
 
 ## Commands
 
