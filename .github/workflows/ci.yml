@@ -34,8 +34,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # 24 es la LTS objetivo; 22 confirma que el suelo declarado en engines aguanta.
-        node: [22, 24]
+        # Exercise the declared Node 20/22 floors and current Node 22/24.
+        node: ['20.19.0', '22.13.0', 22, 24]
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
