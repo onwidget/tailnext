@@ -1,0 +1,38 @@
+name: Typography regression
+on:
+  push:
+    branches: [main, experiment/typography-selector-parser-7]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  selectors:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - name: Compare Typography with the original parser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/typography-baseline" --ignore-scripts --no-audit --no-fund @tailwindcss/typography@0.5.20
+          BASELINE_TYPOGRAPHY_PATH="$RUNNER_TEMP/typography-baseline/node_modules/@tailwindcss/typography/src/index.js" npm run test:typography
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:prose
