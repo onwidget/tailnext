@@ -28,6 +28,7 @@
     "dev": "next dev",
     "build": "next build",
     "typegen": "next typegen",
+    "test:content": "node --test scripts/content-pipeline.test.mjs",
     "start": "next start",
     "lint": "eslint .",
     "prettier": "prettier --write --ignore-unknown .",
@@ -38,8 +39,7 @@
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky",
-    "test:content": "node --test scripts/content-pipeline.test.mjs"
+    "prepare": "husky"
   },
   "dependencies": {
     "@tabler/icons-react": "3.46.0",
@@ -104,10 +104,10 @@
     ]
   },
   "overrides": {
-    "toml": "4.2.0",
-    "uuid": "11.1.1",
     "mdx-bundler": {
       "gray-matter": "npm:@11ty/gray-matter@3.0.0"
-    }
+    },
+    "toml": "4.2.0",
+    "uuid": "11.1.1"
   }
 }
