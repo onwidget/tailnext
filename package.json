@@ -32,15 +32,15 @@
     "lint": "eslint .",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
+    "test:typography": "node --test scripts/typography-parser.test.mjs",
+    "test:prose": "node scripts/test-prose-browser.mjs",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky",
-    "test:typography": "node --test scripts/typography-parser.test.mjs",
-    "test:prose": "node scripts/test-prose-browser.mjs"
+    "prepare": "husky"
   },
   "dependencies": {
     "@tabler/icons-react": "3.46.0",
