@@ -38,7 +38,8 @@
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:content": "node --test scripts/content-pipeline.test.mjs"
   },
   "dependencies": {
     "@tabler/icons-react": "3.46.0",
@@ -52,7 +53,7 @@
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
-    "@content-collections/core": "0.15.2",
+    "@content-collections/core": "0.15.3",
     "@content-collections/mdx": "0.2.2",
     "@content-collections/next": "0.2.11",
     "@storybook/addon-a11y": "10.6.0",
@@ -104,6 +105,9 @@
   },
   "overrides": {
     "toml": "4.2.0",
-    "uuid": "11.1.1"
+    "uuid": "11.1.1",
+    "mdx-bundler": {
+      "gray-matter": "npm:@11ty/gray-matter@3.0.0"
+    }
   }
 }

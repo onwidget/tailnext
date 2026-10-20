@@ -46,6 +46,10 @@ jobs:
       - run: npm run typegen
       # Las stories corren en un navegador real, así que hace falta el binario.
       - run: npx playwright install --with-deps chromium
+      - name: Compare frontmatter with the previous parser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/frontmatter-baseline" --ignore-scripts --no-audit --no-fund gray-matter@4.0.3
+          LEGACY_MATTER_PATH="$RUNNER_TEMP/frontmatter-baseline/node_modules/gray-matter/index.js" npm run test:content
       - run: npm test
 
   build:
