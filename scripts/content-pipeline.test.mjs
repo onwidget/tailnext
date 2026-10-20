@@ -14,14 +14,26 @@ const matter = createRequire(mdxRequire.resolve('mdx-bundler'))('gray-matter');
 const coreMatter = createRequire(import.meta.resolve('@content-collections/core'))('@11ty/gray-matter');
 const legacy = process.env.LEGACY_MATTER_PATH ? require(process.env.LEGACY_MATTER_PATH) : null;
 const source = [
-  '---', "title: 'Fixture: café & design'", "publishDate: 'Nov 02 2022'",
-  'tags: [design, testing]', 'draft: false', 'summary: >-', '  A folded',
-  '  description.', '---', '# Fixture heading', '',
-  'A **formatted** paragraph and [link](https://example.com/).', '',
+  '---',
+  "title: 'Fixture: café & design'",
+  "publishDate: 'Nov 02 2022'",
+  'tags: [design, testing]',
+  'draft: false',
+  'summary: >-',
+  '  A folded',
+  '  description.',
+  '---',
+  '# Fixture heading',
+  '',
+  'A **formatted** paragraph and [link](https://example.com/).',
+  '',
 ].join('\n');
 const expected = {
-  title: 'Fixture: café & design', publishDate: 'Nov 02 2022',
-  tags: ['design', 'testing'], draft: false, summary: 'A folded description.',
+  title: 'Fixture: café & design',
+  publishDate: 'Nov 02 2022',
+  tags: ['design', 'testing'],
+  draft: false,
+  summary: 'A folded description.',
 };
 const render = (code) => renderToStaticMarkup(getMDXComponent(code)({}));
 const dates = "---\ndate: 2022-11-02\nquoted: '2022-11-02'\n---\nBody";
@@ -93,8 +105,14 @@ test('maintained parsers reject executable JavaScript frontmatter', () => {
 });
 
 test('supported YAML agrees with the legacy parser', { skip: !legacy }, async () => {
-  const inputs = [source, '\ufeff' + source.replaceAll('\n', '\r\n'), dates,
-    '# No metadata', '---\n---\nBody', ...await documents()];
+  const inputs = [
+    source,
+    '\ufeff' + source.replaceAll('\n', '\r\n'),
+    dates,
+    '# No metadata',
+    '---\n---\nBody',
+    ...(await documents()),
+  ];
   for (const input of inputs) {
     const baseline = legacy(input);
     for (const parser of [coreMatter, matter]) {
